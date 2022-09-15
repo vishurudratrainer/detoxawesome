@@ -1,0 +1,173 @@
+--------- beginning of main
+09-10 04:11:24.642 15441 15441 W zygote  : Unexpected CPU variant for X86 using defaults: x86
+09-10 04:11:24.844 15441 15441 W System  : ClassLoader referenced unknown path: 
+09-10 04:11:24.956 15441 15441 I MonitoringInstr: Instrumentation started!
+09-10 04:11:24.979 15441 15441 V TestEventClient: No service name argument was given (testDiscoveryService, testRunEventService or orchestratorService)
+09-10 04:11:24.990 15441 15441 V fb-UnpackingSoSource: locked dso store /data/user/0/com.awesome/lib-main
+09-10 04:11:24.998 15441 15441 V fb-UnpackingSoSource: deps mismatch on deps store: regenerating
+09-10 04:11:24.998 15441 15441 V fb-UnpackingSoSource: so store dirty: regenerating
+09-10 04:11:25.076 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libc++_shared.so: deferring to libdir
+09-10 04:11:25.076 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libfabricjni.so: deferring to libdir
+09-10 04:11:25.077 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libfb.so: deferring to libdir
+09-10 04:11:25.077 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libfbjni.so: deferring to libdir
+09-10 04:11:25.077 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libfolly_runtime.so: deferring to libdir
+09-10 04:11:25.077 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libglog.so: deferring to libdir
+09-10 04:11:25.078 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libglog_init.so: deferring to libdir
+09-10 04:11:25.078 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libimagepipeline.so: deferring to libdir
+09-10 04:11:25.078 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libjsc.so: deferring to libdir
+09-10 04:11:25.078 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libjscexecutor.so: deferring to libdir
+09-10 04:11:25.078 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libjsi.so: deferring to libdir
+09-10 04:11:25.079 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libjsijniprofiler.so: deferring to libdir
+09-10 04:11:25.079 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libjsinspector.so: deferring to libdir
+09-10 04:11:25.079 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/liblogger.so: deferring to libdir
+09-10 04:11:25.079 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libmapbufferjni.so: deferring to libdir
+09-10 04:11:25.080 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libnative-filters.so: deferring to libdir
+09-10 04:11:25.080 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libnative-imagetranscoder.so: deferring to libdir
+09-10 04:11:25.080 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libreact_codegen_rncore.so: deferring to libdir
+09-10 04:11:25.083 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libreact_config.so: deferring to libdir
+09-10 04:11:25.083 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libreact_debug.so: deferring to libdir
+09-10 04:11:25.083 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libreact_nativemodule_core.so: deferring to libdir
+09-10 04:11:25.083 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libreact_render_animations.so: deferring to libdir
+09-10 04:11:25.084 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libreact_render_attributedstring.so: deferring to libdir
+09-10 04:11:25.084 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libreact_render_componentregistry.so: deferring to libdir
+09-10 04:11:25.084 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libreact_render_core.so: deferring to libdir
+09-10 04:11:25.085 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libreact_render_debug.so: deferring to libdir
+09-10 04:11:25.085 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libreact_render_graphics.so: deferring to libdir
+09-10 04:11:25.085 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libreact_render_imagemanager.so: deferring to libdir
+09-10 04:11:25.085 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libreact_render_leakchecker.so: deferring to libdir
+09-10 04:11:25.086 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libreact_render_mapbuffer.so: deferring to libdir
+09-10 04:11:25.086 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libreact_render_mounting.so: deferring to libdir
+09-10 04:11:25.086 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libreact_render_runtimescheduler.so: deferring to libdir
+09-10 04:11:25.086 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libreact_render_scheduler.so: deferring to libdir
+09-10 04:11:25.086 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libreact_render_telemetry.so: deferring to libdir
+09-10 04:11:25.087 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libreact_render_templateprocessor.so: deferring to libdir
+09-10 04:11:25.087 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libreact_render_textlayoutmanager.so: deferring to libdir
+09-10 04:11:25.087 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libreact_render_uimanager.so: deferring to libdir
+09-10 04:11:25.087 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libreact_utils.so: deferring to libdir
+09-10 04:11:25.087 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libreactnativeblob.so: deferring to libdir
+09-10 04:11:25.088 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libreactnativejni.so: deferring to libdir
+09-10 04:11:25.088 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libreactnativeutilsjni.so: deferring to libdir
+09-10 04:11:25.088 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libreactperfloggerjni.so: deferring to libdir
+09-10 04:11:25.088 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/librrc_image.so: deferring to libdir
+09-10 04:11:25.089 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/librrc_root.so: deferring to libdir
+09-10 04:11:25.089 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/librrc_scrollview.so: deferring to libdir
+09-10 04:11:25.089 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/librrc_text.so: deferring to libdir
+09-10 04:11:25.089 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/librrc_textinput.so: deferring to libdir
+09-10 04:11:25.089 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/librrc_unimplementedview.so: deferring to libdir
+09-10 04:11:25.090 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/librrc_view.so: deferring to libdir
+09-10 04:11:25.090 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libruntimeexecutor.so: deferring to libdir
+09-10 04:11:25.090 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libturbomodulejsijni.so: deferring to libdir
+09-10 04:11:25.093 15441 15441 D ApkSoSource: not allowing consideration of lib/x86/libyoga.so: deferring to libdir
+09-10 04:11:25.093 15441 15441 V fb-UnpackingSoSource: regenerating DSO store com.facebook.soloader.ApkSoSource
+09-10 04:11:25.094 15441 15441 V fb-UnpackingSoSource: Finished regenerating DSO store com.facebook.soloader.ApkSoSource
+09-10 04:11:25.095 15441 15441 V fb-UnpackingSoSource: starting syncer worker
+09-10 04:11:25.236 15441 15441 V fb-UnpackingSoSource: releasing dso store lock for /data/user/0/com.awesome/lib-main (from syncer thread)
+09-10 04:11:25.236 15441 15441 V fb-UnpackingSoSource: not releasing dso store lock for /data/user/0/com.awesome/lib-main (syncer thread started)
+09-10 04:11:25.259 15441 15441 D SoLoader: libjscexecutor.so not found on /data/data/com.awesome/lib-main
+09-10 04:11:25.259 15441 15441 D SoLoader: libjscexecutor.so found on /data/app/com.awesome-Em_c6zeHdLeY1M6J2UK6-A==/lib/x86
+09-10 04:11:25.263 15441 15441 D SoLoader: Not resolving dependencies for libjscexecutor.so
+09-10 04:11:25.313 15441 15441 D JavaScriptCore.Version: 250230.2.1
+09-10 04:11:25.396 15441 15467 I UsageTrackerFacilitator: Usage tracking enabled
+09-10 04:11:25.404 15441 15467 I TestRequestBuilder: Scanning classpath to find tests in paths [/data/app/com.awesome.test-PRGPIkybglbhyAYiEe8miw==/base.apk]
+09-10 04:11:25.408 15441 15467 W zygote  : Skipping duplicate class check due to unrecognized classloader
+09-10 04:11:25.660 15441 15451 I zygote  : Background concurrent copying GC freed 13784(1206KB) AllocSpace objects, 1(36KB) LOS objects, 62% free, 923KB/2MB, paused 8.420ms total 227.525ms
+09-10 04:11:25.976 15441 15451 I zygote  : Background concurrent copying GC freed 28272(1476KB) AllocSpace objects, 0(0B) LOS objects, 56% free, 1190KB/2MB, paused 7.462ms total 58.639ms
+09-10 04:11:26.264 15441 15451 I zygote  : Background concurrent copying GC freed 30246(1679KB) AllocSpace objects, 0(0B) LOS objects, 56% free, 1195KB/2MB, paused 6.591ms total 105.489ms
+09-10 04:11:26.506 15441 15451 I zygote  : Background concurrent copying GC freed 20705(1493KB) AllocSpace objects, 0(0B) LOS objects, 53% free, 1317KB/2MB, paused 9.321ms total 58.504ms
+09-10 04:11:26.739 15441 15451 I zygote  : Background concurrent copying GC freed 20086(1405KB) AllocSpace objects, 0(0B) LOS objects, 50% free, 1590KB/3MB, paused 7.784ms total 66.200ms
+09-10 04:11:26.993 15441 15451 I zygote  : Background concurrent copying GC freed 27497(1538KB) AllocSpace objects, 0(0B) LOS objects, 49% free, 1710KB/3MB, paused 8.086ms total 84.523ms
+09-10 04:11:27.009 15441 15467 D TestExecutor: Adding listener androidx.test.internal.runner.listener.LogRunListener
+09-10 04:11:27.010 15441 15467 D TestExecutor: Adding listener androidx.test.internal.runner.listener.InstrumentationResultPrinter
+09-10 04:11:27.010 15441 15467 D TestExecutor: Adding listener androidx.test.internal.runner.listener.ActivityFinisherRunListener
+09-10 04:11:27.014 15441 15467 I TestRunner: run started: 1 tests
+09-10 04:11:27.025 15441 15467 I TestRunner: started: runDetoxTests(com.awesome.DetoxTest)
+09-10 04:11:27.134 15441 15467 D EventInjectionStrategy: Creating injection strategy with input manager.
+09-10 04:11:27.482 15441 15441 D LifecycleMonitor: Lifecycle status change: com.awesome.MainActivity@40ddcc5 in: PRE_ON_CREATE
+09-10 04:11:27.588 15441 15479 D SoLoader: libreactnativejni.so not found on /data/data/com.awesome/lib-main
+09-10 04:11:27.588 15441 15479 D SoLoader: libreactnativejni.so found on /data/app/com.awesome-Em_c6zeHdLeY1M6J2UK6-A==/lib/x86
+09-10 04:11:27.589 15441 15479 D SoLoader: Not resolving dependencies for libreactnativejni.so
+09-10 04:11:27.603 15441 15479 D SoLoader: libfbjni.so not found on /data/data/com.awesome/lib-main
+09-10 04:11:27.604 15441 15479 D SoLoader: libfbjni.so found on /data/app/com.awesome-Em_c6zeHdLeY1M6J2UK6-A==/lib/x86
+09-10 04:11:27.604 15441 15479 D SoLoader: Not resolving dependencies for libfbjni.so
+09-10 04:11:27.668 15441 15441 D LifecycleMonitor: Lifecycle status change: com.awesome.MainActivity@40ddcc5 in: CREATED
+09-10 04:11:27.677 15441 15441 D LifecycleMonitor: Lifecycle status change: com.awesome.MainActivity@40ddcc5 in: STARTED
+09-10 04:11:27.686 15441 15441 D LifecycleMonitor: Lifecycle status change: com.awesome.MainActivity@40ddcc5 in: RESUMED
+09-10 04:11:27.720 15441 15479 W unknown:ReactContext: initializeMessageQueueThreads() is called.
+09-10 04:11:27.742 15441 15484 D OpenGLRenderer: HWUI GL Pipeline
+09-10 04:11:27.957 15441 15482 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+09-10 04:11:28.196 15441 15441 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.drawer.ReactDrawerLayoutManager
+09-10 04:11:28.254 15441 15441 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.uimanager.LayoutShadowNode
+09-10 04:11:28.305 15441 15441 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollViewManager
+09-10 04:11:28.325 15441 15441 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollContainerViewManager
+09-10 04:11:28.327 15441 15441 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ReactProgressBarViewManager
+09-10 04:11:28.383 15441 15441 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ProgressBarShadowNode
+09-10 04:11:28.404 15441 15441 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactScrollViewManager
+09-10 04:11:28.414 15441 15441 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.slider.ReactSliderManager
+09-10 04:11:28.434 15441 15441 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.slider.ReactSliderManager$ReactSliderShadowNode
+09-10 04:11:28.440 15441 15441 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager
+09-10 04:11:28.445 15441 15441 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager$ReactSwitchShadowNode
+09-10 04:11:28.447 15441 15441 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.swiperefresh.SwipeRefreshLayoutManager
+09-10 04:11:28.449 15441 15441 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageViewManager
+09-10 04:11:28.453 15441 15441 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageShadowNode
+09-10 04:11:28.456 15441 15441 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.image.ReactImageManager
+09-10 04:11:28.473 15441 15441 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ReactModalHostManager
+09-10 04:11:28.490 15441 15441 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ModalHostShadowNode
+09-10 04:11:28.493 15441 15441 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextManager
+09-10 04:11:28.494 15441 15441 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextShadowNode
+09-10 04:11:28.495 15441 15441 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputManager
+09-10 04:11:28.506 15441 15441 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputShadowNode
+09-10 04:11:28.547 15441 15451 I zygote  : Background concurrent copying GC freed 10761(1065KB) AllocSpace objects, 0(0B) LOS objects, 50% free, 2MB/5MB, paused 13.738ms total 282.768ms
+09-10 04:11:28.549 15441 15441 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextViewManager
+09-10 04:11:28.553 15441 15441 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextShadowNode
+09-10 04:11:28.555 15441 15441 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.view.ReactViewManager
+09-10 04:11:28.566 15441 15445 I zygote  : Do partial code cache collection, code=30KB, data=20KB
+09-10 04:11:28.568 15441 15441 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextViewManager
+09-10 04:11:28.569 15441 15441 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextShadowNode
+09-10 04:11:28.583 15441 15445 I zygote  : After code cache collection, code=30KB, data=20KB
+09-10 04:11:28.584 15441 15445 I zygote  : Increasing code cache capacity to 128KB
+09-10 04:11:28.591 15441 15441 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.unimplementedview.ReactUnimplementedViewManager
+09-10 04:11:28.626 15441 15441 W unknown:ReactContext: initializeMessageQueueThreads() is called.
+09-10 04:11:28.640 15441 15441 D SoLoader: libyoga.so not found on /data/data/com.awesome/lib-main
+09-10 04:11:28.644 15441 15441 D SoLoader: libyoga.so found on /data/app/com.awesome-Em_c6zeHdLeY1M6J2UK6-A==/lib/x86
+09-10 04:11:28.644 15441 15441 D SoLoader: Not resolving dependencies for libyoga.so
+09-10 04:11:28.834 15441 15481 I ReactNativeJS: Running "awesome
+09-10 04:11:28.896 15441 15484 D         : HostConnection::get() New Host Connection established 0x99bba380, tid 15484
+09-10 04:11:28.914 15441 15484 I OpenGLRenderer: Initialized EGL, version 1.4
+09-10 04:11:28.915 15441 15484 D OpenGLRenderer: Swap behavior 1
+09-10 04:11:28.968 15441 15484 D EGL_emulation: eglCreateContext: 0x9c905420: maj 2 min 0 rcv 2
+09-10 04:11:28.978 15441 15484 D EGL_emulation: eglMakeCurrent: 0x9c905420: ver 2 0 (tinfo 0x9c903720)
+09-10 04:11:29.554 15441 15484 D EGL_emulation: eglMakeCurrent: 0x9c905420: ver 2 0 (tinfo 0x9c903720)
+09-10 04:11:29.814 15441 15441 I Choreographer: Skipped 41 frames!  The application may be doing too much work on its main thread.
+09-10 04:11:29.864 15441 15467 I Detox   : Detox server connection details: url=ws://localhost:55737, sessionId=8a7684f8-fd54-b378-2cde-06f353d06c59
+09-10 04:11:30.050 15441 15488 I DetoxDispatcher: Handling action '_init' (ID #0)...
+09-10 04:11:30.052 15441 15488 I Detox   : Connecting to server...
+09-10 04:11:30.052 15441 15488 I DetoxWSClient: At connectToServer
+09-10 04:11:30.158 15441 15441 D DetoxRNLoading: Got new RN-context directly and immediately
+09-10 04:11:30.190 15441 15488 I DetoxRNIdleRes: Setting up Espresso Idling Resources for React Native
+09-10 04:11:30.414 15441 15488 D AsyncStorageIR: Checking whether a custom IR for Async-Storage is required... (legacy=false)
+09-10 04:11:30.423 15441 15488 D DetoxRNHelpers: Native RN module resolution (class com.reactnativecommunity.asyncstorage.AsyncStorageModule): no such class
+09-10 04:11:30.423 15441 15488 D AsyncStorageIR: Checking whether a custom IR for Async-Storage is required... (legacy=true)
+09-10 04:11:30.455 15441 15488 D AsyncStorageIR: IR for Async-Storage is required! (legacy=true)
+09-10 04:11:30.524 15441 15441 D AsyncStorageIRLegacy: Async-storage is busy!
+09-10 04:11:30.545 15441 15490 D DetoxWSClient: At onOpen
+09-10 04:11:30.546 15441 15490 I DetoxWSClient: Sending out action 'login' (ID #0)
+09-10 04:11:30.548 15441 15490 I Detox   : Connected to server!
+09-10 04:11:30.553 15441 15488 I DetoxDispatcher: Done with action '_init'
+09-10 04:11:30.554 15441 15488 I DetoxDispatcher: Handling action 'isReady' (ID #-1000)...
+09-10 04:11:30.627 15441 15490 D DetoxWSClient: Received action 'loginSuccess' (ID #0, params={"testerConnected":true,"appConnected":true})
+09-10 04:11:30.633 15441 15490 D DetoxWSClient: Received action 'isReady' (ID #-1000, params={})
+09-10 04:11:31.367 15441 15482 W unknown:ReactNative: Attempt to set local data for view with unknown tag: -1
+09-10 04:11:31.417 15441 15441 I zygote  : Deoptimizing boolean androidx.test.espresso.base.Interrogator.interrogateQueueState(android.os.MessageQueue, androidx.test.espresso.base.Interrogator$QueueInterrogationHandler) due to JIT inline cache
+09-10 04:11:31.559 15441 15441 I zygote  : Deoptimizing void androidx.test.espresso.base.IdlingResourceRegistry$Dispatcher.handleResourceIdled(android.os.Message) due to JIT inline cache
+09-10 04:11:31.580 15441 15441 I Detox   : Wait is over: App is now idle!
+09-10 04:11:31.584 15441 15488 I DetoxWSClient: Sending out action 'ready' (ID #-1000)
+09-10 04:11:31.587 15441 15488 I DetoxDispatcher: Done with action 'isReady'
+09-10 04:11:31.588 15441 15488 I DetoxDispatcher: Handling action 'loginSuccess' (ID #0)...
+09-10 04:11:31.588 15441 15488 I DetoxDispatcher: Done with action 'loginSuccess'
+09-10 04:11:31.589 15441 15488 I DetoxDispatcher: Handling action 'isReady' (ID #-1000)...
+09-10 04:11:31.627 15441 15441 I Detox   : Wait is over: App is now idle!
+09-10 04:11:31.629 15441 15488 I DetoxWSClient: Sending out action 'ready' (ID #-1000)
+09-10 04:11:31.630 15441 15488 I DetoxDispatcher: Done with action 'isReady'
+09-10 04:11:31.645 15441 15445 I zygote  : Do partial code cache collection, code=53KB, data=42KB
+09-10 04:11:31.672 15441 15445 I zygote  : After code cache collection, code=49KB, data=40KB
+09-10 04:11:31.672 15441 15445 I zygote  : Increasing code cache capacity to 256KB

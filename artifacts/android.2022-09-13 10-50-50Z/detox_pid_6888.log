@@ -1,0 +1,1054 @@
+Sep 13 16:20:56 detox[6888] TRACE: [DETOX_CREATE] created a Detox instance with config:
+{
+  appsConfig: {
+    default: {
+      type: 'android.apk',
+      binaryPath: 'android/app/build/outputs/apk/release/app-release.apk',
+      build: 'cd android && gradlew app:assembleRelease assembleAndroidTest -DtestBuildType=release && cd ..'
+    }
+  },
+  artifactsConfig: {
+    rootDir: 'artifacts\\android.2022-09-13 10-50-50Z',
+    plugins: {
+      log: {
+        enabled: true,
+        keepOnlyFailedTestsArtifacts: false
+      },
+      screenshot: {
+        enabled: true,
+        shouldTakeAutomaticSnapshots: false,
+        keepOnlyFailedTestsArtifacts: false
+      },
+      video: {
+        enabled: false,
+        keepOnlyFailedTestsArtifacts: false
+      },
+      instruments: {
+        enabled: false,
+        keepOnlyFailedTestsArtifacts: false
+      },
+      timeline: {
+        enabled: false
+      },
+      uiHierarchy: {
+        enabled: false,
+        keepOnlyFailedTestsArtifacts: false
+      }
+    },
+    pathBuilder: ArtifactPathBuilder {
+      _rootDir: 'artifacts\\android.2022-09-13 10-50-50Z'
+    }
+  },
+  behaviorConfig: {
+    init: {
+      reinstallApp: true,
+      exposeGlobals: true
+    },
+    cleanup: {
+      shutdownDevice: false
+    },
+    launchApp: 'auto'
+  },
+  cliConfig: {
+    recordLogs: 'all',
+    configuration: 'android',
+    readonlyEmu: true,
+    loglevel: 'verbose',
+    useCustomLogger: true
+  },
+  configurationName: 'android',
+  deviceConfig: {
+    type: 'android.emulator',
+    device: {
+      avdName: 'demotest'
+    },
+    readonly: true
+  },
+  runnerConfig: {
+    testRunner: 'jest',
+    runnerConfig: 'e2e/config.json',
+    specs: 'e2e',
+    skipLegacyWorkersInjection: true
+  },
+  sessionConfig: {
+    autoStart: true,
+    sessionId: '47c879c1-851a-900f-6ded-6a51741a9257',
+    debugSynchronization: 10000
+  }
+}
+Sep 13 16:20:56 detox[6888] DEBUG: [WSS_CREATE] Detox server listening on localhost:52904...
+Sep 13 16:20:56 detox[6888] DEBUG: [WSS_CONNECTION, #52905] registered a new connection.
+Sep 13 16:20:56 detox[6888] TRACE: [WS_OPEN] opened web socket to: ws://localhost:52904
+Sep 13 16:20:56 detox[6888] TRACE: [WS_SEND] {"type":"login","params":{"sessionId":"47c879c1-851a-900f-6ded-6a51741a9257","role":"tester"},"messageId":0}
+Sep 13 16:20:56 detox[6888] TRACE: [WSS_GET_FROM, #52905] {"type":"login","params":{"sessionId":"47c879c1-851a-900f-6ded-6a51741a9257","role":"tester"},"messageId":0}
+Sep 13 16:20:56 detox[6888] TRACE: [SESSION_CREATED] created session 47c879c1-851a-900f-6ded-6a51741a9257
+Sep 13 16:20:56 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+Sep 13 16:20:56 detox[6888] TRACE: [SESSION_JOINED] tester joined session 47c879c1-851a-900f-6ded-6a51741a9257
+Sep 13 16:20:56 detox[6888] TRACE: [WS_MESSAGE] {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+ 
+Sep 13 16:20:56 detox[6888] DEBUG: [EXEC_CMD, #0] "C:\Users\Admin\AppData\Local\Android\Sdk\emulator\emulator.EXE" -list-avds --verbose
+Sep 13 16:20:56 detox[6888] TRACE: [EXEC_SUCCESS, #0] demotest
+demotest2
+second
+
+Sep 13 16:20:56 detox[6888] DEBUG: [EXEC_CMD, #1] "C:\Users\Admin\AppData\Local\Android\Sdk\emulator\emulator.EXE" -version 
+Sep 13 16:20:57 detox[6888] TRACE: [EXEC_SUCCESS, #1] INFO    | Duplicate loglines will be removed, if you wish to see each indiviudal line launch with the -log-nofilter flag.
+Android emulator version 31.3.10.0 (build_id 8807927) (CL:N/A)
+Copyright (C) 2006-2017 The Android Open Source Project and many others.
+This program is a derivative of the QEMU CPU emulator (www.qemu.org).
+
+  This software is licensed under the terms of the GNU General Public
+  License version 2, as published by the Free Software Foundation, and
+  may be copied, distributed, and modified under those terms.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+INFO    | Android emulator version 31.3.10.0 (build_id 8807927) (CL:N/A)
+
+Sep 13 16:20:57 detox[6888] DEBUG: [EMU_BIN_VERSION_DETECT] Detected emulator binary version { major: 31, minor: 3, patch: 10, toString: [Function: toString] }
+Sep 13 16:20:57 detox[6888] DEBUG: [ALLOCATE_DEVICE] Trying to allocate a device based on "demotest"
+Sep 13 16:20:57 detox[6888] DEBUG: [EXEC_CMD, #2] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE"  devices
+Sep 13 16:20:57 detox[6888] DEBUG: [EXEC_SUCCESS, #2] List of devices attached
+emulator-18418	device
+
+
+Sep 13 16:20:57 detox[6888] TRACE: [TELNET_CONNECTING] port: 18418, host: localhost
+Sep 13 16:20:57 detox[6888] DEBUG: [DEVICE_LOOKUP] Found a matching & free device emulator-18418
+Sep 13 16:20:57 detox[6888] DEBUG: [ALLOCATE_DEVICE] Settled on emulator-18418
+Sep 13 16:20:57 detox[6888] DEBUG: [EXEC_CMD, #3] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "getprop dev.bootcomplete"
+Sep 13 16:20:57 detox[6888] TRACE: [EXEC_SUCCESS, #3] 1
+
+Sep 13 16:20:57 detox[6888] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBootDevice({ deviceId: 'emulator-18418', type: 'demotest', coldBoot: false })
+Sep 13 16:20:57 detox[6888] DEBUG: [EXEC_CMD, #4] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "getprop ro.build.version.sdk"
+Sep 13 16:20:57 detox[6888] TRACE: [EXEC_SUCCESS, #4] 26
+
+Sep 13 16:20:57 detox[6888] DEBUG: [EXEC_CMD, #5] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "settings put global animator_duration_scale 0"
+Sep 13 16:20:58 detox[6888] TRACE: [EXEC_SUCCESS, #5] 
+Sep 13 16:20:58 detox[6888] DEBUG: [EXEC_CMD, #6] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "settings put global window_animation_scale 0"
+Sep 13 16:20:58 detox[6888] TRACE: [EXEC_SUCCESS, #6] 
+Sep 13 16:20:58 detox[6888] DEBUG: [EXEC_CMD, #7] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "settings put global transition_animation_scale 0"
+Sep 13 16:20:58 detox[6888] TRACE: [EXEC_SUCCESS, #7] 
+Sep 13 16:20:58 detox[6888] DEBUG: [EXEC_CMD, #8] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "dumpsys power | grep \"^[ ]*m[UW].*=\""
+Sep 13 16:20:58 detox[6888] TRACE: [EXEC_SUCCESS, #8]   mWakefulness=Awake
+  mWakefulnessChanging=false
+  mWakeLockSummary=0x1
+  mUserActivitySummary=0x1
+  mWakeUpWhenPluggedOrUnpluggedConfig=false
+  mWakeUpWhenPluggedOrUnpluggedInTheaterModeConfig=false
+  mDreamsBatteryLevelMinimumWhenPoweredConfig=-1
+  mDreamsBatteryLevelMinimumWhenNotPoweredConfig=15
+  mScreenBrightnessOverrideFromWindowManager=-1
+  mUserActivityTimeoutOverrideFromWindowManager=-1
+  mUserInactiveOverrideFromWindowManager=false
+
+Sep 13 16:20:58 detox[6888] DEBUG: [EXEC_CMD, #9] "C:\Users\Admin\AppData\Local\Android\Sdk\build-tools\33.0.0\aapt.EXE" dump badging "C:\awesome\android\app\build\outputs\apk\release\app-release.apk"
+Sep 13 16:20:58 detox[6888] TRACE: [EXEC_SUCCESS, #9] package: name='com.awesome' versionCode='1' versionName='1.0' platformBuildVersionName='12' platformBuildVersionCode='31' compileSdkVersion='31' compileSdkVersionCodename='12'
+sdkVersion:'21'
+targetSdkVersion:'31'
+uses-permission: name='android.permission.INTERNET'
+application-label:'awesome'
+application-label-af:'awesome'
+application-label-am:'awesome'
+application-label-ar:'awesome'
+application-label-as:'awesome'
+application-label-az:'awesome'
+application-label-be:'awesome'
+application-label-bg:'awesome'
+application-label-bn:'awesome'
+application-label-bs:'awesome'
+application-label-ca:'awesome'
+application-label-cs:'awesome'
+application-label-da:'awesome'
+application-label-de:'awesome'
+application-label-el:'awesome'
+application-label-en-AU:'awesome'
+application-label-en-CA:'awesome'
+application-label-en-GB:'awesome'
+application-label-en-IN:'awesome'
+application-label-en-XC:'awesome'
+application-label-es:'awesome'
+application-label-es-US:'awesome'
+application-label-et:'awesome'
+application-label-eu:'awesome'
+application-label-fa:'awesome'
+application-label-fi:'awesome'
+application-label-fr:'awesome'
+application-label-fr-CA:'awesome'
+application-label-gl:'awesome'
+application-label-gu:'awesome'
+application-label-hi:'awesome'
+application-label-hr:'awesome'
+application-label-hu:'awesome'
+application-label-hy:'awesome'
+application-label-in:'awesome'
+application-label-is:'awesome'
+application-label-it:'awesome'
+application-label-iw:'awesome'
+application-label-ja:'awesome'
+application-label-ka:'awesome'
+application-label-kk:'awesome'
+application-label-km:'awesome'
+application-label-kn:'awesome'
+application-label-ko:'awesome'
+application-label-ky:'awesome'
+application-label-lo:'awesome'
+application-label-lt:'awesome'
+application-label-lv:'awesome'
+application-label-mk:'awesome'
+application-label-ml:'awesome'
+application-label-mn:'awesome'
+application-label-mr:'awesome'
+application-label-ms:'awesome'
+application-label-my:'awesome'
+application-label-nb:'awesome'
+application-label-ne:'awesome'
+application-label-nl:'awesome'
+application-label-or:'awesome'
+application-label-pa:'awesome'
+application-label-pl:'awesome'
+application-label-pt:'awesome'
+application-label-pt-BR:'awesome'
+application-label-pt-PT:'awesome'
+application-label-ro:'awesome'
+application-label-ru:'awesome'
+application-label-si:'awesome'
+application-label-sk:'awesome'
+application-label-sl:'awesome'
+application-label-sq:'awesome'
+application-label-sr:'awesome'
+application-label-sr-Latn:'awesome'
+application-label-sv:'awesome'
+application-label-sw:'awesome'
+application-label-ta:'awesome'
+application-label-te:'awesome'
+application-label-th:'awesome'
+application-label-tl:'awesome'
+application-label-tr:'awesome'
+application-label-uk:'awesome'
+application-label-ur:'awesome'
+application-label-uz:'awesome'
+application-label-vi:'awesome'
+application-label-zh-CN:'awesome'
+application-label-zh-HK:'awesome'
+application-label-zh-TW:'awesome'
+application-label-zu:'awesome'
+application-icon-160:'res/u3.png'
+application-icon-240:'res/SD.png'
+application-icon-320:'res/jy.png'
+application-icon-480:'res/D2.png'
+application-icon-640:'res/CG.png'
+application-icon-65534:'res/u3.png'
+application: label='awesome' icon='res/u3.png'
+launchable-activity: name='com.awesome.MainActivity'  label='awesome' icon=''
+feature-group: label=''
+  uses-feature: name='android.hardware.faketouch'
+  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'
+main
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--' 'af' 'am' 'ar' 'as' 'az' 'be' 'bg' 'bn' 'bs' 'ca' 'cs' 'da' 'de' 'el' 'en-AU' 'en-CA' 'en-GB' 'en-IN' 'en-XC' 'es' 'es-US' 'et' 'eu' 'fa' 'fi' 'fr' 'fr-CA' 'gl' 'gu' 'hi' 'hr' 'hu' 'hy' 'in' 'is' 'it' 'iw' 'ja' 'ka' 'kk' 'km' 'kn' 'ko' 'ky' 'lo' 'lt' 'lv' 'mk' 'ml' 'mn' 'mr' 'ms' 'my' 'nb' 'ne' 'nl' 'or' 'pa' 'pl' 'pt' 'pt-BR' 'pt-PT' 'ro' 'ru' 'si' 'sk' 'sl' 'sq' 'sr' 'sr-Latn' 'sv' 'sw' 'ta' 'te' 'th' 'tl' 'tr' 'uk' 'ur' 'uz' 'vi' 'zh-CN' 'zh-HK' 'zh-TW' 'zu'
+densities: '160' '240' '320' '480' '640' '65534'
+native-code: 'arm64-v8a' 'armeabi-v7a' 'x86' 'x86_64'
+
+Sep 13 16:20:59 detox[6888] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeTerminateApp({ deviceId: 'emulator-18418', bundleId: 'com.awesome' })
+Sep 13 16:20:59 detox[6888] DEBUG: [EXEC_CMD, #10] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "am force-stop com.awesome"
+Sep 13 16:20:59 detox[6888] TRACE: [EXEC_SUCCESS, #10] 
+Sep 13 16:20:59 detox[6888] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTerminateApp({ deviceId: 'emulator-18418', bundleId: 'com.awesome' })
+Sep 13 16:20:59 detox[6888] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeUninstallApp({ deviceId: 'emulator-18418', bundleId: 'com.awesome' })
+Sep 13 16:20:59 detox[6888] DEBUG: [EXEC_CMD, #11] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "pm list packages com.awesome"
+Sep 13 16:21:01 detox[6888] TRACE: [EXEC_SUCCESS, #11] package:com.awesome.test
+package:com.awesome
+
+Sep 13 16:21:01 detox[6888] DEBUG: [EXEC_CMD, #12] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 uninstall com.awesome
+Sep 13 16:21:02 detox[6888] TRACE: [EXEC_SUCCESS, #12] Success
+
+Sep 13 16:21:02 detox[6888] DEBUG: [EXEC_CMD, #13] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "pm list packages com.awesome.test"
+Sep 13 16:21:04 detox[6888] TRACE: [EXEC_SUCCESS, #13] package:com.awesome.test
+
+Sep 13 16:21:04 detox[6888] DEBUG: [EXEC_CMD, #14] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 uninstall com.awesome.test
+Sep 13 16:21:05 detox[6888] TRACE: [EXEC_SUCCESS, #14] Success
+
+Sep 13 16:21:05 detox[6888] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeTerminateApp({ deviceId: 'emulator-18418', bundleId: 'com.awesome' })
+Sep 13 16:21:05 detox[6888] DEBUG: [EXEC_CMD, #15] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "am force-stop com.awesome"
+Sep 13 16:21:05 detox[6888] TRACE: [EXEC_SUCCESS, #15] 
+Sep 13 16:21:05 detox[6888] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTerminateApp({ deviceId: 'emulator-18418', bundleId: 'com.awesome' })
+Sep 13 16:21:05 detox[6888] DEBUG: [EXEC_CMD, #16] "C:\Users\Admin\AppData\Local\Android\Sdk\build-tools\33.0.0\aapt.EXE" dump xmlstrings "C:\awesome\android\app\build\outputs\apk\release\app-release.apk" AndroidManifest.xml
+Sep 13 16:21:05 detox[6888] TRACE: [EXEC_SUCCESS, #16] String pool of 49 unique UTF-16 non-sorted strings, 49 entries and 0 styles using 2012 bytes:
+String #0: theme
+String #1: label
+String #2: icon
+String #3: name
+String #4: exported
+String #5: authorities
+String #6: launchMode
+String #7: configChanges
+String #8: value
+String #9: minSdkVersion
+String #10: versionCode
+String #11: versionName
+String #12: windowSoftInputMode
+String #13: targetSdkVersion
+String #14: allowBackup
+String #15: usesCleartextTraffic
+String #16: roundIcon
+String #17: compileSdkVersion
+String #18: compileSdkVersionCodename
+String #19: appComponentFactory
+String #20: 1.0
+String #21: 12
+String #22: action
+String #23: activity
+String #24: android
+String #25: android.intent.action.MAIN
+String #26: android.intent.category.LAUNCHER
+String #27: android.permission.INTERNET
+String #28: androidx.core.app.CoreComponentFactory
+String #29: androidx.emoji2.text.EmojiCompatInitializer
+String #30: androidx.lifecycle.ProcessLifecycleInitializer
+String #31: androidx.startup
+String #32: androidx.startup.InitializationProvider
+String #33: application
+String #34: category
+String #35: com.awesome
+String #36: com.awesome.MainActivity
+String #37: com.awesome.MainApplication
+String #38: com.awesome.androidx-startup
+String #39: http://schemas.android.com/apk/res/android
+String #40: intent-filter
+String #41: manifest
+String #42: meta-data
+String #43: package
+String #44: platformBuildVersionCode
+String #45: platformBuildVersionName
+String #46: provider
+String #47: uses-permission
+String #48: uses-sdk
+
+Sep 13 16:21:05 detox[6888] DEBUG: [EXEC_CMD, #17] "C:\Users\Admin\AppData\Local\Android\Sdk\build-tools\33.0.0\aapt.EXE" dump xmlstrings "C:\awesome\android\app\build\outputs\apk\androidTest\release\app-release-androidTest.apk" AndroidManifest.xml
+Sep 13 16:21:05 detox[6888] TRACE: [EXEC_SUCCESS, #17] String pool of 40 unique UTF-16 non-sorted strings, 40 entries and 0 styles using 1980 bytes:
+String #0: theme
+String #1: label
+String #2: name
+String #3: exported
+String #4: targetPackage
+String #5: handleProfiling
+String #6: functionalTest
+String #7: minSdkVersion
+String #8: targetSdkVersion
+String #9: compileSdkVersion
+String #10: compileSdkVersionCodename
+String #11: 12
+String #12: Tests for com.awesome
+String #13: action
+String #14: activity
+String #15: android
+String #16: android.intent.action.MAIN
+String #17: android.permission.REORDER_TASKS
+String #18: android.test.runner
+String #19: androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity
+String #20: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity
+String #21: androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity
+String #22: androidx.test.orchestrator
+String #23: androidx.test.runner.AndroidJUnitRunner
+String #24: androidx.test.services
+String #25: application
+String #26: com.awesome
+String #27: com.awesome.test
+String #28: com.google.android.apps.common.testing.services
+String #29: http://schemas.android.com/apk/res/android
+String #30: instrumentation
+String #31: intent-filter
+String #32: manifest
+String #33: package
+String #34: platformBuildVersionCode
+String #35: platformBuildVersionName
+String #36: queries
+String #37: uses-library
+String #38: uses-permission
+String #39: uses-sdk
+
+Sep 13 16:21:05 detox[6888] DEBUG: [EXEC_CMD, #18] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "rm -fr /data/local/tmp/detox"
+Sep 13 16:21:06 detox[6888] TRACE: [EXEC_SUCCESS, #18] 
+Sep 13 16:21:06 detox[6888] DEBUG: [EXEC_CMD, #19] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "mkdir -p /data/local/tmp/detox"
+Sep 13 16:21:06 detox[6888] TRACE: [EXEC_SUCCESS, #19] 
+Sep 13 16:21:06 detox[6888] DEBUG: [EXEC_CMD, #20] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 push "C:\awesome\android\app\build\outputs\apk\release\app-release.apk" "/data/local/tmp/detox/Application.apk"
+Sep 13 16:21:08 detox[6888] TRACE: [EXEC_SUCCESS, #20] C:\awesome\android\app\build\outputs\apk\release\app-release.apk: 1 file pushed, 0 skipped. 28.9 MB/s (28127148 bytes in 0.929s)
+
+Sep 13 16:21:08 detox[6888] DEBUG: [SPAWN_CMD, #21, cpid=6244] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-18418 shell pm install -r -g -t /data/local/tmp/detox/Application.apk
+Sep 13 16:21:38 detox[6888] TRACE: [SPAWN_STDOUT, #21, cpid=6244] Success
+
+Sep 13 16:21:38 detox[6888] DEBUG: [SPAWN_END, #21, cpid=6244] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-18418 shell pm install -r -g -t /data/local/tmp/detox/Application.apk exited with code #0
+Sep 13 16:21:38 detox[6888] DEBUG: [EXEC_CMD, #22] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 push "C:\awesome\android\app\build\outputs\apk\androidTest\release\app-release-androidTest.apk" "/data/local/tmp/detox/Test.apk"
+Sep 13 16:21:39 detox[6888] TRACE: [EXEC_SUCCESS, #22] C:\awesome\android\app\build\outputs\apk\androidTest\release\app-release-androidTest.apk: 1 file pushed, 0 skipped. 340.3 MB/s (1841733 bytes in 0.005s)
+
+Sep 13 16:21:39 detox[6888] DEBUG: [SPAWN_CMD, #23, cpid=5620] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-18418 shell pm install -r -g -t /data/local/tmp/detox/Test.apk
+Sep 13 16:21:51 detox[6888] TRACE: [SPAWN_STDOUT, #23, cpid=5620] Success
+
+Sep 13 16:21:51 detox[6888] DEBUG: [SPAWN_END, #23, cpid=5620] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-18418 shell pm install -r -g -t /data/local/tmp/detox/Test.apk exited with code #0
+Sep 13 16:21:52 ROOT_DESCRIBE_BLOCK[6888] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onRunDescribeStart({ name: 'ROOT_DESCRIBE_BLOCK' })
+Sep 13 16:21:52 App[6888] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onRunDescribeStart({ name: 'App' })
+Sep 13 16:21:52 detox[6888] INFO:  [97mApp[39m is assigned to [94memulator-18418 (demotest)[39m
+Sep 13 16:21:52 detox[6888] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeTerminateApp({ deviceId: 'emulator-18418', bundleId: 'com.awesome' })
+Sep 13 16:21:52 detox[6888] DEBUG: [EXEC_CMD, #24] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "am force-stop com.awesome"
+Sep 13 16:21:53 detox[6888] TRACE: [EXEC_SUCCESS, #24] 
+Sep 13 16:21:53 detox[6888] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTerminateApp({ deviceId: 'emulator-18418', bundleId: 'com.awesome' })
+Sep 13 16:21:53 detox[6888] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeLaunchApp({
+  deviceId: 'emulator-18418',
+  bundleId: 'com.awesome',
+  launchArgs: {
+    detoxServer: 'ws://localhost:52904',
+    detoxSessionId: '47c879c1-851a-900f-6ded-6a51741a9257'
+  }
+})
+Sep 13 16:21:53 detox[6888] DEBUG: [EXEC_CMD, #25] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "date +\"%m-%d %T.000\""
+Sep 13 16:21:53 detox[6888] TRACE: [EXEC_SUCCESS, #25] 09-13 16:21:52.000
+
+Sep 13 16:21:53 detox[6888] DEBUG: [EXEC_CMD, #26] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 reverse tcp:52904 tcp:52904
+Sep 13 16:21:53 detox[6888] TRACE: [EXEC_SUCCESS, #26] 
+Sep 13 16:21:53 detox[6888] DEBUG: [EXEC_CMD, #27] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "pm list instrumentation"
+Sep 13 16:21:55 detox[6888] TRACE: [EXEC_SUCCESS, #27] instrumentation:com.awesome.test/androidx.test.runner.AndroidJUnitRunner (target=com.awesome)
+instrumentation:com.example.myapplication.test/androidx.test.runner.AndroidJUnitRunner (target=com.example.myapplication)
+instrumentation:com.jsmarathon.test/androidx.test.runner.AndroidJUnitRunner (target=com.jsmarathon)
+instrumentation:com.sample6.test/androidx.test.runner.AndroidJUnitRunner (target=com.sample6)
+instrumentation:com.testreactnativedetox.test/androidx.test.runner.AndroidJUnitRunner (target=com.testreactnativedetox)
+instrumentation:org.chromium.webview_shell/.WebViewLayoutTestRunner (target=org.chromium.webview_shell)
+
+Sep 13 16:21:55 detox[6888] DEBUG: [SPAWN_CMD, #28, cpid=4196] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-18418 shell am instrument -w -r -e detoxServer ws://localhost:52904 -e detoxSessionId 47c879c1-851a-900f-6ded-6a51741a9257 -e debug false com.awesome.test/androidx.test.runner.AndroidJUnitRunner
+Sep 13 16:21:56 detox[6888] DEBUG: [EXEC_CMD, #29] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "ps | grep \"com\.awesome$\""
+Sep 13 16:21:58 detox[6888] ERROR: [EXEC_FAIL, #29] ""C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "ps | grep \"com\.awesome$\""" failed with error = ChildProcessError: Command failed: "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "ps | grep \"com\.awesome$\""
+ `"C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "ps | grep \"com\.awesome$\""` (exited with error code 1) (code=1), stdout and stderr:
+
+Sep 13 16:21:58 detox[6888] ERROR: [EXEC_FAIL, #29] 
+Sep 13 16:21:58 detox[6888] ERROR: [EXEC_FAIL, #29] 
+Sep 13 16:21:58 detox[6888] DEBUG: [EXEC_CMD, #30] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "ps | grep \"com\.awesome$\""
+Sep 13 16:21:58 detox[6888] TRACE: [EXEC_SUCCESS, #30] u0_a222      27909  1527 1857748  88336 SyS_epoll_wait      0 S com.awesome
+
+Sep 13 16:21:58 detox[27909] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onLaunchApp({
+  deviceId: 'emulator-18418',
+  bundleId: 'com.awesome',
+  launchArgs: {
+    detoxServer: 'ws://localhost:52904',
+    detoxSessionId: '47c879c1-851a-900f-6ded-6a51741a9257'
+  },
+  pid: 27909
+})
+Sep 13 16:21:58 detox[6888] TRACE: [ARTIFACT_START] starting ADBLogcatRecording
+Sep 13 16:21:58 detox[6888] DEBUG: [SPAWN_CMD, #31, cpid=3340] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-18418 shell "logcat -T \"09-13 16:21:52.000\" --pid=27909 -f /sdcard/162056482_0.log"
+Sep 13 16:21:59 detox[6888] DEBUG: [EXEC_CMD, #32] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell du /sdcard/162056482_0.log
+Sep 13 16:21:59 detox[6888] TRACE: [EXEC_SUCCESS, #32] 12	/sdcard/162056482_0.log
+
+Sep 13 16:21:59 detox[6888] TRACE: [SPAWN_STDOUT, #28, cpid=4196] INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.awesome.DetoxTest:
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=runDetoxTests
+INSTRUMENTATION_STATUS: class=com.awesome.DetoxTest
+Sep 13 16:21:59 detox[6888] TRACE: [SPAWN_STDOUT, #28, cpid=4196] 
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS_CODE: 1
+
+Sep 13 16:22:04 detox[6888] DEBUG: [WSS_CONNECTION, #53013] registered a new connection.
+Sep 13 16:22:04 detox[6888] TRACE: [WSS_GET_FROM, #53013] {"messageId":0,"type":"login","params":{"role":"app","sessionId":"47c879c1-851a-900f-6ded-6a51741a9257"}}
+Sep 13 16:22:04 detox[6888] TRACE: [WSS_SEND_TO, #app] {"messageId":0,"type":"loginSuccess","params":{"testerConnected":true,"appConnected":true}}
+Sep 13 16:22:04 detox[6888] TRACE: [SESSION_JOINED] app joined session 47c879c1-851a-900f-6ded-6a51741a9257
+Sep 13 16:22:04 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"type":"appConnected"}
+Sep 13 16:22:04 detox[6888] TRACE: [WS_MESSAGE] {"type":"appConnected"}
+ 
+Sep 13 16:22:04 detox[6888] TRACE: [WS_SEND] {"type":"isReady","params":{},"messageId":-1000}
+Sep 13 16:22:04 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"isReady","params":{},"messageId":-1000}
+Sep 13 16:22:04 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"isReady","params":{},"messageId":-1000}
+Sep 13 16:22:14 detox[6888] TRACE: [WS_SEND] {"type":"currentStatus","params":{},"messageId":1}
+Sep 13 16:22:14 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"currentStatus","params":{},"messageId":1}
+Sep 13 16:22:14 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"currentStatus","params":{},"messageId":1}
+Sep 13 16:22:14 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":1,"type":"currentStatusResult","params":{"status":{"app_status":"busy","busy_resources":[{"name":"looper","description":{"thread":"\"LooperIdlingResource-449-mqt_js\" (JS Thread)","execution_type":"JavaScript code"}},{"name":"bridge"}]}}}
+Sep 13 16:22:14 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":1,"type":"currentStatusResult","params":{"status":{"app_status":"busy","busy_resources":[{"name":"looper","description":{"thread":"\"LooperIdlingResource-449-mqt_js\" (JS Thread)","execution_type":"JavaScript code"}},{"name":"bridge"}]}}}
+Sep 13 16:22:14 detox[6888] TRACE: [WS_MESSAGE] {"messageId":1,"type":"currentStatusResult","params":{"status":{"app_status":"busy","busy_resources":[{"name":"looper","description":{"thread":"\"LooperIdlingResource-449-mqt_js\" (JS Thread)","execution_type":"JavaScript code"}},{"name":"bridge"}]}}}
+ 
+Sep 13 16:22:14 detox[6888] INFO:  [APP_STATUS] The app is busy with the following tasks:
+• "LooperIdlingResource-449-mqt_js" (JS Thread) is executing (JavaScript code).
+• Activity on the React-Native bridge.
+Sep 13 16:22:15 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":-1000,"type":"ready","params":{}}
+Sep 13 16:22:15 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":-1000,"type":"ready","params":{}}
+Sep 13 16:22:15 detox[6888] TRACE: [WS_MESSAGE] {"messageId":-1000,"type":"ready","params":{}}
+ 
+Sep 13 16:22:15 detox[27909] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onAppReady({ deviceId: 'emulator-18418', bundleId: 'com.awesome', pid: 27909 })
+Sep 13 16:22:15 detox[6888] TRACE: [DETOX_BEFORE_EACH] running test: "App can navigate between menu and order tabs"
+Sep 13 16:22:15 detox[6888] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTestStart({
+  title: 'can navigate between menu and order tabs',
+  fullName: 'App can navigate between menu and order tabs',
+  status: 'running',
+  invocations: 1
+})
+Sep 13 16:22:15 detox[6888] TRACE: [ARTIFACT_STOP] stopping ADBLogcatRecording
+Sep 13 16:22:15 detox[6888] DEBUG: [EXEC_CMD, #33] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "date +\"%m-%d %T.000\""
+Sep 13 16:22:15 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":-1000,"type":"ready","params":{}}
+Sep 13 16:22:15 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":-1000,"type":"ready","params":{}}
+Sep 13 16:22:15 detox[6888] TRACE: [WS_MESSAGE] {"messageId":-1000,"type":"ready","params":{}}
+ 
+Sep 13 16:22:15 detox[6888] TRACE: [EXEC_SUCCESS, #33] 09-13 16:22:15.000
+
+Sep 13 16:22:15 detox[3340] TRACE: [SPAWN_KILL] sending SIGINT to: C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-18418 shell logcat -T "09-13 16:21:52.000" --pid=27909 -f /sdcard/162056482_0.log
+Sep 13 16:22:15 detox[6888] DEBUG: [SPAWN_END, #31, cpid=3340] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-18418 shell "logcat -T \"09-13 16:21:52.000\" --pid=27909 -f /sdcard/162056482_0.log" terminated with SIGINT
+Sep 13 16:22:15 detox[6888] TRACE: [ARTIFACT_START] starting ADBLogcatRecording
+Sep 13 16:22:15 detox[6888] DEBUG: [SPAWN_CMD, #34, cpid=3720] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-18418 shell "logcat -T \"09-13 16:22:15.000\" --pid=27909 -f /sdcard/162056482_1.log"
+Sep 13 16:22:15 detox[6888] TRACE: [WS_SEND] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Sep 13 16:22:15 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Sep 13 16:22:15 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Sep 13 16:22:16 detox[6888] DEBUG: [EXEC_CMD, #35] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell du /sdcard/162056482_1.log
+Sep 13 16:22:16 detox[6888] TRACE: [EXEC_SUCCESS, #35] 32	/sdcard/162056482_1.log
+
+Sep 13 16:22:18 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":-1000,"type":"ready","params":{}}
+Sep 13 16:22:18 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":-1000,"type":"ready","params":{}}
+Sep 13 16:22:18 detox[6888] TRACE: [WS_MESSAGE] {"messageId":-1000,"type":"ready","params":{}}
+ 
+Sep 13 16:22:18 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["menu-screen"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForNotNull","args":[]}}]},"messageId":2}
+Sep 13 16:22:18 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["menu-screen"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForNotNull","args":[]}}]},"messageId":2}
+Sep 13 16:22:18 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["menu-screen"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForNotNull","args":[]}}]},"messageId":2}
+Sep 13 16:22:28 detox[6888] TRACE: [WS_SEND] {"type":"currentStatus","params":{},"messageId":3}
+Sep 13 16:22:28 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"currentStatus","params":{},"messageId":3}
+Sep 13 16:22:28 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"currentStatus","params":{},"messageId":3}
+Sep 13 16:22:28 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":3,"type":"currentStatusResult","params":{"status":{"app_status":"busy","busy_resources":[{"name":"looper","description":{"thread":"\"LooperIdlingResource-481-mqt_js\" (JS Thread)","execution_type":"JavaScript code"}},{"name":"looper","description":{"thread":"\"LooperIdlingResource-484-mqt_native_modules\" (Native Modules Thread)","execution_type":"native module calls"}},{"name":"bridge"}]}}}
+Sep 13 16:22:28 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":3,"type":"currentStatusResult","params":{"status":{"app_status":"busy","busy_resources":[{"name":"looper","description":{"thread":"\"LooperIdlingResource-481-mqt_js\" (JS Thread)","execution_type":"JavaScript code"}},{"name":"looper","description":{"thread":"\"LooperIdlingResource-484-mqt_native_modules\" (Native Modules Thread)","execution_type":"native module calls"}},{"name":"bridge"}]}}}
+Sep 13 16:22:28 detox[6888] TRACE: [WS_MESSAGE] {"messageId":3,"type":"currentStatusResult","params":{"status":{"app_status":"busy","busy_resources":[{"name":"looper","description":{"thread":"\"LooperIdlingResource-481-mqt_js\" (JS Thread)","execution_type":"JavaScript code"}},{"name":"looper","description":{"thread":"\"LooperIdlingResource-484-mqt_native_modules\" (Native Modules Thread)","execution_type":"native module calls"}},{"name":"bridge"}]}}}
+ 
+Sep 13 16:22:28 detox[6888] INFO:  [APP_STATUS] The app is busy with the following tasks:
+• "LooperIdlingResource-481-mqt_js" (JS Thread) is executing (JavaScript code).
+• "LooperIdlingResource-484-mqt_native_modules" (Native Modules Thread) is executing (native module calls).
+• Activity on the React-Native bridge.
+Sep 13 16:22:30 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":2,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:22:30 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":2,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:22:30 detox[6888] TRACE: [WS_MESSAGE] {"messageId":2,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:22:30 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["orders-tab"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":4}
+Sep 13 16:22:30 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["orders-tab"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":4}
+Sep 13 16:22:30 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["orders-tab"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":4}
+Sep 13 16:22:33 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":4,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:22:33 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":4,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:22:33 detox[6888] TRACE: [WS_MESSAGE] {"messageId":4,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:22:33 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["orders-list"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}}]},"messageId":5}
+Sep 13 16:22:33 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["orders-list"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}}]},"messageId":5}
+Sep 13 16:22:33 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["orders-list"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}}]},"messageId":5}
+Sep 13 16:22:33 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":5,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:22:33 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":5,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:22:33 detox[6888] TRACE: [WS_MESSAGE] {"messageId":5,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:22:33 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["menu-tab"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":6}
+Sep 13 16:22:33 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["menu-tab"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":6}
+Sep 13 16:22:33 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["menu-tab"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":6}
+Sep 13 16:22:34 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":6,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:22:34 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":6,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:22:34 detox[6888] TRACE: [WS_MESSAGE] {"messageId":6,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:22:34 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["menu-screen"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForNotNull","args":[]}}]},"messageId":7}
+Sep 13 16:22:34 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["menu-screen"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForNotNull","args":[]}}]},"messageId":7}
+Sep 13 16:22:34 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["menu-screen"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForNotNull","args":[]}}]},"messageId":7}
+Sep 13 16:22:34 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":7,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:22:34 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":7,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:22:34 detox[6888] TRACE: [WS_MESSAGE] {"messageId":7,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:22:34 detox[6888] TRACE: [DETOX_AFTER_EACH] passed test: "App can navigate between menu and order tabs"
+Sep 13 16:22:34 detox[6888] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTestDone({
+  title: 'can navigate between menu and order tabs',
+  fullName: 'App can navigate between menu and order tabs',
+  status: 'passed',
+  invocations: 1,
+  timedOut: false
+})
+Sep 13 16:22:34 detox[6888] TRACE: [ARTIFACT_STOP] stopping ADBLogcatRecording
+Sep 13 16:22:34 detox[6888] DEBUG: [EXEC_CMD, #36] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "date +\"%m-%d %T.000\""
+Sep 13 16:22:34 detox[6888] TRACE: [EXEC_SUCCESS, #36] 09-13 16:22:34.000
+
+Sep 13 16:22:34 detox[3720] TRACE: [SPAWN_KILL] sending SIGINT to: C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-18418 shell logcat -T "09-13 16:22:15.000" --pid=27909 -f /sdcard/162056482_1.log
+Sep 13 16:22:34 detox[6888] DEBUG: [SPAWN_END, #34, cpid=3720] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-18418 shell "logcat -T \"09-13 16:22:15.000\" --pid=27909 -f /sdcard/162056482_1.log" terminated with SIGINT
+Sep 13 16:22:34 detox[6888] TRACE: [DETOX_BEFORE_EACH] running test: "App can navigate to orders tab and view previous orders"
+Sep 13 16:22:34 detox[6888] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTestStart({
+  title: 'can navigate to orders tab and view previous orders',
+  fullName: 'App can navigate to orders tab and view previous orders',
+  status: 'running',
+  invocations: 1
+})
+Sep 13 16:22:34 detox[6888] TRACE: [ARTIFACT_START] starting ADBLogcatRecording
+Sep 13 16:22:34 detox[6888] DEBUG: [SPAWN_CMD, #37, cpid=6440] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-18418 shell "logcat -T \"09-13 16:22:34.000\" --pid=27909 -f /sdcard/162056482_2.log"
+Sep 13 16:22:34 detox[6888] TRACE: [WS_SEND] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Sep 13 16:22:34 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Sep 13 16:22:34 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Sep 13 16:22:34 detox[6888] TRACE: [ARTIFACT_SAVE] saving ADBLogcatRecording to: artifacts\android.2022-09-13 10-50-50Z\✓ App can navigate between menu and order tabs\device.log
+Sep 13 16:22:34 detox[6888] DEBUG: [EXEC_CMD, #38] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 pull "/sdcard/162056482_1.log" "artifacts\android.2022-09-13 10-50-50Z\✓ App can navigate between menu and order tabs\device.log"
+Sep 13 16:22:35 detox[6888] TRACE: [EXEC_SUCCESS, #38] /sdcard/162056482_1.log: 1 file pulled, 0 skipped. 1.2 MB/s (53178 bytes in 0.042s)
+
+Sep 13 16:22:35 detox[6888] DEBUG: [EXEC_CMD, #39] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "rm  \"/sdcard/162056482_1.log\""
+Sep 13 16:22:35 detox[6888] DEBUG: [EXEC_CMD, #40] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell du /sdcard/162056482_2.log
+Sep 13 16:22:35 detox[6888] TRACE: [EXEC_SUCCESS, #39] 
+Sep 13 16:22:35 detox[6888] TRACE: [ARTIFACT_SAVE] saving ADBLogcatRecording to: artifacts\android.2022-09-13 10-50-50Z\emulator-18418 2022-09-13 10-52-35Z.startup.log
+Sep 13 16:22:35 detox[6888] DEBUG: [EXEC_CMD, #41] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 pull "/sdcard/162056482_0.log" "artifacts\android.2022-09-13 10-50-50Z\emulator-18418 2022-09-13 10-52-35Z.startup.log"
+Sep 13 16:22:35 detox[6888] TRACE: [EXEC_SUCCESS, #40] 12	/sdcard/162056482_2.log
+
+Sep 13 16:22:35 detox[6888] TRACE: [EXEC_SUCCESS, #41] /sdcard/162056482_0.log: 1 file pulled, 0 skipped. 2.4 MB/s (47615 bytes in 0.019s)
+
+Sep 13 16:22:35 detox[6888] DEBUG: [EXEC_CMD, #42] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "rm  \"/sdcard/162056482_0.log\""
+Sep 13 16:22:35 detox[6888] TRACE: [EXEC_SUCCESS, #42] 
+Sep 13 16:22:36 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":-1000,"type":"ready","params":{}}
+Sep 13 16:22:36 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":-1000,"type":"ready","params":{}}
+Sep 13 16:22:36 detox[6888] TRACE: [WS_MESSAGE] {"messageId":-1000,"type":"ready","params":{}}
+ 
+Sep 13 16:22:36 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["orders-tab"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":8}
+Sep 13 16:22:36 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["orders-tab"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":8}
+Sep 13 16:22:36 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["orders-tab"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":8}
+Sep 13 16:22:46 detox[6888] TRACE: [WS_SEND] {"type":"currentStatus","params":{},"messageId":9}
+Sep 13 16:22:46 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"currentStatus","params":{},"messageId":9}
+Sep 13 16:22:46 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"currentStatus","params":{},"messageId":9}
+Sep 13 16:22:46 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":9,"type":"currentStatusResult","params":{"status":{"app_status":"idle"}}}
+Sep 13 16:22:46 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":9,"type":"currentStatusResult","params":{"status":{"app_status":"idle"}}}
+Sep 13 16:22:46 detox[6888] TRACE: [WS_MESSAGE] {"messageId":9,"type":"currentStatusResult","params":{"status":{"app_status":"idle"}}}
+ 
+Sep 13 16:22:46 detox[6888] INFO:  [APP_STATUS] The app seems to be idle
+Sep 13 16:22:47 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":8,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:22:47 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":8,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:22:47 detox[6888] TRACE: [WS_MESSAGE] {"messageId":8,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:22:47 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherWithDescendant","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["order-item"]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Status: delivered"]}}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}}]},"messageId":10}
+Sep 13 16:22:47 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherWithDescendant","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["order-item"]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Status: delivered"]}}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}}]},"messageId":10}
+Sep 13 16:22:47 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherWithDescendant","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["order-item"]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Status: delivered"]}}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}}]},"messageId":10}
+Sep 13 16:22:47 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":10,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:22:47 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":10,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:22:47 detox[6888] TRACE: [WS_MESSAGE] {"messageId":10,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:22:47 detox[6888] TRACE: [DETOX_AFTER_EACH] passed test: "App can navigate to orders tab and view previous orders"
+Sep 13 16:22:47 detox[6888] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTestDone({
+  title: 'can navigate to orders tab and view previous orders',
+  fullName: 'App can navigate to orders tab and view previous orders',
+  status: 'passed',
+  invocations: 1,
+  timedOut: false
+})
+Sep 13 16:22:47 detox[6888] TRACE: [ARTIFACT_STOP] stopping ADBLogcatRecording
+Sep 13 16:22:47 detox[6888] DEBUG: [EXEC_CMD, #43] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "date +\"%m-%d %T.000\""
+Sep 13 16:22:48 detox[6888] TRACE: [EXEC_SUCCESS, #43] 09-13 16:22:47.000
+
+Sep 13 16:22:48 detox[6440] TRACE: [SPAWN_KILL] sending SIGINT to: C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-18418 shell logcat -T "09-13 16:22:34.000" --pid=27909 -f /sdcard/162056482_2.log
+Sep 13 16:22:48 detox[6888] DEBUG: [SPAWN_END, #37, cpid=6440] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-18418 shell "logcat -T \"09-13 16:22:34.000\" --pid=27909 -f /sdcard/162056482_2.log" terminated with SIGINT
+Sep 13 16:22:48 detox[6888] TRACE: [DETOX_BEFORE_EACH] running test: "App build screen can add and remove toppings"
+Sep 13 16:22:48 detox[6888] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTestStart({
+  title: 'build screen can add and remove toppings',
+  fullName: 'App build screen can add and remove toppings',
+  status: 'running',
+  invocations: 1
+})
+Sep 13 16:22:48 detox[6888] TRACE: [ARTIFACT_START] starting ADBLogcatRecording
+Sep 13 16:22:48 detox[6888] DEBUG: [SPAWN_CMD, #44, cpid=7648] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-18418 shell "logcat -T \"09-13 16:22:47.000\" --pid=27909 -f /sdcard/162056482_3.log"
+Sep 13 16:22:48 detox[6888] TRACE: [WS_SEND] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Sep 13 16:22:48 detox[6888] TRACE: [ARTIFACT_SAVE] saving ADBLogcatRecording to: artifacts\android.2022-09-13 10-50-50Z\✓ App can navigate to orders tab and view previous orders\device.log
+Sep 13 16:22:48 detox[6888] DEBUG: [EXEC_CMD, #45] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 pull "/sdcard/162056482_2.log" "artifacts\android.2022-09-13 10-50-50Z\✓ App can navigate to orders tab and view previous orders\device.log"
+Sep 13 16:22:48 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Sep 13 16:22:48 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Sep 13 16:22:48 detox[6888] TRACE: [EXEC_SUCCESS, #45] /sdcard/162056482_2.log: 1 file pulled, 0 skipped. 1.2 MB/s (23876 bytes in 0.019s)
+
+Sep 13 16:22:48 detox[6888] DEBUG: [EXEC_CMD, #46] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "rm  \"/sdcard/162056482_2.log\""
+Sep 13 16:22:48 detox[6888] DEBUG: [EXEC_CMD, #47] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell du /sdcard/162056482_3.log
+Sep 13 16:22:48 detox[6888] TRACE: [EXEC_SUCCESS, #47] 12	/sdcard/162056482_3.log
+
+Sep 13 16:22:48 detox[6888] TRACE: [EXEC_SUCCESS, #46] 
+Sep 13 16:22:49 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":-1000,"type":"ready","params":{}}
+Sep 13 16:22:49 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":-1000,"type":"ready","params":{}}
+Sep 13 16:22:49 detox[6888] TRACE: [WS_MESSAGE] {"messageId":-1000,"type":"ready","params":{}}
+ 
+Sep 13 16:22:49 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Build Your Own"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":11}
+Sep 13 16:22:49 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Build Your Own"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":11}
+Sep 13 16:22:49 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Build Your Own"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":11}
+Sep 13 16:22:59 detox[6888] TRACE: [WS_SEND] {"type":"currentStatus","params":{},"messageId":12}
+Sep 13 16:22:59 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"currentStatus","params":{},"messageId":12}
+Sep 13 16:22:59 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"currentStatus","params":{},"messageId":12}
+Sep 13 16:22:59 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":12,"type":"currentStatusResult","params":{"status":{"app_status":"busy","busy_resources":[{"name":"looper","description":{"thread":"\"LooperIdlingResource-505-mqt_js\" (JS Thread)","execution_type":"JavaScript code"}},{"name":"looper","description":{"thread":"\"LooperIdlingResource-506-mqt_native_modules\" (Native Modules Thread)","execution_type":"native module calls"}},{"name":"ui","description":{"reason":"UI rendering activity"}},{"name":"bridge"}]}}}
+Sep 13 16:22:59 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":12,"type":"currentStatusResult","params":{"status":{"app_status":"busy","busy_resources":[{"name":"looper","description":{"thread":"\"LooperIdlingResource-505-mqt_js\" (JS Thread)","execution_type":"JavaScript code"}},{"name":"looper","description":{"thread":"\"LooperIdlingResource-506-mqt_native_modules\" (Native Modules Thread)","execution_type":"native module calls"}},{"name":"ui","description":{"reason":"UI rendering activity"}},{"name":"bridge"}]}}}
+Sep 13 16:22:59 detox[6888] TRACE: [WS_MESSAGE] {"messageId":12,"type":"currentStatusResult","params":{"status":{"app_status":"busy","busy_resources":[{"name":"looper","description":{"thread":"\"LooperIdlingResource-505-mqt_js\" (JS Thread)","execution_type":"JavaScript code"}},{"name":"looper","description":{"thread":"\"LooperIdlingResource-506-mqt_native_modules\" (Native Modules Thread)","execution_type":"native module calls"}},{"name":"ui","description":{"reason":"UI rendering activity"}},{"name":"bridge"}]}}}
+ 
+Sep 13 16:22:59 detox[6888] INFO:  [APP_STATUS] The app is busy with the following tasks:
+• "LooperIdlingResource-505-mqt_js" (JS Thread) is executing (JavaScript code).
+• "LooperIdlingResource-506-mqt_native_modules" (Native Modules Thread) is executing (native module calls).
+• UI elements are busy:
+  - Reason: UI rendering activity.
+• Activity on the React-Native bridge.
+Sep 13 16:23:05 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":11,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:05 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":11,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:05 detox[6888] TRACE: [WS_MESSAGE] {"messageId":11,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:23:05 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["PEPPERONI"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":13}
+Sep 13 16:23:05 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["PEPPERONI"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":13}
+Sep 13 16:23:05 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["PEPPERONI"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":13}
+Sep 13 16:23:06 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":13,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:06 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":13,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:06 detox[6888] TRACE: [WS_MESSAGE] {"messageId":13,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:23:06 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BASIL"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":14}
+Sep 13 16:23:06 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BASIL"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":14}
+Sep 13 16:23:06 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BASIL"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":14}
+Sep 13 16:23:08 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":14,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:08 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":14,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:08 detox[6888] TRACE: [WS_MESSAGE] {"messageId":14,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:23:08 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BACON"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":15}
+Sep 13 16:23:08 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BACON"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":15}
+Sep 13 16:23:08 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BACON"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":15}
+Sep 13 16:23:10 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":15,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:10 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":15,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:10 detox[6888] TRACE: [WS_MESSAGE] {"messageId":15,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:23:10 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherWithAncestor","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["PEPPERONI"]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["selected-toppings"]}}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForNotNull","args":[]}}]},"messageId":16}
+Sep 13 16:23:10 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherWithAncestor","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["PEPPERONI"]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["selected-toppings"]}}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForNotNull","args":[]}}]},"messageId":16}
+Sep 13 16:23:10 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherWithAncestor","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["PEPPERONI"]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["selected-toppings"]}}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForNotNull","args":[]}}]},"messageId":16}
+Sep 13 16:23:10 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":16,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:10 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":16,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:10 detox[6888] TRACE: [WS_MESSAGE] {"messageId":16,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:23:10 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherWithAncestor","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BASIL"]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["selected-toppings"]}}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForNotNull","args":[]}}]},"messageId":17}
+Sep 13 16:23:10 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherWithAncestor","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BASIL"]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["selected-toppings"]}}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForNotNull","args":[]}}]},"messageId":17}
+Sep 13 16:23:10 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherWithAncestor","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BASIL"]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["selected-toppings"]}}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForNotNull","args":[]}}]},"messageId":17}
+Sep 13 16:23:10 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":17,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:10 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":17,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:10 detox[6888] TRACE: [WS_MESSAGE] {"messageId":17,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:23:10 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherWithAncestor","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BACON"]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["selected-toppings"]}}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForNotNull","args":[]}}]},"messageId":18}
+Sep 13 16:23:10 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherWithAncestor","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BACON"]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["selected-toppings"]}}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForNotNull","args":[]}}]},"messageId":18}
+Sep 13 16:23:10 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherWithAncestor","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BACON"]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["selected-toppings"]}}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForNotNull","args":[]}}]},"messageId":18}
+Sep 13 16:23:10 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":18,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:10 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":18,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:10 detox[6888] TRACE: [WS_MESSAGE] {"messageId":18,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:23:10 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["total"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["$20"]}}]},"messageId":19}
+Sep 13 16:23:10 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["total"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["$20"]}}]},"messageId":19}
+Sep 13 16:23:10 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["total"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["$20"]}}]},"messageId":19}
+Sep 13 16:23:10 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":19,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:10 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":19,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:10 detox[6888] TRACE: [WS_MESSAGE] {"messageId":19,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:23:10 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BASIL"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":20}
+Sep 13 16:23:10 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BASIL"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":20}
+Sep 13 16:23:10 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BASIL"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":20}
+Sep 13 16:23:12 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":20,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:12 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":20,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:12 detox[6888] TRACE: [WS_MESSAGE] {"messageId":20,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:23:12 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherWithAncestor","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BASIL"]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["available-toppings"]}}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForNotNull","args":[]}}]},"messageId":21}
+Sep 13 16:23:12 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherWithAncestor","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BASIL"]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["available-toppings"]}}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForNotNull","args":[]}}]},"messageId":21}
+Sep 13 16:23:12 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherWithAncestor","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BASIL"]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["available-toppings"]}}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForNotNull","args":[]}}]},"messageId":21}
+Sep 13 16:23:12 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":21,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:12 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":21,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:12 detox[6888] TRACE: [WS_MESSAGE] {"messageId":21,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:23:12 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["total"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["$18"]}}]},"messageId":22}
+Sep 13 16:23:12 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["total"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["$18"]}}]},"messageId":22}
+Sep 13 16:23:12 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["total"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["$18"]}}]},"messageId":22}
+Sep 13 16:23:12 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":22,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:12 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":22,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:12 detox[6888] TRACE: [WS_MESSAGE] {"messageId":22,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:23:12 detox[6888] TRACE: [DETOX_AFTER_EACH] passed test: "App build screen can add and remove toppings"
+Sep 13 16:23:12 detox[6888] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTestDone({
+  title: 'build screen can add and remove toppings',
+  fullName: 'App build screen can add and remove toppings',
+  status: 'passed',
+  invocations: 1,
+  timedOut: false
+})
+Sep 13 16:23:12 detox[6888] TRACE: [ARTIFACT_STOP] stopping ADBLogcatRecording
+Sep 13 16:23:12 detox[6888] DEBUG: [EXEC_CMD, #48] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "date +\"%m-%d %T.000\""
+Sep 13 16:23:12 detox[6888] TRACE: [EXEC_SUCCESS, #48] 09-13 16:23:12.000
+
+Sep 13 16:23:12 detox[7648] TRACE: [SPAWN_KILL] sending SIGINT to: C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-18418 shell logcat -T "09-13 16:22:47.000" --pid=27909 -f /sdcard/162056482_3.log
+Sep 13 16:23:12 detox[6888] DEBUG: [SPAWN_END, #44, cpid=7648] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-18418 shell "logcat -T \"09-13 16:22:47.000\" --pid=27909 -f /sdcard/162056482_3.log" terminated with SIGINT
+Sep 13 16:23:12 detox[6888] TRACE: [DETOX_BEFORE_EACH] running test: "App build screen can select toppings, pick a size, and submit order"
+Sep 13 16:23:12 detox[6888] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTestStart({
+  title: 'build screen can select toppings, pick a size, and submit order',
+  fullName: 'App build screen can select toppings, pick a size, and submit order',
+  status: 'running',
+  invocations: 1
+})
+Sep 13 16:23:12 detox[6888] TRACE: [ARTIFACT_START] starting ADBLogcatRecording
+Sep 13 16:23:12 detox[6888] DEBUG: [SPAWN_CMD, #49, cpid=3800] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-18418 shell "logcat -T \"09-13 16:23:12.000\" --pid=27909 -f /sdcard/162056482_4.log"
+Sep 13 16:23:12 detox[6888] TRACE: [WS_SEND] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Sep 13 16:23:12 detox[6888] TRACE: [ARTIFACT_SAVE] saving ADBLogcatRecording to: artifacts\android.2022-09-13 10-50-50Z\✓ App build screen can add and remove toppings\device.log
+Sep 13 16:23:12 detox[6888] DEBUG: [EXEC_CMD, #50] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 pull "/sdcard/162056482_3.log" "artifacts\android.2022-09-13 10-50-50Z\✓ App build screen can add and remove toppings\device.log"
+Sep 13 16:23:12 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Sep 13 16:23:12 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Sep 13 16:23:13 detox[6888] TRACE: [EXEC_SUCCESS, #50] /sdcard/162056482_3.log: 1 file pulled, 0 skipped. 0.8 MB/s (48390 bytes in 0.055s)
+
+Sep 13 16:23:13 detox[6888] DEBUG: [EXEC_CMD, #51] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "rm  \"/sdcard/162056482_3.log\""
+Sep 13 16:23:13 detox[6888] DEBUG: [EXEC_CMD, #52] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell du /sdcard/162056482_4.log
+Sep 13 16:23:13 detox[6888] TRACE: [EXEC_SUCCESS, #52] 16	/sdcard/162056482_4.log
+
+Sep 13 16:23:13 detox[6888] TRACE: [EXEC_SUCCESS, #51] 
+Sep 13 16:23:14 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":-1000,"type":"ready","params":{}}
+Sep 13 16:23:14 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":-1000,"type":"ready","params":{}}
+Sep 13 16:23:14 detox[6888] TRACE: [WS_MESSAGE] {"messageId":-1000,"type":"ready","params":{}}
+ 
+Sep 13 16:23:14 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Build Your Own"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":23}
+Sep 13 16:23:14 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Build Your Own"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":23}
+Sep 13 16:23:14 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Build Your Own"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":23}
+Sep 13 16:23:24 detox[6888] TRACE: [WS_SEND] {"type":"currentStatus","params":{},"messageId":24}
+Sep 13 16:23:24 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"currentStatus","params":{},"messageId":24}
+Sep 13 16:23:24 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"currentStatus","params":{},"messageId":24}
+Sep 13 16:23:24 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":24,"type":"currentStatusResult","params":{"status":{"app_status":"busy","busy_resources":[{"name":"looper","description":{"thread":"\"LooperIdlingResource-509-mqt_js\" (JS Thread)","execution_type":"JavaScript code"}},{"name":"looper","description":{"thread":"\"LooperIdlingResource-510-mqt_native_modules\" (Native Modules Thread)","execution_type":"native module calls"}},{"name":"bridge"}]}}}
+Sep 13 16:23:24 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":24,"type":"currentStatusResult","params":{"status":{"app_status":"busy","busy_resources":[{"name":"looper","description":{"thread":"\"LooperIdlingResource-509-mqt_js\" (JS Thread)","execution_type":"JavaScript code"}},{"name":"looper","description":{"thread":"\"LooperIdlingResource-510-mqt_native_modules\" (Native Modules Thread)","execution_type":"native module calls"}},{"name":"bridge"}]}}}
+Sep 13 16:23:24 detox[6888] TRACE: [WS_MESSAGE] {"messageId":24,"type":"currentStatusResult","params":{"status":{"app_status":"busy","busy_resources":[{"name":"looper","description":{"thread":"\"LooperIdlingResource-509-mqt_js\" (JS Thread)","execution_type":"JavaScript code"}},{"name":"looper","description":{"thread":"\"LooperIdlingResource-510-mqt_native_modules\" (Native Modules Thread)","execution_type":"native module calls"}},{"name":"bridge"}]}}}
+ 
+Sep 13 16:23:24 detox[6888] INFO:  [APP_STATUS] The app is busy with the following tasks:
+• "LooperIdlingResource-509-mqt_js" (JS Thread) is executing (JavaScript code).
+• "LooperIdlingResource-510-mqt_native_modules" (Native Modules Thread) is executing (native module calls).
+• Activity on the React-Native bridge.
+Sep 13 16:23:27 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":23,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:27 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":23,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:27 detox[6888] TRACE: [WS_MESSAGE] {"messageId":23,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:23:27 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["PEPPERONI"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":25}
+Sep 13 16:23:27 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["PEPPERONI"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":25}
+Sep 13 16:23:27 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["PEPPERONI"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":25}
+Sep 13 16:23:29 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":25,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:29 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":25,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:29 detox[6888] TRACE: [WS_MESSAGE] {"messageId":25,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:23:29 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BASIL"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":26}
+Sep 13 16:23:29 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BASIL"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":26}
+Sep 13 16:23:29 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BASIL"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":26}
+Sep 13 16:23:30 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":26,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:30 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":26,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:30 detox[6888] TRACE: [WS_MESSAGE] {"messageId":26,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:23:30 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BACON"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":27}
+Sep 13 16:23:30 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BACON"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":27}
+Sep 13 16:23:30 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BACON"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":27}
+Sep 13 16:23:32 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":27,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:32 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":27,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:32 detox[6888] TRACE: [WS_MESSAGE] {"messageId":27,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:23:32 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["small"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":28}
+Sep 13 16:23:32 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["small"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":28}
+Sep 13 16:23:32 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["small"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":28}
+Sep 13 16:23:34 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":28,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:34 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":28,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:34 detox[6888] TRACE: [WS_MESSAGE] {"messageId":28,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:23:34 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["total"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["$16"]}}]},"messageId":29}
+Sep 13 16:23:34 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["total"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["$16"]}}]},"messageId":29}
+Sep 13 16:23:34 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["total"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["$16"]}}]},"messageId":29}
+Sep 13 16:23:34 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":29,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:34 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":29,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:34 detox[6888] TRACE: [WS_MESSAGE] {"messageId":29,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:23:34 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["submit-order"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":30}
+Sep 13 16:23:34 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["submit-order"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":30}
+Sep 13 16:23:34 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["submit-order"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":30}
+Sep 13 16:23:37 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":30,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:37 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":30,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:37 detox[6888] TRACE: [WS_MESSAGE] {"messageId":30,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:23:37 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherWithDescendant","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["order-item"]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Custom"]}}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForNotNull","args":[]}}]},"messageId":31}
+Sep 13 16:23:37 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherWithDescendant","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["order-item"]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Custom"]}}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForNotNull","args":[]}}]},"messageId":31}
+Sep 13 16:23:37 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherWithDescendant","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["order-item"]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Custom"]}}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForNotNull","args":[]}}]},"messageId":31}
+Sep 13 16:23:37 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":31,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:37 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":31,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:37 detox[6888] TRACE: [WS_MESSAGE] {"messageId":31,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:23:37 detox[6888] TRACE: [DETOX_AFTER_EACH] passed test: "App build screen can select toppings, pick a size, and submit order"
+Sep 13 16:23:37 detox[6888] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTestDone({
+  title: 'build screen can select toppings, pick a size, and submit order',
+  fullName: 'App build screen can select toppings, pick a size, and submit order',
+  status: 'passed',
+  invocations: 1,
+  timedOut: false
+})
+Sep 13 16:23:37 detox[6888] TRACE: [ARTIFACT_STOP] stopping ADBLogcatRecording
+Sep 13 16:23:37 detox[6888] DEBUG: [EXEC_CMD, #53] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "date +\"%m-%d %T.000\""
+Sep 13 16:23:37 detox[6888] TRACE: [EXEC_SUCCESS, #53] 09-13 16:23:37.000
+
+Sep 13 16:23:37 detox[3800] TRACE: [SPAWN_KILL] sending SIGINT to: C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-18418 shell logcat -T "09-13 16:23:12.000" --pid=27909 -f /sdcard/162056482_4.log
+Sep 13 16:23:37 detox[6888] DEBUG: [SPAWN_END, #49, cpid=3800] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-18418 shell "logcat -T \"09-13 16:23:12.000\" --pid=27909 -f /sdcard/162056482_4.log" terminated with SIGINT
+Sep 13 16:23:37 detox[6888] TRACE: [DETOX_BEFORE_EACH] running test: "App build screen with all values selected for medium size"
+Sep 13 16:23:37 detox[6888] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTestStart({
+  title: 'build screen with all values selected for medium size',
+  fullName: 'App build screen with all values selected for medium size',
+  status: 'running',
+  invocations: 1
+})
+Sep 13 16:23:37 detox[6888] TRACE: [ARTIFACT_START] starting ADBLogcatRecording
+Sep 13 16:23:37 detox[6888] DEBUG: [SPAWN_CMD, #54, cpid=6908] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-18418 shell "logcat -T \"09-13 16:23:37.000\" --pid=27909 -f /sdcard/162056482_5.log"
+Sep 13 16:23:37 detox[6888] TRACE: [WS_SEND] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Sep 13 16:23:37 detox[6888] TRACE: [ARTIFACT_SAVE] saving ADBLogcatRecording to: artifacts\android.2022-09-13 10-50-50Z\✓ App build screen can select toppings, pick a size, and submit order\device.log
+Sep 13 16:23:37 detox[6888] DEBUG: [EXEC_CMD, #55] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 pull "/sdcard/162056482_4.log" "artifacts\android.2022-09-13 10-50-50Z\✓ App build screen can select toppings, pick a size, and submit order\device.log"
+Sep 13 16:23:37 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Sep 13 16:23:37 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Sep 13 16:23:37 detox[6888] TRACE: [EXEC_SUCCESS, #55] /sdcard/162056482_4.log: 1 file pulled, 0 skipped. 2.7 MB/s (40186 bytes in 0.014s)
+
+Sep 13 16:23:37 detox[6888] DEBUG: [EXEC_CMD, #56] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "rm  \"/sdcard/162056482_4.log\""
+Sep 13 16:23:37 detox[6888] DEBUG: [EXEC_CMD, #57] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell du /sdcard/162056482_5.log
+Sep 13 16:23:38 detox[6888] TRACE: [EXEC_SUCCESS, #56] 
+Sep 13 16:23:38 detox[6888] TRACE: [EXEC_SUCCESS, #57] 8	/sdcard/162056482_5.log
+
+Sep 13 16:23:38 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":-1000,"type":"ready","params":{}}
+Sep 13 16:23:38 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":-1000,"type":"ready","params":{}}
+Sep 13 16:23:38 detox[6888] TRACE: [WS_MESSAGE] {"messageId":-1000,"type":"ready","params":{}}
+ 
+Sep 13 16:23:38 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Build Your Own"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":32}
+Sep 13 16:23:38 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Build Your Own"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":32}
+Sep 13 16:23:38 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Build Your Own"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":32}
+Sep 13 16:23:48 detox[6888] TRACE: [WS_SEND] {"type":"currentStatus","params":{},"messageId":33}
+Sep 13 16:23:48 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"currentStatus","params":{},"messageId":33}
+Sep 13 16:23:48 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"currentStatus","params":{},"messageId":33}
+Sep 13 16:23:48 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":33,"type":"currentStatusResult","params":{"status":{"app_status":"busy","busy_resources":[{"name":"looper","description":{"thread":"\"LooperIdlingResource-513-mqt_js\" (JS Thread)","execution_type":"JavaScript code"}},{"name":"looper","description":{"thread":"\"LooperIdlingResource-514-mqt_native_modules\" (Native Modules Thread)","execution_type":"native module calls"}},{"name":"bridge"}]}}}
+Sep 13 16:23:48 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":33,"type":"currentStatusResult","params":{"status":{"app_status":"busy","busy_resources":[{"name":"looper","description":{"thread":"\"LooperIdlingResource-513-mqt_js\" (JS Thread)","execution_type":"JavaScript code"}},{"name":"looper","description":{"thread":"\"LooperIdlingResource-514-mqt_native_modules\" (Native Modules Thread)","execution_type":"native module calls"}},{"name":"bridge"}]}}}
+Sep 13 16:23:48 detox[6888] TRACE: [WS_MESSAGE] {"messageId":33,"type":"currentStatusResult","params":{"status":{"app_status":"busy","busy_resources":[{"name":"looper","description":{"thread":"\"LooperIdlingResource-513-mqt_js\" (JS Thread)","execution_type":"JavaScript code"}},{"name":"looper","description":{"thread":"\"LooperIdlingResource-514-mqt_native_modules\" (Native Modules Thread)","execution_type":"native module calls"}},{"name":"bridge"}]}}}
+ 
+Sep 13 16:23:48 detox[6888] INFO:  [APP_STATUS] The app is busy with the following tasks:
+• "LooperIdlingResource-513-mqt_js" (JS Thread) is executing (JavaScript code).
+• "LooperIdlingResource-514-mqt_native_modules" (Native Modules Thread) is executing (native module calls).
+• Activity on the React-Native bridge.
+Sep 13 16:23:51 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":32,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:51 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":32,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:51 detox[6888] TRACE: [WS_MESSAGE] {"messageId":32,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:23:51 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["PEPPERONI"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":34}
+Sep 13 16:23:51 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["PEPPERONI"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":34}
+Sep 13 16:23:51 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["PEPPERONI"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":34}
+Sep 13 16:23:54 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":34,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:54 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":34,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:54 detox[6888] TRACE: [WS_MESSAGE] {"messageId":34,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:23:54 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BASIL"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":35}
+Sep 13 16:23:54 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BASIL"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":35}
+Sep 13 16:23:54 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BASIL"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":35}
+Sep 13 16:23:55 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":35,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:55 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":35,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:55 detox[6888] TRACE: [WS_MESSAGE] {"messageId":35,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:23:55 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["MOZZARELLA"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":36}
+Sep 13 16:23:55 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["MOZZARELLA"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":36}
+Sep 13 16:23:55 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["MOZZARELLA"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":36}
+Sep 13 16:23:58 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":36,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:58 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":36,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:58 detox[6888] TRACE: [WS_MESSAGE] {"messageId":36,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:23:58 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["SAUSAGE"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":37}
+Sep 13 16:23:58 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["SAUSAGE"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":37}
+Sep 13 16:23:58 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["SAUSAGE"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":37}
+Sep 13 16:23:59 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":37,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:59 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":37,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:23:59 detox[6888] TRACE: [WS_MESSAGE] {"messageId":37,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:23:59 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BELL PEPPERS"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":38}
+Sep 13 16:23:59 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BELL PEPPERS"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":38}
+Sep 13 16:23:59 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BELL PEPPERS"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":38}
+Sep 13 16:24:01 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":38,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:24:01 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":38,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:24:01 detox[6888] TRACE: [WS_MESSAGE] {"messageId":38,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:24:01 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["ONIONS"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":39}
+Sep 13 16:24:01 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["ONIONS"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":39}
+Sep 13 16:24:01 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["ONIONS"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":39}
+Sep 13 16:24:03 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":39,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:24:03 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":39,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:24:03 detox[6888] TRACE: [WS_MESSAGE] {"messageId":39,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:24:03 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["OLIVES"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":40}
+Sep 13 16:24:03 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["OLIVES"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":40}
+Sep 13 16:24:03 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["OLIVES"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":40}
+Sep 13 16:24:04 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":40,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:24:04 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":40,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:24:04 detox[6888] TRACE: [WS_MESSAGE] {"messageId":40,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:24:04 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BACON"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":41}
+Sep 13 16:24:04 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BACON"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":41}
+Sep 13 16:24:04 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BACON"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":41}
+Sep 13 16:24:06 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":41,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:24:06 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":41,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:24:06 detox[6888] TRACE: [WS_MESSAGE] {"messageId":41,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:24:06 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["HAM"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":42}
+Sep 13 16:24:06 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["HAM"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":42}
+Sep 13 16:24:06 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["HAM"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":42}
+Sep 13 16:24:08 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":42,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:24:08 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":42,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:24:08 detox[6888] TRACE: [WS_MESSAGE] {"messageId":42,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:24:08 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["MUSHROOMS"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":43}
+Sep 13 16:24:08 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["MUSHROOMS"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":43}
+Sep 13 16:24:08 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["MUSHROOMS"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":43}
+Sep 13 16:24:10 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":43,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:24:10 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":43,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:24:10 detox[6888] TRACE: [WS_MESSAGE] {"messageId":43,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:24:10 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["medium"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":44}
+Sep 13 16:24:10 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["medium"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":44}
+Sep 13 16:24:10 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["medium"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":44}
+Sep 13 16:24:11 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":44,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:24:11 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":44,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:24:11 detox[6888] TRACE: [WS_MESSAGE] {"messageId":44,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:24:11 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["total"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["$34"]}}]},"messageId":45}
+Sep 13 16:24:11 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["total"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["$34"]}}]},"messageId":45}
+Sep 13 16:24:11 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["total"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["$34"]}}]},"messageId":45}
+Sep 13 16:24:11 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":45,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:24:11 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":45,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:24:11 detox[6888] TRACE: [WS_MESSAGE] {"messageId":45,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:24:11 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["submit-order"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":46}
+Sep 13 16:24:11 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["submit-order"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":46}
+Sep 13 16:24:11 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["submit-order"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":46}
+Sep 13 16:24:13 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":46,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:24:13 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":46,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:24:13 detox[6888] TRACE: [WS_MESSAGE] {"messageId":46,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:24:14 detox[6888] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherWithDescendant","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["order-item"]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Custom"]}}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForNotNull","args":[]}}]},"messageId":47}
+Sep 13 16:24:14 detox[6888] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherWithDescendant","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["order-item"]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Custom"]}}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForNotNull","args":[]}}]},"messageId":47}
+Sep 13 16:24:14 detox[6888] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherWithDescendant","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["order-item"]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Custom"]}}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForNotNull","args":[]}}]},"messageId":47}
+Sep 13 16:24:14 detox[6888] TRACE: [WSS_GET_FROM, #app] {"messageId":47,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:24:14 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"messageId":47,"type":"invokeResult","params":{"result":null}}
+Sep 13 16:24:14 detox[6888] TRACE: [WS_MESSAGE] {"messageId":47,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 13 16:24:14 detox[6888] TRACE: [DETOX_AFTER_EACH] passed test: "App build screen with all values selected for medium size"
+Sep 13 16:24:14 detox[6888] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTestDone({
+  title: 'build screen with all values selected for medium size',
+  fullName: 'App build screen with all values selected for medium size',
+  status: 'passed',
+  invocations: 1,
+  timedOut: false
+})
+Sep 13 16:24:14 detox[6888] TRACE: [ARTIFACT_STOP] stopping ADBLogcatRecording
+Sep 13 16:24:14 detox[6888] DEBUG: [EXEC_CMD, #58] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "date +\"%m-%d %T.000\""
+Sep 13 16:24:14 detox[6888] TRACE: [EXEC_SUCCESS, #58] 09-13 16:24:14.000
+
+Sep 13 16:24:14 detox[6908] TRACE: [SPAWN_KILL] sending SIGINT to: C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-18418 shell logcat -T "09-13 16:23:37.000" --pid=27909 -f /sdcard/162056482_5.log
+Sep 13 16:24:14 detox[6888] DEBUG: [SPAWN_END, #54, cpid=6908] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-18418 shell "logcat -T \"09-13 16:23:37.000\" --pid=27909 -f /sdcard/162056482_5.log" terminated with SIGINT
+Sep 13 16:24:14 detox[6888] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeTerminateApp({ deviceId: 'emulator-18418', bundleId: 'com.awesome' })
+Sep 13 16:24:14 detox[4196] TRACE: [SPAWN_KILL] sending SIGINT to: C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-18418 shell am instrument -w -r -e detoxServer ws://localhost:52904 -e detoxSessionId 47c879c1-851a-900f-6ded-6a51741a9257 -e debug false com.awesome.test/androidx.test.runner.AndroidJUnitRunner
+Sep 13 16:24:14 detox[6888] TRACE: [ARTIFACT_SAVE] saving ADBLogcatRecording to: artifacts\android.2022-09-13 10-50-50Z\✓ App build screen with all values selected for medium size\device.log
+Sep 13 16:24:14 detox[6888] DEBUG: [EXEC_CMD, #59] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 pull "/sdcard/162056482_5.log" "artifacts\android.2022-09-13 10-50-50Z\✓ App build screen with all values selected for medium size\device.log"
+Sep 13 16:24:14 detox[6888] DEBUG: [SPAWN_END, #28, cpid=4196] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-18418 shell am instrument -w -r -e detoxServer ws://localhost:52904 -e detoxSessionId 47c879c1-851a-900f-6ded-6a51741a9257 -e debug false com.awesome.test/androidx.test.runner.AndroidJUnitRunner terminated with SIGINT
+Sep 13 16:24:14 detox[6888] DEBUG: [EXEC_CMD, #60] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "am force-stop com.awesome"
+Sep 13 16:24:14 detox[6888] DEBUG: [EXEC_CMD, #61] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 reverse --remove tcp:52904
+Sep 13 16:24:14 detox[6888] TRACE: [EXEC_SUCCESS, #61] 
+Sep 13 16:24:14 detox[6888] TRACE: [EXEC_SUCCESS, #59] /sdcard/162056482_5.log: 1 file pulled, 0 skipped. 2.2 MB/s (50664 bytes in 0.022s)
+
+Sep 13 16:24:14 detox[6888] DEBUG: [EXEC_CMD, #62] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-18418 shell "rm  \"/sdcard/162056482_5.log\""
+Sep 13 16:24:15 detox[6888] TRACE: [EXEC_SUCCESS, #62] 
+Sep 13 16:24:15 detox[6888] TRACE: [SESSION_TORN] app exited session 47c879c1-851a-900f-6ded-6a51741a9257
+Sep 13 16:24:15 detox[6888] TRACE: [WSS_SEND_TO, #tester] {"type":"appDisconnected"}
+Sep 13 16:24:15 detox[6888] TRACE: [WS_MESSAGE] {"type":"appDisconnected"}
+ 
+Sep 13 16:24:15 detox[6888] TRACE: [EXEC_SUCCESS, #60] 
+Sep 13 16:24:15 detox[6888] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTerminateApp({ deviceId: 'emulator-18418', bundleId: 'com.awesome' })
+Sep 13 16:24:15 App[6888] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onRunDescribeFinish({ name: 'App' })
+Sep 13 16:24:15 ROOT_DESCRIBE_BLOCK[6888] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onRunDescribeFinish({ name: 'ROOT_DESCRIBE_BLOCK' })
+Sep 13 16:24:15 detox[6888] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeCleanup()
+Sep 13 16:24:15 detox[6888] TRACE: [ARTIFACT_START] starting FileArtifact
+Sep 13 16:24:15 detox[6888] TRACE: [ARTIFACT_STOP] stopping FileArtifact
+Sep 13 16:24:15 detox[6888] TRACE: [ARTIFACT_SAVE] saving FileArtifact to: artifacts\android.2022-09-13 10-50-50Z\detox_pid_6888.json.log { append: true }
+Sep 13 16:24:15 detox[6888] TRACE: [ARTIFACT_START] starting FileArtifact
+Sep 13 16:24:15 detox[6888] TRACE: [ARTIFACT_STOP] stopping FileArtifact
+Sep 13 16:24:15 detox[6888] TRACE: [ARTIFACT_SAVE] saving FileArtifact to: artifacts\android.2022-09-13 10-50-50Z\detox_pid_6888.log { append: true }
+Sep 13 16:24:15 detox[6888] DEBUG: [MOVE_FILE] moving "C:\Users\Admin\AppData\Local\Temp\37593b26-00ff-451e-a5e0-b901c74de8d9.detox.log" to artifacts\android.2022-09-13 10-50-50Z\detox_pid_6888.json.log
+Sep 13 16:24:15 detox[6888] DEBUG: [MOVE_FILE] moving "C:\Users\Admin\AppData\Local\Temp\8a3f7cf0-248b-4a7b-9082-0187ef15c0f8.detox.log" to artifacts\android.2022-09-13 10-50-50Z\detox_pid_6888.log
+Sep 13 16:24:15 detox[6888] DEBUG: [WSS_CLOSE] Detox server has been closed gracefully
+Sep 13 16:24:15 detox[6888] TRACE: [SESSION_TORN] tester exited session 47c879c1-851a-900f-6ded-6a51741a9257

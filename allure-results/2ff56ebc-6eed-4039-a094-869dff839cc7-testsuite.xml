@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1662919921739' stop='1662919949316'>
+    <name>Example</name>
+    <title>Example</title>
+    <test-cases>
+        <test-case start='1662919933570' status='passed' stop='1662919937743'>
+            <name>test welcome</name>
+            <title>test welcome</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1662919937747' status='passed' stop='1662919945805'>
+            <name>test fill textfield by id</name>
+            <title>test fill textfield by id</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1662919945808' status='passed' stop='1662919949311'>
+            <name>test get by label</name>
+            <title>test get by label</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

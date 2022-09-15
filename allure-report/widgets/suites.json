@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"c98cd7b5671de4bf1653b04bdc435ec5","name":"App","statistic":{"failed":1,"broken":0,"skipped":0,"passed":4,"unknown":0,"total":5}},{"uid":"58d8e47988d6ee10e310cb44edd33839","name":"Example","statistic":{"failed":0,"broken":0,"skipped":0,"passed":3,"unknown":0,"total":3}}]}

@@ -1,0 +1,716 @@
+Sep 10 04:17:58 detox[7708] TRACE: [DETOX_CREATE] created a Detox instance with config:
+{
+  appsConfig: {
+    default: {
+      type: 'android.apk',
+      binaryPath: 'android/app/build/outputs/apk/release/app-release.apk',
+      build: 'cd android && gradlew app:assembleRelease assembleAndroidTest -DtestBuildType=release && cd ..'
+    }
+  },
+  artifactsConfig: {
+    rootDir: 'artifacts\\android.2022-09-09 22-47-54Z',
+    plugins: {
+      log: {
+        enabled: true,
+        keepOnlyFailedTestsArtifacts: false
+      },
+      screenshot: {
+        enabled: true,
+        shouldTakeAutomaticSnapshots: false,
+        keepOnlyFailedTestsArtifacts: false
+      },
+      video: {
+        enabled: false,
+        keepOnlyFailedTestsArtifacts: false
+      },
+      instruments: {
+        enabled: false,
+        keepOnlyFailedTestsArtifacts: false
+      },
+      timeline: {
+        enabled: false
+      },
+      uiHierarchy: {
+        enabled: false,
+        keepOnlyFailedTestsArtifacts: false
+      }
+    },
+    pathBuilder: ArtifactPathBuilder {
+      _rootDir: 'artifacts\\android.2022-09-09 22-47-54Z'
+    }
+  },
+  behaviorConfig: {
+    init: {
+      reinstallApp: true,
+      exposeGlobals: true
+    },
+    cleanup: {
+      shutdownDevice: true
+    },
+    launchApp: 'auto'
+  },
+  cliConfig: {
+    recordLogs: 'all',
+    cleanup: true,
+    configuration: 'android',
+    loglevel: 'verbose',
+    useCustomLogger: true
+  },
+  configurationName: 'android',
+  deviceConfig: {
+    type: 'android.emulator',
+    device: {
+      avdName: 'demotest'
+    }
+  },
+  runnerConfig: {
+    testRunner: 'jest',
+    runnerConfig: 'e2e/config.json',
+    specs: 'e2e',
+    skipLegacyWorkersInjection: true
+  },
+  sessionConfig: {
+    autoStart: true,
+    sessionId: 'a470e72e-cfbd-8f33-9be4-6b89e1a319a4',
+    debugSynchronization: 10000
+  }
+}
+Sep 10 04:17:58 detox[7708] DEBUG: [WSS_CREATE] Detox server listening on localhost:56061...
+Sep 10 04:17:58 detox[7708] DEBUG: [WSS_CONNECTION, #56062] registered a new connection.
+Sep 10 04:17:58 detox[7708] TRACE: [WS_OPEN] opened web socket to: ws://localhost:56061
+Sep 10 04:17:58 detox[7708] TRACE: [WS_SEND] {"type":"login","params":{"sessionId":"a470e72e-cfbd-8f33-9be4-6b89e1a319a4","role":"tester"},"messageId":0}
+Sep 10 04:17:58 detox[7708] TRACE: [WSS_GET_FROM, #56062] {"type":"login","params":{"sessionId":"a470e72e-cfbd-8f33-9be4-6b89e1a319a4","role":"tester"},"messageId":0}
+Sep 10 04:17:58 detox[7708] TRACE: [SESSION_CREATED] created session a470e72e-cfbd-8f33-9be4-6b89e1a319a4
+Sep 10 04:17:58 detox[7708] TRACE: [WSS_SEND_TO, #tester] {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+Sep 10 04:17:58 detox[7708] TRACE: [SESSION_JOINED] tester joined session a470e72e-cfbd-8f33-9be4-6b89e1a319a4
+Sep 10 04:17:58 detox[7708] TRACE: [WS_MESSAGE] {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+ 
+Sep 10 04:17:58 detox[7708] DEBUG: [EXEC_CMD, #0] "C:\Users\Admin\AppData\Local\Android\Sdk\emulator\emulator.EXE" -list-avds --verbose
+Sep 10 04:17:58 detox[7708] TRACE: [EXEC_SUCCESS, #0] demotest
+demotest2
+second
+
+Sep 10 04:17:58 detox[7708] DEBUG: [EXEC_CMD, #1] "C:\Users\Admin\AppData\Local\Android\Sdk\emulator\emulator.EXE" -version 
+Sep 10 04:17:59 detox[7708] TRACE: [EXEC_SUCCESS, #1] INFO    | Duplicate loglines will be removed, if you wish to see each indiviudal line launch with the -log-nofilter flag.
+Android emulator version 31.3.10.0 (build_id 8807927) (CL:N/A)
+Copyright (C) 2006-2017 The Android Open Source Project and many others.
+This program is a derivative of the QEMU CPU emulator (www.qemu.org).
+
+  This software is licensed under the terms of the GNU General Public
+  License version 2, as published by the Free Software Foundation, and
+  may be copied, distributed, and modified under those terms.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+INFO    | Android emulator version 31.3.10.0 (build_id 8807927) (CL:N/A)
+
+Sep 10 04:17:59 detox[7708] DEBUG: [EMU_BIN_VERSION_DETECT] Detected emulator binary version { major: 31, minor: 3, patch: 10, toString: [Function: toString] }
+Sep 10 04:17:59 detox[7708] DEBUG: [ALLOCATE_DEVICE] Trying to allocate a device based on "demotest"
+Sep 10 04:17:59 detox[7708] DEBUG: [EXEC_CMD, #2] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE"  devices
+Sep 10 04:17:59 detox[7708] DEBUG: [EXEC_SUCCESS, #2] List of devices attached
+
+
+Sep 10 04:17:59 detox[7708] DEBUG: [ALLOCATE_DEVICE] Settled on emulator-10280
+Sep 10 04:17:59 detox[7708] DEBUG: [SPAWN_CMD] C:\Users\Admin\AppData\Local\Android\Sdk\emulator\emulator.EXE -verbose -no-audio -no-boot-anim -port 10280 @demotest
+Sep 10 04:18:41 detox[7708] DEBUG: [SPAWN_SUCCESS] INFO    | Android emulator version 31.3.10.0 (build_id 8807927) (CL:N/A)
+INFO    | Found AVD name 'demotest'
+INFO    | Found AVD target architecture: x86
+INFO    | argv[0]: 'C:\Users\Admin\AppData\Local\Android\Sdk\emulator\emulator.EXE'; program directory: 'C:\Users\Admin\AppData\Local\Android\Sdk\emulator'
+VERBOSE |  Found directory: C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\
+emulator: INFO: Found systemPath C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\
+INFO    | emuDirName: 'C:\Users\Admin\AppData\Local\Android\Sdk\emulator'
+VERBOSE |  Found directory: C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\
+emulator: INFO: Found systemPath C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\
+WARNING | Your GPU drivers may have a bug. Switching to software rendering.
+INFO    | Duplicate loglines will be removed, if you wish to see each indiviudal line launch with the -log-nofilter flag.
+VERBOSE | autoconfig: -skin 1440x2560
+VERBOSE | autoconfig: -skindir (null)
+VERBOSE | querying file version info API...
+VERBOSE | found kernelbase.dll
+VERBOSE | GetFileVersionInfoSizeW found. On Windows 10?
+VERBOSE | GetFileVersionInfoW found. On Windows 10?
+VERBOSE | VerQueryValueW found. Can query file versions
+VERBOSE | queryFileVersionInfo: path not found: amdvlk64.dll
+VERBOSE | querying file version info API...
+VERBOSE | queryFileVersionInfo: path not found: amdvlk32.dll
+VERBOSE | querying file version info API...
+VERBOSE | queryFileVersionInfo: path not found: vulkan-1.dll
+VERBOSE | autoconfig: -kernel C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\kernel-ranchu
+VERBOSE | Target arch = 'x86'
+VERBOSE | Auto-config: -qemu -cpu qemu32
+VERBOSE | Auto-detect: Kernel image requires new device naming scheme.
+VERBOSE | Auto-detect: Kernel does not support YAFFS2 partitions.
+VERBOSE | autoconfig: -ramdisk C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\ramdisk.img
+VERBOSE | Using initial system image: C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\system.img
+VERBOSE | Using initial vendor image: C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\vendor.img
+VERBOSE | autoconfig: -data C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\userdata-qemu.img
+VERBOSE | autoconfig: -initdata C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\userdata.img
+VERBOSE | autoconfig: -cache C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\cache.img
+VERBOSE | autoconfig: -sdcard C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\sdcard.img
+VERBOSE | Decreasing RAM size to 4096MB
+VERBOSE | VM heap size 15360MB is above maximum supported 576MB, setting it to that value
+VERBOSE | System image is read only
+INFO    | IPv4 server found: 8.8.8.8
+VERBOSE | Found 1 DNS servers:
+VERBOSE | 	8.8.8.8
+VERBOSE | found magic skin width=1440 height=2560 bpp=16
+
+VERBOSE | Requested console port 10280: Inferring adb port 10281.
+VERBOSE | CPU Acceleration: working
+VERBOSE | CPU Acceleration status: HAXM version 7.6.5 (4) is installed and usable.
+VERBOSE | handleCpuAcceleration: feature check for hvf
+VERBOSE | registered 'boot-properties' qemud service
+VERBOSE | Adding boot property: 'qemu.cmdline' = 'androidboot.logcat=*:V androidboot.consolepipe=qemu_pipe,pipe:logcat'
+VERBOSE | Adding boot property: 'qemu.logcat' = 'start'
+VERBOSE | GPU emulation enabled using 'swiftshader_indirect' mode
+VERBOSE | Initializing hardware OpenGLES emulation support
+VERBOSE | create display 0
+VERBOSE | setDisplayPose 0 x 0 y 0 w 1440 h 2560 dpi 0
+INFO    | configAndStartRenderer: setting vsync to 60 hz
+VERBOSE | Verified boot params were not found.
+VERBOSE | Found 1 DNS servers:
+VERBOSE | 	8.8.8.8
+INFO    | Content of hardware configuration file:
+INFO    | 	hw.cpu.arch = x86
+INFO    | 	hw.cpu.model = qemu32
+INFO    | 	hw.cpu.ncore = 4
+INFO    | 	hw.ramSize = 4096
+INFO    | 	hw.screen = multi-touch
+INFO    | 	hw.mainKeys = false
+INFO    | 	hw.trackBall = false
+INFO    | 	hw.keyboard = true
+INFO    | 	hw.keyboard.lid = false
+INFO    | 	hw.keyboard.charmap = qwerty2
+INFO    | 	hw.dPad = false
+INFO    | 	hw.rotaryInput = false
+INFO    | 	hw.gsmModem = true
+INFO    | 	hw.gps = true
+INFO    | 	hw.battery = true
+INFO    | 	hw.accelerometer = true
+INFO    | 	hw.gyroscope = true
+INFO    | 	hw.audioInput = true
+INFO    | 	hw.audioOutput = true
+INFO    | 	hw.sdCard = true
+INFO    | 	hw.sdCard.path = C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\sdcard.img
+INFO    | 	disk.cachePartition = true
+INFO    | 	disk.cachePartition.path = C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\cache.img
+INFO    | 	disk.cachePartition.size = 66m
+INFO    | 	test.quitAfterBootTimeOut = -1
+INFO    | 	test.delayAdbTillBootComplete = 0
+INFO    | 	test.monitorAdb = 0
+INFO    | 	hw.lcd.width = 1440
+INFO    | 	hw.lcd.height = 2560
+INFO    | 	hw.lcd.depth = 16
+INFO    |WARNING | cannot add library vulkan-1.dll: failed
+ 	hw.lcd.density = 560
+INFO    | 	hw.lcd.backlight = true
+INFO    | 	hw.lcd.vsync = 60
+INFO    | 	hw.gltransport = pipe
+INFO    | 	hw.gltransport.asg.writeBufferSize = 1048576
+INFO    | 	hw.gltransport.asg.writeStepSize = 4096
+INFO    | 	hw.gltransport.asg.dataRingSize = 32768
+INFO    | 	hw.gltransport.drawFlushInterval = 800
+INFO    | 	hw.displayRegion.0.1.xOffset = -1
+INFO    | 	hw.displayRegion.0.1.yOffset = -1
+INFO    | 	hw.displayRegion.0.1.width = 0
+INFO    | 	hw.displayRegion.0.1.height = 0
+INFO    | 	hw.displayRegion.0.2.xOffset = -1
+INFO    | 	hw.displayRegion.0.2.yOffset = -1
+INFO    | 	hw.displayRegion.0.2.width = 0
+INFO    | 	hw.displayRegion.0.2.height = 0
+INFO    | 	hw.displayRegion.0.3.xOffset = -1
+INFO    | 	hw.displayRegion.0.3.yOffset = -1
+INFO    | 	hw.displayRegion.0.3.width = 0
+INFO    | 	hw.displayRegion.0.3.height = 0
+INFO    | 	hw.display1.width = 0
+INFO    | 	hw.display1.height = 0
+INFO    | 	hw.display1.density = 0
+INFO    | 	hw.display1.xOffset = -1
+INFO    | 	hw.display1.yOffset = -1
+INFO    | 	hw.display1.flag = 0
+INFO    | 	hw.display2.width = 0
+INFO    | 	hw.display2.height = 0
+INFO    | 	hw.display2.density = 0
+INFO    | 	hw.display2.xOffset = -1
+INFO    | 	hw.display2.yOffset = -1
+INFO    | 	hw.display2.flag = 0
+INFO    | 	hw.display3.width = 0
+INFO    | 	hw.display3.height = 0
+INFO    | 	hw.display3.density = 0
+INFO    | 	hw.display3.xOffset = -1
+INFO    | 	hw.display3.yOffset = -1
+INFO    | 	hw.display3.flag = 0
+INFO    | 	hw.multi_display_window = false
+INFO    | 	hw.gpu.enabled = true
+INFO    | 	hw.gpu.mode = swiftshader_indirect
+INFO    | 	hw.initialOrientation = Portrait
+INFO    | 	hw.camera.back = virtualscene
+INFO    | 	hw.camera.front = emulated
+INFO    | 	vm.heapSize = 576
+INFO    | 	hw.sensors.light = true
+INFO    | 	hw.sensors.pressure = true
+INFO    | 	hw.sensors.humidity = true
+INFO    | 	hw.sensors.proximity = true
+INFO    | 	hw.sensors.magnetic_field = true
+INFO    | 	hw.sensors.magnetic_field_uncalibrated = true
+INFO    | 	hw.sensors.gyroscope_uncalibrated = true
+INFO    | 	hw.sensors.orientation = true
+INFO    | 	hw.sensors.temperature = true
+INFO    | 	hw.sensors.rgbclight = false
+INFO    | 	hw.sensor.hinge = false
+INFO    | 	hw.sensor.hinge.count = 0
+INFO    | 	hw.sensor.hinge.type = 0
+INFO    | 	hw.sensor.hinge.sub_type = 0
+INFO    | 	hw.sensor.hinge.fold_to_displayRegion.0.1_at_posture = 1
+INFO    | 	hw.sensor.roll = false
+INFO    | 	hw.sensor.roll.count = 0
+INFO    | 	hw.sensor.roll.resize_to_displayRegion.0.1_at_posture = 6
+INFO    | 	hw.sensor.roll.resize_to_displayRegion.0.2_at_posture = 6
+INFO    | 	hw.sensor.roll.resize_to_displayRegion.0.3_at_posture = 6
+INFO    | 	hw.sensors.heart_rate = false
+INFO    | 	hw.sensors.wrist_tilt = false
+INFO    | 	hw.useext4 = true
+INFO    | 	hw.arc = false
+INFO    | 	hw.arc.autologin = false
+INFO    | 	hw.device.name = pixel_xl
+INFO    | 	kernel.path = C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\kernel-ranchu
+INFO    | 	kernel.newDeviceNaming = yes
+INFO    | 	kernel.supportsYaffs2 = no
+INFO    | 	disk.ramdisk.path = C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\ramdisk.img
+INFO    | 	disk.systemPartition.initPath = C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\system.img
+INFO    | 	disk.systemPartition.size = 2562m
+INFO    | 	disk.vendorPartition.initPath = C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\vendor.img
+INFO    | 	disk.vendorPartition.size = 800m
+INFO    | 	disk.dataPartition.path = C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\userdata-qemu.img
+INFO    | 	disk.dataPartition.size = 10g
+INFO    | 	disk.encryptionKeyPartition.path = C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\encryptionkey.img
+INFO    | 	PlayStore.enabled = false
+INFO    | 	avd.name = demotest
+INFO    | 	avd.id = demotest
+INFO    | 	fastboot.forceColdBoot = false
+INFO    | 	android.sdk.root = C:\Users\Admin\AppData\Local\Android\Sdk
+INFO    | 	android.avd.home = C:\Users\Admin\.android\avd
+INFO    | .
+INFO    | QEMU options list:
+INFO    | 	 argv[00] = "C:\Users\Admin\AppData\Local\Android\Sdk\emulator\qemu\windows-x86_64\qemu-system-i386.exe"
+INFO    | 	 argv[01] = "-dns-server"
+INFO    | 	 argv[02] = "8.8.8.8"
+INFO    | 	 argv[03] = "-no-audio"
+INFO    | 	 argv[04] = "-mem-path"
+INFO    | 	 argv[05] = "C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\snapshots\default_boot\ram.img"
+INFO    | 	 argv[06] = "-mem-file-shared"
+INFO    | 	 argv[07] = "-serial"
+INFO    | 	 argv[08] = "null"
+INFO    | 	 argv[09] = "-android-ports"
+INFO    | 	 argv[10] = "10280,10281"
+INFO    | 	 argv[11] = "-device"
+INFO    | 	 argv[12] = "goldfish_pstore,addr=0xff018000,size=0x10000,file=C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\data\misc\pstore\pstore.bin"
+INFO    | 	 argv[13] = "-cpu"
+INFO    | 	 argv[14] = "android32"
+INFO    | 	 argv[15] = "-enable-hax"
+INFO    | 	 argv[16] = "-smp"
+INFO    | 	 argv[17] = "cores=4"
+INFO    | 	 argv[18] = "-m"
+INFO    | 	 argv[19] = "4096"
+INFO    | 	 argv[20] = "-lcd-density"
+INFO    | 	 argv[21] = "560"
+INFO    | 	 argv[22] = "-nodefaults"
+INFO    | 	 argv[23] = "-kernel"
+INFO    | 	 argv[24] = "C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\kernel-ranchu"
+INFO    | 	 argv[25] = "-initrd"
+INFO    | 	 argv[26] = "C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\ramdisk.img"
+INFO    | 	 argv[27] = "-drive"
+INFO    | 	 argv[28] = "if=none,index=0,id=system,if=none,file=C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\system.img,read-only"
+INFO    | 	 argv[29] = "-device"
+INFO    | 	 argv[30] = "virtio-blk-pci,drive=system,modern-pio-notify"
+INFO    | 	 argv[31] = "-drive"
+INFO    | 	 argv[32] = "if=none,index=1,id=cache,if=none,file=C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\cache.img.qcow2,overlap-check=none,cache=unsafe,l2-cache-size=1048576"
+INFO    | 	 argv[33] = "-device"
+INFO    | 	 argv[34] = "virtio-blk-pci,drive=cache,modern-pio-notify"
+INFO    | 	 argv[35] = "-drive"
+INFO    | 	 argv[36] = "if=none,index=2,id=userdata,if=none,file=C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\userdata-qemu.img.qcow2,overlap-check=none,cache=unsafe,l2-cache-size=1310720"
+INFO    | 	 argv[37] = "-device"
+INFO    | 	 argv[38] = "virtio-blk-pci,drive=userdata,modern-pio-notify"
+INFO    | 	 argv[39] = "-drive"
+INFO    | 	 argv[40] = "if=none,index=3,id=encrypt,if=none,file=C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\encryptionkey.img.qcow2,overlap-check=none,cache=unsafe,l2-cache-size=1048576"
+INFO    | 	 argv[41] = "-device"
+INFO    | 	 argv[42] = "virtio-blk-pci,drive=encrypt,modern-pio-notify"
+INFO    | 	 argv[43] = "-drive"
+INFO    | 	 argv[44] = "if=none,index=4,id=vendor,if=none,file=C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\vendor.img,read-only"
+INFO    | 	 argv[45] = "-device"
+INFO    | 	 argv[46] = "virtio-blk-pci,drive=vendor,modern-pio-notify"
+INFO    | 	 argv[47] = "-drive"
+INFO    | 	 argv[48] = "if=none,index=5,id=sdcard,if=none,file=C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\sdcard.img.qcow2,overlap-check=none,cache=unsafe,l2-cache-size=1048576"
+INFO    | 	 argv[49] = "-device"
+INFO    | 	 argv[50] = "virtio-blk-pci,drive=sdcard,modern-pio-notify"
+INFO    | 	 argv[51] = "-netdev"
+INFO    | 	 argv[52] = "user,id=mynet"
+INFO    | 	 argv[53] = "-device"
+INFO    | 	 argv[54] = "virtio-net-pci,netdev=mynet"
+INFO    | 	 argv[55] = "-device"
+INFO    | 	 argv[56] = "virtio-rng-pci"
+INFO    | 	 argv[57] = "-show-cursor"
+INFO    | 	 argv[58] = "-L"
+INFO    | 	 argv[59] = "C:\Users\Admin\AppData\Local\Android\Sdk\emulator/lib/pc-bios"
+INFO    | 	 argv[60] = "-soundhw"
+INFO    | 	 argv[61] = "hda"
+INFO    | 	 argv[62] = "-vga"
+INFO    | 	 argv[63] = "none"
+INFO    | 	 argv[64] = "-append"
+INFO    | 	 argv[65] = "no_timer_check clocksource=pit no-kvmclock console=0 cma=314M@0-4G mac80211_hwsim.radios=2 mac80211_hwsim.channels=2 loop.max_part=7 ramoops.mem_address=0xff018000 ramoops.mem_size=0x10000 memmap=0x10000$0xff018000 printk.devkmsg=on qemu=1WARNING | cannot add library vulkan-1.dll: failed
+ androidboot.hardware=ranchu androidboot.serialno=EMULATOR31X3X10X0 android.bootanim=0 qemu.gles=1 qemu.settings.system.screen_off_timeout=2147483647 qemu.encrypt=1 qemu.vsync=60 qemu.gltransport=pipe qemu.gltransport.drawFlushInterval=800 qemu.opengles.version=131072 qemu.dalvik.vm.heapsize=576m qemu.camera_hq_edge_processing=0 androidboot.android_dt_dir=/sys/bus/platform/devices/ANDR0001:00/properties/android/ qemu.wifi=1 android.qemud=1 qemu.avd_name=demotest"
+INFO    | 	 argv[66] = "-android-hw"
+INFO    | 	 argv[67] = "C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\hardware-qemu.ini"
+INFO    | Concatenated QEMU options: C:\Users\Admin\AppData\Local\Android\Sdk\emulator\qemu\windows-x86_64\qemu-system-i386.exe -dns-server 8.8.8.8 -no-audio -mem-path C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\snapshots\default_boot\ram.img -mem-file-shared -serial null -android-ports 10280,10281 -device goldfish_pstore,addr=0xff018000,size=0x10000,file=C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\data\misc\pstore\pstore.bin -cpu android32 -enable-hax -smp cores=4 -m 4096 -lcd-density 560 -nodefaults -kernel C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\kernel-ranchu -initrd C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\ramdisk.img -drive if=none,index=0,id=system,if=none,file=C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\system.img,read-only -device virtio-blk-pci,drive=system,modern-pio-notify -drive if=none,index=1,id=cache,if=none,file=C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\cache.img.qcow2,overlap-check=none,cache=unsafe,l2-cache-size=1048576 -device virtio-blk-pci,drive=cache,modern-pio-notify -drive if=none,index=2,id=userdata,if=none,file=C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\userdata-qemu.img.qcow2,overlap-check=none,cache=unsafe,l2-cache-size=1310720 -device virtio-blk-pci,drive=userdata,modern-pio-notify -drive if=none,index=3,id=encrypt,if=none,file=C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\encryptionkey.img.qcow2,overlap-check=none,cache=unsafe,l2-cache-size=1048576 -device virtio-blk-pci,drive=encrypt,modern-pio-notify -drive if=none,index=4,id=vendor,if=none,file=C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\vendor.img,read-only -device virtio-blk-pci,drive=vendor,modern-pio-notify -drive if=none,index=5,id=sdcard,if=none,file=C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\sdcard.img.qcow2,overlap-check=none,cache=unsafe,l2-cache-size=1048576 -device virtio-blk-pci,drive=sdcard,modern-pio-notify -netdev user,id=mynet -
+INFO    | added library C:\Users\Admin\AppData\Local\Android\Sdk\emulator\lib64\vulkan\vulkan-1.dll
+VERBOSE | Android qemu version 31.3.10.0 (build_id 8807927) (CL:N/A)
+VERBOSE | Starting QEMU main loop
+VERBOSE | android_fopen: Failed to open /qemu.conf, err: 2
+VERBOSE | Adding boot property: 'ro.opengles.version' = '131072'
+VERBOSE | Adding boot property: 'qemu.sf.fake_camera' = 'front'
+VERBOSE | Adding boot property: 'dalvik.vm.heapsize' = '576m'
+VERBOSE | Adding boot property: 'qemu.hw.mainkeys' = '0'
+VERBOSE | Adding boot property: 'qemu.sf.lcd_density' = '560'
+HAX is working and emulator runs in fast virt mode.
+VERBOSE | goldfish_events.have-dpad: false
+VERBOSE | goldfish_events.have-trackball: false
+VERBOSE | goldfish_events.have-camera: true
+VERBOSE | goldfish_events.have-keyboard: true
+VERBOSE | goldfish_events.have-lidswitch: false
+VERBOSE | goldfish_events.have-tabletmode: false
+VERBOSE | goldfish_events.have-touch: false
+VERBOSE | goldfish_events.have-multitouch: true
+pc_memory_init: above 4g size: 40000000
+WARNING | Requested adb port (10281) is outside the recommended range [5555,5586]. ADB may not function properly for the emulator. See -help-port for details.
+VERBOSE | Not using any http proxy
+VERBOSE | Adding boot property: 'qemu.timezone' = 'Asia/Calcutta'
+VERBOSE | android_hw_fingerprint_init: fingerprint qemud listen service initialized
+VERBOSE | emulator_window_fb_rotate
+INFO    | setDisplayConfigs w 1440 h 2560 dpiX 560 dpiY 560
+VERBOSE | No acpi ini file provided, using default
+VERBOSE | Adding boot property: 'qemu.cmdline' = 'androidboot.logcat=*:V androidboot.consolepipe=qemu_pipe,pipe:logcat'
+VERBOSE | Adding boot property: 'qemu.logcat' = 'start'
+VERBOSE | Adding boot property: 'ro.opengles.version' = '131072'
+VERBOSE | Adding boot property: 'qemu.sf.fake_camera' = 'front'
+VERBOSE | Adding boot property: 'dalvik.vm.heapsize' = '576m'
+VERBOSE | Adding boot property: 'qemu.hw.mainkeys' = '0'
+VERBOSE | Adding boot property: 'qemu.sf.lcd_density' = '560'
+VERBOSE | Adding boot property: 'qemu.timezone' = 'Asia/Calcutta'
+VERBOSE | Path:C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.exe protocol version: 41
+VERBOSE | Found: 2 adb executables
+VERBOSE | Found: 2 adb executables
+VERBOSE | Adb: C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.exe
+VERBOSE | Path:C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.exe protocol version: 41
+VERBOSE | Path:C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.exe protocol version: 41
+VERBOSE | _hwFingerprint_connect: connect finger print listen is called
+VERBOSE | _hwFingerprint_connect: connect finger print listen is called
+VERBOSE | Window was not fully visible: monitor=[0,0,1488,745] window=[29,155,336,596]
+VERBOSE | Window repositioned to [24,0]
+VERBOSE | emulator window was out of view and was recentered
+VERBOSE | onGuestClose: [000001E67A9DCAD0] Adb closed by guest
+VERBOSE | onGuestSendCommand: [000001E67D26DD50] Adb connected, start proxing data
+
+Sep 10 04:18:41 detox[7708] DEBUG: [EXEC_CMD, #3] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-10280 shell "getprop dev.bootcomplete"
+Sep 10 04:18:42 detox[7708] TRACE: [EXEC_SUCCESS, #3] 1
+
+Sep 10 04:18:42 detox[7708] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBootDevice({ deviceId: 'emulator-10280', type: 'demotest', coldBoot: true })
+Sep 10 04:18:42 detox[7708] DEBUG: [EXEC_CMD, #4] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-10280 shell "getprop ro.build.version.sdk"
+Sep 10 04:18:42 detox[7708] TRACE: [EXEC_SUCCESS, #4] 26
+
+Sep 10 04:18:42 detox[7708] DEBUG: [EXEC_CMD, #5] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-10280 shell "settings put global animator_duration_scale 0"
+Sep 10 04:18:42 detox[7708] TRACE: [EXEC_SUCCESS, #5] 
+Sep 10 04:18:42 detox[7708] DEBUG: [EXEC_CMD, #6] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-10280 shell "settings put global window_animation_scale 0"
+Sep 10 04:18:43 detox[7708] TRACE: [EXEC_SUCCESS, #6] 
+Sep 10 04:18:43 detox[7708] DEBUG: [EXEC_CMD, #7] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-10280 shell "settings put global transition_animation_scale 0"
+Sep 10 04:18:43 detox[7708] TRACE: [EXEC_SUCCESS, #7] 
+Sep 10 04:18:43 detox[7708] DEBUG: [EXEC_CMD, #8] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-10280 shell "dumpsys power | grep \"^[ ]*m[UW].*=\""
+Sep 10 04:18:44 detox[7708] TRACE: [EXEC_SUCCESS, #8]   mWakefulness=Awake
+  mWakefulnessChanging=false
+  mWakeLockSummary=0x1
+  mUserActivitySummary=0x1
+  mWakeUpWhenPluggedOrUnpluggedConfig=false
+  mWakeUpWhenPluggedOrUnpluggedInTheaterModeConfig=false
+  mDreamsBatteryLevelMinimumWhenPoweredConfig=-1
+  mDreamsBatteryLevelMinimumWhenNotPoweredConfig=15
+  mScreenBrightnessOverrideFromWindowManager=-1
+  mUserActivityTimeoutOverrideFromWindowManager=-1
+  mUserInactiveOverrideFromWindowManager=false
+
+Sep 10 04:18:44 detox[7708] DEBUG: [EXEC_CMD, #9] "C:\Users\Admin\AppData\Local\Android\Sdk\build-tools\33.0.0\aapt.EXE" dump badging "C:\awesome\android\app\build\outputs\apk\release\app-release.apk"
+Sep 10 04:18:44 detox[7708] TRACE: [EXEC_SUCCESS, #9] package: name='com.awesome' versionCode='1' versionName='1.0' platformBuildVersionName='12' platformBuildVersionCode='31' compileSdkVersion='31' compileSdkVersionCodename='12'
+sdkVersion:'21'
+targetSdkVersion:'31'
+uses-permission: name='android.permission.INTERNET'
+application-label:'awesome'
+application-label-af:'awesome'
+application-label-am:'awesome'
+application-label-ar:'awesome'
+application-label-as:'awesome'
+application-label-az:'awesome'
+application-label-be:'awesome'
+application-label-bg:'awesome'
+application-label-bn:'awesome'
+application-label-bs:'awesome'
+application-label-ca:'awesome'
+application-label-cs:'awesome'
+application-label-da:'awesome'
+application-label-de:'awesome'
+application-label-el:'awesome'
+application-label-en-AU:'awesome'
+application-label-en-CA:'awesome'
+application-label-en-GB:'awesome'
+application-label-en-IN:'awesome'
+application-label-en-XC:'awesome'
+application-label-es:'awesome'
+application-label-es-US:'awesome'
+application-label-et:'awesome'
+application-label-eu:'awesome'
+application-label-fa:'awesome'
+application-label-fi:'awesome'
+application-label-fr:'awesome'
+application-label-fr-CA:'awesome'
+application-label-gl:'awesome'
+application-label-gu:'awesome'
+application-label-hi:'awesome'
+application-label-hr:'awesome'
+application-label-hu:'awesome'
+application-label-hy:'awesome'
+application-label-in:'awesome'
+application-label-is:'awesome'
+application-label-it:'awesome'
+application-label-iw:'awesome'
+application-label-ja:'awesome'
+application-label-ka:'awesome'
+application-label-kk:'awesome'
+application-label-km:'awesome'
+application-label-kn:'awesome'
+application-label-ko:'awesome'
+application-label-ky:'awesome'
+application-label-lo:'awesome'
+application-label-lt:'awesome'
+application-label-lv:'awesome'
+application-label-mk:'awesome'
+application-label-ml:'awesome'
+application-label-mn:'awesome'
+application-label-mr:'awesome'
+application-label-ms:'awesome'
+application-label-my:'awesome'
+application-label-nb:'awesome'
+application-label-ne:'awesome'
+application-label-nl:'awesome'
+application-label-or:'awesome'
+application-label-pa:'awesome'
+application-label-pl:'awesome'
+application-label-pt:'awesome'
+application-label-pt-BR:'awesome'
+application-label-pt-PT:'awesome'
+application-label-ro:'awesome'
+application-label-ru:'awesome'
+application-label-si:'awesome'
+application-label-sk:'awesome'
+application-label-sl:'awesome'
+application-label-sq:'awesome'
+application-label-sr:'awesome'
+application-label-sr-Latn:'awesome'
+application-label-sv:'awesome'
+application-label-sw:'awesome'
+application-label-ta:'awesome'
+application-label-te:'awesome'
+application-label-th:'awesome'
+application-label-tl:'awesome'
+application-label-tr:'awesome'
+application-label-uk:'awesome'
+application-label-ur:'awesome'
+application-label-uz:'awesome'
+application-label-vi:'awesome'
+application-label-zh-CN:'awesome'
+application-label-zh-HK:'awesome'
+application-label-zh-TW:'awesome'
+application-label-zu:'awesome'
+application-icon-160:'res/u3.png'
+application-icon-240:'res/SD.png'
+application-icon-320:'res/jy.png'
+application-icon-480:'res/D2.png'
+application-icon-640:'res/CG.png'
+application: label='awesome' icon='res/u3.png'
+launchable-activity: name='com.awesome.MainActivity'  label='awesome' icon=''
+feature-group: label=''
+  uses-feature: name='android.hardware.faketouch'
+  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'
+main
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--' 'af' 'am' 'ar' 'as' 'az' 'be' 'bg' 'bn' 'bs' 'ca' 'cs' 'da' 'de' 'el' 'en-AU' 'en-CA' 'en-GB' 'en-IN' 'en-XC' 'es' 'es-US' 'et' 'eu' 'fa' 'fi' 'fr' 'fr-CA' 'gl' 'gu' 'hi' 'hr' 'hu' 'hy' 'in' 'is' 'it' 'iw' 'ja' 'ka' 'kk' 'km' 'kn' 'ko' 'ky' 'lo' 'lt' 'lv' 'mk' 'ml' 'mn' 'mr' 'ms' 'my' 'nb' 'ne' 'nl' 'or' 'pa' 'pl' 'pt' 'pt-BR' 'pt-PT' 'ro' 'ru' 'si' 'sk' 'sl' 'sq' 'sr' 'sr-Latn' 'sv' 'sw' 'ta' 'te' 'th' 'tl' 'tr' 'uk' 'ur' 'uz' 'vi' 'zh-CN' 'zh-HK' 'zh-TW' 'zu'
+densities: '160' '240' '320' '480' '640'
+native-code: 'arm64-v8a' 'armeabi-v7a' 'x86' 'x86_64'
+
+Sep 10 04:18:44 detox[7708] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeTerminateApp({ deviceId: 'emulator-10280', bundleId: 'com.awesome' })
+Sep 10 04:18:44 detox[7708] DEBUG: [EXEC_CMD, #10] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-10280 shell "am force-stop com.awesome"
+Sep 10 04:18:44 detox[7708] TRACE: [EXEC_SUCCESS, #10] 
+Sep 10 04:18:44 detox[7708] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTerminateApp({ deviceId: 'emulator-10280', bundleId: 'com.awesome' })
+Sep 10 04:18:44 detox[7708] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeUninstallApp({ deviceId: 'emulator-10280', bundleId: 'com.awesome' })
+Sep 10 04:18:44 detox[7708] DEBUG: [EXEC_CMD, #11] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-10280 shell "pm list packages com.awesome"
+Sep 10 04:18:46 detox[7708] TRACE: [EXEC_SUCCESS, #11] package:com.awesome.test
+package:com.awesome
+
+Sep 10 04:18:46 detox[7708] DEBUG: [EXEC_CMD, #12] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-10280 uninstall com.awesome
+Sep 10 04:18:47 detox[7708] TRACE: [EXEC_SUCCESS, #12] Success
+
+Sep 10 04:18:47 detox[7708] DEBUG: [EXEC_CMD, #13] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-10280 shell "pm list packages com.awesome.test"
+Sep 10 04:18:49 detox[7708] TRACE: [EXEC_SUCCESS, #13] package:com.awesome.test
+
+Sep 10 04:18:49 detox[7708] DEBUG: [EXEC_CMD, #14] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-10280 uninstall com.awesome.test
+Sep 10 04:18:49 detox[7708] TRACE: [EXEC_SUCCESS, #14] Success
+
+Sep 10 04:18:49 detox[7708] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeTerminateApp({ deviceId: 'emulator-10280', bundleId: 'com.awesome' })
+Sep 10 04:18:49 detox[7708] DEBUG: [EXEC_CMD, #15] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-10280 shell "am force-stop com.awesome"
+Sep 10 04:18:50 detox[7708] TRACE: [EXEC_SUCCESS, #15] 
+Sep 10 04:18:50 detox[7708] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTerminateApp({ deviceId: 'emulator-10280', bundleId: 'com.awesome' })
+Sep 10 04:18:50 detox[7708] DEBUG: [EXEC_CMD, #16] "C:\Users\Admin\AppData\Local\Android\Sdk\build-tools\33.0.0\aapt.EXE" dump xmlstrings "C:\awesome\android\app\build\outputs\apk\release\app-release.apk" AndroidManifest.xml
+Sep 10 04:18:50 detox[7708] TRACE: [EXEC_SUCCESS, #16] String pool of 49 unique UTF-16 non-sorted strings, 49 entries and 0 styles using 2012 bytes:
+String #0: theme
+String #1: label
+String #2: icon
+String #3: name
+String #4: exported
+String #5: authorities
+String #6: launchMode
+String #7: configChanges
+String #8: value
+String #9: minSdkVersion
+String #10: versionCode
+String #11: versionName
+String #12: windowSoftInputMode
+String #13: targetSdkVersion
+String #14: allowBackup
+String #15: usesCleartextTraffic
+String #16: roundIcon
+String #17: compileSdkVersion
+String #18: compileSdkVersionCodename
+String #19: appComponentFactory
+String #20: 1.0
+String #21: 12
+String #22: action
+String #23: activity
+String #24: android
+String #25: android.intent.action.MAIN
+String #26: android.intent.category.LAUNCHER
+String #27: android.permission.INTERNET
+String #28: androidx.core.app.CoreComponentFactory
+String #29: androidx.emoji2.text.EmojiCompatInitializer
+String #30: androidx.lifecycle.ProcessLifecycleInitializer
+String #31: androidx.startup
+String #32: androidx.startup.InitializationProvider
+String #33: application
+String #34: category
+String #35: com.awesome
+String #36: com.awesome.MainActivity
+String #37: com.awesome.MainApplication
+String #38: com.awesome.androidx-startup
+String #39: http://schemas.android.com/apk/res/android
+String #40: intent-filter
+String #41: manifest
+String #42: meta-data
+String #43: package
+String #44: platformBuildVersionCode
+String #45: platformBuildVersionName
+String #46: provider
+String #47: uses-permission
+String #48: uses-sdk
+
+Sep 10 04:18:50 detox[7708] DEBUG: [EXEC_CMD, #17] "C:\Users\Admin\AppData\Local\Android\Sdk\build-tools\33.0.0\aapt.EXE" dump xmlstrings "C:\awesome\android\app\build\outputs\apk\androidTest\release\app-release-androidTest.apk" AndroidManifest.xml
+Sep 10 04:18:50 detox[7708] TRACE: [EXEC_SUCCESS, #17] String pool of 40 unique UTF-16 non-sorted strings, 40 entries and 0 styles using 1980 bytes:
+String #0: theme
+String #1: label
+String #2: name
+String #3: exported
+String #4: targetPackage
+String #5: handleProfiling
+String #6: functionalTest
+String #7: minSdkVersion
+String #8: targetSdkVersion
+String #9: compileSdkVersion
+String #10: compileSdkVersionCodename
+String #11: 12
+String #12: Tests for com.awesome
+String #13: action
+String #14: activity
+String #15: android
+String #16: android.intent.action.MAIN
+String #17: android.permission.REORDER_TASKS
+String #18: android.test.runner
+String #19: androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity
+String #20: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity
+String #21: androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity
+String #22: androidx.test.orchestrator
+String #23: androidx.test.runner.AndroidJUnitRunner
+String #24: androidx.test.services
+String #25: application
+String #26: com.awesome
+String #27: com.awesome.test
+String #28: com.google.android.apps.common.testing.services
+String #29: http://schemas.android.com/apk/res/android
+String #30: instrumentation
+String #31: intent-filter
+String #32: manifest
+String #33: package
+String #34: platformBuildVersionCode
+String #35: platformBuildVersionName
+String #36: queries
+String #37: uses-library
+String #38: uses-permission
+String #39: uses-sdk
+
+Sep 10 04:18:50 detox[7708] DEBUG: [EXEC_CMD, #18] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-10280 shell "rm -fr /data/local/tmp/detox"
+Sep 10 04:18:50 detox[7708] TRACE: [EXEC_SUCCESS, #18] 
+Sep 10 04:18:50 detox[7708] DEBUG: [EXEC_CMD, #19] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-10280 shell "mkdir -p /data/local/tmp/detox"
+Sep 10 04:18:51 detox[7708] TRACE: [EXEC_SUCCESS, #19] 
+Sep 10 04:18:51 detox[7708] DEBUG: [EXEC_CMD, #20] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-10280 push "C:\awesome\android\app\build\outputs\apk\release\app-release.apk" "/data/local/tmp/detox/Application.apk"
+Sep 10 04:18:52 detox[7708] TRACE: [EXEC_SUCCESS, #20] C:\awesome\android\app\build\outputs\apk\release\app-release.apk: 1 file pushed, 0 skipped. 28.6 MB/s (27047760 bytes in 0.901s)
+
+Sep 10 04:18:52 detox[7708] DEBUG: [SPAWN_CMD, #21, cpid=876] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-10280 shell pm install -r -g -t /data/local/tmp/detox/Application.apk
+Sep 10 04:19:14 detox[7708] TRACE: [SPAWN_STDOUT, #21, cpid=876] Success
+
+Sep 10 04:19:14 detox[7708] DEBUG: [SPAWN_END, #21, cpid=876] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-10280 shell pm install -r -g -t /data/local/tmp/detox/Application.apk exited with code #0
+Sep 10 04:19:14 detox[7708] DEBUG: [EXEC_CMD, #22] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-10280 push "C:\awesome\android\app\build\outputs\apk\androidTest\release\app-release-androidTest.apk" "/data/local/tmp/detox/Test.apk"
+Sep 10 04:19:14 detox[7708] TRACE: [EXEC_SUCCESS, #22] C:\awesome\android\app\build\outputs\apk\androidTest\release\app-release-androidTest.apk: 1 file pushed, 0 skipped. 337.5 MB/s (2417077 bytes in 0.007s)
+
+Sep 10 04:19:14 detox[7708] DEBUG: [SPAWN_CMD, #23, cpid=2548] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-10280 shell pm install -r -g -t /data/local/tmp/detox/Test.apk
+Sep 10 04:19:26 detox[7708] TRACE: [SPAWN_STDOUT, #23, cpid=2548] Success
+
+Sep 10 04:19:26 detox[7708] DEBUG: [SPAWN_END, #23, cpid=2548] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-10280 shell pm install -r -g -t /data/local/tmp/detox/Test.apk exited with code #0
+Sep 10 04:19:27 detox[7708] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeCleanup()
+Sep 10 04:19:27 detox[7708] TRACE: [ARTIFACT_START] starting FileArtifact
+Sep 10 04:19:27 detox[7708] TRACE: [ARTIFACT_STOP] stopping FileArtifact
+Sep 10 04:19:27 detox[7708] TRACE: [ARTIFACT_SAVE] saving FileArtifact to: artifacts\android.2022-09-09 22-47-54Z\detox_pid_7708.json.log { append: true }
+Sep 10 04:19:27 detox[7708] TRACE: [ARTIFACT_START] starting FileArtifact
+Sep 10 04:19:27 detox[7708] TRACE: [ARTIFACT_STOP] stopping FileArtifact
+Sep 10 04:19:27 detox[7708] TRACE: [ARTIFACT_SAVE] saving FileArtifact to: artifacts\android.2022-09-09 22-47-54Z\detox_pid_7708.log { append: true }
+Sep 10 04:19:27 detox[7708] DEBUG: [MOVE_FILE] moving "C:\Users\Admin\AppData\Local\Temp\8d84b222-e6e7-4cbf-bb89-4ef33cfff66b.detox.log" to artifacts\android.2022-09-09 22-47-54Z\detox_pid_7708.log
+Sep 10 04:19:27 detox[7708] DEBUG: [MOVE_FILE] moving "C:\Users\Admin\AppData\Local\Temp\26b46f61-a735-41a8-b370-8cf7b4dd1f14.detox.log" to artifacts\android.2022-09-09 22-47-54Z\detox_pid_7708.json.log
+Sep 10 04:19:27 detox[7708] DEBUG: [EXEC_CMD, #24] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-10280 emu kill
+Sep 10 04:19:27 detox[7708] TRACE: [SESSION_TORN] tester exited session a470e72e-cfbd-8f33-9be4-6b89e1a319a4
+Sep 10 04:19:27 detox[7708] TRACE: [EXEC_SUCCESS, #24] OK: killing emulator, bye bye
+OK
+
+Sep 10 04:19:29 detox[7708] DEBUG: [EXEC_CMD, #25] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-10280 get-state
+Sep 10 04:19:29 detox[7708] TRACE: [EXEC_SUCCESS, #25] device
+
+Sep 10 04:19:30 detox[7708] DEBUG: [EXEC_CMD, #26] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-10280 get-state
+Sep 10 04:19:30 detox[7708] TRACE: [EXEC_SUCCESS, #26] device
+
+Sep 10 04:19:32 detox[7708] DEBUG: [EXEC_CMD, #27] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-10280 get-state
+Sep 10 04:19:32 detox[7708] TRACE: [EXEC_SUCCESS, #27] device
+
+Sep 10 04:19:35 detox[7708] DEBUG: [EXEC_CMD, #28] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-10280 get-state
+Sep 10 04:19:36 detox[7708] DEBUG: [EXEC_FAIL, #28] ""C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-10280 get-state" failed with error = ChildProcessError: Command failed: "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-10280 get-state
+error: device 'emulator-10280' not found
+ `"C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-10280 get-state` (exited with error code 1) (code=1), stdout and stderr:
+
+Sep 10 04:19:36 detox[7708] DEBUG: [EXEC_FAIL, #28] 
+Sep 10 04:19:36 detox[7708] DEBUG: [EXEC_FAIL, #28] error: device 'emulator-10280' not found
+
+Sep 10 04:19:36 detox[7708] DEBUG: [WSS_CLOSE] Detox server has been closed gracefully

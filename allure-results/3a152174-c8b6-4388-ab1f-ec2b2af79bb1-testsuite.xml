@@ -1,0 +1,74 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1663076763973' stop='1663076893514'>
+    <name>App</name>
+    <title>App</title>
+    <test-cases>
+        <test-case start='1663076785705' status='passed' stop='1663076802399'>
+            <name>can navigate between menu and order tabs</name>
+            <title>can navigate between menu and order tabs</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1663076802405' status='passed' stop='1663076814486'>
+            <name>can navigate to orders tab and view previous orders</name>
+            <title>can navigate to orders tab and view previous orders</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1663076814489' status='passed' stop='1663076836850'>
+            <name>build screen can add and remove toppings</name>
+            <title>build screen can add and remove toppings</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1663076836852' status='passed' stop='1663076859668'>
+            <name>build screen can select toppings, pick a size, and submit order</name>
+            <title>build screen can select toppings, pick a size, and submit order</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1663076859670' status='failed' stop='1663076893136'>
+            <name>build screen with all values selected for medium size</name>
+            <title>build screen with all values selected for medium size</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot test failue' source='766e5005-563d-4912-ac12-a5ba74638470-attachment.png' type='image/png' size='108316'/>
+            </attachments>
+            <failure>
+                <message>Test Failed: '(an instance of android.widget.TextView and view.getText() with or without transformation to match: is "$39" and view has effective visibility &lt;VISIBLE>)' doesn't match the selected view.
+                Expected: (an instance of android.widget.TextView and view.getText() with or without transformation to match: is "$39" and view has effective visibility &lt;VISIBLE>)
+                     Got: an instance of android.widget.TextView and view.getText() with or without transformation to match: is "$39" view.getText() was "$34" transformed text was "$34"
+                View Details: ReactTextView{id=493, visibility=VISIBLE, width=141, height=140, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, layout-params=android.view.ViewGroup$LayoutParams@866798c, tag=total, root-is-layout-requested=false, has-input-connection=false, x=314.0, y=1499.0, text=$34, input-type=0, ime-target=false, has-links=false}
+                </message>
+                <stack-trace>Test Failed: '(an instance of android.widget.TextView and view.getText() with or without transformation to match: is "$39" and view has effective visibility &lt;VISIBLE>)' doesn't match the selected view.
+                Expected: (an instance of android.widget.TextView and view.getText() with or without transformation to match: is "$39" and view has effective visibility &lt;VISIBLE>)
+                     Got: an instance of android.widget.TextView and view.getText() with or without transformation to match: is "$39" view.getText() was "$34" transformed text was "$34"
+                View Details: ReactTextView{id=493, visibility=VISIBLE, width=141, height=140, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, layout-params=android.view.ViewGroup$LayoutParams@866798c, tag=total, root-is-layout-requested=false, has-input-connection=false, x=314.0, y=1499.0, text=$34, input-type=0, ime-target=false, has-links=false}
+                
+                    at createErrorWithUserStack (C:\awesome\node_modules\detox\src\utils\errorUtils.js:34:27)
+                    at Client._doSendAction (C:\awesome\node_modules\detox\src\client\Client.js:164:32)
+                    at Client._sendMonitoredAction (C:\awesome\node_modules\detox\src\client\Client.js:157:25)
+                    at Client.sendAction (C:\awesome\node_modules\detox\src\client\Client.js:143:14)
+                    at Client.execute (C:\awesome\node_modules\detox\src\client\Client.js:132:25)
+                    at InvocationManager.execute (C:\awesome\node_modules\detox\src\invoke.js:12:39)
+                    at MatcherAssertionInteraction.execute (C:\awesome\node_modules\detox\src\android\interactions\native.js:18:53)
+                    at NativeExpectElement.toHaveText (C:\awesome\node_modules\detox\src\android\core\NativeExpect.js:38:180)
+                    at Object.&lt;anonymous> (C:\awesome\e2e\app.e2e.js:76:43)
+                    at Generator.next (&lt;anonymous>)
+                    at asyncGeneratorStep (C:\awesome\node_modules\@babel\runtime\helpers\asyncToGenerator.js:3:24)
+                    at _next (C:\awesome\node_modules\@babel\runtime\helpers\asyncToGenerator.js:25:9)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

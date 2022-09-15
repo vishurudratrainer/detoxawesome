@@ -1,0 +1,47 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1663148643327' stop='1663148643363'>
+    <name>App</name>
+    <title>App</title>
+    <test-cases>
+        <test-case start='1663148643330' status='undefined'>
+            <name>can navigate between menu and order tabs</name>
+            <title>can navigate between menu and order tabs</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1663148643355' status='undefined'>
+            <name>can navigate to orders tab and view previous orders</name>
+            <title>can navigate to orders tab and view previous orders</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1663148643357' status='undefined'>
+            <name>build screen can add and remove toppings</name>
+            <title>build screen can add and remove toppings</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1663148643359' status='undefined'>
+            <name>build screen can select toppings, pick a size, and submit order</name>
+            <title>build screen can select toppings, pick a size, and submit order</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1663148643361' status='undefined'>
+            <name>build screen with all values selected for medium size</name>
+            <title>build screen with all values selected for medium size</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

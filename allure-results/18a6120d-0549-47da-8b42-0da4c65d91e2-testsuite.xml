@@ -1,0 +1,127 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1663148643256' stop='1663148662598'>
+    <name>App</name>
+    <title>App</title>
+    <test-cases>
+        <test-case start='1663148645217' status='failed' stop='1663148648637'>
+            <name>can navigate between menu and order tabs</name>
+            <title>can navigate between menu and order tabs</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot test failue' source='2369267a-4fb3-4b5e-8365-867d17d45f4e-attachment.png' type='image/png' size='794658'/>
+            </attachments>
+            <failure>
+                <message>process.stdin.setRawMode is not a function</message>
+                <stack-trace>TypeError: process.stdin.setRawMode is not a function
+                    at C:\awesome\node_modules\detox\src\utils\pressAnyKey.js:9:19
+                    at new Promise (&lt;anonymous>)
+                    at pressAnyKey (C:\awesome\node_modules\detox\src\utils\pressAnyKey.js:7:10)
+                    at EmulatorDriver._waitForAppLaunch (C:\awesome\node_modules\detox\src\devices\runtime\drivers\android\AndroidDriver.js:375:11)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at EmulatorDriver._handleLaunchApp (C:\awesome\node_modules\detox\src\devices\runtime\drivers\android\AndroidDriver.js:121:7)
+                    at EmulatorDriver.waitForAppLaunch (C:\awesome\node_modules\detox\src\devices\runtime\drivers\android\AndroidDriver.js:105:12)
+                    at RuntimeDevice._doLaunchApp (C:\awesome\node_modules\detox\src\devices\runtime\RuntimeDevice.js:348:35)
+                    at traceCall (C:\awesome\node_modules\detox\src\utils\trace.js:41:20)
+                    at RuntimeDevice.stackTraceWrapper [as launchApp] (C:\awesome\node_modules\detox\src\utils\wrapWithStackTraceCutter.js:12:16)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1663148648647' status='failed' stop='1663148652052'>
+            <name>can navigate to orders tab and view previous orders</name>
+            <title>can navigate to orders tab and view previous orders</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot test failue' source='a7fa27d5-c63e-472b-b326-925daddf022d-attachment.png' type='image/png' size='794658'/>
+            </attachments>
+            <failure>
+                <message>process.stdin.setRawMode is not a function</message>
+                <stack-trace>TypeError: process.stdin.setRawMode is not a function
+                    at C:\awesome\node_modules\detox\src\utils\pressAnyKey.js:9:19
+                    at new Promise (&lt;anonymous>)
+                    at pressAnyKey (C:\awesome\node_modules\detox\src\utils\pressAnyKey.js:7:10)
+                    at EmulatorDriver._waitForAppLaunch (C:\awesome\node_modules\detox\src\devices\runtime\drivers\android\AndroidDriver.js:375:11)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at EmulatorDriver._handleLaunchApp (C:\awesome\node_modules\detox\src\devices\runtime\drivers\android\AndroidDriver.js:121:7)
+                    at EmulatorDriver.waitForAppLaunch (C:\awesome\node_modules\detox\src\devices\runtime\drivers\android\AndroidDriver.js:105:12)
+                    at RuntimeDevice._doLaunchApp (C:\awesome\node_modules\detox\src\devices\runtime\RuntimeDevice.js:348:35)
+                    at traceCall (C:\awesome\node_modules\detox\src\utils\trace.js:41:20)
+                    at RuntimeDevice.stackTraceWrapper [as launchApp] (C:\awesome\node_modules\detox\src\utils\wrapWithStackTraceCutter.js:12:16)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1663148652053' status='failed' stop='1663148655461'>
+            <name>build screen can add and remove toppings</name>
+            <title>build screen can add and remove toppings</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot test failue' source='4c48739e-b710-4c98-bd88-e16e3da5acc5-attachment.png' type='image/png' size='794658'/>
+            </attachments>
+            <failure>
+                <message>process.stdin.setRawMode is not a function</message>
+                <stack-trace>TypeError: process.stdin.setRawMode is not a function
+                    at C:\awesome\node_modules\detox\src\utils\pressAnyKey.js:9:19
+                    at new Promise (&lt;anonymous>)
+                    at pressAnyKey (C:\awesome\node_modules\detox\src\utils\pressAnyKey.js:7:10)
+                    at EmulatorDriver._waitForAppLaunch (C:\awesome\node_modules\detox\src\devices\runtime\drivers\android\AndroidDriver.js:375:11)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at EmulatorDriver._handleLaunchApp (C:\awesome\node_modules\detox\src\devices\runtime\drivers\android\AndroidDriver.js:121:7)
+                    at EmulatorDriver.waitForAppLaunch (C:\awesome\node_modules\detox\src\devices\runtime\drivers\android\AndroidDriver.js:105:12)
+                    at RuntimeDevice._doLaunchApp (C:\awesome\node_modules\detox\src\devices\runtime\RuntimeDevice.js:348:35)
+                    at traceCall (C:\awesome\node_modules\detox\src\utils\trace.js:41:20)
+                    at RuntimeDevice.stackTraceWrapper [as launchApp] (C:\awesome\node_modules\detox\src\utils\wrapWithStackTraceCutter.js:12:16)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1663148655462' status='failed' stop='1663148658835'>
+            <name>build screen can select toppings, pick a size, and submit order</name>
+            <title>build screen can select toppings, pick a size, and submit order</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot test failue' source='ee811e26-b4c0-4d6c-b029-e5aa25e6fd9c-attachment.png' type='image/png' size='794658'/>
+            </attachments>
+            <failure>
+                <message>process.stdin.setRawMode is not a function</message>
+                <stack-trace>TypeError: process.stdin.setRawMode is not a function
+                    at C:\awesome\node_modules\detox\src\utils\pressAnyKey.js:9:19
+                    at new Promise (&lt;anonymous>)
+                    at pressAnyKey (C:\awesome\node_modules\detox\src\utils\pressAnyKey.js:7:10)
+                    at EmulatorDriver._waitForAppLaunch (C:\awesome\node_modules\detox\src\devices\runtime\drivers\android\AndroidDriver.js:375:11)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at EmulatorDriver._handleLaunchApp (C:\awesome\node_modules\detox\src\devices\runtime\drivers\android\AndroidDriver.js:121:7)
+                    at EmulatorDriver.waitForAppLaunch (C:\awesome\node_modules\detox\src\devices\runtime\drivers\android\AndroidDriver.js:105:12)
+                    at RuntimeDevice._doLaunchApp (C:\awesome\node_modules\detox\src\devices\runtime\RuntimeDevice.js:348:35)
+                    at traceCall (C:\awesome\node_modules\detox\src\utils\trace.js:41:20)
+                    at RuntimeDevice.stackTraceWrapper [as launchApp] (C:\awesome\node_modules\detox\src\utils\wrapWithStackTraceCutter.js:12:16)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1663148658836' status='failed' stop='1663148662357'>
+            <name>build screen with all values selected for medium size</name>
+            <title>build screen with all values selected for medium size</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot test failue' source='e162c45c-7712-4bf6-9dc7-ad5298a61874-attachment.png' type='image/png' size='794658'/>
+            </attachments>
+            <failure>
+                <message>process.stdin.setRawMode is not a function</message>
+                <stack-trace>TypeError: process.stdin.setRawMode is not a function
+                    at C:\awesome\node_modules\detox\src\utils\pressAnyKey.js:9:19
+                    at new Promise (&lt;anonymous>)
+                    at pressAnyKey (C:\awesome\node_modules\detox\src\utils\pressAnyKey.js:7:10)
+                    at EmulatorDriver._waitForAppLaunch (C:\awesome\node_modules\detox\src\devices\runtime\drivers\android\AndroidDriver.js:375:11)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at EmulatorDriver._handleLaunchApp (C:\awesome\node_modules\detox\src\devices\runtime\drivers\android\AndroidDriver.js:121:7)
+                    at EmulatorDriver.waitForAppLaunch (C:\awesome\node_modules\detox\src\devices\runtime\drivers\android\AndroidDriver.js:105:12)
+                    at RuntimeDevice._doLaunchApp (C:\awesome\node_modules\detox\src\devices\runtime\RuntimeDevice.js:348:35)
+                    at traceCall (C:\awesome\node_modules\detox\src\utils\trace.js:41:20)
+                    at RuntimeDevice.stackTraceWrapper [as launchApp] (C:\awesome\node_modules\detox\src\utils\wrapWithStackTraceCutter.js:12:16)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

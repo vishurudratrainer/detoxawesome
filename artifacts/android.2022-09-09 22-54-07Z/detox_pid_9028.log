@@ -1,0 +1,1019 @@
+Sep 10 04:24:11 detox[9028] TRACE: [DETOX_CREATE] created a Detox instance with config:
+{
+  appsConfig: {
+    default: {
+      type: 'android.apk',
+      binaryPath: 'android/app/build/outputs/apk/release/app-release.apk',
+      build: 'cd android && gradlew app:assembleRelease assembleAndroidTest -DtestBuildType=release && cd ..'
+    }
+  },
+  artifactsConfig: {
+    rootDir: 'artifacts\\android.2022-09-09 22-54-07Z',
+    plugins: {
+      log: {
+        enabled: true,
+        keepOnlyFailedTestsArtifacts: false
+      },
+      screenshot: {
+        enabled: true,
+        shouldTakeAutomaticSnapshots: false,
+        keepOnlyFailedTestsArtifacts: false
+      },
+      video: {
+        enabled: false,
+        keepOnlyFailedTestsArtifacts: false
+      },
+      instruments: {
+        enabled: false,
+        keepOnlyFailedTestsArtifacts: false
+      },
+      timeline: {
+        enabled: false
+      },
+      uiHierarchy: {
+        enabled: false,
+        keepOnlyFailedTestsArtifacts: false
+      }
+    },
+    pathBuilder: ArtifactPathBuilder {
+      _rootDir: 'artifacts\\android.2022-09-09 22-54-07Z'
+    }
+  },
+  behaviorConfig: {
+    init: {
+      reinstallApp: true,
+      exposeGlobals: true
+    },
+    cleanup: {
+      shutdownDevice: true
+    },
+    launchApp: 'auto'
+  },
+  cliConfig: {
+    recordLogs: 'all',
+    cleanup: true,
+    configuration: 'android',
+    loglevel: 'verbose',
+    useCustomLogger: true
+  },
+  configurationName: 'android',
+  deviceConfig: {
+    type: 'android.emulator',
+    device: {
+      avdName: 'demotest'
+    }
+  },
+  runnerConfig: {
+    testRunner: 'jest',
+    runnerConfig: 'e2e/config.json',
+    specs: 'e2e',
+    skipLegacyWorkersInjection: true
+  },
+  sessionConfig: {
+    autoStart: true,
+    sessionId: '362f97e6-2ec7-e9b0-4352-4224d59e89b5',
+    debugSynchronization: 10000
+  }
+}
+Sep 10 04:24:11 detox[9028] DEBUG: [WSS_CREATE] Detox server listening on localhost:56319...
+Sep 10 04:24:11 detox[9028] DEBUG: [WSS_CONNECTION, #56320] registered a new connection.
+Sep 10 04:24:11 detox[9028] TRACE: [WS_OPEN] opened web socket to: ws://localhost:56319
+Sep 10 04:24:11 detox[9028] TRACE: [WS_SEND] {"type":"login","params":{"sessionId":"362f97e6-2ec7-e9b0-4352-4224d59e89b5","role":"tester"},"messageId":0}
+Sep 10 04:24:11 detox[9028] TRACE: [WSS_GET_FROM, #56320] {"type":"login","params":{"sessionId":"362f97e6-2ec7-e9b0-4352-4224d59e89b5","role":"tester"},"messageId":0}
+Sep 10 04:24:11 detox[9028] TRACE: [SESSION_CREATED] created session 362f97e6-2ec7-e9b0-4352-4224d59e89b5
+Sep 10 04:24:11 detox[9028] TRACE: [WSS_SEND_TO, #tester] {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+Sep 10 04:24:11 detox[9028] TRACE: [SESSION_JOINED] tester joined session 362f97e6-2ec7-e9b0-4352-4224d59e89b5
+Sep 10 04:24:11 detox[9028] TRACE: [WS_MESSAGE] {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+ 
+Sep 10 04:24:11 detox[9028] DEBUG: [EXEC_CMD, #0] "C:\Users\Admin\AppData\Local\Android\Sdk\emulator\emulator.EXE" -list-avds --verbose
+Sep 10 04:24:11 detox[9028] TRACE: [EXEC_SUCCESS, #0] demotest
+demotest2
+second
+
+Sep 10 04:24:11 detox[9028] DEBUG: [EXEC_CMD, #1] "C:\Users\Admin\AppData\Local\Android\Sdk\emulator\emulator.EXE" -version 
+Sep 10 04:24:12 detox[9028] TRACE: [EXEC_SUCCESS, #1] INFO    | Duplicate loglines will be removed, if you wish to see each indiviudal line launch with the -log-nofilter flag.
+Android emulator version 31.3.10.0 (build_id 8807927) (CL:N/A)
+Copyright (C) 2006-2017 The Android Open Source Project and many others.
+This program is a derivative of the QEMU CPU emulator (www.qemu.org).
+
+  This software is licensed under the terms of the GNU General Public
+  License version 2, as published by the Free Software Foundation, and
+  may be copied, distributed, and modified under those terms.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+INFO    | Android emulator version 31.3.10.0 (build_id 8807927) (CL:N/A)
+
+Sep 10 04:24:12 detox[9028] DEBUG: [EMU_BIN_VERSION_DETECT] Detected emulator binary version { major: 31, minor: 3, patch: 10, toString: [Function: toString] }
+Sep 10 04:24:12 detox[9028] DEBUG: [ALLOCATE_DEVICE] Trying to allocate a device based on "demotest"
+Sep 10 04:24:12 detox[9028] DEBUG: [EXEC_CMD, #2] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE"  devices
+Sep 10 04:24:12 detox[9028] DEBUG: [EXEC_SUCCESS, #2] List of devices attached
+
+
+Sep 10 04:24:12 detox[9028] DEBUG: [ALLOCATE_DEVICE] Settled on emulator-19496
+Sep 10 04:24:12 detox[9028] DEBUG: [SPAWN_CMD] C:\Users\Admin\AppData\Local\Android\Sdk\emulator\emulator.EXE -verbose -no-audio -no-boot-anim -port 19496 @demotest
+Sep 10 04:24:18 detox[9028] DEBUG: [SPAWN_SUCCESS] INFO    | Android emulator version 31.3.10.0 (build_id 8807927) (CL:N/A)
+INFO    | Found AVD name 'demotest'
+INFO    | Found AVD target architecture: x86
+INFO    | argv[0]: 'C:\Users\Admin\AppData\Local\Android\Sdk\emulator\emulator.EXE'; program directory: 'C:\Users\Admin\AppData\Local\Android\Sdk\emulator'
+VERBOSE |  Found directory: C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\
+emulator: INFO: Found systemPath C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\
+INFO    | emuDirName: 'C:\Users\Admin\AppData\Local\Android\Sdk\emulator'
+VERBOSE |  Found directory: C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\
+emulator: INFO: Found systemPath C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\
+WARNING | Your GPU drivers may have a bug. Switching to software rendering.
+INFO    | Duplicate loglines will be removed, if you wish to see each indiviudal line launch with the -log-nofilter flag.
+VERBOSE | autoconfig: -skin 1440x2560
+VERBOSE | autoconfig: -skindir (null)
+VERBOSE | querying file version info API...
+VERBOSE | found kernelbase.dll
+VERBOSE | GetFileVersionInfoSizeW found. On Windows 10?
+VERBOSE | GetFileVersionInfoW found. On Windows 10?
+VERBOSE | VerQueryValueW found. Can query file versions
+VERBOSE | queryFileVersionInfo: path not found: amdvlk64.dll
+VERBOSE | querying file version info API...
+VERBOSE | queryFileVersionInfo: path not found: amdvlk32.dll
+VERBOSE | querying file version info API...
+VERBOSE | queryFileVersionInfo: path not found: vulkan-1.dll
+VERBOSE | autoconfig: -kernel C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\kernel-ranchu
+VERBOSE | Target arch = 'x86'
+VERBOSE | Auto-config: -qemu -cpu qemu32
+VERBOSE | Auto-detect: Kernel image requires new device naming scheme.
+VERBOSE | Auto-detect: Kernel does not support YAFFS2 partitions.
+VERBOSE | autoconfig: -ramdisk C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\ramdisk.img
+VERBOSE | Using initial system image: C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\system.img
+VERBOSE | Using initial vendor image: C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\vendor.img
+VERBOSE | autoconfig: -data C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\userdata-qemu.img
+VERBOSE | autoconfig: -initdata C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\userdata.img
+VERBOSE | autoconfig: -cache C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\cache.img
+VERBOSE | autoconfig: -sdcard C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\sdcard.img
+VERBOSE | Decreasing RAM size to 4096MB
+VERBOSE | VM heap size 15360MB is above maximum supported 576MB, setting it to that value
+VERBOSE | System image is read only
+INFO    | IPv4 server found: 8.8.8.8
+VERBOSE | Found 1 DNS servers:
+VERBOSE | 	8.8.8.8
+VERBOSE | found magic skin width=1440 height=2560 bpp=16
+
+VERBOSE | Requested console port 19496: Inferring adb port 19497.
+VERBOSE | CPU Acceleration: working
+VERBOSE | CPU Acceleration status: HAXM version 7.6.5 (4) is installed and usable.
+VERBOSE | handleCpuAcceleration: feature check for hvf
+VERBOSE | registered 'boot-properties' qemud service
+VERBOSE | Adding boot property: 'qemu.cmdline' = 'androidboot.logcat=*:V androidboot.consolepipe=qemu_pipe,pipe:logcat'
+VERBOSE | Adding boot property: 'qemu.logcat' = 'start'
+VERBOSE | GPU emulation enabled using 'swiftshader_indirect' mode
+VERBOSE | Initializing hardware OpenGLES emulation support
+VERBOSE | create display 0
+VERBOSE | setDisplayPose 0 x 0 y 0 w 1440 h 2560 dpi 0
+INFO    | configAndStartRenderer: setting vsync to 60 hz
+VERBOSE | Verified boot params were not found.
+VERBOSE | Found 1 DNS servers:
+VERBOSE | 	8.8.8.8
+INFO    | Content of hardware configuration file:
+INFO    | 	hw.cpu.arch = x86
+INFO    | 	hw.cpu.model = qemu32
+INFO    | 	hw.cpu.ncore = 4
+INFO    | 	hw.ramSize = 4096
+INFO    | 	hw.screen = multi-touch
+INFO    | 	hw.mainKeys = false
+INFO    | 	hw.trackBall = false
+INFO    | 	hw.keyboard = true
+INFO    | 	hw.keyboard.lid = false
+INFO    | 	hw.keyboard.charmap = qwerty2
+INFO    | 	hw.dPad = false
+INFO    | 	hw.rotaryInput = false
+INFO    | 	hw.gsmModem = true
+INFO    | 	hw.gps = true
+INFO    | 	hw.battery = true
+INFO    | 	hw.accelerometer = true
+INFO    | 	hw.gyroscope = true
+INFO    | 	hw.audioInput = true
+INFO    | 	hw.audioOutput = true
+INFO    | 	hw.sdCard = true
+INFO    | 	hw.sdCard.path = C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\sdcard.img
+INFO    | 	disk.cachePartition = true
+INFO    | 	disk.cachePartition.path = C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\cache.img
+INFO    | 	disk.cachePartition.size = 66m
+INFO    | 	test.quitAfterBootTimeOut = -1
+INFO    | 	test.delayAdbTillBootComplete = 0
+INFO    | 	test.monitorAdb = 0
+INFO    | 	hw.lcd.width = 1440
+INFO    | 	hw.lcd.height = 2560
+INFO    | 	hw.lcd.depth = 16
+INFO    | 	hw.lcd.density = 560
+INFO    | 	hw.lcd.backlight = true
+INFO    | 	hw.lcd.vsync = 60
+INFO    | 	hw.gltransport = pipe
+INFO    | 	hw.gltransport.asg.writeBufferSize = 1048576
+INFO    | 	hw.gltransport.asg.writeStepSize = 4096
+INFO    | 	hw.gltransport.asg.dataRingSize = 32768
+INFO    | 	hw.gltransport.drawFlushInterval = 800
+INFO    | 	hw.displayRegion.0.1.xOffset = -1
+INFO    | 	hw.displayRegion.0.1.yOffset = -1
+INFO    | 	hw.displayRegion.0.1.width = 0
+INFO    | 	hw.displayRegion.0.1.height = 0
+INFO    | 	hw.displayRegion.0.2.xOffset = -1
+INFO    | 	hw.displayRegion.0.2.yOffset = -1
+INFO    | 	hw.displayRegion.0.2.width = 0
+INFO    | 	hw.displayRegion.0.2.height = 0
+INFO    | 	hw.displayRegion.0.3.xOffset = -1
+INFO    | 	hw.displayRegion.0.3.yOffset = -1
+INFO    | 	hw.displayRegion.0.3.width = 0
+INFO    | 	hw.displayRegion.0.3.height = 0
+INFO    | 	hw.display1.width = 0
+INFO    | 	hw.display1.height = 0
+INFO    | 	hw.display1.density = 0
+INFO    | 	hw.display1.xOffset = -1
+INFO    | 	hw.display1.yOffset = -1
+INFO    | 	hw.display1.flag = 0
+INFO    | 	hw.display2.width = 0
+INFO    | 	hw.display2.height = 0
+INFO    | 	hw.display2.density = 0
+INFO    | 	hw.display2.xOffset = -1
+INFO    | 	hw.display2.yOffset = -1
+INFO    | 	hw.display2.flag = 0
+INFO    | 	hw.display3.width = 0
+INFO    | 	hw.display3.height = 0
+INFO    | 	hw.display3.density = 0
+INFO    | 	hw.display3.xOffset = -1
+INFO    | 	hw.display3.yOffset = -1
+INFO    | 	hw.display3.flag = 0
+INFO    | 	hw.multi_display_window = false
+INFO    | 	hw.gpu.enabled = true
+INFO    | 	hw.gpu.mode = swiftshader_indirect
+INFO    | 	hw.initialOrientation = Portrait
+INFO    | 	hw.camera.back = virtualscene
+INFO    | 	hw.camera.front = emulated
+INFO    | 	vm.heapSize = 576
+INFO    | 	hw.sensors.light = true
+INFO    | 	hw.sensors.pressure = true
+INFO    | 	hw.sensors.humidity = true
+INFO    | 	hw.sensors.proximity = true
+INFO    | 	hw.sensors.magnetic_field = true
+INFO    | 	hw.sensors.magnetic_field_uncalibrated = true
+INFO    | 	hw.sensors.gyroscope_uncalibrated = true
+INFO    | 	hw.sensors.orientation = true
+INFO    | 	hw.sensors.temperature = true
+INFO    | 	hw.sensors.rgbclight = false
+INFO    | 	hw.sensor.hinge = false
+INFO    | 	hw.sensor.hinge.count = 0
+INFO    | 	hw.sensor.hinge.type = 0
+INFO    | 	hw.sensor.hinge.sub_type = 0
+INFO    | 	hw.sensor.hinge.fold_to_displayRegion.0.1_at_posture = 1
+INFO    | 	hw.sensor.roll = false
+INFO    | 	hw.sensor.roll.count = 0
+INFO    | 	hw.sensor.roll.resize_to_displayRegion.0.1_at_posture = 6
+INFO    | 	hw.sensor.roll.resize_to_displayRegion.0.2_at_posture = 6
+INFO    | 	hw.sensor.roll.resize_to_displayRegion.0.3_at_posture = 6
+INFO    | 	hw.sensors.heart_rate = false
+INFO    | 	hw.sensors.wrist_tilt = false
+INFO    | 	hw.useext4 = true
+INFO    | 	hw.arc = false
+INFO    | 	hw.arc.autologin = false
+INFO    | 	hw.device.name = pixel_xl
+INFO    | 	kernel.path = C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\kernel-ranchu
+INFO    | 	kernel.newDeviceNaming = yes
+INFO    | 	kernel.supportsYaffs2 = no
+INFO    | 	disk.ramdisk.path = C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\ramdisk.img
+INFO    | 	disk.systemPartition.initPath = C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\system.img
+INFO    | 	disk.systemPartition.size = 2562m
+INFO    | 	disk.vendorPartition.initPath = C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\vendor.img
+INFO    | 	disk.vendorPartition.size = 800m
+INFO    | 	disk.dataPartition.path = C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\userdata-qemu.img
+INFO    | 	disk.dataPartition.size = 10g
+INFO    | 	disk.encryptionKeyPartition.path = C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\encryptionkey.img
+INFO    | 	PlayStore.enabled = false
+INFO    | 	avd.name = demotest
+INFO    | 	avd.id = demotest
+INFO    | 	fastboot.forceColdBoot = false
+INFO    | 	android.sdk.root = C:\Users\Admin\AppData\Local\Android\Sdk
+INFO    | 	android.avd.home = C:\Users\Admin\.android\avd
+INFO    | WARNING | cannot add library vulkan-1.dll: failed
+.
+INFO    | QEMU options list:
+INFO    | 	 argv[00] = "C:\Users\Admin\AppData\Local\Android\Sdk\emulator\qemu\windows-x86_64\qemu-system-i386.exe"
+INFO    | 	 argv[01] = "-dns-server"
+INFO    | 	 argv[02] = "8.8.8.8"
+INFO    | 	 argv[03] = "-no-audio"
+INFO    | 	 argv[04] = "-mem-path"
+INFO    | 	 argv[05] = "C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\snapshots\default_boot\ram.img"
+INFO    | 	 argv[06] = "-mem-file-shared"
+INFO    | 	 argv[07] = "-serial"
+INFO    | 	 argv[08] = "null"
+INFO    | 	 argv[09] = "-android-ports"
+INFO    | 	 argv[10] = "19496,19497"
+INFO    | 	 argv[11] = "-device"
+INFO    | 	 argv[12] = "goldfish_pstore,addr=0xff018000,size=0x10000,file=C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\data\misc\pstore\pstore.bin"
+INFO    | 	 argv[13] = "-cpu"
+INFO    | 	 argv[14] = "android32"
+INFO    | 	 argv[15] = "-enable-hax"
+INFO    | 	 argv[16] = "-smp"
+INFO    | 	 argv[17] = "cores=4"
+INFO    | 	 argv[18] = "-m"
+INFO    | 	 argv[19] = "4096"
+INFO    | 	 argv[20] = "-lcd-density"
+INFO    | 	 argv[21] = "560"
+INFO    | 	 argv[22] = "-nodefaults"
+INFO    | 	 argv[23] = "-kernel"
+INFO    | 	 argv[24] = "C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\kernel-ranchu"
+INFO    | 	 argv[25] = "-initrd"
+INFO    | 	 argv[26] = "C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\ramdisk.img"
+INFO    | 	 argv[27] = "-drive"
+INFO    | 	 argv[28] = "if=none,index=0,id=system,if=none,file=C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\system.img,read-only"
+INFO    | 	 argv[29] = "-device"
+INFO    | 	 argv[30] = "virtio-blk-pci,drive=system,modern-pio-notify"
+INFO    | 	 argv[31] = "-drive"
+INFO    | 	 argv[32] = "if=none,index=1,id=cache,if=none,file=C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\cache.img.qcow2,overlap-check=none,cache=unsafe,l2-cache-size=1048576"
+INFO    | 	 argv[33] = "-device"
+INFO    | 	 argv[34] = "virtio-blk-pci,drive=cache,modern-pio-notify"
+INFO    | 	 argv[35] = "-drive"
+INFO    | 	 argv[36] = "if=none,index=2,id=userdata,if=none,file=C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\userdata-qemu.img.qcow2,overlap-check=none,cache=unsafe,l2-cache-size=1310720"
+INFO    | 	 argv[37] = "-device"
+INFO    | 	 argv[38] = "virtio-blk-pci,drive=userdata,modern-pio-notify"
+INFO    | 	 argv[39] = "-drive"
+INFO    | 	 argv[40] = "if=none,index=3,id=encrypt,if=none,file=C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\encryptionkey.img.qcow2,overlap-check=none,cache=unsafe,l2-cache-size=1048576"
+INFO    | 	 argv[41] = "-device"
+INFO    | 	 argv[42] = "virtio-blk-pci,drive=encrypt,modern-pio-notify"
+INFO    | 	 argv[43] = "-drive"
+INFO    | 	 argv[44] = "if=none,index=4,id=vendor,if=none,file=C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\vendor.img,read-only"
+INFO    | 	 argv[45] = "-device"
+INFO    | 	 argv[46] = "virtio-blk-pci,drive=vendor,modern-pio-notify"
+INFO    | 	 argv[47] = "-drive"
+INFO    | 	 argv[48] = "if=none,index=5,id=sdcard,if=none,file=C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\sdcard.img.qcow2,overlap-check=none,cache=unsafe,l2-cache-size=1048576"
+INFO    | 	 argv[49] = "-device"
+INFO    | 	 argv[50] = "virtio-blk-pci,drive=sdcard,modern-pio-notify"
+INFO    | 	 argv[51] = "-netdev"
+INFO    | 	 argv[52] = "user,id=mynet"
+INFO    | 	 argv[53] = "-device"
+INFO    | 	 argv[54] = "virtio-net-pci,netdev=mynet"
+INFO    | 	 argv[55] = "-device"
+INFO    | 	 argv[56] = "virtio-rng-pci"
+INFO    | 	 argv[57] = "-show-cursor"
+INFO    | 	 argv[58] = "-L"
+INFO    | 	 argv[59] = "C:\Users\Admin\AppData\Local\Android\Sdk\emulator/lib/pc-bios"
+INFO    | 	 argv[60] = "-soundhw"
+INFO    | 	 argv[61] = "hda"
+INFO    | 	 argv[62] = "-vga"
+INFO    | 	 argv[63] = "none"
+INFO    | 	 argv[64] = "-append"
+INFO    | 	 argv[65] = "no_timer_check clocksource=pit no-kvmclock console=0 cma=314M@0-4G mac80211_hwsim.radios=2 mac80211_hwsim.channels=2 loop.max_part=7 ramoops.mem_address=0xff018000 ramoops.mem_size=0x10000 memmap=0x10000$0xff018000 printk.devkmsg=on qemu=1WARNING | cannot add library vulkan-1.dll: failed
+ androidboot.hardware=ranchu androidboot.serialno=EMULATOR31X3X10X0 android.bootanim=0 qemu.gles=1 qemu.settings.system.screen_off_timeout=2147483647 qemu.encrypt=1 qemu.vsync=60 qemu.gltransport=pipe qemu.gltransport.drawFlushInterval=800 qemu.opengles.version=131072 qemu.dalvik.vm.heapsize=576m qemu.camera_hq_edge_processing=0 androidboot.android_dt_dir=/sys/bus/platform/devices/ANDR0001:00/properties/android/ qemu.wifi=1 android.qemud=1 qemu.avd_name=demotest"
+INFO    | 	 argv[66] = "-android-hw"
+INFO    | 	 argv[67] = "C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\hardware-qemu.ini"
+INFO    | Concatenated QEMU options: C:\Users\Admin\AppData\Local\Android\Sdk\emulator\qemu\windows-x86_64\qemu-system-i386.exe -dns-server 8.8.8.8 -no-audio -mem-path C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\snapshots\default_boot\ram.img -mem-file-shared -serial null -android-ports 19496,19497 -device goldfish_pstore,addr=0xff018000,size=0x10000,file=C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\data\misc\pstore\pstore.bin -cpu android32 -enable-hax -smp cores=4 -m 4096 -lcd-density 560 -nodefaults -kernel C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\kernel-ranchu -initrd C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\ramdisk.img -drive if=none,index=0,id=system,if=none,file=C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\system.img,read-only -device virtio-blk-pci,drive=system,modern-pio-notify -drive if=none,index=1,id=cache,if=none,file=C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\cache.img.qcow2,overlap-check=none,cache=unsafe,l2-cache-size=1048576 -device virtio-blk-pci,drive=cache,modern-pio-notify -drive if=none,index=2,id=userdata,if=none,file=C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\userdata-qemu.img.qcow2,overlap-check=none,cache=unsafe,l2-cache-size=1310720 -device virtio-blk-pci,drive=userdata,modern-pio-notify -drive if=none,index=3,id=encrypt,if=none,file=C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\encryptionkey.img.qcow2,overlap-check=none,cache=unsafe,l2-cache-size=1048576 -device virtio-blk-pci,drive=encrypt,modern-pio-notify -drive if=none,index=4,id=vendor,if=none,file=C:\Users\Admin\AppData\Local\Android\Sdk\system-images\android-26\google_apis\x86\\vendor.img,read-only -device virtio-blk-pci,drive=vendor,modern-pio-notify -drive if=none,index=5,id=sdcard,if=none,file=C:\Users\Admin\.android\avd\Pixel_XL_API_26.avd\sdcard.img.qcow2,overlap-check=none,cache=unsafe,l2-cache-size=1048576 -device virtio-blk-pci,drive=sdcard,modern-pio-notify -netdev user,id=mynet -
+INFO    | added library C:\Users\Admin\AppData\Local\Android\Sdk\emulator\lib64\vulkan\vulkan-1.dll
+VERBOSE | Android qemu version 31.3.10.0 (build_id 8807927) (CL:N/A)
+VERBOSE | Starting QEMU main loop
+VERBOSE | android_fopen: Failed to open /qemu.conf, err: 2
+VERBOSE | Adding boot property: 'ro.opengles.version' = '131072'
+VERBOSE | Adding boot property: 'qemu.sf.fake_camera' = 'front'
+VERBOSE | Adding boot property: 'dalvik.vm.heapsize' = '576m'
+VERBOSE | Adding boot property: 'qemu.hw.mainkeys' = '0'
+VERBOSE | Adding boot property: 'qemu.sf.lcd_density' = '560'
+HAX is working and emulator runs in fast virt mode.
+VERBOSE | goldfish_events.have-dpad: false
+VERBOSE | goldfish_events.have-trackball: false
+VERBOSE | goldfish_events.have-camera: true
+VERBOSE | goldfish_events.have-keyboard: true
+VERBOSE | goldfish_events.have-lidswitch: false
+VERBOSE | goldfish_events.have-tabletmode: false
+VERBOSE | goldfish_events.have-touch: false
+VERBOSE | goldfish_events.have-multitouch: true
+pc_memory_init: above 4g size: 40000000
+WARNING | Requested adb port (19497) is outside the recommended range [5555,5586]. ADB may not function properly for the emulator. See -help-port for details.
+VERBOSE | Not using any http proxy
+VERBOSE | Adding boot property: 'qemu.timezone' = 'Asia/Calcutta'
+VERBOSE | android_hw_fingerprint_init: fingerprint qemud listen service initialized
+VERBOSE | emulator_window_fb_rotate
+INFO    | setDisplayConfigs w 1440 h 2560 dpiX 560 dpiY 560
+VERBOSE | No acpi ini file provided, using default
+VERBOSE | Adding boot property: 'qemu.cmdline' = 'androidboot.logcat=*:V androidboot.consolepipe=qemu_pipe,pipe:logcat'
+VERBOSE | Adding boot property: 'qemu.logcat' = 'start'
+VERBOSE | Adding boot property: 'ro.opengles.version' = '131072'
+VERBOSE | Adding boot property: 'qemu.sf.fake_camera' = 'front'
+VERBOSE | Adding boot property: 'dalvik.vm.heapsize' = '576m'
+VERBOSE | Adding boot property: 'qemu.hw.mainkeys' = '0'
+VERBOSE | Adding boot property: 'qemu.sf.lcd_density' = '560'
+VERBOSE | Adding boot property: 'qemu.timezone' = 'Asia/Calcutta'
+VERBOSE | Path:C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.exe protocol version: 41
+VERBOSE | Found: 2 adb executables
+VERBOSE | Found: 2 adb executables
+VERBOSE | Adb: C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.exe
+VERBOSE | Path:C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.exe protocol version: 41
+VERBOSE | Path:C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.exe protocol version: 41
+VERBOSE | _hwFingerprint_connect: connect finger print listen is called
+VERBOSE | _hwFingerprint_connect: connect finger print listen is called
+VERBOSE | onGuestSendCommand: [000002A336E916D0] Adb connected, start proxing data
+
+Sep 10 04:24:18 detox[9028] DEBUG: [EXEC_CMD, #3] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell "getprop dev.bootcomplete"
+Sep 10 04:24:19 detox[9028] TRACE: [EXEC_SUCCESS, #3] 1
+
+Sep 10 04:24:19 detox[9028] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBootDevice({ deviceId: 'emulator-19496', type: 'demotest', coldBoot: true })
+Sep 10 04:24:19 detox[9028] DEBUG: [EXEC_CMD, #4] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell "getprop ro.build.version.sdk"
+Sep 10 04:24:19 detox[9028] TRACE: [EXEC_SUCCESS, #4] 26
+
+Sep 10 04:24:19 detox[9028] DEBUG: [EXEC_CMD, #5] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell "settings put global animator_duration_scale 0"
+Sep 10 04:24:20 detox[9028] TRACE: [EXEC_SUCCESS, #5] 
+Sep 10 04:24:20 detox[9028] DEBUG: [EXEC_CMD, #6] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell "settings put global window_animation_scale 0"
+Sep 10 04:24:20 detox[9028] TRACE: [EXEC_SUCCESS, #6] 
+Sep 10 04:24:20 detox[9028] DEBUG: [EXEC_CMD, #7] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell "settings put global transition_animation_scale 0"
+Sep 10 04:24:20 detox[9028] TRACE: [EXEC_SUCCESS, #7] 
+Sep 10 04:24:20 detox[9028] DEBUG: [EXEC_CMD, #8] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell "dumpsys power | grep \"^[ ]*m[UW].*=\""
+Sep 10 04:24:21 detox[9028] TRACE: [EXEC_SUCCESS, #8]   mWakefulness=Awake
+  mWakefulnessChanging=false
+  mWakeLockSummary=0x1
+  mUserActivitySummary=0x1
+  mWakeUpWhenPluggedOrUnpluggedConfig=false
+  mWakeUpWhenPluggedOrUnpluggedInTheaterModeConfig=false
+  mDreamsBatteryLevelMinimumWhenPoweredConfig=-1
+  mDreamsBatteryLevelMinimumWhenNotPoweredConfig=15
+  mScreenBrightnessOverrideFromWindowManager=-1
+  mUserActivityTimeoutOverrideFromWindowManager=-1
+  mUserInactiveOverrideFromWindowManager=false
+
+Sep 10 04:24:21 detox[9028] DEBUG: [EXEC_CMD, #9] "C:\Users\Admin\AppData\Local\Android\Sdk\build-tools\33.0.0\aapt.EXE" dump badging "C:\awesome\android\app\build\outputs\apk\release\app-release.apk"
+Sep 10 04:24:21 detox[9028] TRACE: [EXEC_SUCCESS, #9] package: name='com.awesome' versionCode='1' versionName='1.0' platformBuildVersionName='12' platformBuildVersionCode='31' compileSdkVersion='31' compileSdkVersionCodename='12'
+sdkVersion:'21'
+targetSdkVersion:'31'
+uses-permission: name='android.permission.INTERNET'
+application-label:'awesome'
+application-label-af:'awesome'
+application-label-am:'awesome'
+application-label-ar:'awesome'
+application-label-as:'awesome'
+application-label-az:'awesome'
+application-label-be:'awesome'
+application-label-bg:'awesome'
+application-label-bn:'awesome'
+application-label-bs:'awesome'
+application-label-ca:'awesome'
+application-label-cs:'awesome'
+application-label-da:'awesome'
+application-label-de:'awesome'
+application-label-el:'awesome'
+application-label-en-AU:'awesome'
+application-label-en-CA:'awesome'
+application-label-en-GB:'awesome'
+application-label-en-IN:'awesome'
+application-label-en-XC:'awesome'
+application-label-es:'awesome'
+application-label-es-US:'awesome'
+application-label-et:'awesome'
+application-label-eu:'awesome'
+application-label-fa:'awesome'
+application-label-fi:'awesome'
+application-label-fr:'awesome'
+application-label-fr-CA:'awesome'
+application-label-gl:'awesome'
+application-label-gu:'awesome'
+application-label-hi:'awesome'
+application-label-hr:'awesome'
+application-label-hu:'awesome'
+application-label-hy:'awesome'
+application-label-in:'awesome'
+application-label-is:'awesome'
+application-label-it:'awesome'
+application-label-iw:'awesome'
+application-label-ja:'awesome'
+application-label-ka:'awesome'
+application-label-kk:'awesome'
+application-label-km:'awesome'
+application-label-kn:'awesome'
+application-label-ko:'awesome'
+application-label-ky:'awesome'
+application-label-lo:'awesome'
+application-label-lt:'awesome'
+application-label-lv:'awesome'
+application-label-mk:'awesome'
+application-label-ml:'awesome'
+application-label-mn:'awesome'
+application-label-mr:'awesome'
+application-label-ms:'awesome'
+application-label-my:'awesome'
+application-label-nb:'awesome'
+application-label-ne:'awesome'
+application-label-nl:'awesome'
+application-label-or:'awesome'
+application-label-pa:'awesome'
+application-label-pl:'awesome'
+application-label-pt:'awesome'
+application-label-pt-BR:'awesome'
+application-label-pt-PT:'awesome'
+application-label-ro:'awesome'
+application-label-ru:'awesome'
+application-label-si:'awesome'
+application-label-sk:'awesome'
+application-label-sl:'awesome'
+application-label-sq:'awesome'
+application-label-sr:'awesome'
+application-label-sr-Latn:'awesome'
+application-label-sv:'awesome'
+application-label-sw:'awesome'
+application-label-ta:'awesome'
+application-label-te:'awesome'
+application-label-th:'awesome'
+application-label-tl:'awesome'
+application-label-tr:'awesome'
+application-label-uk:'awesome'
+application-label-ur:'awesome'
+application-label-uz:'awesome'
+application-label-vi:'awesome'
+application-label-zh-CN:'awesome'
+application-label-zh-HK:'awesome'
+application-label-zh-TW:'awesome'
+application-label-zu:'awesome'
+application-icon-160:'res/u3.png'
+application-icon-240:'res/SD.png'
+application-icon-320:'res/jy.png'
+application-icon-480:'res/D2.png'
+application-icon-640:'res/CG.png'
+application: label='awesome' icon='res/u3.png'
+launchable-activity: name='com.awesome.MainActivity'  label='awesome' icon=''
+feature-group: label=''
+  uses-feature: name='android.hardware.faketouch'
+  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'
+main
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--' 'af' 'am' 'ar' 'as' 'az' 'be' 'bg' 'bn' 'bs' 'ca' 'cs' 'da' 'de' 'el' 'en-AU' 'en-CA' 'en-GB' 'en-IN' 'en-XC' 'es' 'es-US' 'et' 'eu' 'fa' 'fi' 'fr' 'fr-CA' 'gl' 'gu' 'hi' 'hr' 'hu' 'hy' 'in' 'is' 'it' 'iw' 'ja' 'ka' 'kk' 'km' 'kn' 'ko' 'ky' 'lo' 'lt' 'lv' 'mk' 'ml' 'mn' 'mr' 'ms' 'my' 'nb' 'ne' 'nl' 'or' 'pa' 'pl' 'pt' 'pt-BR' 'pt-PT' 'ro' 'ru' 'si' 'sk' 'sl' 'sq' 'sr' 'sr-Latn' 'sv' 'sw' 'ta' 'te' 'th' 'tl' 'tr' 'uk' 'ur' 'uz' 'vi' 'zh-CN' 'zh-HK' 'zh-TW' 'zu'
+densities: '160' '240' '320' '480' '640'
+native-code: 'arm64-v8a' 'armeabi-v7a' 'x86' 'x86_64'
+
+Sep 10 04:24:21 detox[9028] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeTerminateApp({ deviceId: 'emulator-19496', bundleId: 'com.awesome' })
+Sep 10 04:24:21 detox[9028] DEBUG: [EXEC_CMD, #10] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell "am force-stop com.awesome"
+Sep 10 04:24:21 detox[9028] TRACE: [EXEC_SUCCESS, #10] 
+Sep 10 04:24:21 detox[9028] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTerminateApp({ deviceId: 'emulator-19496', bundleId: 'com.awesome' })
+Sep 10 04:24:21 detox[9028] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeUninstallApp({ deviceId: 'emulator-19496', bundleId: 'com.awesome' })
+Sep 10 04:24:21 detox[9028] DEBUG: [EXEC_CMD, #11] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell "pm list packages com.awesome"
+Sep 10 04:24:23 detox[9028] TRACE: [EXEC_SUCCESS, #11] package:com.awesome.test
+package:com.awesome
+
+Sep 10 04:24:23 detox[9028] DEBUG: [EXEC_CMD, #12] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 uninstall com.awesome
+Sep 10 04:24:24 detox[9028] TRACE: [EXEC_SUCCESS, #12] Success
+
+Sep 10 04:24:24 detox[9028] DEBUG: [EXEC_CMD, #13] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell "pm list packages com.awesome.test"
+Sep 10 04:24:26 detox[9028] TRACE: [EXEC_SUCCESS, #13] package:com.awesome.test
+
+Sep 10 04:24:26 detox[9028] DEBUG: [EXEC_CMD, #14] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 uninstall com.awesome.test
+Sep 10 04:24:26 detox[9028] TRACE: [EXEC_SUCCESS, #14] Success
+
+Sep 10 04:24:26 detox[9028] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeTerminateApp({ deviceId: 'emulator-19496', bundleId: 'com.awesome' })
+Sep 10 04:24:26 detox[9028] DEBUG: [EXEC_CMD, #15] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell "am force-stop com.awesome"
+Sep 10 04:24:26 detox[9028] TRACE: [EXEC_SUCCESS, #15] 
+Sep 10 04:24:26 detox[9028] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTerminateApp({ deviceId: 'emulator-19496', bundleId: 'com.awesome' })
+Sep 10 04:24:26 detox[9028] DEBUG: [EXEC_CMD, #16] "C:\Users\Admin\AppData\Local\Android\Sdk\build-tools\33.0.0\aapt.EXE" dump xmlstrings "C:\awesome\android\app\build\outputs\apk\release\app-release.apk" AndroidManifest.xml
+Sep 10 04:24:26 detox[9028] TRACE: [EXEC_SUCCESS, #16] String pool of 49 unique UTF-16 non-sorted strings, 49 entries and 0 styles using 2012 bytes:
+String #0: theme
+String #1: label
+String #2: icon
+String #3: name
+String #4: exported
+String #5: authorities
+String #6: launchMode
+String #7: configChanges
+String #8: value
+String #9: minSdkVersion
+String #10: versionCode
+String #11: versionName
+String #12: windowSoftInputMode
+String #13: targetSdkVersion
+String #14: allowBackup
+String #15: usesCleartextTraffic
+String #16: roundIcon
+String #17: compileSdkVersion
+String #18: compileSdkVersionCodename
+String #19: appComponentFactory
+String #20: 1.0
+String #21: 12
+String #22: action
+String #23: activity
+String #24: android
+String #25: android.intent.action.MAIN
+String #26: android.intent.category.LAUNCHER
+String #27: android.permission.INTERNET
+String #28: androidx.core.app.CoreComponentFactory
+String #29: androidx.emoji2.text.EmojiCompatInitializer
+String #30: androidx.lifecycle.ProcessLifecycleInitializer
+String #31: androidx.startup
+String #32: androidx.startup.InitializationProvider
+String #33: application
+String #34: category
+String #35: com.awesome
+String #36: com.awesome.MainActivity
+String #37: com.awesome.MainApplication
+String #38: com.awesome.androidx-startup
+String #39: http://schemas.android.com/apk/res/android
+String #40: intent-filter
+String #41: manifest
+String #42: meta-data
+String #43: package
+String #44: platformBuildVersionCode
+String #45: platformBuildVersionName
+String #46: provider
+String #47: uses-permission
+String #48: uses-sdk
+
+Sep 10 04:24:26 detox[9028] DEBUG: [EXEC_CMD, #17] "C:\Users\Admin\AppData\Local\Android\Sdk\build-tools\33.0.0\aapt.EXE" dump xmlstrings "C:\awesome\android\app\build\outputs\apk\androidTest\release\app-release-androidTest.apk" AndroidManifest.xml
+Sep 10 04:24:27 detox[9028] TRACE: [EXEC_SUCCESS, #17] String pool of 40 unique UTF-16 non-sorted strings, 40 entries and 0 styles using 1980 bytes:
+String #0: theme
+String #1: label
+String #2: name
+String #3: exported
+String #4: targetPackage
+String #5: handleProfiling
+String #6: functionalTest
+String #7: minSdkVersion
+String #8: targetSdkVersion
+String #9: compileSdkVersion
+String #10: compileSdkVersionCodename
+String #11: 12
+String #12: Tests for com.awesome
+String #13: action
+String #14: activity
+String #15: android
+String #16: android.intent.action.MAIN
+String #17: android.permission.REORDER_TASKS
+String #18: android.test.runner
+String #19: androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity
+String #20: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity
+String #21: androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity
+String #22: androidx.test.orchestrator
+String #23: androidx.test.runner.AndroidJUnitRunner
+String #24: androidx.test.services
+String #25: application
+String #26: com.awesome
+String #27: com.awesome.test
+String #28: com.google.android.apps.common.testing.services
+String #29: http://schemas.android.com/apk/res/android
+String #30: instrumentation
+String #31: intent-filter
+String #32: manifest
+String #33: package
+String #34: platformBuildVersionCode
+String #35: platformBuildVersionName
+String #36: queries
+String #37: uses-library
+String #38: uses-permission
+String #39: uses-sdk
+
+Sep 10 04:24:27 detox[9028] DEBUG: [EXEC_CMD, #18] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell "rm -fr /data/local/tmp/detox"
+Sep 10 04:24:27 detox[9028] TRACE: [EXEC_SUCCESS, #18] 
+Sep 10 04:24:27 detox[9028] DEBUG: [EXEC_CMD, #19] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell "mkdir -p /data/local/tmp/detox"
+Sep 10 04:24:27 detox[9028] TRACE: [EXEC_SUCCESS, #19] 
+Sep 10 04:24:27 detox[9028] DEBUG: [EXEC_CMD, #20] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 push "C:\awesome\android\app\build\outputs\apk\release\app-release.apk" "/data/local/tmp/detox/Application.apk"
+Sep 10 04:24:28 detox[9028] TRACE: [EXEC_SUCCESS, #20] C:\awesome\android\app\build\outputs\apk\release\app-release.apk: 1 file pushed, 0 skipped. 39.7 MB/s (27047760 bytes in 0.649s)
+
+Sep 10 04:24:28 detox[9028] DEBUG: [SPAWN_CMD, #21, cpid=1744] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-19496 shell pm install -r -g -t /data/local/tmp/detox/Application.apk
+Sep 10 04:24:49 detox[9028] TRACE: [SPAWN_STDOUT, #21, cpid=1744] Success
+
+Sep 10 04:24:49 detox[9028] DEBUG: [SPAWN_END, #21, cpid=1744] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-19496 shell pm install -r -g -t /data/local/tmp/detox/Application.apk exited with code #0
+Sep 10 04:24:49 detox[9028] DEBUG: [EXEC_CMD, #22] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 push "C:\awesome\android\app\build\outputs\apk\androidTest\release\app-release-androidTest.apk" "/data/local/tmp/detox/Test.apk"
+Sep 10 04:24:49 detox[9028] TRACE: [EXEC_SUCCESS, #22] C:\awesome\android\app\build\outputs\apk\androidTest\release\app-release-androidTest.apk: 1 file pushed, 0 skipped. 377.9 MB/s (2417077 bytes in 0.006s)
+
+Sep 10 04:24:49 detox[9028] DEBUG: [SPAWN_CMD, #23, cpid=4196] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-19496 shell pm install -r -g -t /data/local/tmp/detox/Test.apk
+Sep 10 04:25:01 detox[9028] TRACE: [SPAWN_STDOUT, #23, cpid=4196] Success
+Sep 10 04:25:01 detox[9028] TRACE: [SPAWN_STDOUT, #23, cpid=4196] 
+
+Sep 10 04:25:01 detox[9028] DEBUG: [SPAWN_END, #23, cpid=4196] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-19496 shell pm install -r -g -t /data/local/tmp/detox/Test.apk exited with code #0
+Sep 10 04:25:02 ROOT_DESCRIBE_BLOCK[9028] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onRunDescribeStart({ name: 'ROOT_DESCRIBE_BLOCK' })
+Sep 10 04:25:02 Example[9028] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onRunDescribeStart({ name: 'Example' })
+Sep 10 04:25:02 detox[9028] ERROR: TypeError: this.allure.startSuite is not a function
+    at AllureReporterCircus.run_describe_start (C:\awesome\e2e\AllureReporterCircus.js:13:19)
+    at C:\awesome\node_modules\detox\runners\jest-circus\environment.js:90:55
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sep 10 04:25:02 detox[9028] INFO:  [97mExample[39m is assigned to [94memulator-19496 (demotest)[39m
+Sep 10 04:25:02 detox[9028] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeTerminateApp({ deviceId: 'emulator-19496', bundleId: 'com.awesome' })
+Sep 10 04:25:02 detox[9028] DEBUG: [EXEC_CMD, #24] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell "am force-stop com.awesome"
+Sep 10 04:25:03 detox[9028] TRACE: [EXEC_SUCCESS, #24] 
+Sep 10 04:25:03 detox[9028] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTerminateApp({ deviceId: 'emulator-19496', bundleId: 'com.awesome' })
+Sep 10 04:25:03 detox[9028] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeLaunchApp({
+  deviceId: 'emulator-19496',
+  bundleId: 'com.awesome',
+  launchArgs: {
+    detoxServer: 'ws://localhost:56319',
+    detoxSessionId: '362f97e6-2ec7-e9b0-4352-4224d59e89b5'
+  }
+})
+Sep 10 04:25:03 detox[9028] DEBUG: [EXEC_CMD, #25] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell "date +\"%m-%d %T.000\""
+Sep 10 04:25:03 detox[9028] TRACE: [EXEC_SUCCESS, #25] 09-10 04:25:02.000
+
+Sep 10 04:25:03 detox[9028] DEBUG: [EXEC_CMD, #26] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 reverse tcp:56319 tcp:56319
+Sep 10 04:25:03 detox[9028] TRACE: [EXEC_SUCCESS, #26] 
+Sep 10 04:25:03 detox[9028] DEBUG: [EXEC_CMD, #27] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell "pm list instrumentation"
+Sep 10 04:25:04 detox[9028] TRACE: [EXEC_SUCCESS, #27] instrumentation:com.awesome.test/androidx.test.runner.AndroidJUnitRunner (target=com.awesome)
+instrumentation:org.chromium.webview_shell/.WebViewLayoutTestRunner (target=org.chromium.webview_shell)
+
+Sep 10 04:25:04 detox[9028] DEBUG: [SPAWN_CMD, #28, cpid=8236] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-19496 shell am instrument -w -r -e detoxServer ws://localhost:56319 -e detoxSessionId 362f97e6-2ec7-e9b0-4352-4224d59e89b5 -e debug false com.awesome.test/androidx.test.runner.AndroidJUnitRunner
+Sep 10 04:25:05 detox[9028] DEBUG: [EXEC_CMD, #29] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell "ps | grep \"com\.awesome$\""
+Sep 10 04:25:06 detox[9028] TRACE: [EXEC_SUCCESS, #29] u0_a100      16398  2533 1802632  74776                     0 R com.awesome
+
+Sep 10 04:25:06 detox[16398] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onLaunchApp({
+  deviceId: 'emulator-19496',
+  bundleId: 'com.awesome',
+  launchArgs: {
+    detoxServer: 'ws://localhost:56319',
+    detoxSessionId: '362f97e6-2ec7-e9b0-4352-4224d59e89b5'
+  },
+  pid: 16398
+})
+Sep 10 04:25:06 detox[9028] TRACE: [ARTIFACT_START] starting ADBLogcatRecording
+Sep 10 04:25:06 detox[9028] DEBUG: [SPAWN_CMD, #30, cpid=9096] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-19496 shell "logcat -T \"09-10 04:25:02.000\" --pid=16398 -f /sdcard/42411829_0.log"
+Sep 10 04:25:07 detox[9028] DEBUG: [EXEC_CMD, #31] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell du /sdcard/42411829_0.log
+Sep 10 04:25:07 detox[9028] TRACE: [EXEC_SUCCESS, #31] 12	/sdcard/42411829_0.log
+
+Sep 10 04:25:08 detox[9028] TRACE: [SPAWN_STDOUT, #28, cpid=8236] INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.awesome.DetoxTest:
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=runDetoxTests
+INSTRUMENTATION_STATUS: class=com.awesome.DetoxTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS_CODE: 1
+
+Sep 10 04:25:11 detox[9028] DEBUG: [WSS_CONNECTION, #56489] registered a new connection.
+Sep 10 04:25:11 detox[9028] TRACE: [WSS_GET_FROM, #56489] {"messageId":0,"type":"login","params":{"role":"app","sessionId":"362f97e6-2ec7-e9b0-4352-4224d59e89b5"}}
+Sep 10 04:25:11 detox[9028] TRACE: [WSS_SEND_TO, #app] {"messageId":0,"type":"loginSuccess","params":{"testerConnected":true,"appConnected":true}}
+Sep 10 04:25:11 detox[9028] TRACE: [SESSION_JOINED] app joined session 362f97e6-2ec7-e9b0-4352-4224d59e89b5
+Sep 10 04:25:11 detox[9028] TRACE: [WSS_SEND_TO, #tester] {"type":"appConnected"}
+Sep 10 04:25:11 detox[9028] TRACE: [WS_MESSAGE] {"type":"appConnected"}
+ 
+Sep 10 04:25:11 detox[9028] TRACE: [WS_SEND] {"type":"isReady","params":{},"messageId":-1000}
+Sep 10 04:25:11 detox[9028] TRACE: [WSS_GET_FROM, #tester] {"type":"isReady","params":{},"messageId":-1000}
+Sep 10 04:25:11 detox[9028] TRACE: [WSS_SEND_TO, #app] {"type":"isReady","params":{},"messageId":-1000}
+Sep 10 04:25:13 detox[9028] TRACE: [WSS_GET_FROM, #app] {"messageId":-1000,"type":"ready","params":{}}
+Sep 10 04:25:13 detox[9028] TRACE: [WSS_SEND_TO, #tester] {"messageId":-1000,"type":"ready","params":{}}
+Sep 10 04:25:13 detox[9028] TRACE: [WS_MESSAGE] {"messageId":-1000,"type":"ready","params":{}}
+ 
+Sep 10 04:25:13 detox[16398] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onAppReady({ deviceId: 'emulator-19496', bundleId: 'com.awesome', pid: 16398 })
+Sep 10 04:25:13 detox[9028] INFO:  [1m[37mExample: [39m[22m[90mtest welcome[39m
+Sep 10 04:25:13 detox[9028] ERROR: TypeError: this.allure.startCase is not a function
+    at AllureReporterCircus.test_start (C:\awesome\e2e\AllureReporterCircus.js:25:17)
+    at C:\awesome\node_modules\detox\runners\jest-circus\environment.js:90:55
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sep 10 04:25:13 detox[9028] TRACE: [DETOX_BEFORE_EACH] running test: "Example test welcome"
+Sep 10 04:25:13 detox[9028] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTestStart({
+  title: 'test welcome',
+  fullName: 'Example test welcome',
+  status: 'running',
+  invocations: 1
+})
+Sep 10 04:25:13 detox[9028] TRACE: [ARTIFACT_STOP] stopping ADBLogcatRecording
+Sep 10 04:25:13 detox[9028] DEBUG: [EXEC_CMD, #32] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell "date +\"%m-%d %T.000\""
+Sep 10 04:25:13 detox[9028] TRACE: [WSS_GET_FROM, #app] {"messageId":-1000,"type":"ready","params":{}}
+Sep 10 04:25:13 detox[9028] TRACE: [WSS_SEND_TO, #tester] {"messageId":-1000,"type":"ready","params":{}}
+Sep 10 04:25:13 detox[9028] TRACE: [WS_MESSAGE] {"messageId":-1000,"type":"ready","params":{}}
+ 
+Sep 10 04:25:13 detox[9028] TRACE: [EXEC_SUCCESS, #32] 09-10 04:25:13.000
+
+Sep 10 04:25:13 detox[9096] TRACE: [SPAWN_KILL] sending SIGINT to: C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-19496 shell logcat -T "09-10 04:25:02.000" --pid=16398 -f /sdcard/42411829_0.log
+Sep 10 04:25:13 detox[9028] DEBUG: [SPAWN_END, #30, cpid=9096] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-19496 shell "logcat -T \"09-10 04:25:02.000\" --pid=16398 -f /sdcard/42411829_0.log" terminated with SIGINT
+Sep 10 04:25:13 detox[9028] TRACE: [ARTIFACT_START] starting ADBLogcatRecording
+Sep 10 04:25:13 detox[9028] DEBUG: [SPAWN_CMD, #33, cpid=10688] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-19496 shell "logcat -T \"09-10 04:25:13.000\" --pid=16398 -f /sdcard/42411829_1.log"
+Sep 10 04:25:13 detox[9028] TRACE: [WS_SEND] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Sep 10 04:25:13 detox[9028] TRACE: [WSS_GET_FROM, #tester] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Sep 10 04:25:13 detox[9028] TRACE: [WSS_SEND_TO, #app] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Sep 10 04:25:13 detox[9028] DEBUG: [EXEC_CMD, #34] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell du /sdcard/42411829_1.log
+Sep 10 04:25:14 detox[9028] TRACE: [EXEC_SUCCESS, #34] 8	/sdcard/42411829_1.log
+
+Sep 10 04:25:14 detox[9028] TRACE: [WSS_GET_FROM, #app] {"messageId":-1000,"type":"ready","params":{}}
+Sep 10 04:25:14 detox[9028] TRACE: [WSS_SEND_TO, #tester] {"messageId":-1000,"type":"ready","params":{}}
+Sep 10 04:25:14 detox[9028] TRACE: [WS_MESSAGE] {"messageId":-1000,"type":"ready","params":{}}
+ 
+Sep 10 04:25:14 detox[9028] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["welcome"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}}]},"messageId":1}
+Sep 10 04:25:14 detox[9028] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["welcome"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}}]},"messageId":1}
+Sep 10 04:25:14 detox[9028] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["welcome"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}}]},"messageId":1}
+Sep 10 04:25:17 detox[9028] TRACE: [WSS_GET_FROM, #app] {"messageId":1,"type":"invokeResult","params":{"result":null}}
+Sep 10 04:25:17 detox[9028] TRACE: [WSS_SEND_TO, #tester] {"messageId":1,"type":"invokeResult","params":{"result":null}}
+Sep 10 04:25:17 detox[9028] TRACE: [WS_MESSAGE] {"messageId":1,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 10 04:25:17 detox[9028] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["welcome"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAction"},"method":"takeViewScreenshot","args":[]}}]},"messageId":2}
+Sep 10 04:25:17 detox[9028] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["welcome"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAction"},"method":"takeViewScreenshot","args":[]}}]},"messageId":2}
+Sep 10 04:25:17 detox[9028] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["welcome"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAction"},"method":"takeViewScreenshot","args":[]}}]},"messageId":2}
+Sep 10 04:25:17 detox[9028] TRACE: [WSS_GET_FROM, #app] {"messageId":2,"type":"invokeResult","params":{"result":"iVBORw0KGgoAAAANSUhEUgAABaAAAAFxCAYAAACFjQ9RAAAABHNCSVQICAgIfAhkiAAAIABJREFUeJzs3VmwJPV9L\/hvb3TT3YDYdwESmxAChIz2FcSV7GvJtrxpQl7HN3wjHI6ZmJgHz8u8TcQ8zcv4XkfMvbbvtWV5CduSLOkiWcLaLCyBALEIsQjEJhqapdm6aeim6Xn4V0VnZWXVyTqnKquq+\/OJONGd\/5Nb\/fOfeTJ\/9c\/fPwEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCPOunnvACOdluQDtbIvJdkzh31p8rYk51emn0ry9Tnty7Ja9GMMo2i70A1\/a+mCazoAADO1cd47wEhbUh48q748jx0Z4cQM7t8P57UjS2zRjzGMspq2uyHJSb3\/P53kwLR3Cg5D\/tbSBfcjAADMVFMA+reTbG65\/GtJXk6yN8nuJI8n2ZnkySQHp7GDACy9zUl+M8mFven7knw6yStz2yMAAACgE00B6LOSHLfG9T6U5MYktyd5dY3rAmC5XZpDwef0\/n9Zku\/PZ3cAAACArswqBce5vZ+rknwupVc0i2ddkhNqZbujVyIkzo9p2tpQtq3zvQAWSdfXWNd0GM85AgDMTJsA9N7ezyjHJNk04ndvSPIfk\/xpkh2T7Rod2Jjkj2plf5bk3jnsCywa58f0PNBQdn\/newEskq6vsa7pMJ5zBACYmTYB6BuTXDfm9+tS8nuekuSCJO9Jsr3y++0peaX\/OOVbdACOLDuS\/EmSS3rTP0ry0\/ntDgAAANCVaaTgOJgyEOEjvZ9bkvxakvMr8xyf5L1JvjKF7QGwfB7q\/QAAAABHkPUzWOdzSf46ydO18g8kOXoG2wMAAAAAYAHNIgCdlFQb\/1Ir25Dk9TPaHgAAAAAAC2YaKThGuaeh7MysbiCLY5O8LmWww31JXkryfJJXV713wzaljPy8OclRle3sSvLaFLeTlM+zPaVH+CtJ9qT0HD845e3M27okxyXZlmRLSp2+mPJZp6mL9rGafer6GG9Pqeutve28lPJl0Esz2Nb6lM94dG97r6ak4tmVZP+UtrEu5bhuSzkvD6TU5bO9bS2zLo\/VpBb5+tRVm+iiffctcltYja6ux+tT\/mb3x5zYleSFKW9jWXTxt7bLe6RltMjn8eF+P7JaR\/I96qyty2LcMwAAC2SWAeg9KQNPnVEp2z5i3iZbkrw1yc8kOXvE+u\/o\/Tywyn3clORNve1c2Juu253krpTc1g9n9TdUG5NckeTKDObH7nsiyW0pgz7uWeU2VvILSc6pTK8bMU89kPOZJM9MsJ2tSa5K+bxnNvz+8STfTfKDlIeh1eiifUxqHsd4W2+blyZ544h57k0Z9O22JHvXuL3X97Z1WUowou7llC+fbk7y46zufDk1pQ4vH7GNJLk\/pf3cmekFHmd9fnR9rCYx67Z7WsrYAFWfTgkct9FVm+iifSfTbwubkvx+yptGfd9IqYtJ\/EoG\/2bfleG3mZrM4nr8vt46++5J8tWUz\/j2JO9OaRd9j6YMdrwav15b1429nzbenuSdlem\/T\/kb18YnUwZw7vu3lLbV1qz\/1k77Hqmre5CutnckX9ObLFJ91K8fNyX5Xu\/\/W1OuVW\/NctyjXpLkw7WyHyT515b7cnlKGsSqHyb5eqZ\/jrwtyQdT2sKdKWP\/dNnuAYAFNssAdFIeTKq2tlzuLUk+ntIzYZRtSd7V+\/l+kusy2U30uUl+OYMPnU22J3lH7+fW3nYm7WV1apJPJDlvzDynJfloykP1ZzObXiLHJDlrhXlOaiibpJ28OcnHMjpIlCSnp9THVUn+LsmTE6w\/6aZ9TKrrY7wu5Ub\/oym9a8a5qPfzgSRfTnngmTRwti3JtSn7Ps6WlAfQK5Lcl+Qf0z7IuCnlweXaFvOe3\/u5Jsk\/pAQf12pW50fXx2pSXbTdjRmu2zYpoLpqE12072R2bWF\/kscyuP+XZ7IA9PaUYGrVdS2Wm9X1+OgMtpkdvbJfS\/k7U7eWXrhPpByXvt1pH4C+MoP7eWHaBaCP7i1b34+2Zv239txM\/x6pi3uQLrbnmj5oEeujfv3ov5V5Scr1apnuUe9JCWRfWik7tVf+1Ar7si3Jz9f2ZVcOXd+meY6clfJlXt+7Unp8\/48V1g8AHCFmlQO6rx5w3rfC\/OuTfCTJb2b8jVvdVUk+lRIcaOPKJH+QlR+smpb73ax8g111apLfy\/gHgapjk\/xOymdaNlcl+e2Mv7GvOjvJb6V9z\/iu2sekuj7G65P8+5RAzCRt8YSUevhwmnu5jLI9pd2vFJyruzDlPDu9xbybUj5Pm0Bj1QkpPT8vn3C5rnR9rCa1yNenrtpEF+07mX1b+GFt+rJM9tZRvcfis0keGjN\/19fjzSlBnabg81r9pDZ9QdoNmnx8kjfUyi5tmrFBveflcylB9jZm\/be2y3ukZeOaPmjR66NvU0qQ\/HeyfPeoryX5UgZ7Em\/qbWuluru6YV8+n9l0yDijoeyCGWwHAFhSs+wBvS3D36qvlFftmt5P1e6U1+YeTrn52pzk5JRX26qvjZ2f5BeT\/O0K27g45bXXqn0pvQHuT8nLdiAleH5Wyjf41W\/\/z0zpGfEXWbnXxraUm93X1cr3pvQU+mlKr5OtSU5MuTk+vjfPLAI8P8hgr8D1KXVWdUOSnbWyek\/2Jm\/M4IP3Iyk9W55JuXk+JuVGtB4UOiXJ+9Oup10X7WNS8zjGP5dSZ1Uv59DxfTHl2B6T0tPo8gy+Ot0P6H2txbY2JfmNDA8g+mTKq+KPp3zWTTlU79UH3+NSHsb+v5Rza5RrM9w2dqa8NvtEymuwG1LOxctTgn9Vn0zp1fNoi880yizOjy6P1aQW7fpU10Wb6Kp9J7NvCw+lfN5qcOX8lFfd26gHdm\/J+BylXV+PR32h8GRK4GYtPaB3pBy\/fqBmQ8rf+pV60TelGTgn5XxZKYVDvc39MO0+w6z\/1s7yHmmW9yBNXNOLw+V+ZC3eksE0FMt2j7orJQj9q5Wyy1KO649GLPP6lFQkVTdmcIyeaZ4jTX8DV+qhDQAcQWYZgH5TQ9ljY+a\/OMM93e5M8rkM3+j8OCUI8aHaMlemPDT\/eMQ2tib5pVrZT5P8TZpvkh5MCUL8SsrNa98lKTeLo7bTd03KTX7V7Un+Kc03b99IySX5sRXWu1p31aY3ZfhG856sbqDIfm+xfSmvpd+W4YfPm1JyXP5WyoNS3zuTfDPjXwHton2sRtfH+JIMP+zdl\/IK7a6G+W9P8q2UNlx92Lk2JWC1Ul28O8M9\/L6R5PoMD8b2QEq9vz0lANF3Um97\/zBiG6elpFmoujXl2NbzL\/bPyatSPlPfhpQH4f+S1b\/OO+3zo+tjNalFuz5VddUmumjfSTdt4dWU61v1mndp2gWgt2bwb1wyOqiRzPd6vD8l9+kPUoJH\/SD5Wu5nDqQEgN9TKTsnKwegLxlR\/sasHICu5+VtmzJmln9rZ32PNMt7kCau6YfX\/cha9L+YW+Z71FtSrunV56ufS3mDo56jeUNKz\/SqXSk5maumeY70P1c\/ldPOlL+lAABJZpeC43UZvhF7LsOvufZtSXm1turulIeeUT1RXk25sak\/XNcH6qi6NId6eySlN8JfZfw39HtTblbrOQ0vGrNMUl7Lfm+t7N6UfHKjPlP\/wfozK6x7Ue1J8qcpgYFRAZ8Hk3yxVrYlza\/uVX\/fRfuYVNfH+OgMPxg80ltX08Ne384kf5nhHiyfSHLUmOWOz\/B5fFOSf85wcK7vtZTePp+rlb89o49xPYjzXMoD86jBfw729uPLtfI3pgQuF0HXx2pSi3596qJNdNW+u2wL9WBC2zQcb8jgAIaPZfQXxvO8Hu9J8ucpQZSdGeyhPa63dhv1APBKf+O3pfmL9mTlNCFbMxyAfniFZapm9be2y3ukZeOaPmjR66PJst+jvpbkCxkMNp+SwS\/O+q7KcBqWL2S2Y6G8lnIt+L+T\/D9J\/t8MH2cA4Ag2iwB0P6\/b8bXyph5lfVdk8BXOfSkP+Cs9UB5MGcW56ryMDjjUb8Z+kPE3yn0vpQQmqppGFa+6oqHsC2n3kHx7yitvy+aLGZ8ztO\/ODOcDH5drsqv2Mamuj\/FlGX619rNpN8L4iyl5\/6pOzHCvx6q3ZvCB8PmUV0DbvCZ+Y4ZHdr94xLz14\/HDtPtM322Yr2lE+3no+lhNatGvT120ia7ad5dt4fEMpxxZ6W9VMhxIvSWjAzTzvB5\/IcP1Pi0P1abPzfictvWgfbXe35Txgf96m7w7kwWGZvW3tst7pGXjmj5o0eujyeFwj\/pMhgf1uzolrUffcSn5oatuyvi3WqblYMr4ATsz+pkPADhCTSsAvSHlhunqJH+YwVfrknLTc8uIZddl+Nv772TlfNF9T2T41bBRPW++neQ\/V36+3XIbyfCo9idl9OAfGzOcT+\/GTJYL7fYJ5l0ED6U8rLaxP8MPAaMe1rtsH5Po+hivz3DvppvSftCqpARu6j0k35vmdrwxyTtqZTdk+DXPUV5LeTW7alRAot7rqW1PxpdT2sKNlZ+2+zdLXR+rSS3D9WnWbaKr9t11WziY4b+1Kw2KtyXDgZ+7R8w7z+vxo5ltu9uT4X2rj2NRVd3vJzOcw7ae2qWqnv\/5nsa5mj2U2fytTbq7R1o2rumDFr0+mjyUw+ce9fu1ZTYl+dkcqrtrM5hC5NkMp94AAOhcm5yJV2b8aNpbU3pBbBrx+weS\/H1KjsUmp2S4Z8Gk39Lfk8EbtrNHzFd\/QJpE\/dXvo1Lqr+kb\/pMzfLN65xq2vQx2Z7Lcuy\/Wpo9unKvb9jGJro\/xyRmuh7YPU1W3ZPD18DNT3lao93I7NcNvMUxa7\/Xz7fSUB6R6O3m2Nv3mJP+S0ekWqmY9cNFqdH2sJrUM16dZt4mu2vc82sLdGXw1\/s0px3vUq+DnpgSh++7N6PzF87weP5+1DTTYxt0Z3Ldz0\/z5NmcwaH9Hyqv7e3Pob9nFvfIm9QEzH5xgH2f1tzbp7h5p2bimD29vkeujyeF0j9pPxfG\/5tCXtZem1OXLOZSDue8LWf1AngAAU9MmAH1sxr+GOs4NKfk0x\/Uqq+dV25\/JelEkwznG3pDmQNe0jepB3vSqXv216CNdvUfjqC8wFrV9dH2M6\/WwL5PlDO1rysN+VoYf+Orb253k6Qm3tSPJ\/1Era6rzH2ewB9HJST6Z8prppNtcBF0fq0ktw\/Vp1m2iq\/Y9j7bwbErPwn5gZ0NKLuxRPRzrqUPGDVq4qNfjaakHgt+Ukle8vm+vz2BA6r6UAOydORT8uTTNecu3ZfBL\/acz2zypbf\/WzsKsxhnpmmv6oEWvj2lY9HvUp1L+HlYHDf25DKcOuTndpN4AAFjRWkaNH+f2lFfQ2tyQnlSb3pXxr702qeeh257SQ6nt69THpQQ4Tkp5ONyc4VfA69sYp96zbkfa5cVj2CK0jyZdH+NTatMPZnWDbr2UMrhYNQfpiQ3znVCbfjir633YZpn7ej\/VXoFv7v3cnvLw9EjKsV+EINVKuj5Wk1qG69Os20RX7XtebeG2DPYsvDTNAehNGcwdeyDj00Es6vV4WnamfKZ++zi19\/96j\/Bqu3wxyU97\/787hwLQW1LSkd1XW7ZeX3dm8a9r075HWjau6YMWvT66NM9r4k0p1\/n+9ai+L8+n+Qs0AIC5aBOAfjHlJmaU9RnuAXBP2veGOKY2fWqSP2i57DhHZfzN28aUQVTemumP1r6lNj3qdWZWNq\/2sZKuj3H99c+1bO+pDD7wbWuYZ2ttepYjp7+akqbnf8pw3tTLez9J6Sl4d8rD7gNZvKBpX9fHalLLcH2adZvoqn3Pqy3cl9ITrvp69rYMf85zM1gXtzXMU7Wo1+NpeS0lIPyBStnrM3jcNqTcO\/TdnkPBt5+k9IDs95a8MMMB6PoYGbMaVHGtZnmPtGxc0wcten10aZ7XxAMp6TX+lwx\/IZTe7+qpRAAA5qZNAPqWJNeN+f26JL+bwdd4r015BbjNA2XTTdM0jHvN9JyUHJn1keinpf4wsAgP1stqHu2jja6Pcf2hbC3bqwfpmh746g+Ysw72Pp\/kz1MGhrsmwwHCpPTueV\/vZ39KzsmbUnrCLpKuj9WkluX6NMs20VX7nldb2JtSF\/2BFjekDJJY7wVdDyyulDd2Ua\/H03R\/BgPQ52Uwv20\/T21fdTCwvUl+mBK0TUoA98sZHAPjgsr\/92fxrl\/J7O+Rlo1r+qBFr48uzfua+GTKAIMfr5XfmnItAgBYGNNIwXEwyfUZDECfkOSdSb7Z0T5M4pIkn8rwzd2LKQ+ST6b0AHslg6+tnZESBGljQ23a62+r13X7aKvrY1wfGX4t22uTamCa22trX5J\/TclZ+JaUIM4bR8y7KeVV97en9Nq8Lu1HnZ+1ro\/VpJbp+jSrNtFV+55nW7gjhwLQyXAajo0ZTL+xJyv3xl3U6\/E0PZISMO6fJ29KedOrX\/\/VAHJT7tsf5VAA+nUpQdx+kPmYDPaAvjuL9wVQF\/dIy8Y1fdCi10eXFuGaWE8plZQvyTZkdalRAABmYlo3To+kfNt+ZaXs6pReQ+PSdyTDA2bcmeTbU9inFxrKTkzy6xl8sNqZ0kPpvoy\/UasPJDROvUdHvXcK7XXZPibR9TF+aYrbq\/ckra87GQ6KjBoBfhb2pvRivSnlIeqslFHhL8xwup+kBNHOSfLfkzzezS6O1fWxmtQyXp+m3Sa6at\/zbAsPpgTg+\/lF62k4zs7gAMO3ZuW\/c4t6PZ6mvSmB4Ut708elvFb\/eErg7S2Vee\/McFuqB\/EvyKEAdL1H8b1ZLF3dIy0b1\/RBi14fXZr3NfGCJO9tKD8vZSDfb01hXwAApmKa39x\/I4MB6C1J3p\/kiyssV883eTCrG027jQ9mMNDwRJL\/kmT3lLdTv4E+bsrrP5J02T4m0fUxnub26gPeND3w1cua0h904dnez50pPVpfl0MPXKdX5js+JV\/wf878AyFdH6tJLfv1aRptoqv2Pc+28GpKCq1+r9R6Go56+o02r2sv6vV42u7JoQB0UvJAP54y+NoZtfnqdqfUZX\/5y5J8PaWu6vmfH5rCvk7TB9PNPdKycU2f3fZmUR9dmuc18eiUVDmjfDTli6NF+GIeACDrp7iunUm+Uyt7X5LTVliu\/mBzdoZf75uGo3Potdi+f27Y\/jTUe32flcXKcblMumofk+r6GNcH+Tkvqzt\/N\/eWrdrVMN+ztekzsxj1\/lyS7yf5T0n+rfa701JGhJ+3ro\/VpA6369Nq2kRX7XvebeGu2nS\/LtZnMP3G02kXNFnU6\/G0PVSb7qd9Ob9WPiplSbXeT08JXCelx37f4yn1vii6vEdaNvM+j1dyuN+PLLJ5XhM\/nOTkyvTODOar35ASoF6ENCEAAFMNQCfltbP662gfXmGZHbXp41Ned522EzI8WMijM9hOMtzbYEMM5rNaXbWPSXV9jB+rTW9b5fbObrHuZLjeT8hwT6WVbEx5pbv6M60Hs\/1J\/kfKA1fVqPzAXer6WE3qcL0+TdImumrf824Lj9Xme0tvH87KYN7Qm9MuF+uiXo+n7akMtqOLUwJ61S8z7s7o4Gw9MP3GlHQn1eN4VxYr\/3qX90jLZt7n8UoO9\/uRRTava+IFKZ18qr6Uki6n2ou8n4oDAGDuph2Afi7D+cYuy3CvoaqfNpTVe+FMQ9Mr1vsnWH6SwNlTGX4t700TLM8hXbWPSXV9jHdmuNfmW5pmXMHltemn0twL74kMf74LGuYb54wkf1T5+Q8ZDrj8fJL\/q\/LzqQnWvz\/DaQMmDSLOQtfHalKLfn3qok101b7n3RYOpgSX+zakBEMvrM13d8v9WNTr8bQdzGA72pJy3Kr3MvXe5VXPpbz63ndpStC\/aqUBH7vW5T3Sspn3ebySw\/1+ZJHN45p4dJJfqJXdmpJT\/rkkX6n97qMZTE8FADAX0w5AJ+UV6HqvoGvHbGtvku\/Vyt6TQ6+strU1ww\/VVQcayo5vue4NSd41wb68muTGWtm7Mjjg00pWczM\/qabeV4v2ENlV+5hU18f4QJIbamXvSfPo56OcnuQdtbIb0tzzcV\/KgG9V7005F9qq1\/dDDfM8n9Lrrv9zbiZ7XbT+xsU08z+v9vzo+lhNatGvT120ia7a9yK0hXqe4ssyGPh5OCUg38aiXo9noR4g\/sgKv6+rBrDPT\/IzlemXs3i9i7u8R+rr+h7ENX20Rb4fWWTzuCZ+uLb+vSnpcvq+nzIIbd8kqTiW4bkAAFhSswhA70nyL7Wy8zL+5va7temjkvxSBgfDGWdzkk+m9EC7Os2f67mGsqtarHtjSo+8Sxp+N+6m7Lba9JYkP7vCMn1vzvCrdbNwIMPBms0dbHdSXbSP1ej6GN+WwdHuNyX5eNo9VGxO8rFa2Z4cGpCsyQ9q06el1F8bp6UMaFXVtK16EOe4tH8QXp\/hXl5PtVy2jbWcH10fq0kt8vWpqzbRRftO5t8WnslgEPqyDL4ifmsmSwWxqNfjaXs0g+d\/NRj7cIbz4Nb9uDZdHdTwrgxfW+at63ukpPt7ENf0ZstwP7LIurwmnp\/hY\/XPGeyRfiAlHUdV21Qc0zonBa0BgCGzevC7OcMPZ\/8uo29iHk\/yjVrZG5P8RkpezXFOT\/L7KTkak\/KqWVMQYVeGB1l6T0ovkVE3Sqcm+a2Mvmkbd6P9RIZ7iLwt5aZ7VD1sSPLOJL89Zr3TdDDDrztelMW7ceyifaxG18f4hSRfrJVdkuSXU3IwjnJMkl\/NcCqcf8rwa7tVTyT5Zq3s2iTvzvg2cm6S38lgPtH7MxyQScqxvbNW9ospAcdx29iQck05t1Z+75hlJrWW86PrYzWpRb4+ddUmumjfyWK0hXqwvapt+o2+Rb0eT9srGZ1mo94+mzyT5l7xyei2Mk9d3yMl3d+DuKYPWqb7kUXW1TWxKfXGwxl+mycpX6DVUyK2ScWx1nPybUn+9yT\/ZyYLwgMAR4Cm143fn9Jzou+hTP6wdCDlFdNqj59tKak5HhmxzMNJzsngK3wnJnl7DuUm3Jjy0H9SyuAlH065wTmusszOlG\/+m167fjHDudnelHIjfHRvPaf2pj+YEvQ4acT+JuU1t3E3zD9N6W1WvQF7fa9sc0o9b0\/JJXpxyo37uB5H3850Uwwk5TW+11emz8ihUbWPSzkm+zLY0yUpN9dvqEw\/mcl6r1ySwZyYO5L8aMz8XbSP1ej6GD+e8vmqDxFn9LZ3VMrDw6aU8+3U3rY+kVJ3Vd\/P8ANTk8dSzpHtlbKLe+s7mPIl1qaUh8pzknwo5QGpWh8vJvlMRg\/Y9XhKSoB+QG9Tb\/qClGO6PuVatTXls1+ccm5eUVvP7Un+tcVnmsRqz4+k+2M1qS7b7rFpft26qd6S7tpEF+27\/3nm2RZeTAkS1v\/m35XhV\/fb6OJ6vNa\/MdOwOYP3MX3XpdRpm+Uvaij\/Yso9Uhtd\/q3t+h4pWds1djVc05f3fmQSh+M96kczOBBqUv721PNx9z2WwfawPuU43JbxqU5We46cleT3UtrYUSmfcX0W8ws3AGAOJsmrOanbU3JqVkfGviblxqfpQX1\/yo3UJzP4wHZUSlD8\/S22uSPJp1NyiDa5N+WGur6u83o\/oxzoLfehWvnrUm5qR9mT5C9TXqurBjhOSrmRHOdbST6wwjzTcFfKcaq6IoOBnD9J6R01T120j9Xo+hgfTPIPvf9XAwUntNhe381JPp92r92\/lOQvUj5f9cHqwrTLV7g7yX\/P+PPkqSR\/leR\/zmCv0nMz3Jt1lEdSgjqTpBJoYy3nR9fHalKLfH3qqk100b6T+beFPSl\/e+vBpvpr+20t6vV42h5sKHsyJfDWRlPg5eGMDhjNW9f3SEn39yCu6c2W4X5kkc36mnh+wzq+k+G3FqpeSvmy7DcqZW9I+TKy3ju6arXnyBkN65p0cF8A4DA2y9yLryb5Wq1sW8bnmduTcvP1zVVs79Yk\/zXj8zIeTPLlJF+fYL1PJvnTEcvUR7VvsiPJf0v7QZ72J\/lsBgcUmaWfZPi1zbpFSckx6\/axWl0f4\/1J\/r63\/P4JltuX0v7\/ccLlnk45B+qDma3kviT\/Ke0G2\/pJygPNjgm3kSS3pAQBX1jFsitZ6\/nR9bGa1CJfn7pqE12072T+beGOhvXet4b1Ler1eJp2Zfj43pH2wbInM9x+x\/WinLd53CN1fQ\/imj5o2e5HFtmsrolbMpx64\/m0O0\/vzHAqoZVScaz2HGkKnE9zXA4AYMnNKgVH3zMpvdWqPcten+HBS6oO9LZ3W+\/\/x2Z8DrE7knwh5TXrNoP6HEzJ13l\/yuc8dcR8O1N6CHwu5QbqQMq3+9WRp7dmePTrJi+k5OB8OeWVvKbPszelJ8jfpnz+11Jy81Vz980iBUdS6mJ3ysPiUQ2\/vyXDPba6fr2xb9btY7W6PsavpfTOuyPl4e24EdtMShDleykPej\/K6noavZRyfB9P+eLqpIz+Auu+lJ6n1\/eWa+vFlLb2ZMq5dcKYefen1PcXM\/tju5rzo6rrYzWpLtrupCk4+rpqE12072S+beGFlB7Q\/WN2c4aD0pOa5fV4EVJwJKUnaTVf7VfSPGDfKFsy2Avwq5ms13fXf2vncY+01mvspFzTl\/t+pI3D6R61KfXG5zO+93PVjpRUIP1nvjapOFZzjjyb8nn7b77u7O3nsub2BgCmbFF6to6zPuWB5piUm7iNKTdpL6T0XJs0AFC3LclpKQ9KG3vreyHlxmlcjrTV2tDb3jG9bb6ccpP3eObfC2Rzyo3jsSkPBS+n1PGuLO7rkbNuH6sxj2Pcf6DYnkP5Bl9KCeA9mem35X7u3a0p9f5qb3s7Mz4X7qTbOKX37+aUNvhKSvDmqXR\/vkzr\/Oj6WE1ika9PSXdtoov2nSx2W1iNRbweszZd3iN1fQ\/imj4bi1zXeLfwAAAgAElEQVQfXVv2a+Kk58i6lNQ7R\/XmWYT7BgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoNm6ee8A0JnTknygVvalJHvmsC8AAAAAHAE2znsHgM5sSfK2WtmX57EjAAAAABwZNiY5P8nVtfKnk3wuycE1rv\/iJO+vlT2S5CtrXC8AAAAAAAtuY5IHk2xKck6l\/Pwktyd5YI3r\/kiSM2vlX1rDOgEAAAAAWBLrkxxI8tWG330oa8sRfWmGg8\/fTbJjDetkuaxLcmLtZ\/Nc9wgAAAAA6Ew\/B\/T9SX6YEjTuu7D3c+8q1rspyTW1sn1JvrmKdbG8Nib5o1rZn2V1bQoAAAAAWDLre\/8eTHJ9w++vrswziSuSnFor+0aSZ1exLgAAAAAAllA1uLwjyb\/Vfn9ekjdNuM7NGe79\/HxK+g0AAAAAAI4Q9d7N30pJlVF1dZINE6zzbUlOqJV9LclLk+0aAAAAAADLrB6AfjbJ12tlZyd5c8v1HZ0yeGHV40l+MPmuAQAAAACwzDY2lH03ybuSHFcpuybJj5K8usL6rqotlyRfTbJ\/Ffu2Pcm2JFtTclS\/lGR3jsye1McmeV3K4I77Uurg+ax8PFZjXcox3JZkS297LyZ5bgbbWouu6mR9So\/+7b3pXUlemHAdXezrsSn7eHSSV5LsSTlmB6e4DQAAAACYSFMAem9KyoxfqZSdnuTyJLeMWde2DPd+vi8lcN3WtpQBDC9N8sYR89zbW+dtvX1t6yNJLqpM35MSHG\/rF5KcU5m+I8k3J1h+UluSvDXJz6T0Qq\/b09uHO5I80HKd7+uts++mJN\/r\/X9rb1tvTXJmw7KPp3w58YOUAGeTeh2tGzHPy7WyzyR5ZtyO93RRJ\/12sSHJ25O8O4MDaj6a5I\/ntK91G1POlyuTnN\/w+ydSzpMbe9sDAAAAgE41BaCT5NaUwNsZlbKrU4Jlo3ozvzMlgFz1tbTrgbkuJXf0R1N6co5zUe\/nA0m+3NunNtvYnuSsyvQjLZapOqa2\/P0TLj+JtyT5eIZ7k1dtS+mp\/q4k309yXVYOMh6dwc9wT+\/fS3rbq+furjo9ySdSern\/XZInG+ap11GTkxrKRrXDqq7qZEev7NfSnHrmtTnua9WpKcfjvDHznJZyTr07yWdzZL49AAAAAMAc1XNA972a4d7BJ2ewp2jVsSkB4apbkjzcch\/+fUrAb6Xgc9UJST6V5MNp7mm7jNan9NT+zYwPXtZdlVIXWybc3qaUwP\/vZHzwuersJL+VQykpZq3rOtmcEjxum\/e8qqt9PTXJ72V88Lnq2JRjfNUE+wQAAAAAazau5+ndKSk0LqyUXZ3k9gynYHhXBoNnBzI8mOEoP5fk\/bWyl1NSPdyfkn94fUrv2otSUoFsqsx7be\/fr7Xc3iK7pvdTtTslTcbDKSlHNufQlwHVdBfnJ\/nFJH87wfbeksEvDh5J6VH+TEpP32OSXJBS51WnpByz62rl\/WPWt763T1U3JNlZK9s9Zh+7rpP6Z+17MqWNj+sB3cW+bksJJr+uVr435c2Fn6b0dN6a5MSULxiO780jAA0AAABAp8YFoA+mBHWrAegTUgJa\/1YpOz7DAeRvJ3mqxfYvaVj2vpR0Absa5r89ybdS8lNXg3fXJnkoyY9bbHNRXZxDwfS+O5N8LsMB2h+n5G\/+UG2ZK1N6nreth36v531J\/jElX3A9nclNKcf7tzKYYuWdKTmwq2kd7qotuynDAeh7UvJ4tzGPOunbn+RfU4Lqz+TQgIGjzpmu9vWalMBy1e1J\/qlhO0nyjZRj9bEx6wQAAACAmRiVgqPv4QwPPHh1So7cvvdmsEfyS0m+02LbR2c4OPlIyoB0TcHnvp1J\/jLDvWg\/keSoFttdRFtS0j5U3Z3kbzK6d\/CrSa5PCRpXfXjCbe9J8qcpgdZRubQfTPLFWtmWDOYIn7Z518mfJ\/lKSjt7tfK7Vxvm72pfT08536ruTcnJPWo7\/UD6Z8asFwAAAABmYqUAdFJSaRyoTB+b5O29\/5+c5H21+a9PSZuxkssynEbgsympBFbyYpLP18pOTEkpsYyuyODgfPtSes42BTurDmY41cl5KYPPtfXFlN7jK7mzt19Vp06wnUnNs06+kOSBCebval+vaCj7QovtJKWX9A0t5gMAAACAqWkTgH4qJe1F1QdT0jHUg89PJ\/l+y+3We3LelGRHi2X7Hshwyof3ZvkGJFyX5D21su8kea7l8k9kOKXFRS2XfSil53Mb+zMcqJ7VQITzrJNHU4K1bXW1rxsznMP5xrRLddM3yecCAAAAgDVrE4BOSkBtT2V6W0r6jHfW5vtqhgcobHJyhnvPtg2EVtXTg5yZQwOuLYtTMlwXP5pwHffUps9uudzujE670aTes\/3oxrnWbp518nzGDzRY19W+npzhgP+dE24HAAAAADrVNgC9OyW1RtXltemH0z4gVs8dvK+3\/KR+0lB21irWM0\/1utifyXqCJ8P5sN+Q2fQEr6d62NQ419otU510ta9N6U4enXA7AAAAANCpjRPMe3OSd6f0xGzy1Qzmih7nlNr0g2mXx7bupSSPpfR87jtxFeuZp5Nq07syeRC9nkt7e5LNSV5e7U7N2TLVSVf7Wu\/ZvyPt8qUDAAAAwNxMEoB+JSXI\/KmG3\/0wyf0TrKueuuGZCZateyqDAehta1jXPBxTmz41yR9MYb1HZXkD0MtUJ13t65ba79dyzgAAAABAJ9qm4Oi7M6W3ct31mSyXcD1IvJagYL0X6LIFoI+a0XpnlR6jC8tUJ13taz0AvaxfLgAAAABwBJk0AP1akgdqZfsyec7ben7bSYLXdZMMGLeIJumFfqRYpjrpal831KbXcs4AAAAAQCfmFeh7qTZd7905ia0rrHvR7atN35nk21NY7wtTWMe8LFOddLWv9Z7+azlnAAAAAKATixKAPm4N66oP4LZsAeg9temDSR6ex44skGWqk672dZrnDAAAAAB0YtIUHNNSH0DtvKxuXzb3lq3aNWLeRU1ZsLs2fXaGU5QcaZapTrra1+dr02dlufN8AwAAAHAEmFcA+rHa9LYkZ65iPWe3WHff\/tr0rAaPm1Q9f\/bxSU6dx44skGWqk6729fHa9Ias7pwBAAAAgM7MKwC9M8mztbK3rGI9l9emn0ry9Ih5X65Nb1vF9mbhpw1lb+18LxbLMtVJV\/v6VIbTfbxpBtsBAAAAgKmZVwD6QJIbamXvSXLCBOs4Pck7amU3JHltxPz1Qd3OTfsc2K9L8sbWezaZvUm+Vyt7T5JTJlzP1iQXTmWPpqcp7Umb9BTLVCdd7eurSW6slb0rybETbGM1X\/IAAAAAwKrNKwCdJLelBO\/6NiX5eNoFhTcn+VitbE+S28cs80Rt+ui0C05uSvLzmW2P6e\/Wpo9K8ksp+9jG5iSfTPIfklyd+R7XqgNJ9tXKNrdcdpnqpKt9va02vSXJz6ZdUP\/NSd7Xcn8AAAAAYCrmGah8IckXa2WXJPnljA\/2HpPkV5OcXyv\/pwynKKh6PMO9oH8hpSf1KCcm+e0kl42ZZxoeT\/KNWtkbk\/xGbx\/GOT3J7ye5uDf90ZQg5iI4mOGUKBelXcB0meqkq319IsNvDrwt5cuYUYH9DUnemdKOAQAAAKBTbVNQzMotSS7IYM7ctyU5L8lNSX6SQ0Hl7SlB57cnOa62nu9nfO\/npPTEvSGlx2jf8Un+MCW1wX0pPbKPTglyX5TZB56rrk8ZVLEaWL8gyf+WkuLhviTPp3yObSl1cFmG8w3vTKmPRfGTJGdUpn8mpd3dmZKXe3uSh5Psalh2meqkq329PiX3czVdzXtTAtg3pwTD96ak9Dgx5XxZ1AEcAQAAADjMzTsAfTDJP\/T+Xw3EnZDSE7SNm5N8Ps35huu+m9LL+pxK2aaUAN57xyy3O2UQuPNa7tNq7E\/ymZRUDBdVyo9K8v7ez0p2JPl0SqBzUdyV4bq9ovfT9ydpDkAvU510ta97kvxlSrqO7ZXyk7LyOfOtJB9osR8AAAAAMBWLkCt4f5K\/T\/LPvf+3tS\/Jl5P84wTLvZzkr1N65bb1VJL\/OuEyq7UnJQD5zVUse2vKfj4zzR2agp9kOG1E3biUHMtUJ13t644k\/y3Dec1H2Z\/ksynnGAAAAAB0Zt49oPteTfIvKWk03p7k8pT0GE129ea7KasLLD6b5M9TUn28P6Nz9D7e28bNSV5JSXvQhX1JrktJw\/COJG\/J6LpIkjtSUojcn3a9wLt2MMmXUgL5H85gr92+lXJCL1OddLWvj6b0HH9XbzsnNMyzN2Xgwm\/n0LnyYkqKGQAAAACYuTaDwc3D+pS8tdtTctkmyUspwbMnk7w2xe2cnBK825ISCH85Jci9K4sR0F2f5JSUoOHRKV8a7EsZUPHplHpZFpuTnJnk2JS6fTnlM0xa18tUJ13s64Ykp\/W2sTWlXnenfIkyyVsFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMCCWDfvHYCWTkvygVrZl5LsmdL6r0ryhsr0U0m+PqV1L7qTk1xdK\/tykhfmsC91h+txWeQ6BwAAAJiajfPegSPUhiQn9f7\/dJIDc9yXZbElydtqZV+e4vpPrq3\/h1Nc96LbnOG6vX4eO9LgcD0ui1znAAAAAFPTFID+7ZTgSBuvJXk5yd4ku5M8nmRnkieTHJzGDh6GNif5zSQX9qbvS\/LpJK\/MbY8AAAAAAGagKQB9VpLj1rjeh5LcmOT2JK+ucV2Hm0tzKPic3v8vS\/L9+ewOAAAAAMBszCoFx7m9n6uSfC6lV\/SiWJfkhFrZ7nTXA3lrQ9m2jrYNAAAAANCZNgHovb2fUY5JsmnE796Q5D8m+dMkOybbtZnZmOSPamV\/luTejrb\/QEPZ\/R1tGwAAAACgM20C0DcmuW7M79el5DU+JckFSd6TZHvl99tT8kr\/cUpP4yPdjiR\/kuSS3vSPkvx0frsDAAAAADAb00jBcTBlIMJHej+3JPm1JOdX5jk+yXuTfGUK2zscPNT7AQAAAAA4bK2fwTqfS\/LXSZ6ulX8gydEz2B4AAAAAAAtoFgHopKTa+Jda2YYkr5\/R9gAAAAAAWDDTSMExyj0NZWdmdYP9HZvkdSmDHe5L8lKS55O8uuq9m431SU7IoRzYu5K8ML\/dmYou6v7YlDo7OskrSfak9KQ\/OMVtTMOmlLo4OuULlZdSju+4QTqPNJtSzoHNSY7KoTazK8lrM9xmV8dlWa5FAAAAAAthlgHoPSkD7p1RKds+Yt4mW5K8NcnPJDl7xPrv6P08MGY9v5DknMr0uhHzvFwr+0ySZ2pl7+vtU989Sb6aEvR6e5J3Jzm18vtHUwZfrDotJUd21aeTPFuZ3pTk93vr7ftGkjsb9n2cX8lg\/d+V4Z7pTaZV9+NsTHJFkiszmC+874kkt6UMgrlnlduYlrOSXJXksiTbar87kOSHSX6Q5O6MD5qfneSXamXfTvmcbZ2Z5JdrZV\/rbXteNiV5U0qbubA3Xbc7pf3dkuThTOfLhWkdl5V0cT4AAAAAHJZmGYBOStCpamvL5d6S5ONJjhszz7Yk7+r9fD\/JdWkOVB6TEqga56SGsqa6Obq2rh29sl9L8uaG+Zt6fG5s2J96KpT9SR5LCWj3XZ7JAtDbU4LiVde1WG6adT\/KqUk+keS8MfOcluSjKXXw2ZSepl3bmOTfJfngmHk2pByby1MCyV\/IcLvv25FyDpxQKbsykwWgL8xg+zmQMvjnvJybEhA\/dYX5tid5R+\/n1pQ2s9q3A6Z9XMbp4nwAAAAAOGzNKgd0Xz3gvG+F+dcn+UiS38z4gE\/dVUk+ldJTsUubU4JTTcHntfphbfqyTNaD\/I216WeTPDRm\/q7q\/tQkv5fxweeqY5P8Tm87XToqJbD6wQmWuSKl\/kYNtnkgyc21sotTUjq0sS4lIFp1e+YX7LwyyR9k5eBz03K\/m3JsJzWL49Jk2a5FAAAAAAtplj2gt2W4p+9zKyxzTe+naneS76W8tr83Jeh7csor8dXUGucn+cUkf1tb\/gdJ7q9Mr+\/NV3VDkp0N213J5SPKn0wJQK0l5+1DKXlzq71lz0\/73rL1oPgtGZ+ndhZ1X7ctJZhcD7juTekV+9OUns5bk5yY5G1Jju\/N03UA+sLa9F1J7kvJ97su5cuAC1K+GKg6L6V391+nOe3DXSm9d6suSOk5u5KTMnxO1b+o6MrFST5ZK9uXkjLl\/pR6OpByLM9K6R1cfdPgzJR6+otMlh5jVselrovzAQAAAOCwN8sA9Jsayh4bM\/\/FSa6tld2Z5HMZDgb\/OMlNST5UW+bKlEDrjytld9WW3ZThAPQ9Wd3giH37k\/xrSrD7mRwK9K6lfl9N+SzVz3dp2gWgt2a4p+yPxsw\/q7qvuyYlsFx1e5J\/athOUvJevzPJx8asc9Z2pQQSH2r43Y1JTk9JwXJmpfzylLpoGojziZSUGa+vlF2WdgHoeq\/2lzP45UpXtmY4l\/VPk\/xNkqca5n8wpef3r2SwXV6SEqwd12ZGmfZxqerqfAAAAAA47M0qBcfrMhzAeS7JT0bMvyUllUXV3SkBrVE9kV9Ncn2GA7Ifbr+bU7EnyZ8n+UpKL+pqL+NxPY7bqAfP26bheEMGBzB8LKOD\/13V\/elJ3lsruzfJ343ZTj+w\/5kx652lZ5L8WcanLnk8ZRDJ+mf4SJoHvDyY0tu76qK0S8NR79V+W4YHz+zCpTnUMz0pvYH\/Ks3B5+o8\/5jhvM8XrWL7szgufct8LQIAAABYOLMIQJ+QkgP1+Fr59SkBxSZXZPD1\/H0pvQ1XCuAeTPL1Wtl5KQPYdeULSR6Y0bofT\/Jorez8FsvVe5\/fktFpB7qq+ysayr7QYjtJ6SV9Q4v5pu3zGR9U7duV5Ku1sjMzevDLuxvK6qkl6o7NcLC2\/gVFV+r5u3+QUgcreSmlt3BVm\/ZcN6vjkiz3tQgAAABg4UwrAL0hJdBydZI\/zGA+1KSkf7hlxLLrkrynVvadrJwvuu+JDKfPWE2vytV4NCU4OisHM1xvl66wzJYMp99oCngm3dX9xgzncL4x7YKIfbOs5yb3Z7K0LLdnuDdyUxqapAwI2dS7fZx60Hd3Rr9RMGvfTvKfKz\/fnmDZx2vTJ2V8j+S6WR6XZb4WAQAAACykNjmKr8xw8Ktqa0r6gE0jfv9Akr9PGZCsySlJTq2VjctX3OSeDAZ6zp5w+dV6PmsbaLCNuzOYs\/rNKWk4RqUDODclCN13b0rKgiZd1f3JGU4dcueE2+napKkt9qYEld9WKXv9iHmTkq6hmlLjwpS3Bp4dMX89aHprRr9RMGv1IPIkXqlNH5VyHWr7WWZ5XJb5WgQAAACwkNr0gD42pUfzqJ+TMzr4fEOSv0jJkzzKGbXp\/Ul2tNivqp216Tdksl6Vi6zeW3ZDhgejq7q4Nj1u0MKu6r4e1EuGU4scDuo9ks\/L6C957ktJ71B1wYh5t2S45\/ukgdFFNqtc9H1tj4trEQAAAMCUtekBvRq3p7y6\/nCLeU+qTe\/K+BytTeoDuG1PsjnzGaBtFuq9ZS9Nc0qKTRnMtXwgpUfmKF3VfT0f+I6UnqmHm3oe5E0p9dGUwmFvSu7kd1TKLstwjuSkfNFzVGX62bQ7t7p2XMoXUicl2ZbSDo6qzdNmsMVpa3tcXIsAAAAApqxNAPrFlFQTo6zPcM\/Be9I+QHZMbfrUJH\/QctlxjsrhE\/Tp95btB\/MuTQnw1XuWn5uSEqXvtoZ5qrqq+y21349KCbLsmtKi1AOwVXdmMAA9Kg1HPY\/wrRmd0qZrG1MC52\/N4uY7bntcXIsAAAAApqxNAPqWJNeN+f26JL+bwdQP16akjWgTdBkXoFuLUWlBllG9t+yGJOdnuBd0PQC4Up7lruq+HoA+XINx9ZQaSen9OsqDSV5ISXPTd0EGe0H3A7xVi5J+45yU\/ORnzntHVtD2uLgWAQAAAEzZNFJwHExyfQYD0CckeWeSb3a0D0eCOzLYW7aehmNjBtNv7EkZAHKcrup+Q236YEfbXXT7k9yc5OpKWT0Nx1kZDFDvTPLY7HdtRZck+VSGg6svpgx8+WRKG3wlg8f7jCTXdLGDq+BaBAAAADBl0wq4PJKSFuDKStnVKb12x6XvSIZ7J96Z5NtT2KcXprCORfJgSs7afo7ZehqOszMYqLw1Jfg3Tld1X8\/3XO8Rfbho6kHb1Pu26q4MBqDraTjqAxPemuS1Ve3d9JyY5NczGHzemeTLKeliXh2z7EptchbaHhfXIgAAAIApm2aPv29kMAC95f9v7\/5+5CrrOI6\/oZW2WymWQktJiUFCUSsVAUVsrb\/QSKJRriTRaGKMF94Y\/wn\/BC7UxARjghfqhUYkFhWsP6or6kpD2pRGstjSbmlQ2f5e1ovvTPbMc87MnJmd88zs8H4lm+Y8u2fO6XNmzsV3vufzAAeAn\/XZL80oXmYyF1gbt6tEHEq7ezSN4UjjN56v8Zq55v58sn1DA8eYBJsqxvoVXF8GTgE7C2O7gcNEvM3dyd\/3WlQyl4\/S+X99BfgO1VnLk6DudfFeJEmSJEmSNGLXjvC1TgOHkrEPA7f02S8tWt1GFN5UdiTZ3tP691o64zfOUq9wlmvu0y74XUxnLu62ZPsKvReBhChyziZj7cznHXR+fuaJYu84bSIWHCx6isktPkP96+K9SJIkSZIkacRGWYCGeFw9fYz9oT77nEy2txKFN5X9m87837uJGI5dRO522yz1Yhpyzf2pZHsdk79w3TDekWz\/iyh29pN2Nd9JXM87kvHnGH9+9o2UIy3mx3EiA6h7XbwXSZIkSZIkjdioC9CvAc8kY3uJqIhuXq4YSzssFdJu2XVEkXJ38ncv1Hy9XHO\/QLnj9F0NHGeUqnKDe9lIOS6jbnzDApGdXLSbyPkuOjrgOTVhpmKsTpG9bbUdxU1eF+9FkiRJkiRJIzbqAjTAHyg\/yv7JHse6APwpGdsHbB\/wuDOUC7FVqjpI19Jj9mm37F7gvYXtl6gf05Br7q8SmcZFD9K5aGI\/aRGxabvp\/cVJ6n2UF1es+0UAxIKdRfvp7IA+TkSrjNtSxdjWmvuuI677ajR5XXLfiyRJkiRJkqZeEwXoReDpZOx2ehcQ\/5hsXwc8QvXiYVU2AI8CXwM+Tu\/\/1xLlmJANNY8zCV6lswi9l86YgEFjGnLN\/d+T7Y3Aw9Qr\/u8h8sRz+zyd0Sbd3Eh8yVI0T3VHbTdH6SzupkXPdP7G5bWKsffX2G898Bng3RW\/G\/QLoCavS857kSRJkiRJ0tRrqjgySxRKiz5F90LvKeA3ydgdwJcoLyCW2gl8HXhna\/vTRHcJaOYAAARiSURBVOGnm2XKnaR3sba6oNNu2aJBum4h39y\/Avw+GbsP+Czd3xfrgA8CX+lzHk3ZThQSe+VV7wC+CLw1Gf8Vg30R8Drwjx6\/TyM6xuUc5QiLfURnc7fP0A7gy62\/q7J+wHNo8rrkvBdJkiRJkiRNvUELP3VdAg4CXyiM3Ux0Sh7qss9B4DY6H6+\/E\/gW8Vj8MeA\/RPfyZuAGovs3zWg9Dfylz\/mdAG4tbN9PzMU\/gYtE0eolotg2iY4RubtvScaPUN2h2k+uuT9IZD8Xu1f3EwW7WaL4d4GIMNgGfIDxLwJ3E\/BN4vza8wBwPTFf91LOJZ5juLzmudbrpYa9rk15GvhqMvYIcA\/wPCvnej1RvO0XnzJDObannyavS857kSRJkiRJ0lRrqgAN0c25n84uxU8QUQJVxaYrwA+Jx9fvKoxfBxxo\/fRzEvgBK8Wobo60zq3ontZP22NMbgF6kZjHNPpg2JiGXHO\/CDxOdK8WO1NvIrpFe3kG+EiN8xiVQ0ShvB0ZcX\/rp5954KcM1v3c9iIxR5uT8bkhXqtJR4FnKb8vbm\/9dLPU2u9jyfjbgDM1j53juuS8F0mSJEmSJE21JvNJrxKPuxdtpneW7yJRtPntEMd7Dvgu5eiPKicox0GkJj2SIy1KXmZ1MQ255v4k8H3qL5R4BfgJ8NQQ57UarwJPEP+3uo4Rc7g45DEvVRxvicmJ32hbBp4Efj3APmeA73XZZ9cAr5PruuT6PEiSJEmSJE21JjugIRbLO07no+wHgD\/TvThzGfgF8ej6A8Tj+1t7HGMOONw6Tt2u02Xg58AC8BDlnFiY\/AL0CeC\/wJbW9t+I+IrVyDH3EN2ojxG5wQ9QvaDcBaKj+1lW3iv\/IyIWcrhAxLH8qHUeH2Il2zc1T8zDX+lcSHAYL9D5Jc0cwxe0m7QE\/JLoht5P95iN00RMxmFiPiGeQNhT+Ju91C9m57wuuT4PkiRJkiRJU2vSi6wQXdrbicLjJqJofpkovp4Fzq\/y9TcQMSFbiKLRxdbrnsMiUtNzD7HQ4C2tY8wQ8\/86kQd9ZQSvP0pbiCzzGeK8F4m5OMPo3isPEnnKbY8TucqTbjNxHWeI98l5Ym5OA280fOwc1wXyfB4kSZIkSZKmylooQEtvFtcA3wDe3tq+CHyblc5hSZIkSZIkaU1pMgNa0mB2slJ8hljI0+KzJEmSJEmS1iwL0NLkuDfZXgvRG5IkSZIkSVJXFqClybAT2FfYPkcsNClJkiRJkiStWevHfQKSuBV4lFhAr+13TN4ijJIkSZIkSdJALEBL+d0HvAFsITKf35P8fgGYzX1SkiRJkiRJ0qhZgJby+xywscfvfwxcynQukiRJkiRJUmMsQEv5LXcZXwKewOxnSZIkSZIkTQkL0FJ+VQXo48CTwHzmc5EkSZIkSZIac824T0B6E9oG3AxsIBYaXADO0r0zWpIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZK09vwf7K59JmM3ryoAAAAASUVORK5CYII"}}
+Sep 10 04:25:17 detox[9028] TRACE: [WSS_SEND_TO, #tester] {"messageId":2,"type":"invokeResult","params":{"result":"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"}}
+Sep 10 04:25:17 detox[9028] TRACE: [WS_MESSAGE] {"messageId":2,"type":"invokeResult","params":{"result":"iVBORw0KGgoAAAANSUhEUgAABaAAAAFxCAYAAACFjQ9RAAAABHNCSVQICAgIfAhkiAAAIABJREFUeJzs3VmwJPV9L/hvb3TT3YDYdwESmxAChIz2FcSV7GvJtrxpQl7HN3wjHI6ZmJgHz8u8TcQ8zcv4XkfMvbbvtWV5CduSLOkiWcLaLCyBALEIsQjEJhqapdm6aeim6Xn4V0VnZWXVyTqnKquq+/OJONGd/5Nb/fOfeTJ/9c/fPwEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCPOunnvACOdluQDtbIvJdkzh31p8rYk51emn0ry9Tnty7Ja9GMMo2i70A1/a+mCazoAADO1cd47wEhbUh48q748jx0Z4cQM7t8P57UjS2zRjzGMspq2uyHJSb3/P53kwLR3Cg5D/tbSBfcjAADMVFMA+reTbG65/GtJXk6yN8nuJI8n2ZnkySQHp7GDACy9zUl+M8mFven7knw6yStz2yMAAACgE00B6LOSHLfG9T6U5MYktyd5dY3rAmC5XZpDwef0/n9Zku/PZ3cAAACArswqBce5vZ+rknwupVc0i2ddkhNqZbujVyIkzo9p2tpQtq3zvQAWSdfXWNd0GM85AgDMTJsA9N7ezyjHJNk04ndvSPIfk/xpkh2T7Rod2Jjkj2plf5bk3jnsCywa58f0PNBQdn/newEskq6vsa7pMJ5zBACYmTYB6BuTXDfm9+tS8nuekuSCJO9Jsr3y++0peaX/OOVbdACOLDuS/EmSS3rTP0ry0/ntDgAAANCVaaTgOJgyEOEjvZ9bkvxakvMr8xyf5L1JvjKF7QGwfB7q/QAAAABHkPUzWOdzSf46ydO18g8kOXoG2wMAAAAAYAHNIgCdlFQb/1Ir25Dk9TPaHgAAAAAAC2YaKThGuaeh7MysbiCLY5O8LmWww31JXkryfJJXV713wzaljPy8OclRle3sSvLaFLeTlM+zPaVH+CtJ9qT0HD845e3M27okxyXZlmRLSp2+mPJZp6mL9rGafer6GG9Pqeutve28lPJl0Esz2Nb6lM94dG97r6ak4tmVZP+UtrEu5bhuSzkvD6TU5bO9bS2zLo/VpBb5+tRVm+iiffctcltYja6ux+tT/mb3x5zYleSFKW9jWXTxt7bLe6RltMjn8eF+P7JaR/I96qyty2LcMwAAC2SWAeg9KQNPnVEp2z5i3iZbkrw1yc8kOXvE+u/o/Tywyn3clORNve1c2Juu253krpTc1g9n9TdUG5NckeTKDObH7nsiyW0pgz7uWeU2VvILSc6pTK8bMU89kPOZJM9MsJ2tSa5K+bxnNvz+8STfTfKDlIeh1eiifUxqHsd4W2+blyZ544h57k0Z9O22JHvXuL3X97Z1WUowou7llC+fbk7y46zufDk1pQ4vH7GNJLk/pf3cmekFHmd9fnR9rCYx67Z7WsrYAFWfTgkct9FVm+iifSfTbwubkvx+yptGfd9IqYtJ/EoG/2bfleG3mZrM4nr8vt46++5J8tWUz/j2JO9OaRd9j6YMdrwav15b1429nzbenuSdlem/T/kb18YnUwZw7vu3lLbV1qz/1k77Hqmre5CutnckX9ObLFJ91K8fNyX5Xu//W1OuVW/NctyjXpLkw7WyHyT515b7cnlKGsSqHyb5eqZ/jrwtyQdT2sKdKWP/dNnuAYAFNssAdFIeTKq2tlzuLUk+ntIzYZRtSd7V+/l+kusy2U30uUl+OYMPnU22J3lH7+fW3nYm7WV1apJPJDlvzDynJfloykP1ZzObXiLHJDlrhXlOaiibpJ28OcnHMjpIlCSnp9THVUn+LsmTE6w/6aZ9TKrrY7wu5Ub/oym9a8a5qPfzgSRfTnngmTRwti3JtSn7Ps6WlAfQK5Lcl+Qf0z7IuCnlweXaFvOe3/u5Jsk/pAQf12pW50fXx2pSXbTdjRmu2zYpoLpqE12072R2bWF/kscyuP+XZ7IA9PaUYGrVdS2Wm9X1+OgMtpkdvbJfS/k7U7eWXrhPpByXvt1pH4C+MoP7eWHaBaCP7i1b34+2Zv239txM/x6pi3uQLrbnmj5oEeujfv3ov5V5Scr1apnuUe9JCWRfWik7tVf+1Ar7si3Jz9f2ZVcOXd+meY6clfJlXt+7Unp8/48V1g8AHCFmlQO6rx5w3rfC/OuTfCTJb2b8jVvdVUk+lRIcaOPKJH+QlR+smpb73ax8g111apLfy/gHgapjk/xOymdaNlcl+e2Mv7GvOjvJb6V9z/iu2sekuj7G65P8+5RAzCRt8YSUevhwmnu5jLI9pd2vFJyruzDlPDu9xbybUj5Pm0Bj1QkpPT8vn3C5rnR9rCa1yNenrtpEF+07mX1b+GFt+rJM9tZRvcfis0keGjN/19fjzSlBnabg81r9pDZ9QdoNmnx8kjfUyi5tmrFBveflcylB9jZm/be2y3ukZeOaPmjR66NvU0qQ/HeyfPeoryX5UgZ7Em/qbWuluru6YV8+n9l0yDijoeyCGWwHAFhSs+wBvS3D36qvlFftmt5P1e6U1+YeTrn52pzk5JRX26qvjZ2f5BeT/O0K27g45bXXqn0pvQHuT8nLdiAleH5Wyjf41W//z0zpGfEXWbnXxraUm93X1cr3pvQU+mlKr5OtSU5MuTk+vjfPLAI8P8hgr8D1KXVWdUOSnbWyek/2Jm/M4IP3Iyk9W55JuXk+JuVGtB4UOiXJ+9Oup10X7WNS8zjGP5dSZ1Uv59DxfTHl2B6T0tPo8gy+Ot0P6H2txbY2JfmNDA8g+mTKq+KPp3zWTTlU79UH3+NSHsb+v5Rza5RrM9w2dqa8NvtEymuwG1LOxctTgn9Vn0zp1fNoi880yizOjy6P1aQW7fpU10Wb6Kp9J7NvCw+lfN5qcOX8lFfd26gHdm/J+BylXV+PR32h8GRK4GYtPaB3pBy/fqBmQ8rf+pV60TelGTgn5XxZKYVDvc39MO0+w6z/1s7yHmmW9yBNXNOLw+V+ZC3eksE0FMt2j7orJQj9q5Wyy1KO649GLPP6lFQkVTdmcIyeaZ4jTX8DV+qhDQAcQWYZgH5TQ9ljY+a/OMM93e5M8rkM3+j8OCUI8aHaMlemPDT/eMQ2tib5pVrZT5P8TZpvkh5MCUL8SsrNa98lKTeLo7bTd03KTX7V7Un+Kc03b99IySX5sRXWu1p31aY3ZfhG856sbqDIfm+xfSmvpd+W4YfPm1JyXP5WyoNS3zuTfDPjXwHton2sRtfH+JIMP+zdl/IK7a6G+W9P8q2UNlx92Lk2JWC1Ul28O8M9/L6R5PoMD8b2QEq9vz0lANF3Um97/zBiG6elpFmoujXl2NbzL/bPyatSPlPfhpQH4f+S1b/OO+3zo+tjNalFuz5VddUmumjfSTdt4dWU61v1mndp2gWgt2bwb1wyOqiRzPd6vD8l9+kPUoJH/SD5Wu5nDqQEgN9TKTsnKwegLxlR/sasHICu5+VtmzJmln9rZ32PNMt7kCau6YfX/cha9L+YW+Z71FtSrunV56ufS3mDo56jeUNKz/SqXSk5maumeY70P1c/ldPOlL+lAABJZpeC43UZvhF7LsOvufZtSXm1turulIeeUT1RXk25sak/XNcH6qi6NId6eySlN8JfZfw39HtTblbrOQ0vGrNMUl7Lfm+t7N6UfHKjPlP/wfozK6x7Ue1J8qcpgYFRAZ8Hk3yxVrYlza/uVX/fRfuYVNfH+OgMPxg80ltX08Ne384kf5nhHiyfSHLUmOWOz/B5fFOSf85wcK7vtZTePp+rlb89o49xPYjzXMoD86jBfw729uPLtfI3pgQuF0HXx2pSi3596qJNdNW+u2wL9WBC2zQcb8jgAIaPZfQXxvO8Hu9J8ucpQZSdGeyhPa63dhv1APBKf+O3pfmL9mTlNCFbMxyAfniFZapm9be2y3ukZeOaPmjR66PJst+jvpbkCxkMNp+SwS/O+q7KcBqWL2S2Y6G8lnIt+L+T/D9J/t8MH2cA4Ag2iwB0P6/b8bXyph5lfVdk8BXOfSkP+Cs9UB5MGcW56ryMDjjUb8Z+kPE3yn0vpQQmqppGFa+6oqHsC2n3kHx7yitvy+aLGZ8ztO/ODOcDH5drsqv2Mamuj/FlGX619rNpN8L4iyl5/6pOzHCvx6q3ZvCB8PmUV0DbvCZ+Y4ZHdr94xLz14/HDtPtM322Yr2lE+3no+lhNatGvT120ia7ad5dt4fEMpxxZ6W9VMhxIvSWjAzTzvB5/IcP1Pi0P1abPzfictvWgfbXe35Txgf96m7w7kwWGZvW3tst7pGXjmj5o0eujyeFwj/pMhgf1uzolrUffcSn5oatuyvi3WqblYMr4ATsz+pkPADhCTSsAvSHlhunqJH+YwVfrknLTc8uIZddl+Nv772TlfNF9T2T41bBRPW++neQ/V36+3XIbyfCo9idl9OAfGzOcT+/GTJYL7fYJ5l0ED6U8rLaxP8MPAaMe1rtsH5Po+hivz3DvppvSftCqpARu6j0k35vmdrwxyTtqZTdk+DXPUV5LeTW7alRAot7rqW1PxpdT2sKNlZ+2+zdLXR+rSS3D9WnWbaKr9t11WziY4b+1Kw2KtyXDgZ+7R8w7z+vxo5ltu9uT4X2rj2NRVd3vJzOcw7ae2qWqnv/5nsa5mj2U2fytTbq7R1o2rumDFr0+mjyUw+ce9fu1ZTYl+dkcqrtrM5hC5NkMp94AAOhcm5yJV2b8aNpbU3pBbBrx+weS/H1KjsUmp2S4Z8Gk39Lfk8EbtrNHzFd/QJpE/dXvo1Lqr+kb/pMzfLN65xq2vQx2Z7Lcuy/Wpo9unKvb9jGJro/xyRmuh7YPU1W3ZPD18DNT3lao93I7NcNvMUxa7/Xz7fSUB6R6O3m2Nv3mJP+S0ekWqmY9cNFqdH2sJrUM16dZt4mu2vc82sLdGXw1/s0px3vUq+DnpgSh++7N6PzF87weP5+1DTTYxt0Z3Ldz0/z5NmcwaH9Hyqv7e3Pob9nFvfIm9QEzH5xgH2f1tzbp7h5p2bimD29vkeujyeF0j9pPxfG/5tCXtZem1OXLOZSDue8LWf1AngAAU9MmAH1sxr+GOs4NKfk0x/Uqq+dV25/JelEkwznG3pDmQNe0jepB3vSqXv216CNdvUfjqC8wFrV9dH2M6/WwL5PlDO1rysN+VoYf+Orb253k6Qm3tSPJ/1Era6rzH2ewB9HJST6Z8prppNtcBF0fq0ktw/Vp1m2iq/Y9j7bwbErPwn5gZ0NKLuxRPRzrqUPGDVq4qNfjaakHgt+Ukle8vm+vz2BA6r6UAOydORT8uTTNecu3ZfBL/acz2zypbf/WzsKsxhnpmmv6oEWvj2lY9HvUp1L+HlYHDf25DKcOuTndpN4AAFjRWkaNH+f2lFfQ2tyQnlSb3pXxr702qeeh257SQ6nt69THpQQ4Tkp5ONyc4VfA69sYp96zbkfa5cVj2CK0jyZdH+NTatMPZnWDbr2UMrhYNQfpiQ3znVCbfjir633YZpn7ej/VXoFv7v3cnvLw9EjKsV+EINVKuj5Wk1qG69Os20RX7XtebeG2DPYsvDTNAehNGcwdeyDj00Es6vV4WnamfKZ++zi19/96j/Bqu3wxyU97/787hwLQW1LSkd1XW7ZeX3dm8a9r075HWjau6YMWvT66NM9r4k0p1/n+9ai+L8+n+Qs0AIC5aBOAfjHlJmaU9RnuAXBP2veGOKY2fWqSP2i57DhHZfzN28aUQVTemumP1r6lNj3qdWZWNq/2sZKuj3H99c+1bO+pDD7wbWuYZ2ttepYjp7+akqbnf8pw3tTLez9J6Sl4d8rD7gNZvKBpX9fHalLLcH2adZvoqn3Pqy3cl9ITrvp69rYMf85zM1gXtzXMU7Wo1+NpeS0lIPyBStnrM3jcNqTcO/TdnkPBt5+k9IDs95a8MMMB6PoYGbMaVHGtZnmPtGxc0wcten10aZ7XxAMp6TX+lwx/IZTe7+qpRAAA5qZNAPqWJNeN+f26JL+bwdd4r015BbjNA2XTTdM0jHvN9JyUHJn1keinpf4wsAgP1stqHu2jja6Pcf2hbC3bqwfpmh746g+Ysw72Pp/kz1MGhrsmwwHCpPTueV/vZ39KzsmbUnrCLpKuj9WkluX6NMs20VX7nldb2JtSF/2BFjekDJJY7wVdDyyulDd2Ua/H03R/BgPQ52Uwv20/T21fdTCwvUl+mBK0TUoA98sZHAPjgsr/92fxrl/J7O+Rlo1r+qBFr48uzfua+GTKAIMfr5XfmnItAgBYGNNIwXEwyfUZDECfkOSdSb7Z0T5M4pIkn8rwzd2LKQ+ST6b0AHslg6+tnZESBGljQ23a62+r13X7aKvrY1wfGX4t22uTamCa22trX5J/TclZ+JaUIM4bR8y7KeVV97en9Nq8Lu1HnZ+1ro/VpJbp+jSrNtFV+55nW7gjhwLQyXAajo0ZTL+xJyv3xl3U6/E0PZISMO6fJ29KedOrX//VAHJT7tsf5VAA+nUpQdx+kPmYDPaAvjuL9wVQF/dIy8Y1fdCi10eXFuGaWE8plZQvyTZkdalRAABmYlo3To+kfNt+ZaXs6pReQ+PSdyTDA2bcmeTbU9inFxrKTkzy6xl8sNqZ0kPpvoy/UasPJDROvUdHvXcK7XXZPibR9TF+aYrbq/ckra87GQ6KjBoBfhb2pvRivSnlIeqslFHhL8xwup+kBNHOSfLfkzzezS6O1fWxmtQyXp+m3Sa6at/zbAsPpgTg+/lF62k4zs7gAMO3ZuW/c4t6PZ6mvSmB4Ut708elvFb/eErg7S2Vee/McFuqB/EvyKEAdL1H8b1ZLF3dIy0b1/RBi14fXZr3NfGCJO9tKD8vZSDfb01hXwAApmKa39x/I4MB6C1J3p/kiyssV883eTCrG027jQ9mMNDwRJL/kmT3lLdTv4E+bsrrP5J02T4m0fUxnub26gPeND3w1cua0h904dnez50pPVpfl0MPXKdX5js+JV/wf878AyFdH6tJLfv1aRptoqv2Pc+28GpKCq1+r9R6Go56+o02r2sv6vV42u7JoQB0UvJAP54y+NoZtfnqdqfUZX/5y5J8PaWu6vmfH5rCvk7TB9PNPdKycU2f3fZmUR9dmuc18eiUVDmjfDTli6NF+GIeACDrp7iunUm+Uyt7X5LTVliu/mBzdoZf75uGo3Potdi+f27Y/jTUe32flcXKcblMumofk+r6GNcH+Tkvqzt/N/eWrdrVMN+ztekzsxj1/lyS7yf5T0n+rfa701JGhJ+3ro/VpA6369Nq2kRX7XvebeGu2nS/LtZnMP3G02kXNFnU6/G0PVSb7qd9Ob9WPiplSbXeT08JXCelx37f4yn1vii6vEdaNvM+j1dyuN+PLLJ5XhM/nOTkyvTODOar35ASoF6ENCEAAFMNQCfltbP662gfXmGZHbXp41Ned522EzI8WMijM9hOMtzbYEMM5rNaXbWPSXV9jB+rTW9b5fbObrHuZLjeT8hwT6WVbEx5pbv6M60Hs/1J/kfKA1fVqPzAXer6WE3qcL0+TdImumrf824Lj9Xme0tvH87KYN7Qm9MuF+uiXo+n7akMtqOLUwJ61S8z7s7o4Gw9MP3GlHQn1eN4VxYr/3qX90jLZt7n8UoO9/uRRTava+IFKZ18qr6Uki6n2ou8n4oDAGDuph2Afi7D+cYuy3CvoaqfNpTVe+FMQ9Mr1vsnWH6SwNlTGX4t700TLM8hXbWPSXV9jHdmuNfmW5pmXMHltemn0twL74kMf74LGuYb54wkf1T5+Q8ZDrj8fJL/q/LzqQnWvz/DaQMmDSLOQtfHalKLfn3qok101b7n3RYOpgSX+zakBEMvrM13d8v9WNTr8bQdzGA72pJy3Kr3MvXe5VXPpbz63ndpStC/aqUBH7vW5T3Sspn3ebySw/1+ZJHN45p4dJJfqJXdmpJT/rkkX6n97qMZTE8FADAX0w5AJ+UV6HqvoGvHbGtvku/Vyt6TQ6+strU1ww/VVQcayo5vue4NSd41wb68muTGWtm7Mjjg00pWczM/qabeV4v2ENlV+5hU18f4QJIbamXvSfPo56OcnuQdtbIb0tzzcV/KgG9V7005F9qq1/dDDfM8n9Lrrv9zbiZ7XbT+xsU08z+v9vzo+lhNatGvT120ia7a9yK0hXqe4ssyGPh5OCUg38aiXo9noR4g/sgKv6+rBrDPT/IzlemXs3i9i7u8R+rr+h7ENX20Rb4fWWTzuCZ+uLb+vSnpcvq+nzIIbd8kqTiW4bkAAFhSswhA70nyL7Wy8zL+5va7temjkvxSBgfDGWdzkk+m9EC7Os2f67mGsqtarHtjSo+8Sxp+N+6m7Lba9JYkP7vCMn1vzvCrdbNwIMPBms0dbHdSXbSP1ej6GN+WwdHuNyX5eNo9VGxO8rFa2Z4cGpCsyQ9q06el1F8bp6UMaFXVtK16EOe4tH8QXp/hXl5PtVy2jbWcH10fq0kt8vWpqzbRRftO5t8WnslgEPqyDL4ifmsmSwWxqNfjaXs0g+d/NRj7cIbz4Nb9uDZdHdTwrgxfW+at63ukpPt7ENf0ZstwP7LIurwmnp/hY/XPGeyRfiAlHUdV21Qc0zonBa0BgCGzevC7OcMPZ/8uo29iHk/yjVrZG5P8RkpezXFOT/L7KTkak/KqWVMQYVeGB1l6T0ovkVE3Sqcm+a2Mvmkbd6P9RIZ7iLwt5aZ7VD1sSPLOJL89Zr3TdDDDrztelMW7ceyifaxG18f4hSRfrJVdkuSXU3IwjnJMkl/NcCqcf8rwa7tVTyT5Zq3s2iTvzvg2cm6S38lgPtH7MxyQScqxvbNW9ospAcdx29iQck05t1Z+75hlJrWW86PrYzWpRb4+ddUmumjfyWK0hXqwvapt+o2+Rb0eT9srGZ1mo94+mzyT5l7xyei2Mk9d3yMl3d+DuKYPWqb7kUXW1TWxKfXGwxl+mycpX6DVUyK2ScWx1nPybUn+9yT/ZyYLwgMAR4Cm143fn9Jzou+hTP6wdCDlFdNqj59tKak5HhmxzMNJzsngK3wnJnl7DuUm3Jjy0H9SyuAlH065wTmusszOlG/+m167fjHDudnelHIjfHRvPaf2pj+YEvQ4acT+JuU1t3E3zD9N6W1WvQF7fa9sc0o9b0/JJXpxyo37uB5H3850Uwwk5TW+11emz8ihUbWPSzkm+zLY0yUpN9dvqEw/mcl6r1ySwZyYO5L8aMz8XbSP1ej6GD+e8vmqDxFn9LZ3VMrDw6aU8+3U3rY+kVJ3Vd/P8ANTk8dSzpHtlbKLe+s7mPIl1qaUh8pzknwo5QGpWh8vJvlMRg/Y9XhKSoB+QG9Tb/qClGO6PuVatTXls1+ccm5eUVvP7Un+tcVnmsRqz4+k+2M1qS7b7rFpft26qd6S7tpEF+27/3nm2RZeTAkS1v/m35XhV/fb6OJ6vNa/MdOwOYP3MX3XpdRpm+Uvaij/Yso9Uhtd/q3t+h4pWds1djVc05f3fmQSh+M96kczOBBqUv721PNx9z2WwfawPuU43JbxqU5We46cleT3UtrYUSmfcX0W8ws3AGAOJsmrOanbU3JqVkfGviblxqfpQX1/yo3UJzP4wHZUSlD8/S22uSPJp1NyiDa5N+WGur6u83o/oxzoLfehWvnrUm5qR9mT5C9TXqurBjhOSrmRHOdbST6wwjzTcFfKcaq6IoOBnD9J6R01T120j9Xo+hgfTPIPvf9XAwUntNhe381JPp92r92/lOQvUj5f9cHqwrTLV7g7yX/P+PPkqSR/leR/zmCv0nMz3Jt1lEdSgjqTpBJoYy3nR9fHalKLfH3qqk100b6T+beFPSl/e+vBpvpr+20t6vV42h5sKHsyJfDWRlPg5eGMDhjNW9f3SEn39yCu6c2W4X5kkc36mnh+wzq+k+G3FqpeSvmy7DcqZW9I+TKy3ju6arXnyBkN65p0cF8A4DA2y9yLryb5Wq1sW8bnmduTcvP1zVVs79Yk/zXj8zIeTPLlJF+fYL1PJvnTEcvUR7VvsiPJf0v7QZ72J/lsBgcUmaWfZPi1zbpFSckx6/axWl0f4/1J/r63/P4JltuX0v7/ccLlnk45B+qDma3kviT/Ke0G2/pJygPNjgm3kSS3pAQBX1jFsitZ6/nR9bGa1CJfn7pqE12072T+beGOhvXet4b1Ler1eJp2Zfj43pH2wbInM9x+x/WinLd53CN1fQ/imj5o2e5HFtmsrolbMpx64/m0O0/vzHAqoZVScaz2HGkKnE9zXA4AYMnNKgVH3zMpvdWqPcten+HBS6oO9LZ3W+//x2Z8DrE7knwh5TXrNoP6HEzJ13l/yuc8dcR8O1N6CHwu5QbqQMq3+9WRp7dmePTrJi+k5OB8OeWVvKbPszelJ8jfpnz+11Jy81Vz980iBUdS6mJ3ysPiUQ2/vyXDPba6fr2xb9btY7W6PsavpfTOuyPl4e24EdtMShDleykPej/K6noavZRyfB9P+eLqpIz+Auu+lJ6n1/eWa+vFlLb2ZMq5dcKYefen1PcXM/tju5rzo6rrYzWpLtrupCk4+rpqE12072S+beGFlB7Q/WN2c4aD0pOa5fV4EVJwJKUnaTVf7VfSPGDfKFsy2Avwq5ms13fXf2vncY+01mvspFzTl/t+pI3D6R61KfXG5zO+93PVjpRUIP1nvjapOFZzjjyb8nn7b77u7O3nsub2BgCmbFF6to6zPuWB5piUm7iNKTdpL6T0XJs0AFC3LclpKQ9KG3vreyHlxmlcjrTV2tDb3jG9bb6ccpP3eObfC2Rzyo3jsSkPBS+n1PGuLO7rkbNuH6sxj2Pcf6DYnkP5Bl9KCeA9mem35X7u3a0p9f5qb3s7Mz4X7qTbOKX37+aUNvhKSvDmqXR/vkzr/Oj6WE1ika9PSXdtoov2nSx2W1iNRbweszZd3iN1fQ/imj4bi1zXeLfwAAAgAElEQVQfXVv2a+Kk58i6lNQ7R/XmWYT7BgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoNm6ee8A0JnTknygVvalJHvmsC8AAAAAHAE2znsHgM5sSfK2WtmX57EjAAAAABwZNiY5P8nVtfKnk3wuycE1rv/iJO+vlT2S5CtrXC8AAAAAAAtuY5IHk2xKck6l/Pwktyd5YI3r/kiSM2vlX1rDOgEAAAAAWBLrkxxI8tWG330oa8sRfWmGg8/fTbJjDetkuaxLcmLtZ/Nc9wgAAAAA6Ew/B/T9SX6YEjTuu7D3c+8q1rspyTW1sn1JvrmKdbG8Nib5o1rZn2V1bQoAAAAAWDLre/8eTHJ9w++vrswziSuSnFor+0aSZ1exLgAAAAAAllA1uLwjyb/Vfn9ekjdNuM7NGe79/HxK+g0AAAAAAI4Q9d7N30pJlVF1dZINE6zzbUlOqJV9LclLk+0aAAAAAADLrB6AfjbJ12tlZyd5c8v1HZ0yeGHV40l+MPmuAQAAAACwzDY2lH03ybuSHFcpuybJj5K8usL6rqotlyRfTbJ/Ffu2Pcm2JFtTclS/lGR3jsye1McmeV3K4I77Uurg+ax8PFZjXcox3JZkS297LyZ5bgbbWouu6mR9So/+7b3pXUlemHAdXezrsSn7eHSSV5LsSTlmB6e4DQAAAACYSFMAem9KyoxfqZSdnuTyJLeMWde2DPd+vi8lcN3WtpQBDC9N8sYR89zbW+dtvX1t6yNJLqpM35MSHG/rF5KcU5m+I8k3J1h+UluSvDXJz6T0Qq/b09uHO5I80HKd7+uts++mJN/r/X9rb1tvTXJmw7KPp3w58YOUAGeTeh2tGzHPy7WyzyR5ZtyO93RRJ/12sSHJ25O8O4MDaj6a5I/ntK91G1POlyuTnN/w+ydSzpMbe9sDAAAAgE41BaCT5NaUwNsZlbKrU4Jlo3ozvzMlgFz1tbTrgbkuJXf0R1N6co5zUe/nA0m+3NunNtvYnuSsyvQjLZapOqa2/P0TLj+JtyT5eIZ7k1dtS+mp/q4k309yXVYOMh6dwc9wT+/fS3rbq+furjo9ySdSern/XZInG+ap11GTkxrKRrXDqq7qZEev7NfSnHrmtTnua9WpKcfjvDHznJZyTr07yWdzZL49AAAAAMAc1XNA972a4d7BJ2ewp2jVsSkB4apbkjzcch/+fUrAb6Xgc9UJST6V5MNp7mm7jNan9NT+zYwPXtZdlVIXWybc3qaUwP/vZHzwuersJL+VQykpZq3rOtmcEjxum/e8qqt9PTXJ72V88Lnq2JRjfNUE+wQAAAAAazau5+ndKSk0LqyUXZ3k9gynYHhXBoNnBzI8mOEoP5fk/bWyl1NSPdyfkn94fUrv2otSUoFsqsx7be/fr7Xc3iK7pvdTtTslTcbDKSlHNufQlwHVdBfnJ/nFJH87wfbeksEvDh5J6VH+TEpP32OSXJBS51WnpByz62rl/WPWt763T1U3JNlZK9s9Zh+7rpP6Z+17MqWNj+sB3cW+bksJJr+uVr435c2Fn6b0dN6a5MSULxiO780jAA0AAABAp8YFoA+mBHWrAegTUgJa/1YpOz7DAeRvJ3mqxfYvaVj2vpR0Absa5r89ybdS8lNXg3fXJnkoyY9bbHNRXZxDwfS+O5N8LsMB2h+n5G/+UG2ZK1N6nreth36v531J/jElX3A9nclNKcf7tzKYYuWdKTmwq2kd7qotuynDAeh7UvJ4tzGPOunbn+RfU4Lqz+TQgIGjzpmu9vWalMBy1e1J/qlhO0nyjZRj9bEx6wQAAACAmRiVgqPv4QwPPHh1So7cvvdmsEfyS0m+02LbR2c4OPlIyoB0TcHnvp1J/jLDvWg/keSoFttdRFtS0j5U3Z3kbzK6d/CrSa5PCRpXfXjCbe9J8qcpgdZRubQfTPLFWtmWDOYIn7Z518mfJ/lKSjt7tfK7Vxvm72pfT08536ruTcnJPWo7/UD6Z8asFwAAAABmYqUAdFJSaRyoTB+b5O29/5+c5H21+a9PSZuxkssynEbgsympBFbyYpLP18pOTEkpsYyuyODgfPtSes42BTurDmY41cl5KYPPtfXFlN7jK7mzt19Vp06wnUnNs06+kOSBCebval+vaCj7QovtJKWX9A0t5gMAAACAqWkTgH4qJe1F1QdT0jHUg89PJ/l+y+3We3LelGRHi2X7Hshwyof3ZvkGJFyX5D21su8kea7l8k9kOKXFRS2XfSil53Mb+zMcqJ7VQITzrJNHU4K1bXW1rxsznMP5xrRLddM3yecCAAAAgDVrE4BOSkBtT2V6W0r6jHfW5vtqhgcobHJyhnvPtg2EVtXTg5yZQwOuLYtTMlwXP5pwHffUps9uudzujE670aTes/3oxrnWbp518nzGDzRY19W+npzhgP+dE24HAAAAADrVNgC9OyW1RtXltemH0z4gVs8dvK+3/KR+0lB21irWM0/1utifyXqCJ8P5sN+Q2fQEr6d62NQ419otU510ta9N6U4enXA7AAAAANCpjRPMe3OSd6f0xGzy1Qzmih7nlNr0g2mXx7bupSSPpfR87jtxFeuZp5Nq07syeRC9nkt7e5LNSV5e7U7N2TLVSVf7Wu/ZvyPt8qUDAAAAwNxMEoB+JSXI/KmG3/0wyf0TrKueuuGZCZateyqDAehta1jXPBxTmz41yR9MYb1HZXkD0MtUJ13t65ba79dyzgAAAABAJ9qm4Oi7M6W3ct31mSyXcD1IvJagYL0X6LIFoI+a0XpnlR6jC8tUJ13taz0AvaxfLgAAAABwBJk0AP1akgdqZfsyec7ben7bSYLXdZMMGLeIJumFfqRYpjrpal831KbXcs4AAAAAQCfmFeh7qTZd7905ia0rrHvR7atN35nk21NY7wtTWMe8LFOddLWv9Z7+azlnAAAAAKATixKAPm4N66oP4LZsAeg9temDSR6ex44skGWqk672dZrnDAAAAAB0YtIUHNNSH0DtvKxuXzb3lq3aNWLeRU1ZsLs2fXaGU5QcaZapTrra1+dr02dlufN8AwAAAHAEmFcA+rHa9LYkZ65iPWe3WHff/tr0rAaPm1Q9f/bxSU6dx44skGWqk6729fHa9Ias7pwBAAAAgM7MKwC9M8mztbK3rGI9l9emn0ry9Ih5X65Nb1vF9mbhpw1lb+18LxbLMtVJV/v6VIbTfbxpBtsBAAAAgKmZVwD6QJIbamXvSXLCBOs4Pck7amU3JHltxPz1Qd3OTfsc2K9L8sbWezaZvUm+Vyt7T5JTJlzP1iQXTmWPpqcp7Umb9BTLVCdd7eurSW6slb0rybETbGM1X/IAAAAAwKrNKwCdJLelBO/6NiX5eNoFhTcn+VitbE+S28cs80Rt+ui0C05uSvLzmW2P6e/Wpo9K8ksp+9jG5iSfTPIfklyd+R7XqgNJ9tXKNrdcdpnqpKt9va02vSXJz6ZdUP/NSd7Xcn8AAAAAYCrmGah8IckXa2WXJPnljA/2HpPkV5OcXyv/pwynKKh6PMO9oH8hpSf1KCcm+e0kl42ZZxoeT/KNWtkbk/xGbx/GOT3J7ye5uDf90ZQg5iI4mOGUKBelXcB0meqkq319IsNvDrwt5cuYUYH9DUnemdKOAQAAAKBTbVNQzMotSS7IYM7ctyU5L8lNSX6SQ0Hl7SlB57cnOa62nu9nfO/npPTEvSGlx2jf8Un+MCW1wX0pPbKPTglyX5TZB56rrk8ZVLEaWL8gyf+WkuLhviTPp3yObSl1cFmG8w3vTKmPRfGTJGdUpn8mpd3dmZKXe3uSh5Psalh2meqkq329PiX3czVdzXtTAtg3pwTD96ak9Dgx5XxZ1AEcAQAAADjMzTsAfTDJP/T+Xw3EnZDSE7SNm5N8Ps35huu+m9LL+pxK2aaUAN57xyy3O2UQuPNa7tNq7E/ymZRUDBdVyo9K8v7ez0p2JPl0SqBzUdyV4bq9ovfT9ydpDkAvU510ta97kvxlSrqO7ZXyk7LyOfOtJB9osR8AAAAAMBWLkCt4f5K/T/LPvf+3tS/Jl5P84wTLvZzkr1N65bb1VJL/OuEyq7UnJQD5zVUse2vKfj4zzR2agp9kOG1E3biUHMtUJ13t644k/y3Dec1H2Z/ksynnGAAAAAB0Zt49oPteTfIvKWk03p7k8pT0GE129ea7KasLLD6b5M9TUn28P6Nz9D7e28bNSV5JSXvQhX1JrktJw/COJG/J6LpIkjtSUojcn3a9wLt2MMmXUgL5H85gr92+lXJCL1OddLWvj6b0HH9XbzsnNMyzN2Xgwm/n0LnyYkqKGQAAAACYuTaDwc3D+pS8tdtTctkmyUspwbMnk7w2xe2cnBK825ISCH85Jci9K4sR0F2f5JSUoOHRKV8a7EsZUPHplHpZFpuTnJnk2JS6fTnlM0xa18tUJ13s64Ykp/W2sTWlXnenfIkyyVsFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMCCWDfvHYCWTkvygVrZl5LsmdL6r0ryhsr0U0m+PqV1L7qTk1xdK/tykhfmsC91h+txWeQ6BwAAAJiajfPegSPUhiQn9f7/dJIDc9yXZbElydtqZV+e4vpPrq3/h1Nc96LbnOG6vX4eO9LgcD0ui1znAAAAAFPTFID+7ZTgSBuvJXk5yd4ku5M8nmRnkieTHJzGDh6GNif5zSQX9qbvS/LpJK/MbY8AAAAAAGagKQB9VpLj1rjeh5LcmOT2JK+ucV2Hm0tzKPic3v8vS/L9+ewOAAAAAMBszCoFx7m9n6uSfC6lV/SiWJfkhFrZ7nTXA3lrQ9m2jrYNAAAAANCZNgHovb2fUY5JsmnE796Q5D8m+dMkOybbtZnZmOSPamV/luTejrb/QEPZ/R1tGwAAAACgM20C0DcmuW7M79el5DU+JckFSd6TZHvl99tT8kr/cUpP4yPdjiR/kuSS3vSPkvx0frsDAAAAADAb00jBcTBlIMJHej+3JPm1JOdX5jk+yXuTfGUK2zscPNT7AQAAAAA4bK2fwTqfS/LXSZ6ulX8gydEz2B4AAAAAAAtoFgHopKTa+Jda2YYkr5/R9gAAAAAAWDDTSMExyj0NZWdmdYP9HZvkdSmDHe5L8lKS55O8uuq9m431SU7IoRzYu5K8ML/dmYou6v7YlDo7OskrSfak9KQ/OMVtTMOmlLo4OuULlZdSju+4QTqPNJtSzoHNSY7KoTazK8lrM9xmV8dlWa5FAAAAAAthlgHoPSkD7p1RKds+Yt4mW5K8NcnPJDl7xPrv6P08MGY9v5DknMr0uhHzvFwr+0ySZ2pl7+vtU989Sb6aEvR6e5J3Jzm18vtHUwZfrDotJUd21aeTPFuZ3pTk93vr7ftGkjsb9n2cX8lg/d+V4Z7pTaZV9+NsTHJFkiszmC+874kkt6UMgrlnlduYlrOSXJXksiTbar87kOSHSX6Q5O6MD5qfneSXamXfTvmcbZ2Z5JdrZV/rbXteNiV5U0qbubA3Xbc7pf3dkuThTOfLhWkdl5V0cT4AAAAAHJZmGYBOStCpamvL5d6S5ONJjhszz7Yk7+r9fD/JdWkOVB6TEqga56SGsqa6Obq2rh29sl9L8uaG+Zt6fG5s2J96KpT9SR5LCWj3XZ7JAtDbU4LiVde1WG6adT/KqUk+keS8MfOcluSjKXXw2ZSepl3bmOTfJfngmHk2pByby1MCyV/IcLvv25FyDpxQKbsykwWgL8xg+zmQMvjnvJybEhA/dYX5tid5R+/n1pQ2s9q3A6Z9XMbp4nwAAAAAOGzNKgd0Xz3gvG+F+dcn+UiS38z4gE/dVUk+ldJTsUubU4JTTcHntfphbfqyTNaD/I216WeTPDRm/q7q/tQkv5fxweeqY5P8Tm87XToqJbD6wQmWuSKl/kYNtnkgyc21sotTUjq0sS4lIFp1e+YX7LwyyR9k5eBz03K/m3JsJzWL49Jk2a5FAAAAAAtplj2gt2W4p+9zKyxzTe+naneS76W8tr83Jeh7csor8dXUGucn+cUkf1tb/gdJ7q9Mr+/NV3VDkp0N213J5SPKn0wJQK0l5+1DKXlzq71lz0/73rL1oPgtGZ+ndhZ1X7ctJZhcD7juTekV+9OUns5bk5yY5G1Jju/N03UA+sLa9F1J7kvJ97su5cuAC1K+GKg6L6V391+nOe3DXSm9d6suSOk5u5KTMnxO1b+o6MrFST5ZK9uXkjLl/pR6OpByLM9K6R1cfdPgzJR6+otMlh5jVselrovzAQAAAOCwN8sA9Jsayh4bM//FSa6tld2Z5HMZDgb/OMlNST5UW+bKlEDrjytld9WW3ZThAPQ9Wd3giH37k/xrSrD7mRwK9K6lfl9N+SzVz3dp2gWgt2a4p+yPxsw/q7qvuyYlsFx1e5J/athOUvJevzPJx8asc9Z2pQQSH2r43Y1JTk9JwXJmpfzylLpoGojziZSUGa+vlF2WdgHoeq/2lzP45UpXtmY4l/VPk/xNkqca5n8wpef3r2SwXV6SEqwd12ZGmfZxqerqfAAAAAA47M0qBcfrMhzAeS7JT0bMvyUllUXV3SkBrVE9kV9Ncn2GA7Ifbr+bU7EnyZ8n+UpKL+pqL+NxPY7bqAfP26bheEMGBzB8LKOD/13V/elJ3lsruzfJ343ZTj+w/5kx652lZ5L8WcanLnk8ZRDJ+mf4SJoHvDyY0tu76qK0S8NR79V+W4YHz+zCpTnUMz0pvYH/Ks3B5+o8/5jhvM8XrWL7szgufct8LQIAAABYOLMIQJ+QkgP1+Fr59SkBxSZXZPD1/H0pvQ1XCuAeTPL1Wtl5KQPYdeULSR6Y0bofT/Jorez8FsvVe5/fktFpB7qq+ysayr7QYjtJ6SV9Q4v5pu3zGR9U7duV5Ku1sjMzevDLuxvK6qkl6o7NcLC2/gVFV+r5u3+QUgcreSmlt3BVm/ZcN6vjkiz3tQgAAABg4UwrAL0hJdBydZI/zGA+1KSkf7hlxLLrkrynVvadrJwvuu+JDKfPWE2vytV4NCU4OisHM1xvl66wzJYMp99oCngm3dX9xgzncL4x7YKIfbOs5yb3Z7K0LLdnuDdyUxqapAwI2dS7fZx60Hd3Rr9RMGvfTvKfKz/fnmDZx2vTJ2V8j+S6WR6XZb4WAQAAACykNjmKr8xw8Ktqa0r6gE0jfv9Akr9PGZCsySlJTq2VjctX3OSeDAZ6zp5w+dV6PmsbaLCNuzOYs/rNKWk4RqUDODclCN13b0rKgiZd1f3JGU4dcueE2+napKkt9qYEld9WKXv9iHmTkq6hmlLjwpS3Bp4dMX89aHprRr9RMGv1IPIkXqlNH5VyHWr7WWZ5XJb5WgQAAACwkNr0gD42pUfzqJ+TMzr4fEOSv0jJkzzKGbXp/Ul2tNivqp216Tdksl6Vi6zeW3ZDhgejq7q4Nj1u0MKu6r4e1EuGU4scDuo9ks/L6C957ktJ71B1wYh5t2S45/ukgdFFNqtc9H1tj4trEQAAAMCUtekBvRq3p7y6/nCLeU+qTe/K+BytTeoDuG1PsjnzGaBtFuq9ZS9Nc0qKTRnMtXwgpUfmKF3VfT0f+I6UnqmHm3oe5E0p9dGUwmFvSu7kd1TKLstwjuSkfNFzVGX62bQ7t7p2XMoXUicl2ZbSDo6qzdNmsMVpa3tcXIsAAAAApqxNAPrFlFQTo6zPcM/Be9I+QHZMbfrUJH/QctlxjsrhE/Tp95btB/MuTQnw1XuWn5uSEqXvtoZ5qrqq+y21349KCbLsmtKi1AOwVXdmMAA9Kg1HPY/wrRmd0qZrG1MC52/N4uY7bntcXIsAAAAApqxNAPqWJNeN+f26JL+bwdQP16akjWgTdBkXoFuLUWlBllG9t+yGJOdnuBd0PQC4Up7lruq+HoA+XINx9ZQaSen9OsqDSV5ISXPTd0EGe0H3A7xVi5J+45yU/ORnzntHVtD2uLgWAQAAAEzZNFJwHExyfQYD0CckeWeSb3a0D0eCOzLYW7aehmNjBtNv7EkZAHKcrup+Q236YEfbXXT7k9yc5OpKWT0Nx1kZDFDvTPLY7HdtRZck+VSGg6svpgx8+WRKG3wlg8f7jCTXdLGDq+BaBAAAADBl0wq4PJKSFuDKStnVKb12x6XvSIZ7J96Z5NtT2KcXprCORfJgSs7afo7ZehqOszMYqLw1Jfg3Tld1X8/3XO8Rfbho6kHb1Pu26q4MBqDraTjqAxPemuS1Ve3d9JyY5NczGHzemeTLKeliXh2z7EptchbaHhfXIgAAAIApm2aPv29kMAC95f9v7/5+5CrrOI6/oZW2WymWQktJiUFCUSsVAUVsrb/QSKJRriTRaGKMF94Y/wn/BC7UxARjghfqhUYkFhWsP6or6kpD2pRGstjSbmlQ2f5e1ovvTPbMc87MnJmd88zs8H4lm+Y8u2fO6XNmzsV3vufzAAeAn/XZL80oXmYyF1gbt6tEHEq7ezSN4UjjN56v8Zq55v58sn1DA8eYBJsqxvoVXF8GTgE7C2O7gcNEvM3dyd/3WlQyl4/S+X99BfgO1VnLk6DudfFeJEmSJEmSNGLXjvC1TgOHkrEPA7f02S8tWt1GFN5UdiTZ3tP691o64zfOUq9wlmvu0y74XUxnLu62ZPsKvReBhChyziZj7cznHXR+fuaJYu84bSIWHCx6isktPkP96+K9SJIkSZIkacRGWYCGeFw9fYz9oT77nEy2txKFN5X9m87837uJGI5dRO522yz1Yhpyzf2pZHsdk79w3TDekWz/iyh29pN2Nd9JXM87kvHnGH9+9o2UIy3mx3EiA6h7XbwXSZIkSZIkjdioC9CvAc8kY3uJqIhuXq4YSzssFdJu2XVEkXJ38ncv1Hy9XHO/QLnj9F0NHGeUqnKDe9lIOS6jbnzDApGdXLSbyPkuOjrgOTVhpmKsTpG9bbUdxU1eF+9FkiRJkiRJIzbqAjTAHyg/yv7JHse6APwpGdsHbB/wuDOUC7FVqjpI19Jj9mm37F7gvYXtl6gf05Br7q8SmcZFD9K5aGI/aRGxabvp/cVJ6n2UF1es+0UAxIKdRfvp7IA+TkSrjNtSxdjWmvuuI677ajR5XXLfiyRJkiRJkqZeEwXoReDpZOx2ehcQ/5hsXwc8QvXiYVU2AI8CXwM+Tu//1xLlmJANNY8zCV6lswi9l86YgEFjGnLN/d+T7Y3Aw9Qr/u8h8sRz+zyd0Sbd3Eh8yVI0T3VHbTdH6SzupkXPdP7G5bWKsffX2G898Bng3RW/G/QLoCavS857kSRJkiRJ0tRrqjgySxRKiz5F90LvKeA3ydgdwJcoLyCW2gl8HXhna/vTRHcJaOYAAARiSURBVOGnm2XKnaR3sba6oNNu2aJBum4h39y/Avw+GbsP+Czd3xfrgA8CX+lzHk3ZThQSe+VV7wC+CLw1Gf8Vg30R8Drwjx6/TyM6xuUc5QiLfURnc7fP0A7gy62/q7J+wHNo8rrkvBdJkiRJkiRNvUELP3VdAg4CXyiM3Ux0Sh7qss9B4DY6H6+/E/gW8Vj8MeA/RPfyZuAGovs3zWg9Dfylz/mdAG4tbN9PzMU/gYtE0eolotg2iY4RubtvScaPUN2h2k+uuT9IZD8Xu1f3EwW7WaL4d4GIMNgGfIDxLwJ3E/BN4vza8wBwPTFf91LOJZ5juLzmudbrpYa9rk15GvhqMvYIcA/wPCvnej1RvO0XnzJDObannyavS857kSRJkiRJ0lRrqgAN0c25n84uxU8QUQJVxaYrwA+Jx9fvKoxfBxxo/fRzEvgBK8Wobo60zq3ontZP22NMbgF6kZjHNPpg2JiGXHO/CDxOdK8WO1NvIrpFe3kG+EiN8xiVQ0ShvB0ZcX/rp5954KcM1v3c9iIxR5uT8bkhXqtJR4FnKb8vbm/9dLPU2u9jyfjbgDM1j53juuS8F0mSJEmSJE21JvNJrxKPuxdtpneW7yJRtPntEMd7Dvgu5eiPKicox0GkJj2SIy1KXmZ1MQ255v4k8H3qL5R4BfgJ8NQQ57UarwJPEP+3uo4Rc7g45DEvVRxvicmJ32hbBp4Efj3APmeA73XZZ9cAr5PruuT6PEiSJEmSJE21JjugIRbLO07no+wHgD/TvThzGfgF8ej6A8Tj+1t7HGMOONw6Tt2u02Xg58AC8BDlnFiY/AL0CeC/wJbW9t+I+IrVyDH3EN2ojxG5wQ9QvaDcBaKj+1lW3iv/IyIWcrhAxLH8qHUeH2Il2zc1T8zDX+lcSHAYL9D5Jc0cwxe0m7QE/JLoht5P95iN00RMxmFiPiGeQNhT+Ju91C9m57wuuT4PkiRJkiRJU2vSi6wQXdrbicLjJqJofpkovp4Fzq/y9TcQMSFbiKLRxdbrnsMiUtNzD7HQ4C2tY8wQ8/86kQd9ZQSvP0pbiCzzGeK8F4m5OMPo3isPEnnKbY8TucqTbjNxHWeI98l5Ym5OA280fOwc1wXyfB4kSZIkSZKmylooQEtvFtcA3wDe3tq+CHyblc5hSZIkSZIkaU1pMgNa0mB2slJ8hljI0+KzJEmSJEmS1iwL0NLkuDfZXgvRG5IkSZIkSVJXFqClybAT2FfYPkcsNClJkiRJkiStWevHfQKSuBV4lFhAr+13TN4ijJIkSZIkSdJALEBL+d0HvAFsITKf35P8fgGYzX1SkiRJkiRJ0qhZgJby+xywscfvfwxcynQukiRJkiRJUmMsQEv5LXcZXwKewOxnSZIkSZIkTQkL0FJ+VQXo48CTwHzmc5EkSZIkSZIac824T0B6E9oG3AxsIBYaXADO0r0zWpIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZK09vwf7K59JmM3ryoAAAAASUVORK5CYII"}}
+ 
+Sep 10 04:25:17 detox[9028] TRACE: [ARTIFACT_START] starting FileArtifact
+Sep 10 04:25:17 detox[9028] TRACE: [ARTIFACT_STOP] stopping FileArtifact
+Sep 10 04:25:17 welcome[9028] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onCreateExternalArtifact({
+  artifact: FileArtifact {
+    temporaryPath: 'C:\\Users\\Admin\\AppData\\Local\\Temp\\d6db0e0d-e1df-4216-a98e-bd310af71537detox.element-screenshot.png'
+  },
+  name: 'welcome'
+})
+Sep 10 04:25:17 detox[9028] INFO:  at e2e\firstTest.e2e.js:19:13 
+ C:\Users\Admin\AppData\Local\Temp\d6db0e0d-e1df-4216-a98e-bd310af71537detox.element-screenshot.png
+Sep 10 04:25:17 detox[9028] TRACE: [DETOX_AFTER_EACH] passed test: "Example test welcome"
+Sep 10 04:25:17 detox[9028] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTestDone({
+  title: 'test welcome',
+  fullName: 'Example test welcome',
+  status: 'passed',
+  invocations: 1,
+  timedOut: false
+})
+Sep 10 04:25:17 detox[9028] TRACE: [ARTIFACT_STOP] stopping ADBLogcatRecording
+Sep 10 04:25:17 detox[9028] DEBUG: [EXEC_CMD, #35] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell "date +\"%m-%d %T.000\""
+Sep 10 04:25:17 detox[9028] TRACE: [ARTIFACT_SAVE] saving FileArtifact to: artifacts\android.2022-09-09 22-54-07Z\✓ Example test welcome\welcome.png
+Sep 10 04:25:17 detox[9028] DEBUG: [MOVE_FILE] moving "C:\Users\Admin\AppData\Local\Temp\d6db0e0d-e1df-4216-a98e-bd310af71537detox.element-screenshot.png" to artifacts\android.2022-09-09 22-54-07Z\✓ Example test welcome\welcome.png
+Sep 10 04:25:17 detox[9028] TRACE: [EXEC_SUCCESS, #35] 09-10 04:25:17.000
+
+Sep 10 04:25:17 detox[10688] TRACE: [SPAWN_KILL] sending SIGINT to: C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-19496 shell logcat -T "09-10 04:25:13.000" --pid=16398 -f /sdcard/42411829_1.log
+Sep 10 04:25:17 detox[9028] DEBUG: [SPAWN_END, #33, cpid=10688] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-19496 shell "logcat -T \"09-10 04:25:13.000\" --pid=16398 -f /sdcard/42411829_1.log" terminated with SIGINT
+Sep 10 04:25:18 detox[9028] INFO:  [1m[37mExample: [39m[22m[90mtest welcome[39m[90m [[32mOK[90m][39m
+Sep 10 04:25:18 detox[9028] ERROR: TypeError: this.allure.endCase is not a function
+    at AllureReporterCircus.test_done (C:\awesome\e2e\AllureReporterCircus.js:47:19)
+    at C:\awesome\node_modules\detox\runners\jest-circus\environment.js:90:55
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sep 10 04:25:18 detox[9028] INFO:  [1m[37mExample: [39m[22m[90mtest fill textfield by id[39m
+Sep 10 04:25:18 detox[9028] ERROR: TypeError: this.allure.startCase is not a function
+    at AllureReporterCircus.test_start (C:\awesome\e2e\AllureReporterCircus.js:25:17)
+    at C:\awesome\node_modules\detox\runners\jest-circus\environment.js:90:55
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sep 10 04:25:18 detox[9028] TRACE: [DETOX_BEFORE_EACH] running test: "Example test fill textfield by id"
+Sep 10 04:25:18 detox[9028] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTestStart({
+  title: 'test fill textfield by id',
+  fullName: 'Example test fill textfield by id',
+  status: 'running',
+  invocations: 1
+})
+Sep 10 04:25:18 detox[9028] TRACE: [ARTIFACT_START] starting ADBLogcatRecording
+Sep 10 04:25:18 detox[9028] DEBUG: [SPAWN_CMD, #36, cpid=5892] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-19496 shell "logcat -T \"09-10 04:25:17.000\" --pid=16398 -f /sdcard/42411829_2.log"
+Sep 10 04:25:18 detox[9028] TRACE: [WS_SEND] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Sep 10 04:25:18 detox[9028] TRACE: [WSS_GET_FROM, #tester] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Sep 10 04:25:18 detox[9028] TRACE: [WSS_SEND_TO, #app] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Sep 10 04:25:18 detox[9028] TRACE: [ARTIFACT_SAVE] saving ADBLogcatRecording to: artifacts\android.2022-09-09 22-54-07Z\✓ Example test welcome\device.log
+Sep 10 04:25:18 detox[9028] DEBUG: [EXEC_CMD, #37] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 pull "/sdcard/42411829_1.log" "artifacts\android.2022-09-09 22-54-07Z\✓ Example test welcome\device.log"
+Sep 10 04:25:18 detox[9028] TRACE: [EXEC_SUCCESS, #37] /sdcard/42411829_1.log: 1 file pulled, 0 skipped. 2.3 MB/s (18076 bytes in 0.007s)
+
+Sep 10 04:25:18 detox[9028] DEBUG: [EXEC_CMD, #38] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell "rm  \"/sdcard/42411829_1.log\""
+Sep 10 04:25:18 detox[9028] DEBUG: [EXEC_CMD, #39] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell du /sdcard/42411829_2.log
+Sep 10 04:25:18 detox[9028] TRACE: [EXEC_SUCCESS, #38] 
+Sep 10 04:25:18 detox[9028] TRACE: [ARTIFACT_SAVE] saving ADBLogcatRecording to: artifacts\android.2022-09-09 22-54-07Z\emulator-19496 2022-09-09 22-55-18Z.startup.log
+Sep 10 04:25:18 detox[9028] DEBUG: [EXEC_CMD, #40] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 pull "/sdcard/42411829_0.log" "artifacts\android.2022-09-09 22-54-07Z\emulator-19496 2022-09-09 22-55-18Z.startup.log"
+Sep 10 04:25:18 detox[9028] TRACE: [EXEC_SUCCESS, #39] 12	/sdcard/42411829_2.log
+
+Sep 10 04:25:18 detox[9028] TRACE: [EXEC_SUCCESS, #40] /sdcard/42411829_0.log: 1 file pulled, 0 skipped. 1.0 MB/s (21346 bytes in 0.021s)
+
+Sep 10 04:25:18 detox[9028] DEBUG: [EXEC_CMD, #41] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell "rm  \"/sdcard/42411829_0.log\""
+Sep 10 04:25:18 detox[9028] TRACE: [EXEC_SUCCESS, #41] 
+Sep 10 04:25:18 detox[9028] TRACE: [WSS_GET_FROM, #app] {"messageId":-1000,"type":"ready","params":{}}
+Sep 10 04:25:18 detox[9028] TRACE: [WSS_SEND_TO, #tester] {"messageId":-1000,"type":"ready","params":{}}
+Sep 10 04:25:18 detox[9028] TRACE: [WS_MESSAGE] {"messageId":-1000,"type":"ready","params":{}}
+ 
+Sep 10 04:25:18 detox[9028] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["textField"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.action.ViewActions"},"method":"clearText","args":[]}}]},"messageId":3}
+Sep 10 04:25:18 detox[9028] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["textField"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.action.ViewActions"},"method":"clearText","args":[]}}]},"messageId":3}
+Sep 10 04:25:18 detox[9028] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["textField"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.action.ViewActions"},"method":"clearText","args":[]}}]},"messageId":3}
+Sep 10 04:25:20 detox[9028] TRACE: [WSS_GET_FROM, #app] {"messageId":3,"type":"invokeResult","params":{"result":null}}
+Sep 10 04:25:20 detox[9028] TRACE: [WSS_SEND_TO, #tester] {"messageId":3,"type":"invokeResult","params":{"result":null}}
+Sep 10 04:25:20 detox[9028] TRACE: [WS_MESSAGE] {"messageId":3,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 10 04:25:20 detox[9028] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["textField"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"typeText","args":["passcode"]}}]},"messageId":4}
+Sep 10 04:25:20 detox[9028] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["textField"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"typeText","args":["passcode"]}}]},"messageId":4}
+Sep 10 04:25:20 detox[9028] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["textField"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"typeText","args":["passcode"]}}]},"messageId":4}
+Sep 10 04:25:25 detox[9028] TRACE: [WSS_GET_FROM, #app] {"messageId":4,"type":"invokeResult","params":{"result":null}}
+Sep 10 04:25:25 detox[9028] TRACE: [WSS_SEND_TO, #tester] {"messageId":4,"type":"invokeResult","params":{"result":null}}
+Sep 10 04:25:25 detox[9028] TRACE: [WS_MESSAGE] {"messageId":4,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 10 04:25:25 detox[9028] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["output"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["You entered passcode"]}}]},"messageId":5}
+Sep 10 04:25:25 detox[9028] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["output"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["You entered passcode"]}}]},"messageId":5}
+Sep 10 04:25:25 detox[9028] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["output"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["You entered passcode"]}}]},"messageId":5}
+Sep 10 04:25:25 detox[9028] TRACE: [WSS_GET_FROM, #app] {"messageId":5,"type":"invokeResult","params":{"result":null}}
+Sep 10 04:25:25 detox[9028] TRACE: [WSS_SEND_TO, #tester] {"messageId":5,"type":"invokeResult","params":{"result":null}}
+Sep 10 04:25:25 detox[9028] TRACE: [WS_MESSAGE] {"messageId":5,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 10 04:25:25 detox[9028] TRACE: [DETOX_AFTER_EACH] passed test: "Example test fill textfield by id"
+Sep 10 04:25:25 detox[9028] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTestDone({
+  title: 'test fill textfield by id',
+  fullName: 'Example test fill textfield by id',
+  status: 'passed',
+  invocations: 1,
+  timedOut: false
+})
+Sep 10 04:25:25 detox[9028] TRACE: [ARTIFACT_STOP] stopping ADBLogcatRecording
+Sep 10 04:25:25 detox[9028] DEBUG: [EXEC_CMD, #42] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell "date +\"%m-%d %T.000\""
+Sep 10 04:25:25 detox[9028] TRACE: [EXEC_SUCCESS, #42] 09-10 04:25:25.000
+
+Sep 10 04:25:25 detox[5892] TRACE: [SPAWN_KILL] sending SIGINT to: C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-19496 shell logcat -T "09-10 04:25:17.000" --pid=16398 -f /sdcard/42411829_2.log
+Sep 10 04:25:25 detox[9028] DEBUG: [SPAWN_END, #36, cpid=5892] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-19496 shell "logcat -T \"09-10 04:25:17.000\" --pid=16398 -f /sdcard/42411829_2.log" terminated with SIGINT
+Sep 10 04:25:25 detox[9028] INFO:  [1m[37mExample: [39m[22m[90mtest fill textfield by id[39m[90m [[32mOK[90m][39m
+Sep 10 04:25:25 detox[9028] ERROR: TypeError: this.allure.endCase is not a function
+    at AllureReporterCircus.test_done (C:\awesome\e2e\AllureReporterCircus.js:47:19)
+    at C:\awesome\node_modules\detox\runners\jest-circus\environment.js:90:55
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sep 10 04:25:25 detox[9028] INFO:  [1m[37mExample: [39m[22m[90mtest get by label[39m
+Sep 10 04:25:25 detox[9028] ERROR: TypeError: this.allure.startCase is not a function
+    at AllureReporterCircus.test_start (C:\awesome\e2e\AllureReporterCircus.js:25:17)
+    at C:\awesome\node_modules\detox\runners\jest-circus\environment.js:90:55
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sep 10 04:25:25 detox[9028] TRACE: [DETOX_BEFORE_EACH] running test: "Example test get by label"
+Sep 10 04:25:25 detox[9028] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTestStart({
+  title: 'test get by label',
+  fullName: 'Example test get by label',
+  status: 'running',
+  invocations: 1
+})
+Sep 10 04:25:25 detox[9028] TRACE: [ARTIFACT_START] starting ADBLogcatRecording
+Sep 10 04:25:25 detox[9028] DEBUG: [SPAWN_CMD, #43, cpid=10040] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-19496 shell "logcat -T \"09-10 04:25:25.000\" --pid=16398 -f /sdcard/42411829_3.log"
+Sep 10 04:25:25 detox[9028] TRACE: [WS_SEND] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Sep 10 04:25:25 detox[9028] TRACE: [WSS_GET_FROM, #tester] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Sep 10 04:25:25 detox[9028] TRACE: [WSS_SEND_TO, #app] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Sep 10 04:25:25 detox[9028] TRACE: [ARTIFACT_SAVE] saving ADBLogcatRecording to: artifacts\android.2022-09-09 22-54-07Z\✓ Example test fill textfield by id\device.log
+Sep 10 04:25:25 detox[9028] DEBUG: [EXEC_CMD, #44] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 pull "/sdcard/42411829_2.log" "artifacts\android.2022-09-09 22-54-07Z\✓ Example test fill textfield by id\device.log"
+Sep 10 04:25:26 detox[9028] TRACE: [EXEC_SUCCESS, #44] /sdcard/42411829_2.log: 1 file pulled, 0 skipped. 0.8 MB/s (21008 bytes in 0.025s)
+
+Sep 10 04:25:26 detox[9028] DEBUG: [EXEC_CMD, #45] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell "rm  \"/sdcard/42411829_2.log\""
+Sep 10 04:25:26 detox[9028] DEBUG: [EXEC_CMD, #46] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell du /sdcard/42411829_3.log
+Sep 10 04:25:26 detox[9028] TRACE: [EXEC_SUCCESS, #45] 
+Sep 10 04:25:26 detox[9028] TRACE: [EXEC_SUCCESS, #46] 12	/sdcard/42411829_3.log
+
+Sep 10 04:25:26 detox[9028] TRACE: [WSS_GET_FROM, #app] {"messageId":-1000,"type":"ready","params":{}}
+Sep 10 04:25:26 detox[9028] TRACE: [WSS_SEND_TO, #tester] {"messageId":-1000,"type":"ready","params":{}}
+Sep 10 04:25:26 detox[9028] TRACE: [WS_MESSAGE] {"messageId":-1000,"type":"ready","params":{}}
+ 
+Sep 10 04:25:26 detox[9028] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForContentDescription","args":["sampleLabel"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Retrived by label"]}}]},"messageId":6}
+Sep 10 04:25:26 detox[9028] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForContentDescription","args":["sampleLabel"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Retrived by label"]}}]},"messageId":6}
+Sep 10 04:25:26 detox[9028] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForContentDescription","args":["sampleLabel"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Retrived by label"]}}]},"messageId":6}
+Sep 10 04:25:28 detox[9028] TRACE: [WSS_GET_FROM, #app] {"messageId":6,"type":"invokeResult","params":{"result":null}}
+Sep 10 04:25:28 detox[9028] TRACE: [WSS_SEND_TO, #tester] {"messageId":6,"type":"invokeResult","params":{"result":null}}
+Sep 10 04:25:28 detox[9028] TRACE: [WS_MESSAGE] {"messageId":6,"type":"invokeResult","params":{"result":null}}
+ 
+Sep 10 04:25:28 detox[9028] TRACE: [DETOX_AFTER_EACH] passed test: "Example test get by label"
+Sep 10 04:25:28 detox[9028] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTestDone({
+  title: 'test get by label',
+  fullName: 'Example test get by label',
+  status: 'passed',
+  invocations: 1,
+  timedOut: false
+})
+Sep 10 04:25:28 detox[9028] TRACE: [ARTIFACT_STOP] stopping ADBLogcatRecording
+Sep 10 04:25:28 detox[9028] DEBUG: [EXEC_CMD, #47] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell "date +\"%m-%d %T.000\""
+Sep 10 04:25:29 detox[9028] TRACE: [EXEC_SUCCESS, #47] 09-10 04:25:28.000
+
+Sep 10 04:25:29 detox[10040] TRACE: [SPAWN_KILL] sending SIGINT to: C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-19496 shell logcat -T "09-10 04:25:25.000" --pid=16398 -f /sdcard/42411829_3.log
+Sep 10 04:25:29 detox[9028] DEBUG: [SPAWN_END, #43, cpid=10040] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-19496 shell "logcat -T \"09-10 04:25:25.000\" --pid=16398 -f /sdcard/42411829_3.log" terminated with SIGINT
+Sep 10 04:25:29 detox[9028] INFO:  [1m[37mExample: [39m[22m[90mtest get by label[39m[90m [[32mOK[90m][39m
+Sep 10 04:25:29 detox[9028] ERROR: TypeError: this.allure.endCase is not a function
+    at AllureReporterCircus.test_done (C:\awesome\e2e\AllureReporterCircus.js:47:19)
+    at C:\awesome\node_modules\detox\runners\jest-circus\environment.js:90:55
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sep 10 04:25:29 Example[9028] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onRunDescribeFinish({ name: 'Example' })
+Sep 10 04:25:29 detox[9028] ERROR: TypeError: this.allure.endSuite is not a function
+    at AllureReporterCircus.run_describe_finish (C:\awesome\e2e\AllureReporterCircus.js:19:19)
+    at C:\awesome\node_modules\detox\runners\jest-circus\environment.js:90:55
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Sep 10 04:25:29 ROOT_DESCRIBE_BLOCK[9028] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onRunDescribeFinish({ name: 'ROOT_DESCRIBE_BLOCK' })
+Sep 10 04:25:29 detox[9028] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeCleanup()
+Sep 10 04:25:29 detox[9028] TRACE: [ARTIFACT_SAVE] saving ADBLogcatRecording to: artifacts\android.2022-09-09 22-54-07Z\✓ Example test get by label\device.log
+Sep 10 04:25:29 detox[9028] DEBUG: [EXEC_CMD, #48] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 pull "/sdcard/42411829_3.log" "artifacts\android.2022-09-09 22-54-07Z\✓ Example test get by label\device.log"
+Sep 10 04:25:29 detox[9028] TRACE: [EXEC_SUCCESS, #48] /sdcard/42411829_3.log: 1 file pulled, 0 skipped. 1.3 MB/s (19470 bytes in 0.015s)
+
+Sep 10 04:25:29 detox[9028] DEBUG: [EXEC_CMD, #49] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 shell "rm  \"/sdcard/42411829_3.log\""
+Sep 10 04:25:29 detox[9028] TRACE: [EXEC_SUCCESS, #49] 
+Sep 10 04:25:29 detox[9028] TRACE: [ARTIFACT_START] starting FileArtifact
+Sep 10 04:25:29 detox[9028] TRACE: [ARTIFACT_STOP] stopping FileArtifact
+Sep 10 04:25:29 detox[9028] TRACE: [ARTIFACT_SAVE] saving FileArtifact to: artifacts\android.2022-09-09 22-54-07Z\detox_pid_9028.json.log { append: true }
+Sep 10 04:25:29 detox[9028] TRACE: [ARTIFACT_START] starting FileArtifact
+Sep 10 04:25:29 detox[9028] TRACE: [ARTIFACT_STOP] stopping FileArtifact
+Sep 10 04:25:29 detox[9028] TRACE: [ARTIFACT_SAVE] saving FileArtifact to: artifacts\android.2022-09-09 22-54-07Z\detox_pid_9028.log { append: true }
+Sep 10 04:25:29 detox[9028] DEBUG: [MOVE_FILE] moving "C:\Users\Admin\AppData\Local\Temp\dedef9e8-5693-4691-a7ab-7a4f509dc1f7.detox.log" to artifacts\android.2022-09-09 22-54-07Z\detox_pid_9028.json.log
+Sep 10 04:25:29 detox[9028] DEBUG: [MOVE_FILE] moving "C:\Users\Admin\AppData\Local\Temp\4dd1d145-168e-4cb7-8162-ff0c60dbf1d8.detox.log" to artifacts\android.2022-09-09 22-54-07Z\detox_pid_9028.log
+Sep 10 04:25:29 detox[9028] TRACE: [WS_SEND] {"type":"cleanup","params":{"stopRunner":true},"messageId":-49642}
+Sep 10 04:25:29 detox[9028] TRACE: [WSS_GET_FROM, #tester] {"type":"cleanup","params":{"stopRunner":true},"messageId":-49642}
+Sep 10 04:25:29 detox[9028] TRACE: [WSS_SEND_TO, #app] {"type":"cleanup","params":{"stopRunner":true},"messageId":-49642}
+Sep 10 04:25:29 detox[9028] TRACE: [WSS_GET_FROM, #app] {"messageId":-49642,"type":"cleanupDone","params":{}}
+Sep 10 04:25:29 detox[9028] TRACE: [WSS_SEND_TO, #tester] {"messageId":-49642,"type":"cleanupDone","params":{}}
+Sep 10 04:25:29 detox[9028] TRACE: [WS_MESSAGE] {"messageId":-49642,"type":"cleanupDone","params":{}}
+ 
+Sep 10 04:25:29 detox[9028] TRACE: [SESSION_TORN] app exited session 362f97e6-2ec7-e9b0-4352-4224d59e89b5
+Sep 10 04:25:29 detox[9028] TRACE: [WSS_SEND_TO, #tester] {"type":"appDisconnected"}
+Sep 10 04:25:29 detox[9028] TRACE: [SESSION_TORN] tester exited session 362f97e6-2ec7-e9b0-4352-4224d59e89b5
+Sep 10 04:25:29 detox[8236] TRACE: [SPAWN_KILL] sending SIGINT to: C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-19496 shell am instrument -w -r -e detoxServer ws://localhost:56319 -e detoxSessionId 362f97e6-2ec7-e9b0-4352-4224d59e89b5 -e debug false com.awesome.test/androidx.test.runner.AndroidJUnitRunner
+Sep 10 04:25:29 detox[9028] DEBUG: [SPAWN_END, #28, cpid=8236] C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE -s emulator-19496 shell am instrument -w -r -e detoxServer ws://localhost:56319 -e detoxSessionId 362f97e6-2ec7-e9b0-4352-4224d59e89b5 -e debug false com.awesome.test/androidx.test.runner.AndroidJUnitRunner terminated with SIGINT
+Sep 10 04:25:29 detox[9028] DEBUG: [EXEC_CMD, #50] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 reverse --remove tcp:56319
+Sep 10 04:25:29 detox[9028] DEBUG: [EXEC_CMD, #51] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 emu kill
+Sep 10 04:25:29 detox[9028] TRACE: [EXEC_SUCCESS, #50] 
+Sep 10 04:25:29 detox[9028] TRACE: [EXEC_SUCCESS, #51] OK: killing emulator, bye bye
+OK
+
+Sep 10 04:25:31 detox[9028] DEBUG: [EXEC_CMD, #52] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 get-state
+Sep 10 04:25:31 detox[9028] TRACE: [EXEC_SUCCESS, #52] device
+
+Sep 10 04:25:32 detox[9028] DEBUG: [EXEC_CMD, #53] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 get-state
+Sep 10 04:25:32 detox[9028] TRACE: [EXEC_SUCCESS, #53] device
+
+Sep 10 04:25:34 detox[9028] DEBUG: [EXEC_CMD, #54] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 get-state
+Sep 10 04:25:34 detox[9028] TRACE: [EXEC_SUCCESS, #54] device
+
+Sep 10 04:25:37 detox[9028] DEBUG: [EXEC_CMD, #55] "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 get-state
+Sep 10 04:25:39 detox[9028] DEBUG: [EXEC_FAIL, #55] ""C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 get-state" failed with error = ChildProcessError: Command failed: "C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 get-state
+error: device 'emulator-19496' not found
+ `"C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.EXE" -s emulator-19496 get-state` (exited with error code 1) (code=1), stdout and stderr:
+
+Sep 10 04:25:39 detox[9028] DEBUG: [EXEC_FAIL, #55] 
+Sep 10 04:25:39 detox[9028] DEBUG: [EXEC_FAIL, #55] error: device 'emulator-19496' not found
+
+Sep 10 04:25:39 detox[9028] DEBUG: [WSS_CLOSE] Detox server has been closed gracefully

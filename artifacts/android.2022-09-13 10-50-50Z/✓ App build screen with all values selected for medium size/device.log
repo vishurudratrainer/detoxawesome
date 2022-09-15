@@ -1,0 +1,308 @@
+--------- beginning of main
+09-13 16:23:37.289 27909 27959 D DetoxWSClient: Received action 'reactNativeReload' (ID #-1000, params={})
+09-13 16:23:37.296 27909 27957 I DetoxDispatcher: Handling action 'reactNativeReload' (ID #-1000)...
+09-13 16:23:37.397 27909 27957 I DetoxRNExt: Reloading React Native
+09-13 16:23:37.411 27909 28130 I ReactNative: [GESTURE HANDLER] Tearing down gesture handler registered for root view com.facebook.react.ReactRootView{dc71ffd V.E...... ......ID 0,0-1440,2308}
+09-13 16:23:37.412 27909 28130 E unknown:ReactContextBaseJavaModule: Unhandled SoftException
+09-13 16:23:37.412 27909 28130 E unknown:ReactContextBaseJavaModule: java.lang.RuntimeException: Catalyst Instance has already disappeared: requested by DeviceInfo
+09-13 16:23:37.412 27909 28130 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.ReactContextBaseJavaModule.getReactApplicationContextIfActiveOrWarn(ReactContextBaseJavaModule.java:66)
+09-13 16:23:37.412 27909 28130 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.modules.deviceinfo.DeviceInfoModule.invalidate(DeviceInfoModule.java:114)
+09-13 16:23:37.412 27909 28130 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.ModuleHolder.destroy(ModuleHolder.java:110)
+09-13 16:23:37.412 27909 28130 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.NativeModuleRegistry.notifyJSInstanceDestroy(NativeModuleRegistry.java:108)
+09-13 16:23:37.412 27909 28130 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.CatalystInstanceImpl$1.run(CatalystInstanceImpl.java:368)
+09-13 16:23:37.412 27909 28130 E unknown:ReactContextBaseJavaModule: 	at android.os.Handler.handleCallback(Handler.java:789)
+09-13 16:23:37.412 27909 28130 E unknown:ReactContextBaseJavaModule: 	at android.os.Handler.dispatchMessage(Handler.java:98)
+09-13 16:23:37.412 27909 28130 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:27)
+09-13 16:23:37.412 27909 28130 E unknown:ReactContextBaseJavaModule: 	at androidx.test.espresso.base.Interrogator.loopAndInterrogate(Interrogator.java:14)
+09-13 16:23:37.412 27909 28130 E unknown:ReactContextBaseJavaModule: 	at androidx.test.espresso.base.LooperIdlingResourceInterrogationHandler$2.run(LooperIdlingResourceInterrogationHandler.java:3)
+09-13 16:23:37.412 27909 28130 E unknown:ReactContextBaseJavaModule: 	at android.os.Handler.handleCallback(Handler.java:789)
+09-13 16:23:37.412 27909 28130 E unknown:ReactContextBaseJavaModule: 	at android.os.Handler.dispatchMessage(Handler.java:98)
+09-13 16:23:37.412 27909 28130 E unknown:ReactContextBaseJavaModule: 	at android.os.Looper.loop(Looper.java:164)
+09-13 16:23:37.412 27909 28130 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.queue.MessageQueueThreadImpl$4.run(MessageQueueThreadImpl.java:228)
+09-13 16:23:37.412 27909 28130 E unknown:ReactContextBaseJavaModule: 	at java.lang.Thread.run(Thread.java:764)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: Unhandled SoftException
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: java.lang.RuntimeException: Catalyst Instance has already disappeared: requested by NativeAnimatedModule
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.ReactContextBaseJavaModule.getReactApplicationContextIfActiveOrWarn(ReactContextBaseJavaModule.java:66)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.animated.NativeAnimatedModule.invalidate(NativeAnimatedModule.java:968)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.ModuleHolder.destroy(ModuleHolder.java:110)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.NativeModuleRegistry.notifyJSInstanceDestroy(NativeModuleRegistry.java:108)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.CatalystInstanceImpl$1.run(CatalystInstanceImpl.java:368)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at android.os.Handler.handleCallback(Handler.java:789)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at android.os.Handler.dispatchMessage(Handler.java:98)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:27)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at androidx.test.espresso.base.Interrogator.loopAndInterrogate(Interrogator.java:14)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at androidx.test.espresso.base.LooperIdlingResourceInterrogationHandler$2.run(LooperIdlingResourceInterrogationHandler.java:3)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at android.os.Handler.handleCallback(Handler.java:789)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at android.os.Handler.dispatchMessage(Handler.java:98)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at android.os.Looper.loop(Looper.java:164)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.queue.MessageQueueThreadImpl$4.run(MessageQueueThreadImpl.java:228)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at java.lang.Thread.run(Thread.java:764)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: Unhandled SoftException
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: java.lang.RuntimeException: Catalyst Instance has already disappeared: requested by FrescoModule
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.ReactContextBaseJavaModule.getReactApplicationContextIfActiveOrWarn(ReactContextBaseJavaModule.java:66)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.modules.fresco.FrescoModule.invalidate(FrescoModule.java:202)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.ModuleHolder.destroy(ModuleHolder.java:110)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.NativeModuleRegistry.notifyJSInstanceDestroy(NativeModuleRegistry.java:108)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.CatalystInstanceImpl$1.run(CatalystInstanceImpl.java:368)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at android.os.Handler.handleCallback(Handler.java:789)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at android.os.Handler.dispatchMessage(Handler.java:98)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:27)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at androidx.test.espresso.base.Interrogator.loopAndInterrogate(Interrogator.java:14)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at androidx.test.espresso.base.LooperIdlingResourceInterrogationHandler$2.run(LooperIdlingResourceInterrogationHandler.java:3)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at android.os.Handler.handleCallback(Handler.java:789)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at android.os.Handler.dispatchMessage(Handler.java:98)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at android.os.Looper.loop(Looper.java:164)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.queue.MessageQueueThreadImpl$4.run(MessageQueueThreadImpl.java:228)
+09-13 16:23:37.414 27909 28130 E unknown:ReactContextBaseJavaModule: 	at java.lang.Thread.run(Thread.java:764)
+09-13 16:23:37.589 27909 28173 W unknown:ReactContext: initializeMessageQueueThreads() is called.
+09-13 16:23:37.735 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.drawer.ReactDrawerLayoutManager
+09-13 16:23:37.742 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.uimanager.LayoutShadowNode
+09-13 16:23:37.746 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollViewManager
+09-13 16:23:37.771 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollContainerViewManager
+09-13 16:23:37.773 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ReactProgressBarViewManager
+09-13 16:23:37.776 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ProgressBarShadowNode
+09-13 16:23:37.778 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactScrollViewManager
+09-13 16:23:37.786 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.slider.ReactSliderManager
+09-13 16:23:37.796 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.slider.ReactSliderManager$ReactSliderShadowNode
+09-13 16:23:37.797 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager
+09-13 16:23:37.801 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager$ReactSwitchShadowNode
+09-13 16:23:37.803 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.swiperefresh.SwipeRefreshLayoutManager
+09-13 16:23:37.807 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageViewManager
+09-13 16:23:37.807 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageShadowNode
+09-13 16:23:37.810 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.image.ReactImageManager
+09-13 16:23:37.820 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ReactModalHostManager
+09-13 16:23:37.823 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ModalHostShadowNode
+09-13 16:23:37.824 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextManager
+09-13 16:23:37.824 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextShadowNode
+09-13 16:23:37.826 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputManager
+09-13 16:23:37.837 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputShadowNode
+09-13 16:23:37.846 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextViewManager
+09-13 16:23:37.850 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextShadowNode
+09-13 16:23:37.852 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.view.ReactViewManager
+09-13 16:23:37.874 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextViewManager
+09-13 16:23:37.875 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextShadowNode
+09-13 16:23:37.876 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.unimplementedview.ReactUnimplementedViewManager
+09-13 16:23:37.879 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class org.reactnative.maskedview.RNCMaskedViewManager
+09-13 16:23:37.880 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.gesturehandler.react.RNGestureHandlerRootViewManager
+09-13 16:23:37.882 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.gesturehandler.react.RNGestureHandlerButtonViewManager
+09-13 16:23:37.889 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaProviderManager
+09-13 16:23:37.894 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewManager
+09-13 16:23:37.895 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewShadowNode
+09-13 16:23:37.896 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenContainerViewManager
+09-13 16:23:37.897 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenViewManager
+09-13 16:23:37.905 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackViewManager
+09-13 16:23:37.905 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderConfigViewManager
+09-13 16:23:37.907 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderSubviewManager
+09-13 16:23:37.908 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.SearchBarManager
+09-13 16:23:37.912 27909 28175 W unknown:ReactContext: initializeMessageQueueThreads() is called.
+09-13 16:23:37.926 27909 27909 D DetoxRNLoading: Listener-proxy method called: onReactContextInitialized
+09-13 16:23:37.926 27909 27909 I DetoxRNLoading: Got new RN-context async'ly through listener
+09-13 16:23:37.927 27909 27909 D DetoxRNLoading: Listener-proxy method called: equals
+09-13 16:23:37.943 27909 27957 I DetoxRNIdleRes: Setting up Espresso Idling Resources for React Native
+09-13 16:23:37.977 27909 27957 D AsyncStorageIR: Checking whether a custom IR for Async-Storage is required... (legacy=false)
+09-13 16:23:37.977 27909 27957 D DetoxRNHelpers: Native RN module resolution (class com.reactnativecommunity.asyncstorage.AsyncStorageModule): no such class
+09-13 16:23:37.978 27909 27957 D AsyncStorageIR: Checking whether a custom IR for Async-Storage is required... (legacy=true)
+09-13 16:23:37.979 27909 27957 D AsyncStorageIR: IR for Async-Storage is required! (legacy=true)
+09-13 16:23:37.985 27909 27909 D AsyncStorageIRLegacy: Async-storage is busy!
+09-13 16:23:37.994 27909 27957 I DetoxWSClient: Sending out action 'ready' (ID #-1000)
+09-13 16:23:38.003 27909 27957 I DetoxDispatcher: Done with action 'reactNativeReload'
+09-13 16:23:38.030 27909 27959 D DetoxWSClient: Received action 'invoke' (ID #32, params={"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Build Your Own"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]})
+09-13 16:23:38.042 27909 27957 I DetoxDispatcher: Handling action 'invoke' (ID #32)...
+09-13 16:23:38.043 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForText, [Build Your Own]
+09-13 16:23:38.044 27909 27957 D Detox   : class androidx.test.espresso.Espresso, onView, [(an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Build Your Own" and view has effective visibility <VISIBLE>)]
+09-13 16:23:38.045 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxViewActions, click, []
+09-13 16:23:38.045 27909 27957 D Detox   : class com.wix.detox.espresso.EspressoDetox, perform, [androidx.test.espresso.ViewInteraction@41f011c, com.wix.detox.espresso.action.RNClickAction@b323125]
+09-13 16:23:39.121 27909 27909 I IdlingResourceRegistry: Ignoring message from unregistered resource: androidx.test.espresso.base.LooperIdlingResourceInterrogationHandler@6f662fa
+09-13 16:23:39.132 27909 27909 I IdlingResourceRegistry: Ignoring message from unregistered resource: androidx.test.espresso.base.LooperIdlingResourceInterrogationHandler@6f662fa
+09-13 16:23:39.152 27909 27909 I IdlingResourceRegistry: Ignoring message from unregistered resource: androidx.test.espresso.base.LooperIdlingResourceInterrogationHandler@6c80ab
+09-13 16:23:39.603 27909 28174 I ReactNativeJS: Running "awesome
+09-13 16:23:40.035 27909 27909 W UiControllerImpl: Waiting for: DYNAMIC_TASKS_HAVE_IDLED for 100 iterations.
+09-13 16:23:42.094 27909 27909 W UiControllerImpl: Waiting for: DYNAMIC_TASKS_HAVE_IDLED for 200 iterations.
+09-13 16:23:43.054 27909 27909 W IdlingPolicy: These resources are not idle: [LooperIdlingResource-513-mqt_js]
+09-13 16:23:44.141 27909 28174 I zygote  : IncrementDisableThreadFlip blocked for 14.875ms
+09-13 16:23:44.146 27909 27909 W UiControllerImpl: Waiting for: DYNAMIC_TASKS_HAVE_IDLED for 300 iterations.
+09-13 16:23:44.607 27909 27924 I zygote  : Background concurrent copying GC freed 104762(5MB) AllocSpace objects, 0(0B) LOS objects, 50% free, 5MB/10MB, paused 11.294ms total 491.258ms
+09-13 16:23:44.700 27909 28175 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreensShadowNode
+09-13 16:23:44.998 27909 28175 I zygote  : Deoptimizing void com.facebook.react.uimanager.ReactShadowNodeImpl.addChildAt(com.facebook.react.uimanager.ReactShadowNodeImpl, int) due to JIT inline cache
+09-13 16:23:45.502 27909 27909 W UiControllerImpl: Waiting for: DYNAMIC_TASKS_HAVE_IDLED for 400 iterations.
+09-13 16:23:45.762 27909 27909 I ReactNative: [GESTURE HANDLER] Initialize gesture handler for root view com.facebook.react.ReactRootView{dc71ffd V.E...... ......ID 0,0-1440,2308 #33}
+09-13 16:23:45.848 27909 27909 I zygote  : Deoptimizing com.facebook.react.bridge.UIManager com.facebook.react.uimanager.UIManagerHelper.getUIManager(com.facebook.react.bridge.ReactContext, int, boolean) due to JIT inline cache
+09-13 16:23:47.087 27909 27909 W UiControllerImpl: Waiting for: DYNAMIC_TASKS_HAVE_IDLED for 100 iterations.
+09-13 16:23:48.021 27909 27959 D DetoxWSClient: Received action 'currentStatus' (ID #33, params={})
+09-13 16:23:48.028 27909 27958 I DetoxDispatcher: Handling action 'currentStatus' (ID #33)...
+09-13 16:23:48.033 27909 27909 I Detox   : JS Bridge is busy
+09-13 16:23:48.043 27909 27958 I DetoxWSClient: Sending out action 'currentStatusResult' (ID #33)
+09-13 16:23:48.044 27909 27958 I DetoxDispatcher: Done with action 'currentStatus'
+09-13 16:23:48.628 27909 27909 I Detox   : UIManagerModule is busy
+09-13 16:23:48.704 27909 27909 I ViewInteraction: Performing 'com.wix.detox.espresso.action.detoxsingletap@8b92d7 click' action on view (an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Build Your Own" and view has effective visibility <VISIBLE>)
+09-13 16:23:51.083 27909 27909 I Detox   : UIManagerModule is busy
+09-13 16:23:51.555 27909 27957 I DetoxWSClient: Sending out action 'invokeResult' (ID #32)
+09-13 16:23:51.557 27909 27957 I DetoxDispatcher: Done with action 'invoke'
+09-13 16:23:51.576 27909 27959 D DetoxWSClient: Received action 'invoke' (ID #34, params={"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["PEPPERONI"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]})
+09-13 16:23:51.578 27909 27957 I DetoxDispatcher: Handling action 'invoke' (ID #34)...
+09-13 16:23:51.579 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForText, [PEPPERONI]
+09-13 16:23:51.579 27909 27957 D Detox   : class androidx.test.espresso.Espresso, onView, [(an instance of android.widget.TextView and view.getText() with or without transformation to match: is "PEPPERONI" and view has effective visibility <VISIBLE>)]
+09-13 16:23:51.580 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxViewActions, click, []
+09-13 16:23:51.582 27909 27957 D Detox   : class com.wix.detox.espresso.EspressoDetox, perform, [androidx.test.espresso.ViewInteraction@5390199, com.wix.detox.espresso.action.RNClickAction@d187c5e]
+09-13 16:23:51.627 27909 27909 I ViewInteraction: Performing 'com.wix.detox.espresso.action.detoxsingletap@d33a50c click' action on view (an instance of android.widget.TextView and view.getText() with or without transformation to match: is "PEPPERONI" and view has effective visibility <VISIBLE>)
+09-13 16:23:52.878 27909 27909 I Detox   : AnimatedModule is busy.
+09-13 16:23:53.011 27909 27909 I chatty  : uid=10222(u0_a222) com.awesome identical 5 lines
+09-13 16:23:53.034 27909 27909 I Detox   : AnimatedModule is busy.
+09-13 16:23:53.616 27909 27957 I DetoxWSClient: Sending out action 'invokeResult' (ID #34)
+09-13 16:23:53.620 27909 27957 I DetoxDispatcher: Done with action 'invoke'
+09-13 16:23:53.641 27909 27959 D DetoxWSClient: Received action 'invoke' (ID #35, params={"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BASIL"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]})
+09-13 16:23:53.644 27909 27957 I DetoxDispatcher: Handling action 'invoke' (ID #35)...
+09-13 16:23:53.644 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForText, [BASIL]
+09-13 16:23:53.645 27909 27957 D Detox   : class androidx.test.espresso.Espresso, onView, [(an instance of android.widget.TextView and view.getText() with or without transformation to match: is "BASIL" and view has effective visibility <VISIBLE>)]
+09-13 16:23:53.646 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxViewActions, click, []
+09-13 16:23:53.646 27909 27957 D Detox   : class com.wix.detox.espresso.EspressoDetox, perform, [androidx.test.espresso.ViewInteraction@a5d4bff, com.wix.detox.espresso.action.RNClickAction@d1b3dcc]
+09-13 16:23:53.706 27909 27909 I ViewInteraction: Performing 'com.wix.detox.espresso.action.detoxsingletap@935a815 click' action on view (an instance of android.widget.TextView and view.getText() with or without transformation to match: is "BASIL" and view has effective visibility <VISIBLE>)
+09-13 16:23:54.648 27909 27909 I Detox   : AnimatedModule is busy.
+09-13 16:23:55.257 27909 27957 I DetoxWSClient: Sending out action 'invokeResult' (ID #35)
+09-13 16:23:55.258 27909 27957 I DetoxDispatcher: Done with action 'invoke'
+09-13 16:23:55.277 27909 27959 D DetoxWSClient: Received action 'invoke' (ID #36, params={"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["MOZZARELLA"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]})
+09-13 16:23:55.284 27909 27957 I DetoxDispatcher: Handling action 'invoke' (ID #36)...
+09-13 16:23:55.284 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForText, [MOZZARELLA]
+09-13 16:23:55.285 27909 27957 D Detox   : class androidx.test.espresso.Espresso, onView, [(an instance of android.widget.TextView and view.getText() with or without transformation to match: is "MOZZARELLA" and view has effective visibility <VISIBLE>)]
+09-13 16:23:55.286 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxViewActions, click, []
+09-13 16:23:55.287 27909 27957 D Detox   : class com.wix.detox.espresso.EspressoDetox, perform, [androidx.test.espresso.ViewInteraction@ca23e92, com.wix.detox.espresso.action.RNClickAction@7115063]
+09-13 16:23:55.382 27909 27909 I ViewInteraction: Performing 'com.wix.detox.espresso.action.detoxsingletap@86f9460 click' action on view (an instance of android.widget.TextView and view.getText() with or without transformation to match: is "MOZZARELLA" and view has effective visibility <VISIBLE>)
+09-13 16:23:55.843 27909 27924 I zygote  : Background concurrent copying GC freed 134131(5MB) AllocSpace objects, 0(0B) LOS objects, 50% free, 4MB/9MB, paused 15.672ms total 193.198ms
+09-13 16:23:56.878 27909 27909 W UiControllerImpl: Waiting for: DYNAMIC_TASKS_HAVE_IDLED for 100 iterations.
+09-13 16:23:57.009 27909 27909 I Detox   : AnimatedModule is busy.
+09-13 16:23:57.091 27909 27909 I chatty  : uid=10222(u0_a222) com.awesome identical 3 lines
+09-13 16:23:57.123 27909 27909 I Detox   : AnimatedModule is busy.
+09-13 16:23:57.640 27909 27957 I DetoxWSClient: Sending out action 'invokeResult' (ID #36)
+09-13 16:23:57.657 27909 27957 I DetoxDispatcher: Done with action 'invoke'
+09-13 16:23:57.664 27909 27959 D DetoxWSClient: Received action 'invoke' (ID #37, params={"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["SAUSAGE"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]})
+09-13 16:23:57.667 27909 27957 I DetoxDispatcher: Handling action 'invoke' (ID #37)...
+09-13 16:23:57.668 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForText, [SAUSAGE]
+09-13 16:23:57.669 27909 27957 D Detox   : class androidx.test.espresso.Espresso, onView, [(an instance of android.widget.TextView and view.getText() with or without transformation to match: is "SAUSAGE" and view has effective visibility <VISIBLE>)]
+09-13 16:23:57.673 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxViewActions, click, []
+09-13 16:23:57.674 27909 27957 D Detox   : class com.wix.detox.espresso.EspressoDetox, perform, [androidx.test.espresso.ViewInteraction@e17688f, com.wix.detox.espresso.action.RNClickAction@f6d471c]
+09-13 16:23:57.727 27909 27909 I ViewInteraction: Performing 'com.wix.detox.espresso.action.detoxsingletap@8d9ff25 click' action on view (an instance of android.widget.TextView and view.getText() with or without transformation to match: is "SAUSAGE" and view has effective visibility <VISIBLE>)
+09-13 16:23:58.236 27909 27909 I Detox   : UIManagerModule is busy
+09-13 16:23:58.351 27909 27909 I Detox   : AnimatedModule is busy.
+09-13 16:23:58.464 27909 27909 I chatty  : uid=10222(u0_a222) com.awesome identical 5 lines
+09-13 16:23:58.476 27909 27909 I Detox   : AnimatedModule is busy.
+09-13 16:23:58.998 27909 27957 I DetoxWSClient: Sending out action 'invokeResult' (ID #37)
+09-13 16:23:58.999 27909 27957 I DetoxDispatcher: Done with action 'invoke'
+09-13 16:23:59.024 27909 27959 D DetoxWSClient: Received action 'invoke' (ID #38, params={"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BELL PEPPERS"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]})
+09-13 16:23:59.026 27909 27957 I DetoxDispatcher: Handling action 'invoke' (ID #38)...
+09-13 16:23:59.026 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForText, [BELL PEPPERS]
+09-13 16:23:59.028 27909 27957 D Detox   : class androidx.test.espresso.Espresso, onView, [(an instance of android.widget.TextView and view.getText() with or without transformation to match: is "BELL PEPPERS" and view has effective visibility <VISIBLE>)]
+09-13 16:23:59.029 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxViewActions, click, []
+09-13 16:23:59.030 27909 27957 D Detox   : class com.wix.detox.espresso.EspressoDetox, perform, [androidx.test.espresso.ViewInteraction@98d91fe, com.wix.detox.espresso.action.RNClickAction@c36bd5f]
+09-13 16:23:59.070 27909 27909 I ViewInteraction: Performing 'com.wix.detox.espresso.action.detoxsingletap@77bc3ac click' action on view (an instance of android.widget.TextView and view.getText() with or without transformation to match: is "BELL PEPPERS" and view has effective visibility <VISIBLE>)
+09-13 16:24:00.565 27909 27909 I Detox   : AnimatedModule is busy.
+09-13 16:24:00.596 27909 27909 I chatty  : uid=10222(u0_a222) com.awesome identical 2 lines
+09-13 16:24:00.617 27909 27909 I Detox   : AnimatedModule is busy.
+09-13 16:24:00.691 27909 27909 I Detox   : AnimatedModule is busy.
+09-13 16:24:01.248 27909 27957 I DetoxWSClient: Sending out action 'invokeResult' (ID #38)
+09-13 16:24:01.249 27909 27957 I DetoxDispatcher: Done with action 'invoke'
+09-13 16:24:01.269 27909 27959 D DetoxWSClient: Received action 'invoke' (ID #39, params={"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["ONIONS"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]})
+09-13 16:24:01.274 27909 27957 I DetoxDispatcher: Handling action 'invoke' (ID #39)...
+09-13 16:24:01.275 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForText, [ONIONS]
+09-13 16:24:01.277 27909 27957 D Detox   : class androidx.test.espresso.Espresso, onView, [(an instance of android.widget.TextView and view.getText() with or without transformation to match: is "ONIONS" and view has effective visibility <VISIBLE>)]
+09-13 16:24:01.279 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxViewActions, click, []
+09-13 16:24:01.279 27909 27957 D Detox   : class com.wix.detox.espresso.EspressoDetox, perform, [androidx.test.espresso.ViewInteraction@fe9ef37, com.wix.detox.espresso.action.RNClickAction@907cca4]
+09-13 16:24:01.325 27909 27909 I ViewInteraction: Performing 'com.wix.detox.espresso.action.detoxsingletap@3844a0d click' action on view (an instance of android.widget.TextView and view.getText() with or without transformation to match: is "ONIONS" and view has effective visibility <VISIBLE>)
+09-13 16:24:02.054 27909 27909 I Detox   : UIManagerModule is busy
+09-13 16:24:02.234 27909 27909 I Detox   : AnimatedModule is busy.
+09-13 16:24:02.273 27909 27909 I chatty  : uid=10222(u0_a222) com.awesome identical 2 lines
+09-13 16:24:02.303 27909 27909 I Detox   : AnimatedModule is busy.
+09-13 16:24:02.767 27909 27957 I DetoxWSClient: Sending out action 'invokeResult' (ID #39)
+09-13 16:24:02.769 27909 27957 I DetoxDispatcher: Done with action 'invoke'
+09-13 16:24:02.793 27909 27959 D DetoxWSClient: Received action 'invoke' (ID #40, params={"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["OLIVES"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]})
+09-13 16:24:02.794 27909 27957 I DetoxDispatcher: Handling action 'invoke' (ID #40)...
+09-13 16:24:02.794 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForText, [OLIVES]
+09-13 16:24:02.796 27909 27957 D Detox   : class androidx.test.espresso.Espresso, onView, [(an instance of android.widget.TextView and view.getText() with or without transformation to match: is "OLIVES" and view has effective visibility <VISIBLE>)]
+09-13 16:24:02.796 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxViewActions, click, []
+09-13 16:24:02.797 27909 27957 D Detox   : class com.wix.detox.espresso.EspressoDetox, perform, [androidx.test.espresso.ViewInteraction@e633522, com.wix.detox.espresso.action.RNClickAction@4ba2bb3]
+09-13 16:24:02.846 27909 27909 I ViewInteraction: Performing 'com.wix.detox.espresso.action.detoxsingletap@c075570 click' action on view (an instance of android.widget.TextView and view.getText() with or without transformation to match: is "OLIVES" and view has effective visibility <VISIBLE>)
+09-13 16:24:03.478 27909 27909 I Detox   : UIManagerModule is busy
+09-13 16:24:03.616 27909 27909 I Detox   : AnimatedModule is busy.
+09-13 16:24:03.694 27909 27909 I chatty  : uid=10222(u0_a222) com.awesome identical 4 lines
+09-13 16:24:03.704 27909 27909 I Detox   : AnimatedModule is busy.
+09-13 16:24:04.225 27909 27957 I DetoxWSClient: Sending out action 'invokeResult' (ID #40)
+09-13 16:24:04.227 27909 27957 I DetoxDispatcher: Done with action 'invoke'
+09-13 16:24:04.258 27909 27959 D DetoxWSClient: Received action 'invoke' (ID #41, params={"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["BACON"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]})
+09-13 16:24:04.265 27909 27957 I DetoxDispatcher: Handling action 'invoke' (ID #41)...
+09-13 16:24:04.266 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForText, [BACON]
+09-13 16:24:04.267 27909 27957 D Detox   : class androidx.test.espresso.Espresso, onView, [(an instance of android.widget.TextView and view.getText() with or without transformation to match: is "BACON" and view has effective visibility <VISIBLE>)]
+09-13 16:24:04.268 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxViewActions, click, []
+09-13 16:24:04.269 27909 27957 D Detox   : class com.wix.detox.espresso.EspressoDetox, perform, [androidx.test.espresso.ViewInteraction@63d2af7, com.wix.detox.espresso.action.RNClickAction@d2cbd64]
+09-13 16:24:04.307 27909 27909 I ViewInteraction: Performing 'com.wix.detox.espresso.action.detoxsingletap@d194bcd click' action on view (an instance of android.widget.TextView and view.getText() with or without transformation to match: is "BACON" and view has effective visibility <VISIBLE>)
+09-13 16:24:05.668 27909 27909 I Detox   : AnimatedModule is busy.
+09-13 16:24:05.728 27909 27909 I chatty  : uid=10222(u0_a222) com.awesome identical 2 lines
+09-13 16:24:05.746 27909 27909 I Detox   : AnimatedModule is busy.
+09-13 16:24:05.757 27909 27924 I zygote  : Background concurrent copying GC freed 120446(5MB) AllocSpace objects, 0(0B) LOS objects, 49% free, 4MB/8MB, paused 12.412ms total 177.493ms
+09-13 16:24:05.760 27909 27909 I Detox   : AnimatedModule is busy.
+09-13 16:24:05.781 27909 27909 I Detox   : AnimatedModule is busy.
+09-13 16:24:06.267 27909 27957 I DetoxWSClient: Sending out action 'invokeResult' (ID #41)
+09-13 16:24:06.268 27909 27957 I DetoxDispatcher: Done with action 'invoke'
+09-13 16:24:06.285 27909 27959 D DetoxWSClient: Received action 'invoke' (ID #42, params={"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["HAM"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]})
+09-13 16:24:06.288 27909 27957 I DetoxDispatcher: Handling action 'invoke' (ID #42)...
+09-13 16:24:06.290 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForText, [HAM]
+09-13 16:24:06.292 27909 27957 D Detox   : class androidx.test.espresso.Espresso, onView, [(an instance of android.widget.TextView and view.getText() with or without transformation to match: is "HAM" and view has effective visibility <VISIBLE>)]
+09-13 16:24:06.293 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxViewActions, click, []
+09-13 16:24:06.293 27909 27957 D Detox   : class com.wix.detox.espresso.EspressoDetox, perform, [androidx.test.espresso.ViewInteraction@574077e, com.wix.detox.espresso.action.RNClickAction@623c4df]
+09-13 16:24:06.316 27909 27909 I ViewInteraction: Performing 'com.wix.detox.espresso.action.detoxsingletap@6b0f52c click' action on view (an instance of android.widget.TextView and view.getText() with or without transformation to match: is "HAM" and view has effective visibility <VISIBLE>)
+09-13 16:24:07.118 27909 27909 I Detox   : AnimatedModule is busy.
+09-13 16:24:07.282 27909 27909 I chatty  : uid=10222(u0_a222) com.awesome identical 8 lines
+09-13 16:24:07.296 27909 27909 I Detox   : AnimatedModule is busy.
+09-13 16:24:07.857 27909 27957 I DetoxWSClient: Sending out action 'invokeResult' (ID #42)
+09-13 16:24:07.859 27909 27957 I DetoxDispatcher: Done with action 'invoke'
+09-13 16:24:07.887 27909 27959 D DetoxWSClient: Received action 'invoke' (ID #43, params={"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["MUSHROOMS"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]})
+09-13 16:24:07.889 27909 27957 I DetoxDispatcher: Handling action 'invoke' (ID #43)...
+09-13 16:24:07.889 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForText, [MUSHROOMS]
+09-13 16:24:07.890 27909 27957 D Detox   : class androidx.test.espresso.Espresso, onView, [(an instance of android.widget.TextView and view.getText() with or without transformation to match: is "MUSHROOMS" and view has effective visibility <VISIBLE>)]
+09-13 16:24:07.892 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxViewActions, click, []
+09-13 16:24:07.892 27909 27957 D Detox   : class com.wix.detox.espresso.EspressoDetox, perform, [androidx.test.espresso.ViewInteraction@42da3cf, com.wix.detox.espresso.action.RNClickAction@72015c]
+09-13 16:24:07.926 27909 27909 I ViewInteraction: Performing 'com.wix.detox.espresso.action.detoxsingletap@61ccc65 click' action on view (an instance of android.widget.TextView and view.getText() with or without transformation to match: is "MUSHROOMS" and view has effective visibility <VISIBLE>)
+09-13 16:24:09.058 27909 27909 I Detox   : AnimatedModule is busy.
+09-13 16:24:09.167 27909 27909 I chatty  : uid=10222(u0_a222) com.awesome identical 3 lines
+09-13 16:24:09.194 27909 27909 I Detox   : AnimatedModule is busy.
+09-13 16:24:09.707 27909 27957 I DetoxWSClient: Sending out action 'invokeResult' (ID #43)
+09-13 16:24:09.712 27909 27957 I DetoxDispatcher: Done with action 'invoke'
+09-13 16:24:09.746 27909 27959 D DetoxWSClient: Received action 'invoke' (ID #44, params={"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["medium"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]})
+09-13 16:24:09.752 27909 27957 I DetoxDispatcher: Handling action 'invoke' (ID #44)...
+09-13 16:24:09.753 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForText, [medium]
+09-13 16:24:09.754 27909 27957 D Detox   : class androidx.test.espresso.Espresso, onView, [(an instance of android.widget.TextView and view.getText() with or without transformation to match: is "medium" and view has effective visibility <VISIBLE>)]
+09-13 16:24:09.755 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxViewActions, click, []
+09-13 16:24:09.755 27909 27957 D Detox   : class com.wix.detox.espresso.EspressoDetox, perform, [androidx.test.espresso.ViewInteraction@46cf992, com.wix.detox.espresso.action.RNClickAction@f5cef63]
+09-13 16:24:09.799 27909 27909 I ViewInteraction: Performing 'com.wix.detox.espresso.action.detoxsingletap@5144760 click' action on view (an instance of android.widget.TextView and view.getText() with or without transformation to match: is "medium" and view has effective visibility <VISIBLE>)
+09-13 16:24:10.820 27909 27957 I DetoxWSClient: Sending out action 'invokeResult' (ID #44)
+09-13 16:24:10.823 27909 27957 I DetoxDispatcher: Done with action 'invoke'
+09-13 16:24:10.841 27909 27959 D DetoxWSClient: Received action 'invoke' (ID #45, params={"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["total"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["$34"]}}]})
+09-13 16:24:10.845 27909 27957 I DetoxDispatcher: Handling action 'invoke' (ID #45)...
+09-13 16:24:10.845 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForTestId, [total]
+09-13 16:24:10.846 27909 27957 D Detox   : class androidx.test.espresso.Espresso, onView, [(view.getTag() is "total" and view has effective visibility <VISIBLE>)]
+09-13 16:24:10.847 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForText, [$34]
+09-13 16:24:10.848 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxAssertion, assertMatcher, [androidx.test.espresso.ViewInteraction@ba1d419, (an instance of android.widget.TextView and view.getText() with or without transformation to match: is "$34" and view has effective visibility <VISIBLE>)]
+09-13 16:24:10.876 27909 27909 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(an instance of android.widget.TextView and view.getText() with or without transformation to match: is "$34" and view has effective visibility <VISIBLE>)}' assertion on view (view.getTag() is "total" and view has effective visibility <VISIBLE>)
+09-13 16:24:10.883 27909 27957 I DetoxWSClient: Sending out action 'invokeResult' (ID #45)
+09-13 16:24:10.884 27909 27957 I DetoxDispatcher: Done with action 'invoke'
+09-13 16:24:10.907 27909 27959 D DetoxWSClient: Received action 'invoke' (ID #46, params={"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["submit-order"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]})
+09-13 16:24:10.910 27909 27957 I DetoxDispatcher: Handling action 'invoke' (ID #46)...
+09-13 16:24:10.912 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForTestId, [submit-order]
+09-13 16:24:10.913 27909 27957 D Detox   : class androidx.test.espresso.Espresso, onView, [(view.getTag() is "submit-order" and view has effective visibility <VISIBLE>)]
+09-13 16:24:10.914 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxViewActions, click, []
+09-13 16:24:10.916 27909 27957 D Detox   : class com.wix.detox.espresso.EspressoDetox, perform, [androidx.test.espresso.ViewInteraction@6dd1cde, com.wix.detox.espresso.action.RNClickAction@ca51ebf]
+09-13 16:24:10.952 27909 27909 I ViewInteraction: Performing 'com.wix.detox.espresso.action.detoxsingletap@866798c click' action on view (view.getTag() is "submit-order" and view has effective visibility <VISIBLE>)
+09-13 16:24:11.910 27909 28175 I zygote  : Deoptimizing void com.facebook.react.uimanager.LayoutShadowNode.setMargins(int, com.facebook.react.bridge.Dynamic) due to JIT inline cache
+09-13 16:24:12.177 27909 27916 I zygote  : Compiler allocated 8MB to compile void com.facebook.react.views.text.ReactTextShadowNode.markUpdated()
+09-13 16:24:12.646 27909 28175 I zygote  : Deoptimizing long com.facebook.react.views.text.ReactTextShadowNode$1.measure(com.facebook.yoga.YogaNode, float, com.facebook.yoga.YogaMeasureMode, float, com.facebook.yoga.YogaMeasureMode) due to JIT inline cache
+09-13 16:24:13.573 27909 27957 I DetoxWSClient: Sending out action 'invokeResult' (ID #46)
+09-13 16:24:13.593 27909 27957 I DetoxDispatcher: Done with action 'invoke'
+09-13 16:24:13.639 27909 27959 D DetoxWSClient: Received action 'invoke' (ID #47, params={"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherWithDescendant","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["order-item"]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Custom"]}}]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForNotNull","args":[]}}]})
+09-13 16:24:13.643 27909 27957 I DetoxDispatcher: Handling action 'invoke' (ID #47)...
+09-13 16:24:13.646 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForTestId, [order-item]
+09-13 16:24:13.647 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForText, [Custom]
+09-13 16:24:13.665 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherWithDescendant, [(view.getTag() is "order-item" and view has effective visibility <VISIBLE>), (an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Custom" and view has effective visibility <VISIBLE>)]
+09-13 16:24:13.694 27909 27957 D Detox   : class androidx.test.espresso.Espresso, onView, [((view.getTag() is "order-item" and view has effective visibility <VISIBLE>) and (view is an instance of android.view.ViewGroup and has descendant matching (an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Custom" and view has effective visibility <VISIBLE>)))]
+09-13 16:24:13.695 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForNotNull, []
+09-13 16:24:13.695 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxAssertion, assertMatcher, [androidx.test.espresso.ViewInteraction@12069d, not null]
+09-13 16:24:13.730 27909 27909 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=not null}' assertion on view ((view.getTag() is "order-item" and view has effective visibility <VISIBLE>) and (view is an instance of android.view.ViewGroup and has descendant matching (an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Custom" and view has effective visibility <VISIBLE>)))
+09-13 16:24:13.735 27909 27957 I DetoxWSClient: Sending out action 'invokeResult' (ID #47)
+09-13 16:24:13.737 27909 27957 I DetoxDispatcher: Done with action 'invoke'

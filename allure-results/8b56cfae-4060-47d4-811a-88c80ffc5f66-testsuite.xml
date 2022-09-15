@@ -1,0 +1,57 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1663089864248' stop='1663090003116'>
+    <name>App</name>
+    <title>App</title>
+    <test-cases>
+        <test-case start='1663089984264' status='undefined'>
+            <name>can navigate between menu and order tabs</name>
+            <title>can navigate between menu and order tabs</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot test failue' source='914dd9d4-8372-41e4-8d50-64c02332ede3-attachment.png' type='image/png' size='794952'/>
+            </attachments>
+        </test-case>
+        <test-case start='1663089988250' status='undefined'>
+            <name>can navigate to orders tab and view previous orders</name>
+            <title>can navigate to orders tab and view previous orders</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot test failue' source='48cff975-49ff-4577-be3d-99ac2ed51662-attachment.png' type='image/png' size='794372'/>
+            </attachments>
+        </test-case>
+        <test-case start='1663089991948' status='undefined'>
+            <name>build screen can add and remove toppings</name>
+            <title>build screen can add and remove toppings</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot test failue' source='66e59a32-5cfb-4001-8ef9-e883cabb19b1-attachment.png' type='image/png' size='794372'/>
+            </attachments>
+        </test-case>
+        <test-case start='1663089995608' status='undefined'>
+            <name>build screen can select toppings, pick a size, and submit order</name>
+            <title>build screen can select toppings, pick a size, and submit order</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot test failue' source='36c3d154-a60b-4bc4-ae7f-b90cda2b9e3c-attachment.png' type='image/png' size='794372'/>
+            </attachments>
+        </test-case>
+        <test-case start='1663089999430' status='undefined'>
+            <name>build screen with all values selected for medium size</name>
+            <title>build screen with all values selected for medium size</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot test failue' source='5899d7e1-942c-47fa-b9d2-24fb5abd70ee-attachment.png' type='image/png' size='794372'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

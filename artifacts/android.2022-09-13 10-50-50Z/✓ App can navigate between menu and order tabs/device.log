@@ -1,0 +1,337 @@
+--------- beginning of main
+09-13 16:22:15.199 27909 27980 I zygote  : Rejecting re-init on previously-failed class java.lang.Class<uJ>: java.lang.NoClassDefFoundError: Failed resolution of: Landroid/webkit/TracingController;
+09-13 16:22:15.199 27909 27980 I zygote  :   at java.lang.Class java.lang.Class.classForName(java.lang.String, boolean, java.lang.ClassLoader) (Class.java:-2)
+09-13 16:22:15.200 27909 27980 I zygote  :   at java.lang.Class java.lang.Class.forName(java.lang.String, boolean, java.lang.ClassLoader) (Class.java:453)
+09-13 16:22:15.202 27909 27980 I zygote  :   at java.lang.Class android.webkit.WebViewFactory.getWebViewProviderClass(java.lang.ClassLoader) (WebViewFactory.java:150)
+09-13 16:22:15.202 27909 27980 I zygote  :   at java.lang.Class android.webkit.WebViewFactory.getProviderClass() (WebViewFactory.java:417)
+09-13 16:22:15.203 27909 27980 I zygote  :   at android.webkit.WebViewFactoryProvider android.webkit.WebViewFactory.getProvider() (WebViewFactory.java:211)
+09-13 16:22:15.203 27909 27980 I zygote  :   at android.webkit.CookieManager android.webkit.CookieManager.getInstance() (CookieManager.java:39)
+09-13 16:22:15.203 27909 27980 I zygote  :   at android.webkit.CookieManager com.facebook.react.modules.network.ForwardingCookieHandler.getCookieManager() (ForwardingCookieHandler.java:136)
+09-13 16:22:15.203 27909 27980 I zygote  :   at java.util.Map com.facebook.react.modules.network.ForwardingCookieHandler.get(java.net.URI, java.util.Map) (ForwardingCookieHandler.java:53)
+09-13 16:22:15.203 27909 27980 I zygote  :   at java.util.List okhttp3.JavaNetCookieJar.loadForRequest(okhttp3.HttpUrl) (JavaNetCookieJar.kt:47)
+09-13 16:22:15.203 27909 27980 I zygote  :   at java.util.List com.facebook.react.modules.network.ReactCookieJarContainer.loadForRequest(okhttp3.HttpUrl) (ReactCookieJarContainer.java:44)
+09-13 16:22:15.204 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.http.BridgeInterceptor.intercept(okhttp3.Interceptor$Chain) (BridgeInterceptor.kt:74)
+09-13 16:22:15.204 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.http.RealInterceptorChain.proceed(okhttp3.Request) (RealInterceptorChain.kt:109)
+09-13 16:22:15.204 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(okhttp3.Interceptor$Chain) (RetryAndFollowUpInterceptor.kt:76)
+09-13 16:22:15.204 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.http.RealInterceptorChain.proceed(okhttp3.Request) (RealInterceptorChain.kt:109)
+09-13 16:22:15.205 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp() (RealCall.kt:201)
+09-13 16:22:15.205 27909 27980 I zygote  :   at void okhttp3.internal.connection.RealCall$AsyncCall.run() (RealCall.kt:517)
+09-13 16:22:15.205 27909 27980 I zygote  :   at void java.util.concurrent.ThreadPoolExecutor.runWorker(java.util.concurrent.ThreadPoolExecutor$Worker) (ThreadPoolExecutor.java:1162)
+09-13 16:22:15.205 27909 27980 I zygote  :   at void java.util.concurrent.ThreadPoolExecutor$Worker.run() (ThreadPoolExecutor.java:636)
+09-13 16:22:15.205 27909 27980 I zygote  :   at void java.lang.Thread.run() (Thread.java:764)
+09-13 16:22:15.206 27909 27980 I zygote  : Caused by: java.lang.ClassNotFoundException: Didn't find class "android.webkit.TracingController" on path: DexPathList[[zip file "/system/app/Chrome/Chrome.apk"],nativeLibraryDirectories=[/system/app/Chrome/lib/x86, /system/app/Chrome/Chrome.apk!/lib/x86, /system/lib, /vendor/lib, /system/lib, /vendor/lib]]
+09-13 16:22:15.206 27909 27980 I zygote  :   at java.lang.Class dalvik.system.BaseDexClassLoader.findClass(java.lang.String) (BaseDexClassLoader.java:93)
+09-13 16:22:15.206 27909 27980 I zygote  :   at java.lang.Class java.lang.ClassLoader.loadClass(java.lang.String, boolean) (ClassLoader.java:379)
+09-13 16:22:15.206 27909 27980 I zygote  :   at java.lang.Class java.lang.ClassLoader.loadClass(java.lang.String) (ClassLoader.java:312)
+09-13 16:22:15.206 27909 27980 I zygote  :   at java.lang.Class java.lang.Class.classForName(java.lang.String, boolean, java.lang.ClassLoader) (Class.java:-2)
+09-13 16:22:15.207 27909 27980 I zygote  :   at java.lang.Class java.lang.Class.forName(java.lang.String, boolean, java.lang.ClassLoader) (Class.java:453)
+09-13 16:22:15.207 27909 27980 I zygote  :   at java.lang.Class android.webkit.WebViewFactory.getWebViewProviderClass(java.lang.ClassLoader) (WebViewFactory.java:150)
+09-13 16:22:15.207 27909 27980 I zygote  :   at java.lang.Class android.webkit.WebViewFactory.getProviderClass() (WebViewFactory.java:417)
+09-13 16:22:15.208 27909 27980 I zygote  :   at android.webkit.WebViewFactoryProvider android.webkit.WebViewFactory.getProvider() (WebViewFactory.java:211)
+09-13 16:22:15.208 27909 27980 I zygote  :   at android.webkit.CookieManager android.webkit.CookieManager.getInstance() (CookieManager.java:39)
+09-13 16:22:15.208 27909 27980 I zygote  :   at android.webkit.CookieManager com.facebook.react.modules.network.ForwardingCookieHandler.getCookieManager() (ForwardingCookieHandler.java:136)
+09-13 16:22:15.208 27909 27980 I zygote  :   at java.util.Map com.facebook.react.modules.network.ForwardingCookieHandler.get(java.net.URI, java.util.Map) (ForwardingCookieHandler.java:53)
+09-13 16:22:15.208 27909 27980 I zygote  :   at java.util.List okhttp3.JavaNetCookieJar.loadForRequest(okhttp3.HttpUrl) (JavaNetCookieJar.kt:47)
+09-13 16:22:15.208 27909 27980 I zygote  :   at java.util.List com.facebook.react.modules.network.ReactCookieJarContainer.loadForRequest(okhttp3.HttpUrl) (ReactCookieJarContainer.java:44)
+09-13 16:22:15.209 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.http.BridgeInterceptor.intercept(okhttp3.Interceptor$Chain) (BridgeInterceptor.kt:74)
+09-13 16:22:15.209 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.http.RealInterceptorChain.proceed(okhttp3.Request) (RealInterceptorChain.kt:109)
+09-13 16:22:15.209 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(okhttp3.Interceptor$Chain) (RetryAndFollowUpInterceptor.kt:76)
+09-13 16:22:15.209 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.http.RealInterceptorChain.proceed(okhttp3.Request) (RealInterceptorChain.kt:109)
+09-13 16:22:15.209 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp() (RealCall.kt:201)
+09-13 16:22:15.209 27909 27980 I zygote  :   at void okhttp3.internal.connection.RealCall$AsyncCall.run() (RealCall.kt:517)
+09-13 16:22:15.210 27909 27980 I zygote  :   at void java.util.concurrent.ThreadPoolExecutor.runWorker(java.util.concurrent.ThreadPoolExecutor$Worker) (ThreadPoolExecutor.java:1162)
+09-13 16:22:15.210 27909 27980 I zygote  :   at void java.util.concurrent.ThreadPoolExecutor$Worker.run() (ThreadPoolExecutor.java:636)
+09-13 16:22:15.211 27909 27980 I zygote  :   at void java.lang.Thread.run() (Thread.java:764)
+09-13 16:22:15.211 27909 27980 I zygote  : 
+09-13 16:22:15.212 27909 27980 I zygote  : Rejecting re-init on previously-failed class java.lang.Class<uJ>: java.lang.NoClassDefFoundError: Failed resolution of: Landroid/webkit/TracingController;
+09-13 16:22:15.213 27909 27980 I zygote  :   at java.lang.Class java.lang.Class.classForName(java.lang.String, boolean, java.lang.ClassLoader) (Class.java:-2)
+09-13 16:22:15.213 27909 27980 I zygote  :   at java.lang.Class java.lang.Class.forName(java.lang.String, boolean, java.lang.ClassLoader) (Class.java:453)
+09-13 16:22:15.213 27909 27980 I zygote  :   at java.lang.Class android.webkit.WebViewFactory.getWebViewProviderClass(java.lang.ClassLoader) (WebViewFactory.java:150)
+09-13 16:22:15.213 27909 27980 I zygote  :   at java.lang.Class android.webkit.WebViewFactory.getProviderClass() (WebViewFactory.java:417)
+09-13 16:22:15.213 27909 27909 I Detox   : Wait is over: App is now idle!
+09-13 16:22:15.213 27909 27980 I zygote  :   at android.webkit.WebViewFactoryProvider android.webkit.WebViewFactory.getProvider() (WebViewFactory.java:211)
+09-13 16:22:15.214 27909 27980 I zygote  :   at android.webkit.CookieManager android.webkit.CookieManager.getInstance() (CookieManager.java:39)
+09-13 16:22:15.214 27909 27980 I zygote  :   at android.webkit.CookieManager com.facebook.react.modules.network.ForwardingCookieHandler.getCookieManager() (ForwardingCookieHandler.java:136)
+09-13 16:22:15.215 27909 27980 I zygote  :   at java.util.Map com.facebook.react.modules.network.ForwardingCookieHandler.get(java.net.URI, java.util.Map) (ForwardingCookieHandler.java:53)
+09-13 16:22:15.215 27909 27980 I zygote  :   at java.util.List okhttp3.JavaNetCookieJar.loadForRequest(okhttp3.HttpUrl) (JavaNetCookieJar.kt:47)
+09-13 16:22:15.215 27909 27980 I zygote  :   at java.util.List com.facebook.react.modules.network.ReactCookieJarContainer.loadForRequest(okhttp3.HttpUrl) (ReactCookieJarContainer.java:44)
+09-13 16:22:15.215 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.http.BridgeInterceptor.intercept(okhttp3.Interceptor$Chain) (BridgeInterceptor.kt:74)
+09-13 16:22:15.215 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.http.RealInterceptorChain.proceed(okhttp3.Request) (RealInterceptorChain.kt:109)
+09-13 16:22:15.215 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(okhttp3.Interceptor$Chain) (RetryAndFollowUpInterceptor.kt:76)
+09-13 16:22:15.216 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.http.RealInterceptorChain.proceed(okhttp3.Request) (RealInterceptorChain.kt:109)
+09-13 16:22:15.216 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp() (RealCall.kt:201)
+09-13 16:22:15.216 27909 27980 I zygote  :   at void okhttp3.internal.connection.RealCall$AsyncCall.run() (RealCall.kt:517)
+09-13 16:22:15.216 27909 27980 I zygote  :   at void java.util.concurrent.ThreadPoolExecutor.runWorker(java.util.concurrent.ThreadPoolExecutor$Worker) (ThreadPoolExecutor.java:1162)
+09-13 16:22:15.216 27909 27980 I zygote  :   at void java.util.concurrent.ThreadPoolExecutor$Worker.run() (ThreadPoolExecutor.java:636)
+09-13 16:22:15.216 27909 27980 I zygote  :   at void java.lang.Thread.run() (Thread.java:764)
+09-13 16:22:15.217 27909 27980 I zygote  : Caused by: java.lang.ClassNotFoundException: Didn't find class "android.webkit.TracingController" on path: DexPathList[[zip file "/system/app/Chrome/Chrome.apk"],nativeLibraryDirectories=[/system/app/Chrome/lib/x86, /system/app/Chrome/Chrome.apk!/lib/x86, /system/lib, /vendor/lib, /system/lib, /vendor/lib]]
+09-13 16:22:15.217 27909 27980 I zygote  :   at java.lang.Class dalvik.system.BaseDexClassLoader.findClass(java.lang.String) (BaseDexClassLoader.java:93)
+09-13 16:22:15.218 27909 27980 I zygote  :   at java.lang.Class java.lang.ClassLoader.loadClass(java.lang.String, boolean) (ClassLoader.java:379)
+09-13 16:22:15.218 27909 27980 I zygote  :   at java.lang.Class java.lang.ClassLoader.loadClass(java.lang.String) (ClassLoader.java:312)
+09-13 16:22:15.218 27909 27980 I zygote  :   at java.lang.Class java.lang.Class.classForName(java.lang.String, boolean, java.lang.ClassLoader) (Class.java:-2)
+09-13 16:22:15.218 27909 27980 I zygote  :   at java.lang.Class java.lang.Class.forName(java.lang.String, boolean, java.lang.ClassLoader) (Class.java:453)
+09-13 16:22:15.218 27909 27980 I zygote  :   at java.lang.Class android.webkit.WebViewFactory.getWebViewProviderClass(java.lang.ClassLoader) (WebViewFactory.java:150)
+09-13 16:22:15.219 27909 27980 I zygote  :   at java.lang.Class android.webkit.WebViewFactory.getProviderClass() (WebViewFactory.java:417)
+09-13 16:22:15.219 27909 27980 I zygote  :   at android.webkit.WebViewFactoryProvider android.webkit.WebViewFactory.getProvider() (WebViewFactory.java:211)
+09-13 16:22:15.219 27909 27980 I zygote  :   at android.webkit.CookieManager android.webkit.CookieManager.getInstance() (CookieManager.java:39)
+09-13 16:22:15.220 27909 27980 I zygote  :   at android.webkit.CookieManager com.facebook.react.modules.network.ForwardingCookieHandler.getCookieManager() (ForwardingCookieHandler.java:136)
+09-13 16:22:15.220 27909 27980 I zygote  :   at java.util.Map com.facebook.react.modules.network.ForwardingCookieHandler.get(java.net.URI, java.util.Map) (ForwardingCookieHandler.java:53)
+09-13 16:22:15.220 27909 27980 I zygote  :   at java.util.List okhttp3.JavaNetCookieJar.loadForRequest(okhttp3.HttpUrl) (JavaNetCookieJar.kt:47)
+09-13 16:22:15.220 27909 27980 I zygote  :   at java.util.List com.facebook.react.modules.network.ReactCookieJarContainer.loadForRequest(okhttp3.HttpUrl) (ReactCookieJarContainer.java:44)
+09-13 16:22:15.220 27909 27957 I DetoxWSClient: Sending out action 'ready' (ID #-1000)
+09-13 16:22:15.224 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.http.BridgeInterceptor.intercept(okhttp3.Interceptor$Chain) (BridgeInterceptor.kt:74)
+09-13 16:22:15.224 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.http.RealInterceptorChain.proceed(okhttp3.Request) (RealInterceptorChain.kt:109)
+09-13 16:22:15.225 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(okhttp3.Interceptor$Chain) (RetryAndFollowUpInterceptor.kt:76)
+09-13 16:22:15.225 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.http.RealInterceptorChain.proceed(okhttp3.Request) (RealInterceptorChain.kt:109)
+09-13 16:22:15.225 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp() (RealCall.kt:201)
+09-13 16:22:15.225 27909 27980 I zygote  :   at void okhttp3.internal.connection.RealCall$AsyncCall.run() (RealCall.kt:517)
+09-13 16:22:15.225 27909 27980 I zygote  :   at void java.util.concurrent.ThreadPoolExecutor.runWorker(java.util.concurrent.ThreadPoolExecutor$Worker) (ThreadPoolExecutor.java:1162)
+09-13 16:22:15.225 27909 27957 I DetoxDispatcher: Done with action 'isReady'
+09-13 16:22:15.226 27909 27980 I zygote  :   at void java.util.concurrent.ThreadPoolExecutor$Worker.run() (ThreadPoolExecutor.java:636)
+09-13 16:22:15.226 27909 27980 I zygote  :   at void java.lang.Thread.run() (Thread.java:764)
+09-13 16:22:15.226 27909 27980 I zygote  : 
+09-13 16:22:15.226 27909 27957 I DetoxDispatcher: Handling action 'loginSuccess' (ID #0)...
+09-13 16:22:15.227 27909 27957 I DetoxDispatcher: Done with action 'loginSuccess'
+09-13 16:22:15.227 27909 27980 I zygote  : Rejecting re-init on previously-failed class java.lang.Class<uJ>: java.lang.NoClassDefFoundError: Failed resolution of: Landroid/webkit/TracingController;
+09-13 16:22:15.227 27909 27980 I zygote  :   at java.lang.Class java.lang.Class.classForName(java.lang.String, boolean, java.lang.ClassLoader) (Class.java:-2)
+09-13 16:22:15.227 27909 27980 I zygote  :   at java.lang.Class java.lang.Class.forName(java.lang.String, boolean, java.lang.ClassLoader) (Class.java:453)
+09-13 16:22:15.227 27909 27980 I zygote  :   at java.lang.Class android.webkit.WebViewFactory.getWebViewProviderClass(java.lang.ClassLoader) (WebViewFactory.java:150)
+09-13 16:22:15.228 27909 27980 I zygote  :   at java.lang.Class android.webkit.WebViewFactory.getProviderClass() (WebViewFactory.java:417)
+09-13 16:22:15.228 27909 27980 I zygote  :   at android.webkit.WebViewFactoryProvider android.webkit.WebViewFactory.getProvider() (WebViewFactory.java:211)
+09-13 16:22:15.228 27909 27980 I zygote  :   at android.webkit.CookieManager android.webkit.CookieManager.getInstance() (CookieManager.java:39)
+09-13 16:22:15.228 27909 27980 I zygote  :   at android.webkit.CookieManager com.facebook.react.modules.network.ForwardingCookieHandler.getCookieManager() (ForwardingCookieHandler.java:136)
+09-13 16:22:15.228 27909 27980 I zygote  :   at java.util.Map com.facebook.react.modules.network.ForwardingCookieHandler.get(java.net.URI, java.util.Map) (ForwardingCookieHandler.java:53)
+09-13 16:22:15.228 27909 27980 I zygote  :   at java.util.List okhttp3.JavaNetCookieJar.loadForRequest(okhttp3.HttpUrl) (JavaNetCookieJar.kt:47)
+09-13 16:22:15.229 27909 27980 I zygote  :   at java.util.List com.facebook.react.modules.network.ReactCookieJarContainer.loadForRequest(okhttp3.HttpUrl) (ReactCookieJarContainer.java:44)
+09-13 16:22:15.229 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.http.BridgeInterceptor.intercept(okhttp3.Interceptor$Chain) (BridgeInterceptor.kt:74)
+09-13 16:22:15.229 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.http.RealInterceptorChain.proceed(okhttp3.Request) (RealInterceptorChain.kt:109)
+09-13 16:22:15.229 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(okhttp3.Interceptor$Chain) (RetryAndFollowUpInterceptor.kt:76)
+09-13 16:22:15.229 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.http.RealInterceptorChain.proceed(okhttp3.Request) (RealInterceptorChain.kt:109)
+09-13 16:22:15.229 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp() (RealCall.kt:201)
+09-13 16:22:15.230 27909 27980 I zygote  :   at void okhttp3.internal.connection.RealCall$AsyncCall.run() (RealCall.kt:517)
+09-13 16:22:15.230 27909 27980 I zygote  :   at void java.util.concurrent.ThreadPoolExecutor.runWorker(java.util.concurrent.ThreadPoolExecutor$Worker) (ThreadPoolExecutor.java:1162)
+09-13 16:22:15.231 27909 27980 I zygote  :   at void java.util.concurrent.ThreadPoolExecutor$Worker.run() (ThreadPoolExecutor.java:636)
+09-13 16:22:15.231 27909 27980 I zygote  :   at void java.lang.Thread.run() (Thread.java:764)
+09-13 16:22:15.231 27909 27980 I zygote  : Caused by: java.lang.ClassNotFoundException: Didn't find class "android.webkit.TracingController" on path: DexPathList[[zip file "/system/app/Chrome/Chrome.apk"],nativeLibraryDirectories=[/system/app/Chrome/lib/x86, /system/app/Chrome/Chrome.apk!/lib/x86, /system/lib, /vendor/lib, /system/lib, /vendor/lib]]
+09-13 16:22:15.232 27909 27980 I zygote  :   at java.lang.Class dalvik.system.BaseDexClassLoader.findClass(java.lang.String) (BaseDexClassLoader.java:93)
+09-13 16:22:15.232 27909 27980 I zygote  :   at java.lang.Class java.lang.ClassLoader.loadClass(java.lang.String, boolean) (ClassLoader.java:379)
+09-13 16:22:15.232 27909 27980 I zygote  :   at java.lang.Class java.lang.ClassLoader.loadClass(java.lang.String) (ClassLoader.java:312)
+09-13 16:22:15.232 27909 27980 I zygote  :   at java.lang.Class java.lang.Class.classForName(java.lang.String, boolean, java.lang.ClassLoader) (Class.java:-2)
+09-13 16:22:15.232 27909 27980 I zygote  :   at java.lang.Class java.lang.Class.forName(java.lang.String, boolean, java.lang.ClassLoader) (Class.java:453)
+09-13 16:22:15.232 27909 27980 I zygote  :   at java.lang.Class android.webkit.WebViewFactory.getWebViewProviderClass(java.lang.ClassLoader) (WebViewFactory.java:150)
+09-13 16:22:15.233 27909 27980 I zygote  :   at java.lang.Class android.webkit.WebViewFactory.getProviderClass() (WebViewFactory.java:417)
+09-13 16:22:15.233 27909 27980 I zygote  :   at android.webkit.WebViewFactoryProvider android.webkit.WebViewFactory.getProvider() (WebViewFactory.java:211)
+09-13 16:22:15.233 27909 27980 I zygote  :   at android.webkit.CookieManager android.webkit.CookieManager.getInstance() (CookieManager.java:39)
+09-13 16:22:15.233 27909 27980 I zygote  :   at android.webkit.CookieManager com.facebook.react.modules.network.ForwardingCookieHandler.getCookieManager() (ForwardingCookieHandler.java:136)
+09-13 16:22:15.234 27909 27980 I zygote  :   at java.util.Map com.facebook.react.modules.network.ForwardingCookieHandler.get(java.net.URI, java.util.Map) (ForwardingCookieHandler.java:53)
+09-13 16:22:15.234 27909 27980 I zygote  :   at java.util.List okhttp3.JavaNetCookieJar.loadForRequest(okhttp3.HttpUrl) (JavaNetCookieJar.kt:47)
+09-13 16:22:15.234 27909 27980 I zygote  :   at java.util.List com.facebook.react.modules.network.ReactCookieJarContainer.loadForRequest(okhttp3.HttpUrl) (ReactCookieJarContainer.java:44)
+09-13 16:22:15.234 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.http.BridgeInterceptor.intercept(okhttp3.Interceptor$Chain) (BridgeInterceptor.kt:74)
+09-13 16:22:15.235 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.http.RealInterceptorChain.proceed(okhttp3.Request) (RealInterceptorChain.kt:109)
+09-13 16:22:15.235 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(okhttp3.Interceptor$Chain) (RetryAndFollowUpInterceptor.kt:76)
+09-13 16:22:15.238 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.http.RealInterceptorChain.proceed(okhttp3.Request) (RealInterceptorChain.kt:109)
+09-13 16:22:15.239 27909 27980 I zygote  :   at okhttp3.Response okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp() (RealCall.kt:201)
+09-13 16:22:15.239 27909 27980 I zygote  :   at void okhttp3.internal.connection.RealCall$AsyncCall.run() (RealCall.kt:517)
+09-13 16:22:15.239 27909 27980 I zygote  :   at void java.util.concurrent.ThreadPoolExecutor.runWorker(java.util.concurrent.ThreadPoolExecutor$Worker) (ThreadPoolExecutor.java:1162)
+09-13 16:22:15.239 27909 27980 I zygote  :   at void java.util.concurrent.ThreadPoolExecutor$Worker.run() (ThreadPoolExecutor.java:636)
+09-13 16:22:15.242 27909 27980 I zygote  :   at void java.lang.Thread.run() (Thread.java:764)
+09-13 16:22:15.242 27909 27980 I zygote  : 
+09-13 16:22:15.277 27909 27957 I DetoxDispatcher: Handling action 'isReady' (ID #-1000)...
+09-13 16:22:15.379 27909 27909 I Detox   : Wait is over: App is now idle!
+09-13 16:22:15.383 27909 27957 I DetoxWSClient: Sending out action 'ready' (ID #-1000)
+09-13 16:22:15.384 27909 27957 I DetoxDispatcher: Done with action 'isReady'
+09-13 16:22:15.423 27909 27980 I cr_LibraryLoader: Time to load native libraries: 24 ms (timestamps 8717-8741)
+09-13 16:22:15.547 27909 27959 D DetoxWSClient: Received action 'reactNativeReload' (ID #-1000, params={})
+09-13 16:22:15.548 27909 27957 I DetoxDispatcher: Handling action 'reactNativeReload' (ID #-1000)...
+09-13 16:22:15.617 27909 27957 I DetoxRNExt: Reloading React Native
+09-13 16:22:15.684 27909 27948 I ReactNative: [GESTURE HANDLER] Tearing down gesture handler registered for root view com.facebook.react.ReactRootView{dc71ffd V.E...... ......ID 0,0-1440,2308}
+09-13 16:22:15.695 27909 27948 E unknown:ReactContextBaseJavaModule: Unhandled SoftException
+09-13 16:22:15.695 27909 27948 E unknown:ReactContextBaseJavaModule: java.lang.RuntimeException: Catalyst Instance has already disappeared: requested by DeviceInfo
+09-13 16:22:15.695 27909 27948 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.ReactContextBaseJavaModule.getReactApplicationContextIfActiveOrWarn(ReactContextBaseJavaModule.java:66)
+09-13 16:22:15.695 27909 27948 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.modules.deviceinfo.DeviceInfoModule.invalidate(DeviceInfoModule.java:114)
+09-13 16:22:15.695 27909 27948 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.ModuleHolder.destroy(ModuleHolder.java:110)
+09-13 16:22:15.695 27909 27948 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.NativeModuleRegistry.notifyJSInstanceDestroy(NativeModuleRegistry.java:108)
+09-13 16:22:15.695 27909 27948 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.CatalystInstanceImpl$1.run(CatalystInstanceImpl.java:368)
+09-13 16:22:15.695 27909 27948 E unknown:ReactContextBaseJavaModule: 	at android.os.Handler.handleCallback(Handler.java:789)
+09-13 16:22:15.695 27909 27948 E unknown:ReactContextBaseJavaModule: 	at android.os.Handler.dispatchMessage(Handler.java:98)
+09-13 16:22:15.695 27909 27948 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:27)
+09-13 16:22:15.695 27909 27948 E unknown:ReactContextBaseJavaModule: 	at androidx.test.espresso.base.Interrogator.loopAndInterrogate(Interrogator.java:14)
+09-13 16:22:15.695 27909 27948 E unknown:ReactContextBaseJavaModule: 	at androidx.test.espresso.base.LooperIdlingResourceInterrogationHandler$2.run(LooperIdlingResourceInterrogationHandler.java:3)
+09-13 16:22:15.695 27909 27948 E unknown:ReactContextBaseJavaModule: 	at android.os.Handler.handleCallback(Handler.java:789)
+09-13 16:22:15.695 27909 27948 E unknown:ReactContextBaseJavaModule: 	at android.os.Handler.dispatchMessage(Handler.java:98)
+09-13 16:22:15.695 27909 27948 E unknown:ReactContextBaseJavaModule: 	at android.os.Looper.loop(Looper.java:164)
+09-13 16:22:15.695 27909 27948 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.queue.MessageQueueThreadImpl$4.run(MessageQueueThreadImpl.java:228)
+09-13 16:22:15.695 27909 27948 E unknown:ReactContextBaseJavaModule: 	at java.lang.Thread.run(Thread.java:764)
+09-13 16:22:15.740 27909 27948 E unknown:ReactContextBaseJavaModule: Unhandled SoftException
+09-13 16:22:15.740 27909 27948 E unknown:ReactContextBaseJavaModule: java.lang.RuntimeException: Catalyst Instance has already disappeared: requested by NativeAnimatedModule
+09-13 16:22:15.740 27909 27948 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.ReactContextBaseJavaModule.getReactApplicationContextIfActiveOrWarn(ReactContextBaseJavaModule.java:66)
+09-13 16:22:15.740 27909 27948 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.animated.NativeAnimatedModule.invalidate(NativeAnimatedModule.java:968)
+09-13 16:22:15.740 27909 27948 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.ModuleHolder.destroy(ModuleHolder.java:110)
+09-13 16:22:15.740 27909 27948 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.NativeModuleRegistry.notifyJSInstanceDestroy(NativeModuleRegistry.java:108)
+09-13 16:22:15.740 27909 27948 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.CatalystInstanceImpl$1.run(CatalystInstanceImpl.java:368)
+09-13 16:22:15.740 27909 27948 E unknown:ReactContextBaseJavaModule: 	at android.os.Handler.handleCallback(Handler.java:789)
+09-13 16:22:15.740 27909 27948 E unknown:ReactContextBaseJavaModule: 	at android.os.Handler.dispatchMessage(Handler.java:98)
+09-13 16:22:15.740 27909 27948 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:27)
+09-13 16:22:15.740 27909 27948 E unknown:ReactContextBaseJavaModule: 	at androidx.test.espresso.base.Interrogator.loopAndInterrogate(Interrogator.java:14)
+09-13 16:22:15.740 27909 27948 E unknown:ReactContextBaseJavaModule: 	at androidx.test.espresso.base.LooperIdlingResourceInterrogationHandler$2.run(LooperIdlingResourceInterrogationHandler.java:3)
+09-13 16:22:15.740 27909 27948 E unknown:ReactContextBaseJavaModule: 	at android.os.Handler.handleCallback(Handler.java:789)
+09-13 16:22:15.740 27909 27948 E unknown:ReactContextBaseJavaModule: 	at android.os.Handler.dispatchMessage(Handler.java:98)
+09-13 16:22:15.740 27909 27948 E unknown:ReactContextBaseJavaModule: 	at android.os.Looper.loop(Looper.java:164)
+09-13 16:22:15.740 27909 27948 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.queue.MessageQueueThreadImpl$4.run(MessageQueueThreadImpl.java:228)
+09-13 16:22:15.740 27909 27948 E unknown:ReactContextBaseJavaModule: 	at java.lang.Thread.run(Thread.java:764)
+09-13 16:22:15.768 27909 27948 E unknown:ReactContextBaseJavaModule: Unhandled SoftException
+09-13 16:22:15.768 27909 27948 E unknown:ReactContextBaseJavaModule: java.lang.RuntimeException: Catalyst Instance has already disappeared: requested by FrescoModule
+09-13 16:22:15.768 27909 27948 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.ReactContextBaseJavaModule.getReactApplicationContextIfActiveOrWarn(ReactContextBaseJavaModule.java:66)
+09-13 16:22:15.768 27909 27948 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.modules.fresco.FrescoModule.invalidate(FrescoModule.java:202)
+09-13 16:22:15.768 27909 27948 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.ModuleHolder.destroy(ModuleHolder.java:110)
+09-13 16:22:15.768 27909 27948 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.NativeModuleRegistry.notifyJSInstanceDestroy(NativeModuleRegistry.java:108)
+09-13 16:22:15.768 27909 27948 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.CatalystInstanceImpl$1.run(CatalystInstanceImpl.java:368)
+09-13 16:22:15.768 27909 27948 E unknown:ReactContextBaseJavaModule: 	at android.os.Handler.handleCallback(Handler.java:789)
+09-13 16:22:15.768 27909 27948 E unknown:ReactContextBaseJavaModule: 	at android.os.Handler.dispatchMessage(Handler.java:98)
+09-13 16:22:15.768 27909 27948 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:27)
+09-13 16:22:15.768 27909 27948 E unknown:ReactContextBaseJavaModule: 	at androidx.test.espresso.base.Interrogator.loopAndInterrogate(Interrogator.java:14)
+09-13 16:22:15.768 27909 27948 E unknown:ReactContextBaseJavaModule: 	at androidx.test.espresso.base.LooperIdlingResourceInterrogationHandler$2.run(LooperIdlingResourceInterrogationHandler.java:3)
+09-13 16:22:15.768 27909 27948 E unknown:ReactContextBaseJavaModule: 	at android.os.Handler.handleCallback(Handler.java:789)
+09-13 16:22:15.768 27909 27948 E unknown:ReactContextBaseJavaModule: 	at android.os.Handler.dispatchMessage(Handler.java:98)
+09-13 16:22:15.768 27909 27948 E unknown:ReactContextBaseJavaModule: 	at android.os.Looper.loop(Looper.java:164)
+09-13 16:22:15.768 27909 27948 E unknown:ReactContextBaseJavaModule: 	at com.facebook.react.bridge.queue.MessageQueueThreadImpl$4.run(MessageQueueThreadImpl.java:228)
+09-13 16:22:15.768 27909 27948 E unknown:ReactContextBaseJavaModule: 	at java.lang.Thread.run(Thread.java:764)
+09-13 16:22:16.192 27909 27982 W zygote  : Long monitor contention with owner OkHttp https://pbs.twimg.com/... (27980) at android.webkit.IWebViewUpdateService android.webkit.WebViewFactory.getUpdateService()(WebViewFactory.java:722) waiters=0 in android.webkit.WebViewFactoryProvider android.webkit.WebViewFactory.getProvider() for 5.754s
+09-13 16:22:16.215 27909 27984 W zygote  : Long monitor contention with owner OkHttp https://pbs.twimg.com/... (27980) at android.webkit.IWebViewUpdateService android.webkit.WebViewFactory.getUpdateService()(WebViewFactory.java:722) waiters=1 in android.webkit.WebViewFactoryProvider android.webkit.WebViewFactory.getProvider() for 5.761s
+09-13 16:22:16.216 27909 27980 I chromium: [INFO:library_loader_hooks.cc(36)] Chromium logging enabled: level = 0, default verbosity = 0
+09-13 16:22:16.217 27909 27980 I cr_LibraryLoader: Expected native library version number "69.0.3497.100", actual native library version number "69.0.3497.100"
+09-13 16:22:16.260 27909 27981 W zygote  : Long monitor contention with owner OkHttp https://pbs.twimg.com/... (27980) at android.webkit.IWebViewUpdateService android.webkit.WebViewFactory.getUpdateService()(WebViewFactory.java:722) waiters=2 in android.webkit.WebViewFactoryProvider android.webkit.WebViewFactory.getProvider() for 5.754s
+09-13 16:22:16.305 27909 27985 W zygote  : Long monitor contention with owner OkHttp https://pbs.twimg.com/... (27980) at android.webkit.IWebViewUpdateService android.webkit.WebViewFactory.getUpdateService()(WebViewFactory.java:722) waiters=3 in android.webkit.WebViewFactoryProvider android.webkit.WebViewFactory.getProvider() for 5.798s
+09-13 16:22:16.365 27909 28011 E cr_VariationsUtils: Failed reading seed file "/data/user/0/com.awesome/app_webview/variations_seed_new": /data/user/0/com.awesome/app_webview/variations_seed_new (No such file or directory)
+09-13 16:22:16.376 27909 28011 E cr_VariationsUtils: Failed reading seed file "/data/user/0/com.awesome/app_webview/variations_seed": /data/user/0/com.awesome/app_webview/variations_seed (No such file or directory)
+09-13 16:22:17.217 27909 28000 W unknown:ReactContext: initializeMessageQueueThreads() is called.
+09-13 16:22:17.358 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.drawer.ReactDrawerLayoutManager
+09-13 16:22:17.370 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.uimanager.LayoutShadowNode
+09-13 16:22:17.377 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollViewManager
+09-13 16:22:17.405 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollContainerViewManager
+09-13 16:22:17.406 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ReactProgressBarViewManager
+09-13 16:22:17.408 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ProgressBarShadowNode
+09-13 16:22:17.409 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactScrollViewManager
+09-13 16:22:17.425 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.slider.ReactSliderManager
+09-13 16:22:17.434 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.slider.ReactSliderManager$ReactSliderShadowNode
+09-13 16:22:17.435 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager
+09-13 16:22:17.441 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager$ReactSwitchShadowNode
+09-13 16:22:17.444 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.swiperefresh.SwipeRefreshLayoutManager
+09-13 16:22:17.449 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageViewManager
+09-13 16:22:17.450 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageShadowNode
+09-13 16:22:17.454 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.image.ReactImageManager
+09-13 16:22:17.467 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ReactModalHostManager
+09-13 16:22:17.469 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ModalHostShadowNode
+09-13 16:22:17.476 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextManager
+09-13 16:22:17.476 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextShadowNode
+09-13 16:22:17.477 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputManager
+09-13 16:22:17.499 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputShadowNode
+09-13 16:22:17.505 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextViewManager
+09-13 16:22:17.524 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextShadowNode
+09-13 16:22:17.532 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.view.ReactViewManager
+09-13 16:22:17.555 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextViewManager
+09-13 16:22:17.561 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextShadowNode
+09-13 16:22:17.565 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.unimplementedview.ReactUnimplementedViewManager
+09-13 16:22:17.568 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class org.reactnative.maskedview.RNCMaskedViewManager
+09-13 16:22:17.598 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.gesturehandler.react.RNGestureHandlerRootViewManager
+09-13 16:22:17.599 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.gesturehandler.react.RNGestureHandlerButtonViewManager
+09-13 16:22:17.619 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaProviderManager
+09-13 16:22:17.624 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewManager
+09-13 16:22:17.639 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewShadowNode
+09-13 16:22:17.664 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenContainerViewManager
+09-13 16:22:17.665 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenViewManager
+09-13 16:22:17.682 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackViewManager
+09-13 16:22:17.682 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderConfigViewManager
+09-13 16:22:17.705 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderSubviewManager
+09-13 16:22:17.736 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.SearchBarManager
+09-13 16:22:17.747 27909 28010 W unknown:ReactContext: initializeMessageQueueThreads() is called.
+09-13 16:22:17.794 27909 27909 D DetoxRNLoading: Listener-proxy method called: onReactContextInitialized
+09-13 16:22:17.795 27909 27909 I DetoxRNLoading: Got new RN-context async'ly through listener
+09-13 16:22:17.796 27909 27909 D DetoxRNLoading: Listener-proxy method called: equals
+09-13 16:22:17.798 27909 27957 I DetoxRNIdleRes: Setting up Espresso Idling Resources for React Native
+09-13 16:22:17.823 27909 27957 D AsyncStorageIR: Checking whether a custom IR for Async-Storage is required... (legacy=false)
+09-13 16:22:17.831 27909 27957 D DetoxRNHelpers: Native RN module resolution (class com.reactnativecommunity.asyncstorage.AsyncStorageModule): no such class
+09-13 16:22:17.832 27909 27957 D AsyncStorageIR: Checking whether a custom IR for Async-Storage is required... (legacy=true)
+09-13 16:22:17.834 27909 27957 D AsyncStorageIR: IR for Async-Storage is required! (legacy=true)
+09-13 16:22:17.853 27909 27909 I Detox   : UIManagerModule is busy
+09-13 16:22:17.946 27909 27909 D AsyncStorageIRLegacy: Async-storage is busy!
+09-13 16:22:17.974 27909 27957 I DetoxWSClient: Sending out action 'ready' (ID #-1000)
+09-13 16:22:17.976 27909 27957 I DetoxDispatcher: Done with action 'reactNativeReload'
+09-13 16:22:18.018 27909 27959 D DetoxWSClient: Received action 'invoke' (ID #2, params={"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["menu-screen"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForNotNull","args":[]}}]})
+09-13 16:22:18.027 27909 27957 I DetoxDispatcher: Handling action 'invoke' (ID #2)...
+09-13 16:22:18.059 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForTestId, [menu-screen]
+09-13 16:22:18.065 27909 27957 D Detox   : class androidx.test.espresso.Espresso, onView, [(view.getTag() is "menu-screen" and view has effective visibility <VISIBLE>)]
+09-13 16:22:18.083 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForNotNull, []
+09-13 16:22:18.087 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxAssertion, assertMatcher, [androidx.test.espresso.ViewInteraction@62a3f86, not null]
+09-13 16:22:18.167 27909 27924 I zygote  : Background concurrent copying GC freed 36876(2MB) AllocSpace objects, 1(20KB) LOS objects, 50% free, 3MB/6MB, paused 28.555ms total 602.945ms
+09-13 16:22:19.075 27909 28008 I ReactNativeJS: Running "awesome
+09-13 16:22:19.817 27909 27909 W UiControllerImpl: Waiting for: DYNAMIC_TASKS_HAVE_IDLED for 100 iterations.
+09-13 16:22:21.689 27909 27909 W UiControllerImpl: Waiting for: DYNAMIC_TASKS_HAVE_IDLED for 200 iterations.
+09-13 16:22:22.423 27909 28008 I zygote  : Deoptimizing com.th3rdwave.safeareacontext.EdgeInsets com.th3rdwave.safeareacontext.SafeAreaUtilsKt.getSafeAreaInsets(android.view.View) due to JIT inline cache
+09-13 16:22:23.127 27909 27909 W IdlingPolicy: These resources are not idle: [LooperIdlingResource-481-mqt_js]
+09-13 16:22:23.576 27909 27909 W UiControllerImpl: Waiting for: DYNAMIC_TASKS_HAVE_IDLED for 300 iterations.
+09-13 16:22:23.618 27909 27909 I zygote  : Deoptimizing void com.facebook.react.uimanager.NativeViewHierarchyManager.createView(com.facebook.react.uimanager.ThemedReactContext, int, java.lang.String, com.facebook.react.uimanager.ReactStylesDiffMap) due to JIT inline cache
+09-13 16:22:24.181 27909 28010 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreensShadowNode
+09-13 16:22:24.184 27909 28008 I zygote  : Deoptimizing void com.facebook.react.uimanager.UIManagerModuleConstantsHelper.recursiveMerge(java.util.Map, java.util.Map) due to JIT inline cache
+09-13 16:22:24.184 27909 28008 I zygote  : Deoptimizing void com.facebook.react.uimanager.UIManagerModuleConstantsHelper.recursiveMerge(java.util.Map, java.util.Map) due to JIT inline cache
+09-13 16:22:24.487 27909 28010 I zygote  : Deoptimizing void com.facebook.react.uimanager.ViewManagersPropertyCache$PropSetter.updateShadowNodeProp(com.facebook.react.uimanager.ReactShadowNode, java.lang.Object) due to JIT inline cache
+09-13 16:22:24.860 27909 27909 W UiControllerImpl: Waiting for: DYNAMIC_TASKS_HAVE_IDLED for 400 iterations.
+09-13 16:22:25.498 27909 27909 I zygote  : Deoptimizing void com.facebook.react.uimanager.UIViewOperationQueue$1.run() due to JIT inline cache
+09-13 16:22:25.578 27909 27909 I ReactNative: [GESTURE HANDLER] Initialize gesture handler for root view com.facebook.react.ReactRootView{dc71ffd V.E...... ......ID 0,0-1440,2308 #b}
+09-13 16:22:27.258 27909 27966 W zygote  : Long monitor contention with owner OkHttp i.ibb.co applyAndAckSettings (27963) at void okhttp3.internal.concurrent.TaskRunner$runnable$1.run()(TaskRunner.kt:58) waiters=0 in void okhttp3.internal.concurrent.TaskQueue.shutdown() for 118ms
+09-13 16:22:27.272 27909 28029 W zygote  : Long monitor contention with owner OkHttp i.ibb.co applyAndAckSettings (27963) at void okhttp3.internal.concurrent.TaskRunner$runnable$1.run()(TaskRunner.kt:58) waiters=1 in void okhttp3.internal.concurrent.TaskRunner$runnable$1.run() for 137ms
+09-13 16:22:27.459 27909 27980 D SoLoader: libimagepipeline.so not found on /data/data/com.awesome/lib-main
+09-13 16:22:27.462 27909 27980 D SoLoader: libimagepipeline.so found on /data/app/com.awesome-HEceIL5-FgU7wS_YeJNtQg==/lib/x86
+09-13 16:22:27.463 27909 27980 D SoLoader: Not resolving dependencies for libimagepipeline.so
+09-13 16:22:27.600 27909 27924 I zygote  : WaitForGcToComplete blocked for 9.694ms for cause Background
+09-13 16:22:28.044 27909 27959 D DetoxWSClient: Received action 'currentStatus' (ID #3, params={})
+09-13 16:22:28.073 27909 27958 I DetoxDispatcher: Handling action 'currentStatus' (ID #3)...
+09-13 16:22:28.104 27909 27909 I Detox   : JS Bridge is busy
+09-13 16:22:28.144 27909 27958 I DetoxWSClient: Sending out action 'currentStatusResult' (ID #3)
+09-13 16:22:28.203 27909 27958 I DetoxDispatcher: Done with action 'currentStatus'
+09-13 16:22:28.753 27909 27924 I zygote  : Background concurrent copying GC freed 67418(2MB) AllocSpace objects, 0(0B) LOS objects, 49% free, 4MB/8MB, paused 37.184ms total 1.151s
+09-13 16:22:30.024 27909 27916 I zygote  : Do full code cache collection, code=249KB, data=168KB
+09-13 16:22:30.027 27909 27916 I zygote  : After code cache collection, code=233KB, data=139KB
+09-13 16:22:30.292 27909 27909 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=not null}' assertion on view (view.getTag() is "menu-screen" and view has effective visibility <VISIBLE>)
+09-13 16:22:30.303 27909 27957 I DetoxWSClient: Sending out action 'invokeResult' (ID #2)
+09-13 16:22:30.304 27909 27957 I DetoxDispatcher: Done with action 'invoke'
+09-13 16:22:30.327 27909 27959 D DetoxWSClient: Received action 'invoke' (ID #4, params={"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["orders-tab"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]})
+09-13 16:22:30.330 27909 27957 I DetoxDispatcher: Handling action 'invoke' (ID #4)...
+09-13 16:22:30.330 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForTestId, [orders-tab]
+09-13 16:22:30.334 27909 27957 D Detox   : class androidx.test.espresso.Espresso, onView, [(view.getTag() is "orders-tab" and view has effective visibility <VISIBLE>)]
+09-13 16:22:30.340 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxViewActions, click, []
+09-13 16:22:30.363 27909 27957 D Detox   : class com.wix.detox.espresso.EspressoDetox, perform, [androidx.test.espresso.ViewInteraction@aee9140, com.wix.detox.espresso.action.RNClickAction@f558879]
+09-13 16:22:30.385 27909 27909 I zygote  : Deoptimizing boolean org.hamcrest.core.AllOf.matches(java.lang.Object, org.hamcrest.Description) due to JIT same target
+09-13 16:22:30.393 27909 27909 I ViewInteraction: Performing 'com.wix.detox.espresso.action.detoxsingletap@9bda1f click' action on view (view.getTag() is "orders-tab" and view has effective visibility <VISIBLE>)
+09-13 16:22:31.861 27909 28010 I zygote  : Deoptimizing void com.facebook.react.uimanager.UIImplementation.applyUpdatesRecursive(com.facebook.react.uimanager.ReactShadowNode, float, float) due to JIT inline cache
+09-13 16:22:32.637 27909 27957 I DetoxWSClient: Sending out action 'invokeResult' (ID #4)
+09-13 16:22:32.639 27909 27957 I DetoxDispatcher: Done with action 'invoke'
+09-13 16:22:32.669 27909 27959 D DetoxWSClient: Received action 'invoke' (ID #5, params={"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["orders-list"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}}]})
+09-13 16:22:32.673 27909 27957 I DetoxDispatcher: Handling action 'invoke' (ID #5)...
+09-13 16:22:32.673 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForTestId, [orders-list]
+09-13 16:22:32.674 27909 27957 D Detox   : class androidx.test.espresso.Espresso, onView, [(view.getTag() is "orders-list" and view has effective visibility <VISIBLE>)]
+09-13 16:22:32.676 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForSufficientlyVisible, [75]
+09-13 16:22:32.684 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxAssertion, assertMatcher, [androidx.test.espresso.ViewInteraction@3f27e8c, (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)]
+09-13 16:22:32.730 27909 27916 I zygote  : Do partial code cache collection, code=249KB, data=163KB
+09-13 16:22:32.733 27909 27916 I zygote  : After code cache collection, code=244KB, data=160KB
+09-13 16:22:32.734 27909 27916 I zygote  : Increasing code cache capacity to 1024KB
+09-13 16:22:32.747 27909 27957 I DetoxWSClient: Sending out action 'invokeResult' (ID #5)
+09-13 16:22:32.748 27909 27957 I DetoxDispatcher: Done with action 'invoke'
+09-13 16:22:32.790 27909 27959 D DetoxWSClient: Received action 'invoke' (ID #6, params={"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["menu-tab"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]})
+09-13 16:22:32.794 27909 27957 I DetoxDispatcher: Handling action 'invoke' (ID #6)...
+09-13 16:22:32.795 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForTestId, [menu-tab]
+09-13 16:22:32.797 27909 27957 D Detox   : class androidx.test.espresso.Espresso, onView, [(view.getTag() is "menu-tab" and view has effective visibility <VISIBLE>)]
+09-13 16:22:32.798 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxViewActions, click, []
+09-13 16:22:32.798 27909 27957 D Detox   : class com.wix.detox.espresso.EspressoDetox, perform, [androidx.test.espresso.ViewInteraction@d16b9d5, com.wix.detox.espresso.action.RNClickAction@f0a35ea]
+09-13 16:22:32.835 27909 27909 I ViewInteraction: Performing 'com.wix.detox.espresso.action.detoxsingletap@c270db click' action on view (view.getTag() is "menu-tab" and view has effective visibility <VISIBLE>)
+09-13 16:22:33.848 27909 27957 I DetoxWSClient: Sending out action 'invokeResult' (ID #6)
+09-13 16:22:33.853 27909 27957 I DetoxDispatcher: Done with action 'invoke'
+09-13 16:22:33.916 27909 27959 D DetoxWSClient: Received action 'invoke' (ID #7, params={"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["menu-screen"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForNotNull","args":[]}}]})
+09-13 16:22:33.923 27909 27957 I DetoxDispatcher: Handling action 'invoke' (ID #7)...
+09-13 16:22:33.926 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForTestId, [menu-screen]
+09-13 16:22:33.932 27909 27957 D Detox   : class androidx.test.espresso.Espresso, onView, [(view.getTag() is "menu-screen" and view has effective visibility <VISIBLE>)]
+09-13 16:22:33.934 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForNotNull, []
+09-13 16:22:33.934 27909 27957 D Detox   : class com.wix.detox.espresso.DetoxAssertion, assertMatcher, [androidx.test.espresso.ViewInteraction@67240fa, not null]
+09-13 16:22:34.037 27909 27909 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=not null}' assertion on view (view.getTag() is "menu-screen" and view has effective visibility <VISIBLE>)
+09-13 16:22:34.046 27909 27957 I DetoxWSClient: Sending out action 'invokeResult' (ID #7)
+09-13 16:22:34.050 27909 27957 I DetoxDispatcher: Done with action 'invoke'
